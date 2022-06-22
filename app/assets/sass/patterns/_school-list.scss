@@ -1,0 +1,10 @@
+.govuk-summary-list.govuk-summary-list--school-details{
+  .govuk-summary-list__key{ width:64%;}
+  .govuk-summary-list__value{ width:64%; font-weight: normal;}
+  .govuk-summary-list__actions{ width:36%; text-align: right;}
+  .govuk-heading-m.govuk-heading-m--school-name{
+    span{color: $govuk-secondary-text-colour; font-weight: normal;}
+  }
+
+  .govuk-summary-list__project-type{text-transform: uppercase; font-weight: bold;}
+}

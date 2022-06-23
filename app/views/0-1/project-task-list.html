@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Update and submit an Income Tax Return
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "./includes/phase.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">URN 102062 - Voluntary aided school</span>
+      <h1 class="govuk-heading-l">St. Wilfred's Primary School</h1>
+      <div class="govuk-inset-text">
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">First baseline:</span>
+          1 July 2022</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">All conditions met baseline:</span>
+          14 July 2022</p>
+          <p class="govuk-body govuk-!-margin-0">
+            <span class="govuk-!-font-weight-bold">Target opening date:</span>
+            1 August 2022</p>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-l">Project task list</h2>
+          <ol class="app-task-list">
+            <li>
+              <h2 class="app-task-list__section">
+                <span class="app-task-list__section-number">1. </span> Handover
+                to Operational Delivery Team
+              </h2>
+              <ul class="app-task-list__items">
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="handover-status">
+                      Read project notes and complete handover
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--blue"
+                    id="handover-status">In progress</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="read-declaration-status">
+                      Agree opening date
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="read-declaration-status">Not started</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="read-declaration-status">
+                      Confirm number of high needs places
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="read-declaration-status">Not started</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="read-declaration-status">
+                      Process conversion grant
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="read-declaration-status">Not started</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="read-declaration-status">
+                      Confirm local authority information template has been
+                      received
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="read-declaration-status">Not started</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="read-declaration-status">
+                      Confirm Master Funding Agreement and Articles of
+                      Association versions
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="read-declaration-status">Not started</strong>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <h2 class="app-task-list__section">
+                <span class="app-task-list__section-number">2. </span> Documents
+                to clear
+              </h2>
+              <ul class="app-task-list__items">
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="contact-details-status">
+                      Land questionnaire
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag"
+                    id="contact-details-status">Completed</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Supplementary funding agreement
+                    </a>
+                  </span>
+                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag"
+                    id="list-convictions-status">Not started</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Trust modification order
+                    </a>
+                  </span>
+                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag"
+                    id="financial-evidence-status">Not started</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    Give medical information
+                  </span>
+                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="medical-information-status">Cannot start yet</strong>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <h2 class="app-task-list__section">
+                <span class="app-task-list__section-number">3. </span> Apply
+              </h2>
+              <ul class="app-task-list__items">
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    Submit and pay
+                  </span>
+                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+          <h3 class="govuk-heading-s">Incoming trust</h3>
+          <p class="govuk-body"><a href="#" class="govuk-link">Dynamics Trust
+            </a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

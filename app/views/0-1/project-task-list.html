@@ -26,6 +26,9 @@
           <p class="govuk-body govuk-!-margin-0">
             <span class="govuk-!-font-weight-bold">Target opening date:</span>
             1 August 2022</p>
+          <p class="govuk-body govuk-!-margin-0">
+            <span class="govuk-!-font-weight-bold">Incoming trust:</span>
+            Dynamics Trust</p>
       </div>
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
@@ -131,33 +134,100 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    Give medical information
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Church supplementary agreement
+                    </a>
                   </span>
-                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="medical-information-status">Cannot start yet</strong>
+                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag"
+                    id="financial-evidence-status">Not started</strong>
                 </li>
               </ul>
             </li>
 
             <li>
               <h2 class="app-task-list__section">
-                <span class="app-task-list__section-number">3. </span> Apply
+                <span class="app-task-list__section-number">3. </span> Confirm
+                  conversion conditions met
               </h2>
               <ul class="app-task-list__items">
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    Submit and pay
+                    <a href="#" aria-describedby="contact-details-status">
+                      Add project to all conditions met baseline
+                    </a>
                   </span>
-                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status">Cannot start yet</strong>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Confirm commercial transfer agreement has been signed and
+                      sealed
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Confirm single worksheet has been completed
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <h2 class="app-task-list__section">
+                <span class="app-task-list__section-number">4. </span> Complete
+                  after academy opens
+              </h2>
+              <ul class="app-task-list__items">
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="contact-details-status">
+                      Save, send and redact documents
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Receive and send grant support certificate
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Add any issues or concerns for Education and Skills
+                      Funding Agency
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Complete handover notes for the region
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
                 </li>
               </ul>
             </li>
           </ol>
-        </div>
-
-        <div class="govuk-grid-column-one-third">
-          <h3 class="govuk-heading-s">Incoming trust</h3>
-          <p class="govuk-body"><a href="#" class="govuk-link">Dynamics Trust
-            </a></p>
+          {{ govukButton({ text: "Complete project" }) }}
         </div>
       </div>
     </div>

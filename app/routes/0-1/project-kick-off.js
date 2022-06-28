@@ -19,6 +19,7 @@ module.exports = function (router) {
     res.redirect('check-trust-model-docs')
   })
 
+
   router.get('/' + version + '/project-kick-off/check-trust-model-docs', function (req, res) {
     res.render(version + '/project-kick-off/check-trust-model-docs', {})
   })
@@ -27,12 +28,22 @@ module.exports = function (router) {
     res.redirect('trust-model-docs-url')
   })
 
+
   router.get('/' + version + '/project-kick-off/trust-model-docs-url', function (req, res) {
     res.render(version + '/project-kick-off/trust-model-docs-url', {})
   })
 
   router.post('/' + version + '/project-kick-off/trust-model-docs-url', function (req, res) {
     res.redirect('check-academy-order')
+  })
+
+
+  router.get('/' + version + '/project-kick-off/check-academy-order', function (req, res) {
+    res.render(version + '/project-kick-off/check-academy-order', {})
+  })
+
+  router.post('/' + version + '/project-kick-off/check-academy-order', function (req, res) {
+    res.redirect('academy-order-url')
   })
 
 }

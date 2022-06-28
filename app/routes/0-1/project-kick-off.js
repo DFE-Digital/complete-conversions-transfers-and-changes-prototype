@@ -27,4 +27,12 @@ module.exports = function (router) {
     res.redirect('trust-model-docs-url')
   })
 
+  router.get('/' + version + '/project-kick-off/trust-model-docs-url', function (req, res) {
+    res.render(version + '/project-kick-off/trust-model-docs-url', {})
+  })
+
+  router.post('/' + version + '/project-kick-off/trust-model-docs-url', function (req, res) {
+    res.redirect('check-academy-order')
+  })
+
 }

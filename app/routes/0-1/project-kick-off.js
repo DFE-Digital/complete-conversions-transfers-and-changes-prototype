@@ -10,4 +10,12 @@ module.exports = function (router) {
     res.redirect('proforma-url')
   })
 
+  router.get('/' + version + '/project-kick-off/proforma-url', function (req, res) {
+    res.render(version + '/project-kick-off/proforma-url', {})
+  })
+
+  router.post('/' + version + '/project-kick-off/proforma-url', function (req, res) {
+    res.redirect('check-trust-model-docs')
+  })
+
 }

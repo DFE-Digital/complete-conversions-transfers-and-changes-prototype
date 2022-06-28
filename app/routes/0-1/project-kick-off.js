@@ -46,4 +46,13 @@ module.exports = function (router) {
     res.redirect('academy-order-url')
   })
 
+
+  router.get('/' + version + '/project-kick-off/academy-order-url', function (req, res) {
+    res.render(version + '/project-kick-off/academy-order-url', {})
+  })
+
+  router.post('/' + version + '/project-kick-off/academy-order-url', function (req, res) {
+    res.redirect('check-application-to-convert')
+  })
+
 }

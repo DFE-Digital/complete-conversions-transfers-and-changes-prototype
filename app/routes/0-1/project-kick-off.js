@@ -55,4 +55,13 @@ module.exports = function (router) {
     res.redirect('check-application-to-convert')
   })
 
+
+  router.get('/' + version + '/project-kick-off/check-application-to-convert', function (req, res) {
+    res.render(version + '/project-kick-off/check-application-to-convert', {})
+  })
+
+  router.post('/' + version + '/project-kick-off/check-application-to-convert', function (req, res) {
+    res.redirect('application-to-convert-url')
+  })
+
 }

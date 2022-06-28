@@ -17,28 +17,16 @@
     <div class="govuk-grid-column-full">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <form action="check-application-to-convert" method="post" class="form">
+          <form action="application-to-convert-url" method="post" class="form">
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <span class="govuk-caption-l">St. Wilfred's Primary School</span>
-                  <h1 class="govuk-fieldset__heading">Is the application to
-                    convert document correct?</h1>
+                  <h1 class="govuk-fieldset__heading" for="trustModelDocsUrl">
+                    What is the URL for the school's application to convert
+                    document?</h1>
                 </legend>
-                <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="academyOrder" name="academyOrder" type="radio" value="Yes">
-                    <label class="govuk-label govuk-radios__label" for="academyOrder">
-                      Yes, the application to convert document is correct
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="academyOrder-2" name="academyOrder" type="radio" value="No">
-                    <label class="govuk-label govuk-radios__label" for="academyOrder-2">
-                      No
-                    </label>
-                  </div>
-                </div>
+                <input class="govuk-input" id="trustModelDocsUrl" name="trustModelDocsUrl" type="text">
               </fieldset>
             </div>
             {{ govukButton({ text: "Continue" }) }}

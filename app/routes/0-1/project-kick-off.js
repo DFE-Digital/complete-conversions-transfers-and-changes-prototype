@@ -73,4 +73,12 @@ module.exports = function (router) {
     res.redirect('identify-things-to-discuss')
   })
 
+  router.get('/' + version + '/project-kick-off/identify-things-to-discuss', function (req, res) {
+    res.render(version + '/project-kick-off/identify-things-to-discuss', {})
+  })
+
+  router.post('/' + version + '/project-kick-off/identify-things-to-discuss', function (req, res) {
+    res.redirect('complete-handover-meeting')
+  })
+
 }

@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Update and submit an Income Tax Return
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="check-trust-model-docs" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Are the trust model
+                    documents correct?</h1>
+                </legend>
+                <div id="sign-in-hint" class="govuk-hint">
+                  The trust model documents should be using the 2018 or later
+                  format. If they are not they the trust will need to update
+                  their trust model documents.
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="correctTrustModelDocs" name="correctTrustModelDocs" type="radio" value="Yes, the trust model documents are in the 2018 or later format" {{ checked("correctTrustModelDocs", "Yes, the trust model documents are in the 2018 or later format") }}>
+                    <label class="govuk-label govuk-radios__label" for="correctTrustModelDocs">
+                      Yes, the trust model documents are in the 2018 or later format
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="correctTrustModelDocs-2" name="correctTrustModelDocs" type="radio" value="No, the documents are using a pre 2018 format" {{ checked("correctTrustModelDocs", "No, the documents are using a pre 2018 format") }}>
+                    <label class="govuk-label govuk-radios__label" for="correctTrustModelDocs-2">
+                      No, the documents are using a pre 2018 format
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Update and submit an Income Tax Return
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="check-trust-model-docs" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Check answers</h1>
+                </legend>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Have you saved pro-forma in the school's SharePoint
+                      folder?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['proformaInSharepoint']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="save-proforma">
+                        Change<span class="govuk-visually-hidden"> Have you
+                          saved pro-forma in the school's SharePoint folder?</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      What is the URL for the school's Proforma on sharepoint?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['proformaSharepointURL']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="proforma-url">
+                        Change<span class="govuk-visually-hidden"> URL for the school's Proforma on sharepoint</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Are the trust model documents correct?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['correctTrustModelDocs']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="check-trust-model-docs">
+                        Change<span class="govuk-visually-hidden"> are the trust model documents correct</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      What is the URL for the school's trust model documents?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['trustModelDocsUrl']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="trust-model-docs-url">
+                        Change<span class="govuk-visually-hidden"> the URL for the school's trust model documents</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Is the academy order document correct?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['correctAcademyOrder']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="check-academy-order">
+                        Change<span class="govuk-visually-hidden"> is the academy order document correct</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      What is the URL for the school's academy order document?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['academyOrderUrl']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="academy-order-url">
+                        Change<span class="govuk-visually-hidden"> the URL for the school's academy order document</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Is the application to convert document correct?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['applicationToConvertCorrect']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="check-application-to-convert">
+                        Change<span class="govuk-visually-hidden"> Is the application to convert document correct</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      What is the URL for the school's application to convert document?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['applicationToConvertUrl']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="application-to-convert-url">
+                        Change<span class="govuk-visually-hidden"> Is the application to convert document correct</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Identify things to discuss with the regional delivery officer
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['thingsToDiscussWithRegionalOfficer']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="identify-things-to-discuss">
+                        Change<span class="govuk-visually-hidden"> Is the application to convert document correct</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Have you completed a the handover meeting with the regional delivery officer?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['completedHandoverMeeting']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="complete-handover-meeting">
+                        Change<span class="govuk-visually-hidden"> Is the application to convert document correct</span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

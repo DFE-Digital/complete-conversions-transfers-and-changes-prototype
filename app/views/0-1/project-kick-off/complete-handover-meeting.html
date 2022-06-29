@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Update and submit an Income Tax Return
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="complete-handover-meeting" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Have you completed a the
+                    handover meeting with the regional delivery officer?
+                  </h1>
+                </legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="completedHandoverMeeting" name="completedHandoverMeeting" type="radio" value="Yes" {{ checked("completedHandoverMeeting", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting">
+                      Yes, my questions were answered
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="completedHandoverMeeting-2" name="completedHandoverMeeting" type="radio" value="Yes, but I still have questions" {{ checked("completedHandoverMeeting", "Yes, but I still have questions") }}>
+                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting-2">
+                      Yes, but I still have questions
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="completedHandoverMeeting-3" name="completedHandoverMeeting" type="radio" value="No" {{ checked("completedHandoverMeeting", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting-3">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

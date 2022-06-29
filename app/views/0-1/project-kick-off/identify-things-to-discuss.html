@@ -25,7 +25,7 @@
                   <h1 class="govuk-fieldset__heading" for="thingsToDiscussWithRegionalOfficer">
                     Identify things to discuss with the regional delivery officer</h1>
                 </legend>
-                <textarea class="govuk-textarea" id="thingsToDiscussWithRegionalOfficer" name="thingsToDiscussWithRegionalOfficer" rows="5" aria-describedby="more-detail-hint"></textarea>
+                <textarea class="govuk-textarea" id="thingsToDiscussWithRegionalOfficer" name="thingsToDiscussWithRegionalOfficer" rows="5" aria-describedby="more-detail-hint" >{{data['thingsToDiscussWithRegionalOfficer']}}</textarea>
               </fieldset>
             </div>
             {{ govukButton({ text: "Continue" }) }}

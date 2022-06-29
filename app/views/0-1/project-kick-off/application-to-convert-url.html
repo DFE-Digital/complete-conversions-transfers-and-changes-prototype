@@ -22,11 +22,11 @@
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <span class="govuk-caption-l">St. Wilfred's Primary School</span>
-                  <h1 class="govuk-fieldset__heading" for="trustModelDocsUrl">
+                  <h1 class="govuk-fieldset__heading" for="applicationToConvertUrl">
                     What is the URL for the school's application to convert
                     document?</h1>
                 </legend>
-                <input class="govuk-input" id="trustModelDocsUrl" name="trustModelDocsUrl" type="text">
+                <input class="govuk-input" id="applicationToConvertUrl" name="applicationToConvertUrl" type="text" value="{{data['trustModelDocsUrl']}}">
               </fieldset>
             </div>
             {{ govukButton({ text: "Continue" }) }}

@@ -23,25 +23,25 @@
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <span class="govuk-caption-l">St. Wilfred's Primary School</span>
                   <h1 class="govuk-fieldset__heading">Have you completed a the
-                    handover meeting with the regional delivery officer.
+                    handover meeting with the regional delivery officer?
                   </h1>
                 </legend>
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="proformaInSharepoint" name="proformaInSharepoint" type="radio" value="Yes">
-                    <label class="govuk-label govuk-radios__label" for="proformaInSharepoint">
+                    <input class="govuk-radios__input" id="completedHandoverMeeting" name="completedHandoverMeeting" type="radio" value="Yes" {{ checked("completedHandoverMeeting", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting">
                       Yes, my questions were answered
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="proformaInSharepoint-2" name="proformaInSharepoint" type="radio" value="Yes, but I still have questions">
-                    <label class="govuk-label govuk-radios__label" for="proformaInSharepoint-2">
+                    <input class="govuk-radios__input" id="completedHandoverMeeting-2" name="completedHandoverMeeting" type="radio" value="Yes, but I still have questions" {{ checked("completedHandoverMeeting", "Yes, but I still have questions") }}>
+                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting-2">
                       Yes, but I still have questions
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="proformaInSharepoint-3" name="proformaInSharepoint" type="radio" value="No">
-                    <label class="govuk-label govuk-radios__label" for="proformaInSharepoint-3">
+                    <input class="govuk-radios__input" id="completedHandoverMeeting-3" name="completedHandoverMeeting" type="radio" value="No" {{ checked("completedHandoverMeeting", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting-3">
                       No
                     </label>
                   </div>

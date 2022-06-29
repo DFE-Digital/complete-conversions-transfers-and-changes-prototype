@@ -27,13 +27,13 @@
                 </legend>
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="proformaInSharepoint" name="proformaInSharepoint" type="radio" value="Yes">
+                    <input class="govuk-radios__input" id="proformaInSharepoint" name="proformaInSharepoint" type="radio" value="Yes" {{ checked("proformaInSharepoint", "yes") }}>
                     <label class="govuk-label govuk-radios__label" for="proformaInSharepoint">
                       Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="proformaInSharepoint-2" name="proformaInSharepoint" type="radio" value="No">
+                    <input class="govuk-radios__input" id="proformaInSharepoint-2" name="proformaInSharepoint" type="radio" value="No, but I have requested the pro-forma" {{ checked("proformaInSharepoint", "no") }}>
                     <label class="govuk-label govuk-radios__label" for="proformaInSharepoint-2">
                       No, but I have requested the pro-forma
                     </label>

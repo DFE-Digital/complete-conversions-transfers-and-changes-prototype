@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+      <h1 class="govuk-heading-l">Handover with regional delivery officer</h1>
+      <div class="govuk-inset-text">
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">First baseline:</span>
+          1 July 2022</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">All conditions met baseline:</span>
+          14 July 2022</p>
+          <p class="govuk-body govuk-!-margin-0">
+            <span class="govuk-!-font-weight-bold">Target opening date:</span>
+            1 August 2022</p>
+          <p class="govuk-body govuk-!-margin-0">
+            <span class="govuk-!-font-weight-bold">Incoming trust:</span>
+            Dynamics Trust</p>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-l">Project task list</h2>
+          <ol class="app-task-list">
+            <li>
+              <ul class="app-task-list__items">
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="handover-status">
+                      Save handover pro-forma in SharePoint</a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--blue"
+                    id="handover-status">In progress</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="read-declaration-status">
+                      Check documents</a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="read-declaration-status">Not started</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="read-declaration-status">
+                      Prepare for regional delivery officer handover</a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="read-declaration-status">Not started</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="read-declaration-status">
+                      Complete regional delivery officer handover</a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="read-declaration-status">Not started</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="read-declaration-status">
+                      Get local authority questionnaire</a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="read-declaration-status">Not started</strong>
+                </li>
+              </ul>
+            </li>
+          </ol>
+          {{ govukButton({ text: "Complete project" }) }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

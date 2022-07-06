@@ -5,5 +5,8 @@ const router = express.Router()
   require('./routes/0-1/routes.js')(router);
   require('./routes/0-1/project-kick-off.js')(router);
 
+  require('./routes/0-2/routes.js')(router);
+  require('./routes/0-2/project-kick-off.js')(router);
+
 
 module.exports = router

@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="check-introductory-email-sent" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Have you sent the kick-off
+                    email?</h1>
+                </legend>
+                <div id="sign-in-hint" class="govuk-hint">
+                  Kick-off or introduction emails should be sent to all external
+                  stakeholders. They should include documents that they will
+                  need to complete as well as any dates for milestones.
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Recommended content for kick-off emails
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <p class="govuk-body">Emails should include:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>attached documents that external stakeholders will
+                        need to complete and return</li>
+                      <li>a list of which stakeholder should complete each
+                        document, with an appropriate due date</li>
+                      <li>a project end date and a list of key dates or
+                        milestones</li>
+                      <li>explain ways of working such as monthly progress calls</li>
+                      <li>link to forms or website that need completing such as
+                        the vendor account form</li>
+                      <li>some options for when the kick-off call could happen</li>
+                    </ul>
+                  </div>
+                </details>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkIntroductoryEmailSent" name="checkIntroductoryEmailSent" type="radio" value="Yes" {{ checked("checkIntroductoryEmailSent", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkIntroductoryEmailSent">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkIntroductoryEmailSent-2" name="checkIntroductoryEmailSent" type="radio" value="No" {{ checked("checkIntroductoryEmailSent", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkIntroductoryEmailSent-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

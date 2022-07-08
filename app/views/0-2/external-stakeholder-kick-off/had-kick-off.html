@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="had-kick-off" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Have you had the kick-off?</h1>
+                </legend>
+                <div id="sign-in-hint" class="govuk-hint">
+                  Check that external stakeholders have received all the
+                  documents, know who needs to complete them and when they need
+                  to be returned.
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Documents to check and important questions
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <p class="govuk-body">You should check that:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>all required documents, person responsible for
+                        completing the document and when have been shared</li>
+                      <li>the school has decided to opt into/out of RPA
+                        insurance</li>
+                      <li>ways of working have been agreed e.g. monthly progress
+                        calls</li>
+                      <li>bank details for the GAG form have been confirmed</li>
+                      <li>the grant payment amount is confirmed, some schools
+                        may have tried to convert before so they may not have
+                        the full £25,000 available
+                      </li>
+                      <li>number of high needs places is confirmed</li>
+                    </ul>
+                  </div>
+                </details>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="hadKickoff" name="hadKickoff" type="radio" value="Yes" {{ checked("hadKickoff", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="hadKickoff">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="hadKickoff-2" name="hadKickoff" type="radio" value="No" {{ checked("hadKickoff", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="hadKickoff-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

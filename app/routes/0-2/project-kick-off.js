@@ -91,4 +91,13 @@ module.exports = function (router) {
     res.redirect('check-answers')
   })
 
+
+  router.get('/' + version + '/project-kick-off/check-answers', function (req, res) {
+    res.render(version + '/project-kick-off/check-answers', {})
+  })
+
+  router.post('/' + version + '/project-kick-off/check-answers', function (req, res) {
+    res.redirect('../project-task-list')
+  })
+
 }

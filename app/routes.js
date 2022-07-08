@@ -7,6 +7,6 @@ const router = express.Router()
 
   require('./routes/0-2/routes.js')(router);
   require('./routes/0-2/project-kick-off.js')(router);
-
+  require('./routes/0-2/external-stakeholder-kick-off.js')(router);
 
 module.exports = router

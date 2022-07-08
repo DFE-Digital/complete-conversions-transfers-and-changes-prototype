@@ -10,4 +10,13 @@ module.exports = function (router) {
     res.redirect('check-grant-payment-form')
   })
 
+
+  router.get('/' + version + '/process-conversion-grant/check-grant-payment-form', function (req, res) {
+    res.render(version + '/process-conversion-grant/check-grant-payment-form', {})
+  })
+
+  router.post('/' + version + '/process-conversion-grant/check-grant-payment-form', function (req, res) {
+    res.redirect('email-form-to-ESFA')
+  })
+
 }

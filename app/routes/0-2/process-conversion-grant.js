@@ -19,4 +19,13 @@ module.exports = function (router) {
     res.redirect('email-form-to-ESFA')
   })
 
+
+  router.get('/' + version + '/process-conversion-grant/email-form-to-ESFA', function (req, res) {
+    res.render(version + '/process-conversion-grant/email-form-to-ESFA', {})
+  })
+
+  router.post('/' + version + '/process-conversion-grant/email-form-to-ESFA', function (req, res) {
+    res.redirect('check-answers')
+  })
+
 }

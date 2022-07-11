@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="clear-direction-to-transfer" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Have you cleared the
+                    direction to transfer?</h1>
+                </legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="clearDirectionToTransfer" name="clearDirectionToTransfer" type="radio" value="Yes, the direction to transfer has cleared" {{ checked("clearDirectionToTransfer", "Yes, the direction to transfer has cleared") }}>
+                    <label class="govuk-label govuk-radios__label" for="clearDirectionToTransfer">
+                      Yes, the direction to transfer has cleared
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="clearDirectionToTransfer-2" name="clearDirectionToTransfer" type="radio" value="No, I have the direction to transfer but it cannot be cleared" {{ checked("clearDirectionToTransfer", "No, I have the direction to transfer but it cannot be cleared") }}>
+                    <label class="govuk-label govuk-radios__label" for="clearDirectionToTransfer-2">
+                      No, I have the direction to transfer but it cannot be cleared
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="clearDirectionToTransfer-3" name="clearDirectionToTransfer" type="radio" value="No, I have not received the direction to transfer" {{ checked("clearDirectionToTransfer", "No, I have not received the direction to transfer") }}>
+                    <label class="govuk-label govuk-radios__label" for="clearDirectionToTransfer-3">
+                      No, I have not received the direction to transfer
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

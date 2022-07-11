@@ -28,4 +28,13 @@ module.exports = function (router) {
     res.redirect('check-answers')
   })
 
+
+  router.get('/' + version + '/process-conversion-grant/check-answers', function (req, res) {
+    res.render(version + '/process-conversion-grant/check-answers', {})
+  })
+
+  router.post('/' + version + '/process-conversion-grant/check-answers', function (req, res) {
+    res.redirect('../project-task-list')
+  })
+
 }

@@ -25,6 +25,15 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/land-questionnaire-registry-title/clear-land-registry', function (req, res) {
+    res.redirect('check-trust-modification-order')
+  })
+
+
+  router.get('/' + version + '/land-questionnaire-registry-title/check-trust-modification-order', function (req, res) {
+    res.render(version + '/land-questionnaire-registry-title/check-trust-modification-order', {})
+  })
+
+  router.post('/' + version + '/land-questionnaire-registry-title/check-trust-modification-order', function (req, res) {
     res.redirect('check-answers')
   })
 

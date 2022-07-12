@@ -34,6 +34,15 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/additional-documents/check-deed-of-novation-and-variation', function (req, res) {
+    res.redirect('check-main-funding-agreement')
+  })
+
+
+  router.get('/' + version + '/additional-documents/check-main-funding-agreement', function (req, res) {
+    res.render(version + '/additional-documents/check-main-funding-agreement', {})
+  })
+
+  router.post('/' + version + '/additional-documents/check-main-funding-agreement', function (req, res) {
     res.redirect('check-answers')
   })
 

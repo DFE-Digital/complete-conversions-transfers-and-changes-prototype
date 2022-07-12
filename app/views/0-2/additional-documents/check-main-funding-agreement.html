@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="check-main-funding-agreement" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Have you checked and
+                    cleared the Main Funding Agreement?</h1>
+                </legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkMainFundingAgreement" name="checkMainFundingAgreement" type="radio" value="Yes, the Main Funding Agreement has been cleared" {{ checked("checkMainFundingAgreement", "Yes, the Main Funding Agreement has been cleared") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkMainFundingAgreement">
+                      Yes, the Main Funding Agreement has been cleared
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkMainFundingAgreement-2" name="checkMainFundingAgreement" type="radio" value="No, the Main Funding Agreement needs changes" {{ checked("checkMainFundingAgreement", "No, the Main Funding Agreement needs changes") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkMainFundingAgreement-2">
+                      No, the Main Funding Agreement needs changes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkMainFundingAgreement-3" name="checkMainFundingAgreement" type="radio" value="No, it is not needed" {{ checked("checkMainFundingAgreement", "No, it is not needed") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkMainFundingAgreement-3">
+                      No, it is not needed
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

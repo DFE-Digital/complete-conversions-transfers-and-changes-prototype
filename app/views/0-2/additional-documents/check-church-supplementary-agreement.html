@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="check-church-supplementary-agreement" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Have you checked and
+                    cleared the Church Supplementary Agreement?</h1>
+                </legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkChurchSupplementaryAgreement" name="checkChurchSupplementaryAgreement" type="radio" value="Yes, the Church Supplementary Agreement has been cleared" {{ checked("checkChurchSupplementaryAgreement", "Yes, the Church Supplementary Agreement has been cleared") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkChurchSupplementaryAgreement">
+                      Yes, the Church Supplementary Agreement has been cleared
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkChurchSupplementaryAgreement-2" name="checkChurchSupplementaryAgreement" type="radio" value="No, the Church Supplementary Agreement needs changes" {{ checked("checkChurchSupplementaryAgreement", "No, the Church Supplementary Agreement needs changes") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkChurchSupplementaryAgreement-2">
+                      No, the Church Supplementary Agreement needs changes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkChurchSupplementaryAgreement-3" name="checkChurchSupplementaryAgreement" type="radio" value="No, it is not needed" {{ checked("checkChurchSupplementaryAgreement", "No, it is not needed") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkChurchSupplementaryAgreement-3">
+                      No, it is not needed
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

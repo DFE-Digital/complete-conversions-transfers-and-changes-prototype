@@ -10,6 +10,7 @@ const router = express.Router()
   require('./routes/0-2/external-stakeholder-kick-off.js')(router);
   require('./routes/0-2/process-conversion-grant.js')(router);
   require('./routes/0-2/local-authority-questionnaire.js')(router);
-  require('./routes/0-2/land-questionnaire-registry-title')(router);
+  require('./routes/0-2/land-questionnaire-registry-title.js')(router);
+  require('./routes/0-2/additional-documents.js')(router);
 
 module.exports = router

@@ -16,6 +16,15 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/additional-documents/check-supplementary-funding-agreement', function (req, res) {
+    res.redirect('check-church-supplementary-agreement')
+  })
+
+
+  router.get('/' + version + '/additional-documents/check-church-supplementary-agreement', function (req, res) {
+    res.render(version + '/additional-documents/check-church-supplementary-agreement', {})
+  })
+
+  router.post('/' + version + '/additional-documents/check-church-supplementary-agreement', function (req, res) {
     res.redirect('check-answers')
   })
 

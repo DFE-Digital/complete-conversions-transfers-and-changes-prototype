@@ -25,6 +25,15 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/additional-documents/check-church-supplementary-agreement', function (req, res) {
+    res.redirect('check-deed-of-novation-and-variation')
+  })
+
+
+  router.get('/' + version + '/additional-documents/check-deed-of-novation-and-variation', function (req, res) {
+    res.render(version + '/additional-documents/check-deed-of-novation-and-variation', {})
+  })
+
+  router.post('/' + version + '/additional-documents/check-deed-of-novation-and-variation', function (req, res) {
     res.redirect('check-answers')
   })
 

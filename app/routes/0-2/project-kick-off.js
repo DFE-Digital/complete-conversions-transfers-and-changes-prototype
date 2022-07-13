@@ -10,33 +10,15 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/project-kick-off/check-conversion-documents', function (req, res) {
-    res.redirect('check-academy-order')
+    res.redirect('research-and-questions-for-delivery-officer')
   })
 
 
-  router.get('/' + version + '/project-kick-off/check-academy-order', function (req, res) {
-    res.render(version + '/project-kick-off/check-academy-order', {})
+  router.get('/' + version + '/project-kick-off/research-and-questions-for-delivery-officer', function (req, res) {
+    res.render(version + '/project-kick-off/research-and-questions-for-delivery-officer', {})
   })
 
-  router.post('/' + version + '/project-kick-off/check-academy-order', function (req, res) {
-    res.redirect('check-application-to-convert')
-  })
-
-
-  router.get('/' + version + '/project-kick-off/check-application-to-convert', function (req, res) {
-    res.render(version + '/project-kick-off/check-application-to-convert', {})
-  })
-
-  router.post('/' + version + '/project-kick-off/check-application-to-convert', function (req, res) {
-    res.redirect('identify-things-to-discuss')
-  })
-
-
-  router.get('/' + version + '/project-kick-off/identify-things-to-discuss', function (req, res) {
-    res.render(version + '/project-kick-off/identify-things-to-discuss', {})
-  })
-
-  router.post('/' + version + '/project-kick-off/identify-things-to-discuss', function (req, res) {
+  router.post('/' + version + '/project-kick-off/research-and-questions-for-delivery-officer', function (req, res) {
     res.redirect('complete-handover-meeting')
   })
 

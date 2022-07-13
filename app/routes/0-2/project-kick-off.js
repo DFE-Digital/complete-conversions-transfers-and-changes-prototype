@@ -5,11 +5,11 @@ module.exports = function (router) {
 
 
 
-  router.get('/' + version + '/project-kick-off/check-trust-model-docs', function (req, res) {
-    res.render(version + '/project-kick-off/check-trust-model-docs', {})
+  router.get('/' + version + '/project-kick-off/check-conversion-documents', function (req, res) {
+    res.render(version + '/project-kick-off/check-conversion-documents', {})
   })
 
-  router.post('/' + version + '/project-kick-off/check-trust-model-docs', function (req, res) {
+  router.post('/' + version + '/project-kick-off/check-conversion-documents', function (req, res) {
     res.redirect('check-academy-order')
   })
 

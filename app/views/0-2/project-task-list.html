@@ -54,17 +54,17 @@
               <ul class="app-task-list__items">
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="project-kick-off/check-conversion-documents" aria-describedby="handover-status">
+                    <a href="project-kick-off/check-conversion-documents" aria-describedby="handoverStatus">
                       Handover with regional delivery officer</a>
                   </span>
                   {% if (data['handoverStatus'] == 'complete') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="handover-status">
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="handoverStatus">
                       Complete</strong>
                   {% elseif (data['handoverStatus'] == 'inProgress') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="handover-status">
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="handoverStatus">
                       In progress</strong>
                   {% else %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="handover-status">
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="handoverStatus">
                       Not started</strong>
                   {% endif %}
                 </li>

@@ -33,6 +33,18 @@ module.exports = function (router) {
 
 
   router.get('/' + version + '/project-kick-off/check-answers', function (req, res) {
+    const checkConversionDocuments = req.session.data['checkConversionDocuments']
+    const researchAndQuestionsForDeliveryOfficer = req.session.data['researchAndQuestionsForDeliveryOfficer']
+    const completedHandoverMeeting = req.session.data['completedHandoverMeeting']
+
+    if ( checkConversionDocuments == null ||
+      researchAndQuestionsForDeliveryOfficer == null ||
+      researchAndQuestionsForDeliveryOfficer == '' ||
+      completedHandoverMeeting == null){
+      req.session.data.handoverStatus = 'inProgress'
+    } else {
+      req.session.data.handoverStatus = 'complete'
+    }
     res.render(version + '/project-kick-off/check-answers', {})
   })
 

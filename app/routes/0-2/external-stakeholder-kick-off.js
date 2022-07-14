@@ -30,6 +30,24 @@ module.exports = function (router) {
 
 
   router.get('/' + version + '/external-stakeholder-kick-off/check-answers', function (req, res) {
+    const checkIntroductoryEmailSent = req.session.data['checkIntroductoryEmailSent']
+    const haveYouAgreedKickoffDate = req.session.data['haveYouAgreedKickoffDate']
+    const kickoffDateDay = req.session.data['kickoffDateDay']
+    const kickoffDateMonth = req.session.data['kickoffDateMonth']
+    const kickoffDateYear = req.session.data['kickoffDateYear']
+    const hadKickoff = req.session.data['hadKickoff']
+
+    if ( checkIntroductoryEmailSent == null ||
+      haveYouAgreedKickoffDate == null ||
+      kickoffDateDay == null ||
+      kickoffDateMonth == null ||
+      kickoffDateYear == null ||
+      hadKickoff == null ){
+      req.session.data.externalStakeHolderKickoffStatus = 'inProgress'
+    } else {
+      req.session.data.externalStakeHolderKickoffStatus = 'complete'
+    }
+
     res.render(version + '/external-stakeholder-kick-off/check-answers', {})
   })
 

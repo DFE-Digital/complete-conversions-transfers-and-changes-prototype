@@ -54,19 +54,35 @@
               <ul class="app-task-list__items">
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="project-kick-off/check-conversion-documents" aria-describedby="handover-status">
+                    <a href="project-kick-off/check-conversion-documents" aria-describedby="handoverStatus">
                       Handover with regional delivery officer</a>
                   </span>
-                  <strong class="govuk-tag app-task-list__tag govuk-tag--blue"
-                    id="handover-status">In progress</strong>
+                  {% if (data['handoverStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="handoverStatus">
+                      Complete</strong>
+                  {% elseif (data['handoverStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="handoverStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="handoverStatus">
+                      Not started</strong>
+                  {% endif %}
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="external-stakeholder-kick-off/check-introductory-email-sent" aria-describedby="read-declaration-status">
+                    <a href="external-stakeholder-kick-off/check-introductory-email-sent" aria-describedby="externalStakeHolderKickoff">
                       External stakeholder kick-off</a>
                   </span>
-                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
-                    id="read-declaration-status">Not started</strong>
+                  {% if (data['externalStakeHolderKickoffStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="externalStakeHolderKickoff">
+                      Complete</strong>
+                  {% elseif (data['externalStakeHolderKickoffStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="externalStakeHolderKickoff">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="externalStakeHolderKickoff">
+                      Not started</strong>
+                  {% endif %}
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">

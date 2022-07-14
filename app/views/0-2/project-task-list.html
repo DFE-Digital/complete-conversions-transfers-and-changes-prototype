@@ -70,11 +70,19 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="external-stakeholder-kick-off/check-introductory-email-sent" aria-describedby="read-declaration-status">
+                    <a href="external-stakeholder-kick-off/check-introductory-email-sent" aria-describedby="externalStakeHolderKickoff">
                       External stakeholder kick-off</a>
                   </span>
-                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
-                    id="read-declaration-status">Not started</strong>
+                  {% if (data['externalStakeHolderKickoffStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="externalStakeHolderKickoff">
+                      Complete</strong>
+                  {% elseif (data['externalStakeHolderKickoffStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="externalStakeHolderKickoff">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="externalStakeHolderKickoff">
+                      Not started</strong>
+                  {% endif %}
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">

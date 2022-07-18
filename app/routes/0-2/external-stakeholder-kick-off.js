@@ -37,12 +37,12 @@ module.exports = function (router) {
     const kickoffDateYear = req.session.data['kickoffDateYear']
     const hadKickoff = req.session.data['hadKickoff']
 
-    if ( checkIntroductoryEmailSent == null ||
-      haveYouAgreedKickoffDate == null ||
+    if ( checkIntroductoryEmailSent == 'No' ||
+      haveYouAgreedKickoffDate == 'No' ||
       kickoffDateDay == null ||
       kickoffDateMonth == null ||
       kickoffDateYear == null ||
-      hadKickoff == null ){
+      hadKickoff == 'No' ){
       req.session.data.externalStakeHolderKickoffStatus = 'inProgress'
     } else {
       req.session.data.externalStakeHolderKickoffStatus = 'complete'

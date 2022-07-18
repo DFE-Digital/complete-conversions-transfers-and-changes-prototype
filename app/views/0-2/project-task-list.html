@@ -86,19 +86,35 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="process-conversion-grant/check-vendor-account" aria-describedby="read-declaration-status">
+                    <a href="process-conversion-grant/check-vendor-account" aria-describedby="processConversionGrantStatus">
                       Process conversion grant</a>
                   </span>
-                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
-                    id="read-declaration-status">Not started</strong>
+                  {% if (data['processConversionGrantStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="processConversionGrantStatus">
+                      Complete</strong>
+                  {% elseif (data['processConversionGrantStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="processConversionGrantStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="processConversionGrantStatus">
+                      Not started</strong>
+                  {% endif %}
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="local-authority-questionnaire/check-local-authority-questionnaire" aria-describedby="read-declaration-status">
+                    <a href="local-authority-questionnaire/check-local-authority-questionnaire" aria-describedby="localAuthorityQuestionnaireStatus">
                       Get local authority questionnaire</a>
                   </span>
-                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
-                    id="read-declaration-status">Not started</strong>
+                  {% if (data['localAuthorityQuestionnaireStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="localAuthorityQuestionnaireStatus">
+                      Complete</strong>
+                  {% elseif (data['localAuthorityQuestionnaireStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="localAuthorityQuestionnaireStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="localAuthorityQuestionnaireStatus">
+                      Not started</strong>
+                  {% endif %}
                 </li>
               </ul>
             </li>
@@ -111,19 +127,35 @@
               <ul class="app-task-list__items">
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="land-questionnaire-registry-title/check-land-questionnaire" aria-describedby="land-questionnaire-registry-title-status">
+                    <a href="land-questionnaire-registry-title/check-land-questionnaire" aria-describedby="landQuestionnaireStatus">
                       Land questionnaire and land registry title</a>
                   </span>
-                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
-                    id="land-questionnaire-registry-title-status">Not started</strong>
+                  {% if (data['landQuestionnaireStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="landQuestionnaireStatus">
+                      Complete</strong>
+                  {% elseif (data['landQuestionnaireStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="landQuestionnaireStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="landQuestionnaireStatus">
+                      Not started</strong>
+                  {% endif %}
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="additional-documents/check-articles-of-association" aria-describedby="list-convictions-status">
+                    <a href="additional-documents/check-articles-of-association" aria-describedby="additionalDocumentsStatus">
                       Additional documents</a>
                   </span>
-                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag"
-                    id="list-convictions-status">Not started</strong>
+                  {% if (data['additionalDocumentsStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="additionalDocumentsStatus">
+                      Complete</strong>
+                  {% elseif (data['additionalDocumentsStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="additionalDocumentsStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="additionalDocumentsStatus">
+                      Not started</strong>
+                  {% endif %}
                 </li>
               </ul>
             </li>

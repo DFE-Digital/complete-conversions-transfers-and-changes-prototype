@@ -37,10 +37,12 @@ module.exports = function (router) {
     const researchAndQuestionsForDeliveryOfficer = req.session.data['researchAndQuestionsForDeliveryOfficer']
     const completedHandoverMeeting = req.session.data['completedHandoverMeeting']
 
-    if ( checkConversionDocuments == null ||
+    // checkSupplementaryFundingAgreement != 'Yes, the Supplementary Funding Agreement has been cleared'
+
+    if ( checkConversionDocuments == 'No' ||
       researchAndQuestionsForDeliveryOfficer == null ||
       researchAndQuestionsForDeliveryOfficer == '' ||
-      completedHandoverMeeting == null){
+      completedHandoverMeeting == 'No'){
       req.session.data.handoverStatus = 'inProgress'
     } else {
       req.session.data.handoverStatus = 'complete'

@@ -11,6 +11,14 @@ module.exports = function (router) {
   })
 
   router.get('/' + version + '/local-authority-questionnaire/check-answers', function (req, res) {
+    const checkLocalAuthorityQuestionnaire = req.session.data['checkLocalAuthorityQuestionnaire']
+
+    if ( checkLocalAuthorityQuestionnaire == 'No' ){
+      req.session.data.localAuthorityQuestionnaireStatus = 'inProgress'
+    } else {
+      req.session.data.localAuthorityQuestionnaireStatus = 'complete'
+    }
+
     res.render(version + '/local-authority-questionnaire/check-answers', {})
   })
 

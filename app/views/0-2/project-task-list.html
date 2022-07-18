@@ -105,8 +105,16 @@
                     <a href="local-authority-questionnaire/check-local-authority-questionnaire" aria-describedby="read-declaration-status">
                       Get local authority questionnaire</a>
                   </span>
-                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
-                    id="read-declaration-status">Not started</strong>
+                  {% if (data['localAuthorityQuestionnaireStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="localAuthorityQuestionnaireStatus">
+                      Complete</strong>
+                  {% elseif (data['localAuthorityQuestionnaireStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="localAuthorityQuestionnaireStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="localAuthorityQuestionnaireStatus">
+                      Not started</strong>
+                  {% endif %}
                 </li>
               </ul>
             </li>

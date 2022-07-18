@@ -102,7 +102,7 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="local-authority-questionnaire/check-local-authority-questionnaire" aria-describedby="read-declaration-status">
+                    <a href="local-authority-questionnaire/check-local-authority-questionnaire" aria-describedby="localAuthorityQuestionnaireStatus">
                       Get local authority questionnaire</a>
                   </span>
                   {% if (data['localAuthorityQuestionnaireStatus'] == 'complete') %}
@@ -127,11 +127,19 @@
               <ul class="app-task-list__items">
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="land-questionnaire-registry-title/check-land-questionnaire" aria-describedby="land-questionnaire-registry-title-status">
+                    <a href="land-questionnaire-registry-title/check-land-questionnaire" aria-describedby="landQuestionnaireStatus">
                       Land questionnaire and land registry title</a>
                   </span>
-                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
-                    id="land-questionnaire-registry-title-status">Not started</strong>
+                  {% if (data['landQuestionnaireStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="landQuestionnaireStatus">
+                      Complete</strong>
+                  {% elseif (data['landQuestionnaireStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="landQuestionnaireStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="landQuestionnaireStatus">
+                      Not started</strong>
+                  {% endif %}
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">

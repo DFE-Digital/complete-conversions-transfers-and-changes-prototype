@@ -25,15 +25,15 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/land-questionnaire-registry-title/clear-land-registry', function (req, res) {
-    res.redirect('check-trust-modification-order')
+    res.redirect('clear-trust-modification-order')
   })
 
 
-  router.get('/' + version + '/land-questionnaire-registry-title/check-trust-modification-order', function (req, res) {
-    res.render(version + '/land-questionnaire-registry-title/check-trust-modification-order', {})
+  router.get('/' + version + '/land-questionnaire-registry-title/clear-trust-modification-order', function (req, res) {
+    res.render(version + '/land-questionnaire-registry-title/clear-trust-modification-order', {})
   })
 
-  router.post('/' + version + '/land-questionnaire-registry-title/check-trust-modification-order', function (req, res) {
+  router.post('/' + version + '/land-questionnaire-registry-title/clear-trust-modification-order', function (req, res) {
     res.redirect('clear-direction-to-transfer')
   })
 
@@ -48,6 +48,22 @@ module.exports = function (router) {
 
 
   router.get('/' + version + '/land-questionnaire-registry-title/check-answers', function (req, res) {
+    const checkLandQuestionnaire = req.session.data['checkLandQuestionnaire']
+    const clearLandQuestionnaire = req.session.data['clearLandQuestionnaire']
+    const clearLandRegistry = req.session.data['clearLandRegistry']
+    const clearTrustModificationOrder = req.session.data['clearTrustModificationOrder']
+    const clearDirectionToTransfer = req.session.data['clearDirectionToTransfer']
+
+    if ( checkLandQuestionnaire == 'No' ||
+      clearLandQuestionnaire == 'No' ||
+      clearLandRegistry != 'Yes, registry title plans have been cleared' ||
+      clearTrustModificationOrder != 'Yes, the Trust Modification Order has been cleared' ||
+      clearDirectionToTransfer != 'Yes, the direction to transfer has cleared'){
+      req.session.data.landQuestionnaireStatus = 'inProgress'
+    } else {
+      req.session.data.landQuestionnaireStatus = 'complete'
+    }
+
     res.render(version + '/land-questionnaire-registry-title/check-answers', {})
   })
 

@@ -30,6 +30,17 @@ module.exports = function (router) {
 
 
   router.get('/' + version + '/process-conversion-grant/check-answers', function (req, res) {
+    const checkVendorAccount = req.session.data['checkVendorAccount']
+    const checkGrantPaymentForm = req.session.data['checkGrantPaymentForm']
+    const checkEmailEsfa = req.session.data['checkEmailEsfa']
+
+    if ( checkVendorAccount == 'No' ||
+      checkGrantPaymentForm == 'No' ||
+      checkEmailEsfa == 'No'){
+      req.session.data.processConversionGrantStatus = 'inProgress'
+    } else {
+      req.session.data.processConversionGrantStatus = 'complete'
+    }
     res.render(version + '/process-conversion-grant/check-answers', {})
   })
 

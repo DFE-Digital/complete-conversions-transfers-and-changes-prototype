@@ -86,11 +86,19 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="process-conversion-grant/check-vendor-account" aria-describedby="read-declaration-status">
+                    <a href="process-conversion-grant/check-vendor-account" aria-describedby="processConversionGrantStatus">
                       Process conversion grant</a>
                   </span>
-                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
-                    id="read-declaration-status">Not started</strong>
+                  {% if (data['processConversionGrantStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="processConversionGrantStatus">
+                      Complete</strong>
+                  {% elseif (data['processConversionGrantStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="processConversionGrantStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="processConversionGrantStatus">
+                      Not started</strong>
+                  {% endif %}
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">

@@ -143,11 +143,19 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="additional-documents/check-articles-of-association" aria-describedby="list-convictions-status">
+                    <a href="additional-documents/check-articles-of-association" aria-describedby="additionalDocumentsStatus">
                       Additional documents</a>
                   </span>
-                  <strong class="govuk-tag govuk-tag--grey app-task-list__tag"
-                    id="list-convictions-status">Not started</strong>
+                  {% if (data['additionalDocumentsStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="additionalDocumentsStatus">
+                      Complete</strong>
+                  {% elseif (data['additionalDocumentsStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="additionalDocumentsStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="additionalDocumentsStatus">
+                      Not started</strong>
+                  {% endif %}
                 </li>
               </ul>
             </li>

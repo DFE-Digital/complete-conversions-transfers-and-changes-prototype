@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="research-and-questions-for-delivery-officer" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading" for="researchAndQuestionsForDeliveryOfficer">
+                    Preliminary research and questions for the regional delivery
+                    officer</h1>
+                </legend>
+                <div id="changed-name-hint" class="govuk-hint">
+                  It's a good idea to do some preliminary research about your
+                  school. Note any questions you have for the regional delivery
+                  officer.
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Common things to check
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>Which version of the model documents is the school is
+                        using?</li>
+                      <li>Do the land arrangements look simple on Google Maps?</li>
+                      <li>Are there any Advisory Board conditions?</li>
+                    </ul>
+                  </div>
+                </details>
+                <textarea class="govuk-textarea" id="researchAndQuestionsForDeliveryOfficer" name="researchAndQuestionsForDeliveryOfficer" rows="10" aria-describedby="more-detail-hint" >{{data['researchAndQuestionsForDeliveryOfficer']}}</textarea>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

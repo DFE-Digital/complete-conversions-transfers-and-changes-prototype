@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="check-conversion-documents" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Have you checked all the
+                    documents from the regional delivery officer?</h1>
+                </legend>
+                <div id="sign-in-hint" class="govuk-hint">
+                  Check there are no errors or any missing information in the
+                  documents.
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    Examples of conversion documents
+                  </summary>
+                  <div class="govuk-details__text">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>Academy Order</li>
+                      <li>Application to convert</li>
+                      <li>Articles of association</li>
+                      <li>Model Documents</li>
+                    </ul>
+                  </span>
+                  </div>
+                </details>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkConversionDocuments" name="checkConversionDocuments" type="radio" value="Yes, all required documents are correct" {{ checked("checkConversionDocuments", "Yes, all required documents are correct") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkConversionDocuments">
+                      Yes, all required documents are correct
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkConversionDocuments-2" name="checkConversionDocuments" type="radio" value="Yes, but some documents are missing or have errors" {{ checked("checkConversionDocuments", "Yes, but some documents are missing or have errors") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkConversionDocuments-2">
+                      Yes, but some documents are missing or have errors
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkConversionDocuments-3" name="checkConversionDocuments" type="radio" value="No" {{ checked("checkConversionDocuments", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkConversionDocuments-3">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

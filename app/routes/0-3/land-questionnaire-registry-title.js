@@ -58,7 +58,7 @@ module.exports = function (router) {
       clearLandQuestionnaire == 'No' ||
       clearLandRegistry != 'Yes, registry title plans have been cleared' ||
       clearTrustModificationOrder != 'Yes, the Trust modification order has been cleared' ||
-      clearDirectionToTransfer != 'Yes, the direction to transfer has cleared'){
+      clearDirectionToTransfer != 'Yes, the Direction to transfer has cleared'){
       req.session.data.landQuestionnaireStatus = 'inProgress'
     } else {
       req.session.data.landQuestionnaireStatus = 'complete'

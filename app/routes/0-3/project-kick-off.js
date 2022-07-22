@@ -34,7 +34,7 @@ module.exports = function (router) {
     const researchAndQuestionsForDeliveryOfficer = req.session.data['researchAndQuestionsForDeliveryOfficer']
     const completedHandoverMeeting = req.session.data['completedHandoverMeeting']
 
-    // checkSupplementaryFundingAgreement != 'Yes, the Supplementary Funding Agreement has been cleared'
+    // checkSupplementaryFundingAgreement != 'Yes, the Supplementary funding agreement has been cleared'
 
     if ( checkConversionDocuments == 'No' ||
       researchAndQuestionsForDeliveryOfficer == null ||

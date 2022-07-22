@@ -16,15 +16,15 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/land-questionnaire-registry-title/clear-land-questionnaire', function (req, res) {
-    res.redirect('clear-land-registry')
+    res.redirect('clear-title-plans')
   })
 
 
-  router.get('/' + version + '/land-questionnaire-registry-title/clear-land-registry', function (req, res) {
-    res.render(version + '/land-questionnaire-registry-title/clear-land-registry', {})
+  router.get('/' + version + '/land-questionnaire-registry-title/clear-title-plans', function (req, res) {
+    res.render(version + '/land-questionnaire-registry-title/clear-title-plans', {})
   })
 
-  router.post('/' + version + '/land-questionnaire-registry-title/clear-land-registry', function (req, res) {
+  router.post('/' + version + '/land-questionnaire-registry-title/clear-title-plans', function (req, res) {
     res.redirect('clear-trust-modification-order')
   })
 
@@ -56,9 +56,9 @@ module.exports = function (router) {
 
     if ( checkLandQuestionnaire == 'No' ||
       clearLandQuestionnaire == 'No' ||
-      clearLandRegistry != 'Yes, registry title plans have been cleared' ||
-      clearTrustModificationOrder != 'Yes, the Trust Modification Order has been cleared' ||
-      clearDirectionToTransfer != 'Yes, the direction to transfer has cleared'){
+      clearLandRegistry != 'Yes, registry Title plans have been cleared' ||
+      clearTrustModificationOrder != 'Yes, the Trust modification order has been cleared' ||
+      clearDirectionToTransfer != 'Yes, the Direction to transfer has cleared'){
       req.session.data.landQuestionnaireStatus = 'inProgress'
     } else {
       req.session.data.landQuestionnaireStatus = 'complete'

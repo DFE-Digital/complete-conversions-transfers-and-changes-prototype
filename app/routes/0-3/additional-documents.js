@@ -55,7 +55,7 @@ module.exports = function (router) {
     const checkMainFundingAgreement = req.session.data['checkMainFundingAgreement']
 
     if ( checkArticlesOfAssociation != 'Yes, the Articles of association have been cleared' ||
-      checkSupplementaryFundingAgreement != 'Yes, the Supplementary Funding Agreement has been cleared' ||
+      checkSupplementaryFundingAgreement != 'Yes, the Supplementary funding agreement has been cleared' ||
       checkChurchSupplementaryAgreement != 'Yes, the Church Supplementary Agreement has been cleared' ||
       checkDeedOfNovationAndVariation != 'Yes, the Deed of Novation and Variation has been cleared' ||
       checkMainFundingAgreement != 'Yes, the Main Funding Agreement has been cleared'){

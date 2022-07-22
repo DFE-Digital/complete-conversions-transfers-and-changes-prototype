@@ -3,7 +3,7 @@
   .govuk-summary-list__value{ width:64%; font-weight: normal;}
   .govuk-summary-list__actions{ width:36%; text-align: right;}
   .govuk-heading-m.govuk-heading-m--school-name{
-    span{color: $govuk-secondary-text-colour; font-weight: normal;}
+      margin-bottom: 10px;
   }
 
   .govuk-summary-list__project-type{text-transform: uppercase; font-weight: bold;}

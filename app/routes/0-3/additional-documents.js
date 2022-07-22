@@ -57,7 +57,7 @@ module.exports = function (router) {
     if ( checkArticlesOfAssociation != 'Yes, the Articles of association have been cleared' ||
       checkSupplementaryFundingAgreement != 'Yes, the Supplementary funding agreement has been cleared' ||
       checkChurchSupplementaryAgreement != 'Yes, the Church supplementary agreement has been cleared' ||
-      checkDeedOfNovationAndVariation != 'Yes, the Deed of Novation and Variation has been cleared' ||
+      checkDeedOfNovationAndVariation != 'Yes, the Deed of novation and variation has been cleared' ||
       checkMainFundingAgreement != 'Yes, the Main Funding Agreement has been cleared'){
       req.session.data.additionalDocumentsStatus = 'inProgress'
     } else {

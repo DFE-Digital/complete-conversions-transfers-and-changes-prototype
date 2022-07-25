@@ -13,11 +13,9 @@ const router = express.Router()
   require('./routes/0-2/land-questionnaire-registry-title.js')(router);
   require('./routes/0-2/additional-documents.js')(router);
 
-  require('./routes/0-3/routes.js')(router);
   require('./routes/0-3/project-kick-off.js')(router);
   require('./routes/0-3/external-stakeholder-kick-off.js')(router);
   require('./routes/0-3/process-conversion-grant.js')(router);
-  require('./routes/0-3/local-authority-proforma.js')(router);
   require('./routes/0-3/land-questionnaire-registry-title.js')(router);
   require('./routes/0-3/additional-documents.js')(router);
 

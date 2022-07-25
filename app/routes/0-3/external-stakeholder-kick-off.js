@@ -25,6 +25,15 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/external-stakeholder-kick-off/had-kick-off', function (req, res) {
+    res.redirect('had-local-authority-kick-off')
+  })
+
+
+  router.get('/' + version + '/external-stakeholder-kick-off/had-local-authority-kick-off', function (req, res) {
+    res.render(version + '/external-stakeholder-kick-off/had-local-authority-kick-off', {})
+  })
+
+  router.post('/' + version + '/external-stakeholder-kick-off/had-local-authority-kick-off', function (req, res) {
     res.redirect('check-answers')
   })
 

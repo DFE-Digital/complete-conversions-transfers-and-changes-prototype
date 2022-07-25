@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="had-local-authority-kick-off" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Have you had the local
+                    authority kick-off meeting?</h1>
+                </legend>
+                <div id="sign-in-hint" class="govuk-hint">
+                  Check that the local authority have received the land
+                  questionnaire and agree to the conversion date.
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="hadLocalAuthorityKickoff" name="hadLocalAuthorityKickoff" type="radio" value="Yes" {{ checked("hadLocalAuthorityKickoff", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="hadLocalAuthorityKickoff">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="hadLocalAuthorityKickoff-2" name="hadLocalAuthorityKickoff" type="radio" value="No" {{ checked("hadLocalAuthorityKickoff", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="hadLocalAuthorityKickoff-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

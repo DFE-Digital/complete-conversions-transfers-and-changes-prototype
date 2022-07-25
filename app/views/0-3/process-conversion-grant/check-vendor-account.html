@@ -22,14 +22,26 @@
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <span class="govuk-caption-l">St. Wilfred's Primary School</span>
-                  <h1 class="govuk-fieldset__heading">Does the trust have a
-                    vendor account?</h1>
+                  <h1 class="govuk-fieldset__heading">Does the school or trust
+                    have a vendor account?</h1>
                 </legend>
-                <p class="govuk-body"> Trusts need to have a vendor account so
-                  that they can be paid their conversion grant. <a href="https://educationgovuk.sharepoint.com/sites/lvedfe00083/SitePages/Set-up-and-mainta.aspx" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                <p class="govuk-body"> Whoever is receiving the conversion
+                  grant will need to have a vendor account. <a href="https://educationgovuk.sharepoint.com/sites/lvedfe00083/SitePages/Set-up-and-mainta.aspx" class="govuk-link" rel="noreferrer noopener" target="_blank">
                   You can check all the vendor accounts (opens in new tab)</a>.</p>
-                <p class="govuk-body">Schools can <a href="https://www.gov.uk/guidance/provide-information-about-your-banking-and-payments-to-dfe" class="govuk-link" rel="noreferrer noopener" target="_blank">
-                  use this service</a> to set up a vendor account.</p>
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        Help setting up a vendor account
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      <p class="govuk-body">You can send the school or trust a link to
+                        the <a href="https://www.gov.uk/guidance/provide-information-about-your-banking-and-payments-to-dfe" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                        Provide information about your banking and payments to DfE
+                        (opens in new tab)</a> service so that they can
+                        set up a vendor account.</p>
+                    </div>
+                  </details>
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="checkVendorAccount" name="checkVendorAccount" type="radio" value="Yes" {{ checked("checkVendorAccount", "Yes") }}>

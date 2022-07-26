@@ -25,15 +25,15 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/additional-documents/check-church-supplementary-agreement', function (req, res) {
-    res.redirect('check-deed-of-novation-and-variation')
+    res.redirect('check-deed-of-variation')
   })
 
 
-  router.get('/' + version + '/additional-documents/check-deed-of-novation-and-variation', function (req, res) {
-    res.render(version + '/additional-documents/check-deed-of-novation-and-variation', {})
+  router.get('/' + version + '/additional-documents/check-deed-of-variation', function (req, res) {
+    res.render(version + '/additional-documents/check-deed-of-variation', {})
   })
 
-  router.post('/' + version + '/additional-documents/check-deed-of-novation-and-variation', function (req, res) {
+  router.post('/' + version + '/additional-documents/check-deed-of-variation', function (req, res) {
     res.redirect('check-main-funding-agreement')
   })
 
@@ -51,13 +51,13 @@ module.exports = function (router) {
     const checkArticlesOfAssociation = req.session.data['checkArticlesOfAssociation']
     const checkSupplementaryFundingAgreement = req.session.data['checkSupplementaryFundingAgreement']
     const checkChurchSupplementaryAgreement = req.session.data['checkChurchSupplementaryAgreement']
-    const checkDeedOfNovationAndVariation = req.session.data['checkDeedOfNovationAndVariation']
+    const checkDeedOfVariation = req.session.data['checkDeedOfVariation']
     const checkMainFundingAgreement = req.session.data['checkMainFundingAgreement']
 
     if ( checkArticlesOfAssociation != 'Yes, the Articles of association have been cleared' ||
       checkSupplementaryFundingAgreement != 'Yes, the Supplementary funding agreement has been cleared' ||
       checkChurchSupplementaryAgreement != 'Yes, the Church supplementary agreement has been cleared' ||
-      checkDeedOfNovationAndVariation != 'Yes, the Deed of novation and variation has been cleared' ||
+      checkDeedOfVariation != 'Yes, the Deed of variation has been cleared' ||
       checkMainFundingAgreement != 'Yes, the Main funding agreement has been cleared'){
       req.session.data.additionalDocumentsStatus = 'inProgress'
     } else {

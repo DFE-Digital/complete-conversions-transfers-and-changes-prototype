@@ -25,6 +25,11 @@
                   <h1 class="govuk-fieldset__heading">Have you cleared the
                     Direction to transfer?</h1>
                 </legend>
+                <div id="changed-name-hint" class="govuk-hint">
+                  Only foundation schools may need a direction to transfer, you
+                  can check this information on the <a href="https://www.get-information-schools.service.gov.uk/Search" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                    Get Information About Schools service (opens in new tab)</a>.
+                </div>
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="clearDirectionToTransfer" name="clearDirectionToTransfer" type="radio" value="Yes, the Direction to transfer has cleared" {{ checked("clearDirectionToTransfer", "Yes, the Direction to transfer has cleared") }}>

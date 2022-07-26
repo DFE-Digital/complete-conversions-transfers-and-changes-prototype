@@ -25,6 +25,27 @@
                   <h1 class="govuk-fieldset__heading">Have you checked and
                     cleared the Church supplementary agreement?</h1>
                 </legend>
+                <div class="govuk-hint">This document is only required for
+                  Church of England and Catholic schools.
+                  <a href="https://www.gov.uk/government/collections/convert-to-an-academy-documents-for-schools" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                  View original copies of the model documents (opens in new tab)</a>
+                  and refer any complicated articles to the policy team.</div>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Help checking model documents
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <p class="govuk-body">Compare the original and school
+                      model documents. Changes that personalise the model
+                      documents to a school or trust and the removal/inclusion
+                      of optional clauses are expected.</p>
+                    <p class="govuk-body">Wording of clauses should not change,
+                      if this has happened then you may need to refer the
+                      document to policy.</p>
+                  </div>
+                </details>
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="checkChurchSupplementaryAgreement" name="checkChurchSupplementaryAgreement" type="radio" value="Yes, the Church supplementary agreement has been cleared" {{ checked("checkChurchSupplementaryAgreement", "Yes, the Church supplementary agreement has been cleared") }}>

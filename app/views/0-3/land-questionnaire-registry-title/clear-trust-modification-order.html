@@ -25,17 +25,34 @@
                   <h1 class="govuk-fieldset__heading">Has the Trust modification
                     order been cleared?</h1>
                 </legend>
+                <div id="changed-name-hint" class="govuk-hint">
+                  The land questionnaire will state if a Trust modification
+                  order is needed.
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Help checking the Trust modification order
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <p class="govuk-body">You will need to send the Trust
+                      modification order to the legal department with a copy of
+                      the original deed so that it can be cleared. It can take
+                      a number of weeks to hear back from the legal team.</p>
+                  </div>
+                </details>
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="clearTrustModificationOrder" name="clearTrustModificationOrder" type="radio" value="Yes, the Trust modification order has been cleared" {{ checked("clearTrustModificationOrder", "Yes, the Trust modification order has been cleared") }}>
+                    <input class="govuk-radios__input" id="clearTrustModificationOrder" name="clearTrustModificationOrder" type="radio" value="Yes the legal team has cleared the Trust modification order" {{ checked("clearTrustModificationOrder", "Yes the legal team has cleared the Trust modification order") }}>
                     <label class="govuk-label govuk-radios__label" for="clearTrustModificationOrder">
-                      Yes, the Trust modification order has been cleared
+                      Yes the legal team has cleared the Trust modification order
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="clearTrustModificationOrder-2" name="clearTrustModificationOrder" type="radio" value="Yes, but the Trust modification order needs changes" {{ checked("clearTrustModificationOrder", "Yes, but the Trust modification order needs changes") }}>
+                    <input class="govuk-radios__input" id="clearTrustModificationOrder-2" name="clearTrustModificationOrder" type="radio" value="No, the trust modification order is being cleared/needs changes" {{ checked("clearTrustModificationOrder", "No, the trust modification order is being cleared/needs changes") }}>
                     <label class="govuk-label govuk-radios__label" for="clearTrustModificationOrder-2">
-                      No, the Trust modification order needs changes
+                      No, the trust modification order is being cleared/needs changes
                     </label>
                   </div>
                   <div class="govuk-radios__item">

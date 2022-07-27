@@ -18,5 +18,8 @@ const router = express.Router()
   require('./routes/0-3/process-conversion-grant.js')(router);
   require('./routes/0-3/land-questionnaire-registry-title.js')(router);
   require('./routes/0-3/additional-documents.js')(router);
+  require('./routes/0-3/routes.js')(router);
+
+
 
 module.exports = router

@@ -3,7 +3,13 @@ module.exports = function (router) {
   var version = "0-3";
 
   router.get('/' + version + '/process-conversion-grant/check-vendor-account', function (req, res) {
-    res.render(version + '/process-conversion-grant/check-vendor-account', {})
+    const journeyType = req.session.data['journeyType']
+
+    if (journeyType == 'singlePage'){
+      res.redirect('single-page-questions')
+    } else {
+      res.render(version + '/process-conversion-grant/check-vendor-account', {})
+    }
   })
 
   router.post('/' + version + '/process-conversion-grant/check-vendor-account', function (req, res) {
@@ -45,6 +51,26 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/process-conversion-grant/check-answers', function (req, res) {
+    res.redirect('../project-task-list')
+  })
+
+
+  router.get('/' + version + '/process-conversion-grant/single-page-questions', function (req, res) {
+    res.render(version + '/process-conversion-grant/single-page-questions', {})
+  })
+
+  router.post('/' + version + '/process-conversion-grant/single-page-questions', function (req, res) {
+    const checkVendorAccount = req.session.data['checkVendorAccount']
+    const checkGrantPaymentForm = req.session.data['checkGrantPaymentForm']
+    const checkEmailEsfa = req.session.data['checkEmailEsfa']
+
+    if ( checkVendorAccount == 'No' ||
+      checkGrantPaymentForm == 'No' ||
+      checkEmailEsfa == 'No'){
+      req.session.data.processConversionGrantStatus = 'inProgress'
+    } else {
+      req.session.data.processConversionGrantStatus = 'complete'
+    }
     res.redirect('../project-task-list')
   })
 

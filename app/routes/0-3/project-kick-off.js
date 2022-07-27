@@ -3,7 +3,13 @@ module.exports = function (router) {
   var version = "0-3";
 
   router.get('/' + version + '/project-kick-off/check-conversion-documents', function (req, res) {
-    res.render(version + '/project-kick-off/check-conversion-documents', {})
+    const journeyType = req.session.data['journeyType']
+
+    if (journeyType == 'singlePage'){
+      res.redirect('single-page-questions')
+    } else {
+      res.render(version + '/project-kick-off/check-conversion-documents', {})
+    }
   })
 
   router.post('/' + version + '/project-kick-off/check-conversion-documents', function (req, res) {
@@ -48,6 +54,15 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/project-kick-off/check-answers', function (req, res) {
+    res.redirect('../project-task-list')
+  })
+
+
+  router.get('/' + version + '/project-kick-off/single-page-questions', function (req, res) {
+    res.render(version + '/project-kick-off/single-page-questions', {})
+  })
+
+  router.post('/' + version + '/project-kick-off/single-page-questions', function (req, res) {
     res.redirect('../project-task-list')
   })
 

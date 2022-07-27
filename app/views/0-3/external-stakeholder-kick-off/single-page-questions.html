@@ -1,0 +1,237 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+              <h1 class="govuk-heading-xl">Handover with regional delivery
+                officer</h1>
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Have you sent the
+                    introduction emails?</h1>
+                </legend>
+                <p class="govul-body">
+                  Kick off and introduction emails should be sent to the trust,
+                  school and their solicitors. You may want to contact local
+                  authorities separately.
+                </p>
+                <div class="govuk-hint">
+                  They should include documents that they will
+                  need to complete as well as any dates for milestones.
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Recommended content for kick-off emails
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <p class="govuk-body">Emails should include:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>attached documents that external stakeholders will
+                        need to complete and return</li>
+                      <li>a list of which stakeholder should complete each
+                        document, with an appropriate due date</li>
+                      <li>a project end date and a list of key dates or
+                        milestones</li>
+                      <li>explain ways of working such as monthly progress calls</li>
+                      <li>link to forms or website that need completing such as
+                        the vendor account form</li>
+                      <li>an explanation that bank details submitted by the
+                        vendor account form are only valid for 4 months</li>
+                      <li>some options for when the kick-off call could happen</li>
+                    </ul>
+                  </div>
+                </details>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkIntroductoryEmailSent" name="checkIntroductoryEmailSent" type="radio" value="Yes" {{ checked("checkIntroductoryEmailSent", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkIntroductoryEmailSent">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkIntroductoryEmailSent-2" name="checkIntroductoryEmailSent" type="radio" value="No" {{ checked("checkIntroductoryEmailSent", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkIntroductoryEmailSent-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Have you agreed a date
+                    for the kick-off?</h1>
+                </legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="haveYouAgreedKickoffDate" name="haveYouAgreedKickoffDate" type="radio" value="Yes" data-aria-controls="conditional-haveYouAgreedKickoffDate">
+                    <label class="govuk-label govuk-radios__label" for="haveYouAgreedKickoffDate">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-haveYouAgreedKickoffDate">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="kickoffDate">
+                        What is the date for the kick-off call?
+                      </label>
+                      <div id="kickoffDate-hint" class="govuk-hint">
+                        For example, 27 3 2007
+                      </div>
+                      <div class="govuk-date-input" id="kickoffDate">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="kickoffDateDay">
+                              Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="kickoffDateDay" name="kickoffDateDay" type="text" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="kickoffDateMonth">
+                              Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="kickoffDateMonth" name="kickoffDateMonth" type="text" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="kickoffDateYear">
+                              Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="kickoffDateYear" name="kickoffDateYear" type="text" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="haveYouAgreedKickoffDate-2" name="haveYouAgreedKickoffDate" type="radio" value="No" data-aria-controls="conditional-haveYouAgreedKickoffDate-2">
+                    <label class="govuk-label govuk-radios__label" for="haveYouAgreedKickoffDate-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Have you had the school
+                    and trust kick-off meeting?</h1>
+                </legend>
+                <div id="sign-in-hint" class="govuk-hint">
+                  Check that external stakeholders have received all the
+                  documents, know who needs to complete them and when they need
+                  to be returned.
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Documents to check and important questions
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <p class="govuk-body">You should check that:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>all required documents, person responsible for
+                        completing the document and when have been shared</li>
+                      <li>the school has decided to opt into/out of Risk
+                        Protection Agreement insurance</li>
+                      <li>ways of working have been agreed e.g. monthly progress
+                        calls</li>
+                      <li>bank details have been submitted for the conversion
+                        grant (if applicable)</li>
+                      <li>the grant payment amount is confirmed, some schools
+                        may have tried to convert before so they may not have
+                        the full £25,000 available
+                      </li>
+                      <li>schools/trusts will need to submit bank details
+                        separately for the General annual grant payment</li>
+                      <li>number of high needs places is confirmed</li>
+                    </ul>
+                  </div>
+                </details>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="hadKickoff" name="hadKickoff" type="radio" value="Yes" {{ checked("hadKickoff", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="hadKickoff">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="hadKickoff-2" name="hadKickoff" type="radio" value="No" {{ checked("hadKickoff", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="hadKickoff-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Have you had the local
+                    authority kick-off meeting?</h1>
+                </legend>
+                <div id="sign-in-hint" class="govuk-hint">
+                  Check that the local authority have received the land
+                  questionnaire and agree to the conversion date.
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="hadLocalAuthorityKickoff" name="hadLocalAuthorityKickoff" type="radio" value="Yes" {{ checked("hadLocalAuthorityKickoff", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="hadLocalAuthorityKickoff">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="hadLocalAuthorityKickoff-2" name="hadLocalAuthorityKickoff" type="radio" value="No" {{ checked("hadLocalAuthorityKickoff", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="hadLocalAuthorityKickoff-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

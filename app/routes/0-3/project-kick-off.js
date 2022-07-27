@@ -63,6 +63,20 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/project-kick-off/single-page-questions', function (req, res) {
+    const checkConversionDocuments = req.session.data['checkConversionDocuments']
+    const researchAndQuestionsForDeliveryOfficer = req.session.data['researchAndQuestionsForDeliveryOfficer']
+    const completedHandoverMeeting = req.session.data['completedHandoverMeeting']
+
+    // checkSupplementaryFundingAgreement != 'Yes, the Supplementary funding agreement has been cleared'
+
+    if ( checkConversionDocuments == 'No' ||
+      researchAndQuestionsForDeliveryOfficer == null ||
+      researchAndQuestionsForDeliveryOfficer == '' ||
+      completedHandoverMeeting == 'No'){
+      req.session.data.handoverStatus = 'inProgress'
+    } else {
+      req.session.data.handoverStatus = 'complete'
+    }
     res.redirect('../project-task-list')
   })
 

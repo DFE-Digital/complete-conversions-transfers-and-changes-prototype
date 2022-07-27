@@ -3,7 +3,13 @@ module.exports = function (router) {
   var version = "0-3";
 
   router.get('/' + version + '/external-stakeholder-kick-off/check-introductory-email-sent', function (req, res) {
-    res.render(version + '/external-stakeholder-kick-off/check-introductory-email-sent', {})
+    const journeyType = req.session.data['journeyType']
+
+    if (journeyType == 'singlePage'){
+      res.redirect('single-page-questions')
+    } else {
+      res.render(version + '/external-stakeholder-kick-off/check-introductory-email-sent', {})
+    }
   })
 
   router.post('/' + version + '/external-stakeholder-kick-off/check-introductory-email-sent', function (req, res) {
@@ -61,6 +67,32 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/external-stakeholder-kick-off/check-answers', function (req, res) {
+    res.redirect('../project-task-list')
+  })
+
+
+  router.get('/' + version + '/external-stakeholder-kick-off/single-page-questions', function (req, res) {
+    res.render(version + '/external-stakeholder-kick-off/single-page-questions', {})
+  })
+
+  router.post('/' + version + '/external-stakeholder-kick-off/single-page-questions', function (req, res) {
+    const checkIntroductoryEmailSent = req.session.data['checkIntroductoryEmailSent']
+    const haveYouAgreedKickoffDate = req.session.data['haveYouAgreedKickoffDate']
+    const kickoffDateDay = req.session.data['kickoffDateDay']
+    const kickoffDateMonth = req.session.data['kickoffDateMonth']
+    const kickoffDateYear = req.session.data['kickoffDateYear']
+    const hadKickoff = req.session.data['hadKickoff']
+
+    if ( checkIntroductoryEmailSent == 'No' ||
+      haveYouAgreedKickoffDate == 'No' ||
+      kickoffDateDay == null ||
+      kickoffDateMonth == null ||
+      kickoffDateYear == null ||
+      hadKickoff == 'No' ){
+      req.session.data.externalStakeHolderKickoffStatus = 'inProgress'
+    } else {
+      req.session.data.externalStakeHolderKickoffStatus = 'complete'
+    }
     res.redirect('../project-task-list')
   })
 

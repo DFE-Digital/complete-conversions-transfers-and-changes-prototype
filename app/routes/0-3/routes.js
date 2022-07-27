@@ -15,7 +15,7 @@ module.exports = function (router) {
     const journeyType = req.session.data['journeyType']
 
     if (journeyType == null){
-      req.session.data.journeyType = ['singlePage']
+      req.session.data.journeyType = ['multiPage']
     }
 
     res.render(version + '/start', {})

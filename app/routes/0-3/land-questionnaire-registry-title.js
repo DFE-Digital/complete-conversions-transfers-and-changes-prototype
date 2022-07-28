@@ -39,15 +39,13 @@ module.exports = function (router) {
 
 
   router.get('/' + version + '/land-questionnaire-registry-title/check-answers', function (req, res) {
-    const checkLandQuestionnaire = req.session.data['checkLandQuestionnaire']
     const clearLandQuestionnaire = req.session.data['clearLandQuestionnaire']
     const clearLandRegistry = req.session.data['clearLandRegistry']
     const clearTrustModificationOrder = req.session.data['clearTrustModificationOrder']
     const clearDirectionToTransfer = req.session.data['clearDirectionToTransfer']
 
-    if ( checkLandQuestionnaire == 'No' ||
-      clearLandQuestionnaire == 'No' ||
-      clearLandRegistry != 'Yes, registry Title plans have been cleared' ||
+    if ( clearLandQuestionnaire != 'Yes, the Land questionnaire has been cleared' ||
+      clearLandRegistry != 'Yes, the Land registry title plans or site plans have been cleared' ||
       clearTrustModificationOrder != 'Yes the legal team has cleared the Trust modification order' ||
       clearDirectionToTransfer != 'Yes, the Direction to transfer has cleared'){
       req.session.data.landQuestionnaireStatus = 'inProgress'

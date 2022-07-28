@@ -26,47 +26,34 @@
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h2 class="govuk-fieldset__heading govuk-heading-m">Have you checked all the
-                  documents from the regional delivery officer?</h2>
+                  <h2 class="govuk-fieldset__heading">Review the project and
+                    check the documents</h2>
+                </legend>
                 <div id="sign-in-hint" class="govuk-hint">
                   Check there are no errors or any missing information in the
-                  documents.
+                  documents before your meeting with the regional delivery officer.
                 </div>
                 <details class="govuk-details" data-module="govuk-details">
                   <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                      Examples of conversion documents
-                    </span>
+                    Things to check
                   </summary>
                   <div class="govuk-details__text">
                     <ul class="govuk-list govuk-list--bullet">
-                      <li>Academy Order</li>
-                      <li>Application to convert</li>
-                      <li>Articles of association</li>
-                      <li>Model Documents</li>
+                      <li>Project information</li>
+                      <li>School or trust website</li>
+                      <li>Google maps for potential land issues</li>
+                      <li>Project documents in Sharepoint such as:
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>Academy order</li>
+                          <li>Application to convert</li>
+                          <li>Articles of association</li>
+                          <li>Model documents</li>
+                        </ul>
+                      </li>
                     </ul>
+                  </span>
                   </div>
                 </details>
-                <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="checkConversionDocuments" name="checkConversionDocuments" type="radio" value="Yes, all required documents are correct" {{ checked("checkConversionDocuments", "Yes, all required documents are correct") }}>
-                    <label class="govuk-label govuk-radios__label" for="checkConversionDocuments">
-                      Yes, all required documents are correct
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="checkConversionDocuments-2" name="checkConversionDocuments" type="radio" value="Yes, but some documents are missing or have errors" {{ checked("checkConversionDocuments", "Yes, but some documents are missing or have errors") }}>
-                    <label class="govuk-label govuk-radios__label" for="checkConversionDocuments-2">
-                      Yes, but some documents are missing or have errors
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="checkConversionDocuments-3" name="checkConversionDocuments" type="radio" value="No" {{ checked("checkConversionDocuments", "No") }}>
-                    <label class="govuk-label govuk-radios__label" for="checkConversionDocuments-3">
-                      No
-                    </label>
-                  </div>
-                </div>
               </fieldset>
             </div>
             <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
@@ -75,13 +62,11 @@
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h2 class="govuk-fieldset__heading" for="researchAndQuestionsForDeliveryOfficer">
-                    Preliminary research and questions for the regional delivery
-                    officer</h2>
+                    Handover questions and notes</h2>
                 </legend>
                 <div id="changed-name-hint" class="govuk-hint">
-                  It's a good idea to do some preliminary research about your
-                  school. Note any questions you have for the regional delivery
-                  officer.
+                  Add any questions you have for the regional delivery officer
+                  and their responses from the handover meeting.
                 </div>
                 <details class="govuk-details" data-module="govuk-details">
                   <summary class="govuk-details__summary">
@@ -106,28 +91,38 @@
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h2 class="govuk-fieldset__heading">Have you completed a the
-                    handover meeting with the regional delivery officer?
-                  </h2>
+                  <h2 class="govuk-fieldset__heading">When did you complete the
+                    handover with the regional delivery officer?</h2>
                 </legend>
-                <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="completedHandoverMeeting" name="completedHandoverMeeting" type="radio" value="Yes" {{ checked("completedHandoverMeeting", "Yes") }}>
-                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting">
-                      Yes, my questions were answered
-                    </label>
+                <div class="govuk-form-group">
+                  <div id="handoverDate-hint" class="govuk-hint">
+                    For example, 27 3 2007
                   </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="completedHandoverMeeting-2" name="completedHandoverMeeting" type="radio" value="Yes, but I still have questions" {{ checked("completedHandoverMeeting", "Yes, but I still have questions") }}>
-                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting-2">
-                      Yes, but I still have questions
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="completedHandoverMeeting-3" name="completedHandoverMeeting" type="radio" value="No" {{ checked("completedHandoverMeeting", "No") }}>
-                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting-3">
-                      No
-                    </label>
+                  <div class="govuk-date-input" id="handoverDate">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="handoverDateDay">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="handoverDateDay" name="handoverDateDay" type="text" inputmode="numeric" value="{{data['handoverDateDay']}}" />
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="handoverDateMonth">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="handoverDateMonth" name="handoverDateMonth" type="text" inputmode="numeric" value="{{data['handoverDateMonth']}}" />
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="handoverDateYear">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="handoverDateYear" name="handoverDateYear" type="text" inputmode="numeric" value="{{data['handoverDateYear']}}" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </fieldset>

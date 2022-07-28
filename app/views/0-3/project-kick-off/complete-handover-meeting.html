@@ -22,28 +22,39 @@
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <span class="govuk-caption-l">St. Wilfred's Primary School</span>
-                  <h1 class="govuk-fieldset__heading">Have you completed the
-                    handover meeting with the regional delivery officer?
+                  <h1 class="govuk-fieldset__heading">When did you complete the
+                    handover with the regional delivery officer?
                   </h1>
                 </legend>
-                <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="completedHandoverMeeting" name="completedHandoverMeeting" type="radio" value="Yes" {{ checked("completedHandoverMeeting", "Yes") }}>
-                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting">
-                      Yes, my questions were answered
-                    </label>
+                <div class="govuk-form-group">
+                  <div id="handoverDate-hint" class="govuk-hint">
+                    For example, 27 3 2007
                   </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="completedHandoverMeeting-2" name="completedHandoverMeeting" type="radio" value="Yes, but I still have questions" {{ checked("completedHandoverMeeting", "Yes, but I still have questions") }}>
-                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting-2">
-                      Yes, but I still have questions
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="completedHandoverMeeting-3" name="completedHandoverMeeting" type="radio" value="No" {{ checked("completedHandoverMeeting", "No") }}>
-                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting-3">
-                      No
-                    </label>
+                  <div class="govuk-date-input" id="handoverDate">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="handoverDateDay">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="handoverDateDay" name="handoverDateDay" type="text" inputmode="numeric" value="{{data['handoverDateDay']}}" />
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="handoverDateMonth">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="handoverDateMonth" name="handoverDateMonth" type="text" inputmode="numeric" value="{{data['handoverDateMonth']}}" />
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="handoverDateYear">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="handoverDateYear" name="handoverDateYear" type="text" inputmode="numeric" value="{{data['handoverDateYear']}}" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </fieldset>

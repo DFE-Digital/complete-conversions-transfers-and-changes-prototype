@@ -42,11 +42,12 @@
                   </div>
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">
-                      Have you completed the handover meeting with the
-                      regional delivery officer?
+                      When did you complete the handover with the regional
+                      delivery officer?
                     </dt>
                     <dd class="govuk-summary-list__value">
-                      {{data['completedHandoverMeeting']}}
+                      {{data['handoverDateDay']}} {{data['handoverDateMonth']}}
+                      {{data['handoverDateYear']}}
                     </dd>
                     <dd class="govuk-summary-list__actions">
                       <a class="govuk-link" href="complete-handover-meeting">

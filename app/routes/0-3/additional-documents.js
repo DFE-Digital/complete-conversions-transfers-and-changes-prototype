@@ -3,7 +3,13 @@ module.exports = function (router) {
   var version = "0-3";
 
   router.get('/' + version + '/additional-documents/check-articles-of-association', function (req, res) {
-    res.render(version + '/additional-documents/check-articles-of-association', {})
+    const journeyType = req.session.data['journeyType']
+
+    if (journeyType == 'singlePage'){
+      res.redirect('single-page-questions')
+    } else {
+      res.render(version + '/additional-documents/check-articles-of-association', {})
+    }
   })
 
   router.post('/' + version + '/additional-documents/check-articles-of-association', function (req, res) {
@@ -68,6 +74,31 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/additional-documents/check-answers', function (req, res) {
+    res.redirect('../project-task-list')
+  })
+
+
+  router.get('/' + version + '/additional-documents/single-page-questions', function (req, res) {
+    res.render(version + '/additional-documents/single-page-questions', {})
+  })
+
+  router.post('/' + version + '/additional-documents/single-page-questions', function (req, res) {
+    const checkArticlesOfAssociation = req.session.data['checkArticlesOfAssociation']
+    const checkSupplementaryFundingAgreement = req.session.data['checkSupplementaryFundingAgreement']
+    const checkChurchSupplementaryAgreement = req.session.data['checkChurchSupplementaryAgreement']
+    const checkDeedOfVariation = req.session.data['checkDeedOfVariation']
+    const checkMainFundingAgreement = req.session.data['checkMainFundingAgreement']
+
+    if ( checkArticlesOfAssociation != 'Yes, the Articles of association have been cleared' ||
+      checkSupplementaryFundingAgreement != 'Yes, the Supplementary funding agreement has been cleared' ||
+      checkChurchSupplementaryAgreement != 'Yes, the Church supplementary agreement has been cleared' ||
+      checkDeedOfVariation != 'Yes, the Deed of variation has been cleared' ||
+      checkMainFundingAgreement != 'Yes, the Main funding agreement has been cleared'){
+      req.session.data.additionalDocumentsStatus = 'inProgress'
+    } else {
+      req.session.data.additionalDocumentsStatus = 'complete'
+    }
+
     res.redirect('../project-task-list')
   })
 

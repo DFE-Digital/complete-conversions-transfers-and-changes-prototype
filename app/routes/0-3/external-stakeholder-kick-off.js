@@ -51,18 +51,26 @@ module.exports = function (router) {
     const kickoffDateMonth = req.session.data['kickoffDateMonth']
     const kickoffDateYear = req.session.data['kickoffDateYear']
     const hadKickoff = req.session.data['hadKickoff']
+    const hadLocalAuthorityKickoff = req.session.data['hadLocalAuthorityKickoff']
 
     if ( checkIntroductoryEmailSent == 'No' ||
+      checkIntroductoryEmailSent == null ||
       haveYouAgreedKickoffDate == 'No' ||
+      haveYouAgreedKickoffDate == null ||
       kickoffDateDay == null ||
+      kickoffDateDay == '' ||
       kickoffDateMonth == null ||
+      kickoffDateMonth == '' ||
       kickoffDateYear == null ||
-      hadKickoff == 'No' ){
+      kickoffDateYear == '' ||
+      hadKickoff == 'No' ||
+      hadKickoff == null ||
+      hadLocalAuthorityKickoff == 'No' ||
+      hadLocalAuthorityKickoff == null){
       req.session.data.externalStakeHolderKickoffStatus = 'inProgress'
     } else {
       req.session.data.externalStakeHolderKickoffStatus = 'complete'
     }
-
     res.render(version + '/external-stakeholder-kick-off/check-answers', {})
   })
 
@@ -82,13 +90,22 @@ module.exports = function (router) {
     const kickoffDateMonth = req.session.data['kickoffDateMonth']
     const kickoffDateYear = req.session.data['kickoffDateYear']
     const hadKickoff = req.session.data['hadKickoff']
+    const hadLocalAuthorityKickoff = req.session.data['hadLocalAuthorityKickoff']
 
     if ( checkIntroductoryEmailSent == 'No' ||
+      checkIntroductoryEmailSent == null ||
       haveYouAgreedKickoffDate == 'No' ||
+      haveYouAgreedKickoffDate == null ||
       kickoffDateDay == null ||
+      kickoffDateDay == '' ||
       kickoffDateMonth == null ||
+      kickoffDateMonth == '' ||
       kickoffDateYear == null ||
-      hadKickoff == 'No' ){
+      kickoffDateYear == '' ||
+      hadKickoff == 'No' ||
+      hadKickoff == null ||
+      hadLocalAuthorityKickoff == 'No' ||
+      hadLocalAuthorityKickoff == null){
       req.session.data.externalStakeHolderKickoffStatus = 'inProgress'
     } else {
       req.session.data.externalStakeHolderKickoffStatus = 'complete'

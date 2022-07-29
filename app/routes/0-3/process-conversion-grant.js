@@ -40,9 +40,12 @@ module.exports = function (router) {
     const checkGrantPaymentForm = req.session.data['checkGrantPaymentForm']
     const checkEmailEsfa = req.session.data['checkEmailEsfa']
 
-    if ( checkVendorAccount == 'No' ||
+    if (checkVendorAccount == 'No' ||
+      checkVendorAccount == null ||
       checkGrantPaymentForm == 'No' ||
-      checkEmailEsfa == 'No'){
+      checkGrantPaymentForm == null ||
+      checkEmailEsfa == 'No' ||
+      checkEmailEsfa == null){
       req.session.data.processConversionGrantStatus = 'inProgress'
     } else {
       req.session.data.processConversionGrantStatus = 'complete'
@@ -64,9 +67,12 @@ module.exports = function (router) {
     const checkGrantPaymentForm = req.session.data['checkGrantPaymentForm']
     const checkEmailEsfa = req.session.data['checkEmailEsfa']
 
-    if ( checkVendorAccount == 'No' ||
+    if (checkVendorAccount == 'No' ||
+      checkVendorAccount == null ||
       checkGrantPaymentForm == 'No' ||
-      checkEmailEsfa == 'No'){
+      checkGrantPaymentForm == null ||
+      checkEmailEsfa == 'No' ||
+      checkEmailEsfa == null){
       req.session.data.processConversionGrantStatus = 'inProgress'
     } else {
       req.session.data.processConversionGrantStatus = 'complete'

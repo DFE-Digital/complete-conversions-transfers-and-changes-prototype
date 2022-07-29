@@ -27,7 +27,7 @@
                 </legend>
                 <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="haveYouAgreedKickoffDate" name="haveYouAgreedKickoffDate" type="radio" value="Yes" data-aria-controls="conditional-haveYouAgreedKickoffDate">
+                    <input class="govuk-radios__input" id="haveYouAgreedKickoffDate" name="haveYouAgreedKickoffDate" type="radio" value="Yes" data-aria-controls="conditional-haveYouAgreedKickoffDate" {{ checked("haveYouAgreedKickoffDate", "Yes") }}>
                     <label class="govuk-label govuk-radios__label" for="haveYouAgreedKickoffDate">
                       Yes
                     </label>
@@ -54,7 +54,7 @@
                             <label class="govuk-label govuk-date-input__label" for="kickoffDateMonth">
                               Month
                             </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="kickoffDateMonth" name="kickoffDateMonth" type="text" inputmode="numeric" value="{{data['kickoffDateDay']}}">
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="kickoffDateMonth" name="kickoffDateMonth" type="text" inputmode="numeric" value="{{data['kickoffDateMonth']}}">
                           </div>
                         </div>
                         <div class="govuk-date-input__item">
@@ -62,14 +62,14 @@
                             <label class="govuk-label govuk-date-input__label" for="kickoffDateYear">
                               Year
                             </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="kickoffDateYear" name="kickoffDateYear" type="text" inputmode="numeric" value="{{data['kickoffDateDay']}}">
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="kickoffDateYear" name="kickoffDateYear" type="text" inputmode="numeric" value="{{data['kickoffDateYear']}}">
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="haveYouAgreedKickoffDate-2" name="haveYouAgreedKickoffDate" type="radio" value="No" data-aria-controls="conditional-haveYouAgreedKickoffDate-2">
+                    <input class="govuk-radios__input" id="haveYouAgreedKickoffDate-2" name="haveYouAgreedKickoffDate" type="radio" value="No" data-aria-controls="conditional-haveYouAgreedKickoffDate-2" {{ checked("haveYouAgreedKickoffDate", "No") }}>
                     <label class="govuk-label govuk-radios__label" for="haveYouAgreedKickoffDate-2">
                       No
                     </label>

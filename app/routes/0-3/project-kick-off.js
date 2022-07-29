@@ -36,16 +36,19 @@ module.exports = function (router) {
 
 
   router.get('/' + version + '/project-kick-off/check-answers', function (req, res) {
-    const checkConversionDocuments = req.session.data['checkConversionDocuments']
     const researchAndQuestionsForDeliveryOfficer = req.session.data['researchAndQuestionsForDeliveryOfficer']
-    const completedHandoverMeeting = req.session.data['completedHandoverMeeting']
+    const handoverDateDay = req.session.data['handoverDateDay']
+    const handoverDateMonth = req.session.data['handoverDateMonth']
+    const handoverDateYear = req.session.data['handoverDateYear']
 
-    // checkSupplementaryFundingAgreement != 'Yes, the Supplementary funding agreement has been cleared'
-
-    if ( checkConversionDocuments == 'No' ||
-      researchAndQuestionsForDeliveryOfficer == null ||
+    if (researchAndQuestionsForDeliveryOfficer == null ||
       researchAndQuestionsForDeliveryOfficer == '' ||
-      completedHandoverMeeting == 'No'){
+      handoverDateDay == '' ||
+      handoverDateDay ==  null ||
+      handoverDateMonth == '' ||
+      handoverDateMonth == null ||
+      handoverDateYear == '' ||
+      handoverDateYear == null){
       req.session.data.handoverStatus = 'inProgress'
     } else {
       req.session.data.handoverStatus = 'complete'
@@ -63,16 +66,19 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/project-kick-off/single-page-questions', function (req, res) {
-    const checkConversionDocuments = req.session.data['checkConversionDocuments']
     const researchAndQuestionsForDeliveryOfficer = req.session.data['researchAndQuestionsForDeliveryOfficer']
-    const completedHandoverMeeting = req.session.data['completedHandoverMeeting']
+    const handoverDateDay = req.session.data['handoverDateDay']
+    const handoverDateMonth = req.session.data['handoverDateMonth']
+    const handoverDateYear = req.session.data['handoverDateYear']
 
-    // checkSupplementaryFundingAgreement != 'Yes, the Supplementary funding agreement has been cleared'
-
-    if ( checkConversionDocuments == 'No' ||
-      researchAndQuestionsForDeliveryOfficer == null ||
+    if (researchAndQuestionsForDeliveryOfficer == null ||
       researchAndQuestionsForDeliveryOfficer == '' ||
-      completedHandoverMeeting == 'No'){
+      handoverDateDay == '' ||
+      handoverDateDay ==  null ||
+      handoverDateMonth == '' ||
+      handoverDateMonth == null ||
+      handoverDateYear == '' ||
+      handoverDateYear == null){
       req.session.data.handoverStatus = 'inProgress'
     } else {
       req.session.data.handoverStatus = 'complete'

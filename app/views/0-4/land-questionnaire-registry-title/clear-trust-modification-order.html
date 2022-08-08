@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="clear-trust-modification-order" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Has the Trust modification
+                    order been cleared?</h1>
+                </legend>
+                <div id="changed-name-hint" class="govuk-hint">
+                  The land questionnaire will state if a Trust modification
+                  order is needed.
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Help checking the Trust modification order
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <p class="govuk-body">Send the Trust modification order 
+                      to the legal department with a copy of the original 
+                      deed so that it can be cleared.</p> 
+                    <p class="govuk-body">It can take a number of weeks to 
+                      hear back from the legal team.</p>
+                  </div>
+                </details>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="clearTrustModificationOrder" name="clearTrustModificationOrder" type="radio" value="Yes the legal team has cleared the Trust modification order" {{ checked("clearTrustModificationOrder", "Yes the legal team has cleared the Trust modification order") }}>
+                    <label class="govuk-label govuk-radios__label" for="clearTrustModificationOrder">
+                      Yes the legal team has cleared the Trust modification order
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="clearTrustModificationOrder-2" name="clearTrustModificationOrder" type="radio" value="No, the Trust modification order is being cleared/needs changes" {{ checked("clearTrustModificationOrder", "No, the Trust modification order is being cleared/needs changes") }}>
+                    <label class="govuk-label govuk-radios__label" for="clearTrustModificationOrder-2">
+                      No, the Trust modification order is being cleared or needs changes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="clearTrustModificationOrder-3" name="clearTrustModificationOrder" type="radio" value="No, it is not needed" {{ checked("clearTrustModificationOrder", "No, it is not needed") }}>
+                    <label class="govuk-label govuk-radios__label" for="clearTrustModificationOrder-3">
+                      No, it is not needed
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

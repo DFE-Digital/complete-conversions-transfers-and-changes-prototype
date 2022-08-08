@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="kick-off-date" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Have you agreed a date
+                    for the kick-off meeting?</h1>
+                </legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="haveYouAgreedKickoffDate" name="haveYouAgreedKickoffDate" type="radio" value="Yes" data-aria-controls="conditional-haveYouAgreedKickoffDate" {{ checked("haveYouAgreedKickoffDate", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="haveYouAgreedKickoffDate">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-haveYouAgreedKickoffDate">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="kickoffDate">
+                        What is the kick-off meeting date?
+                      </label>
+                      <div id="kickoffDate-hint" class="govuk-hint">
+                        For example, 27 3 2007
+                      </div>
+                      <div class="govuk-date-input" id="kickoffDate">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="kickoffDateDay">
+                              Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="kickoffDateDay" name="kickoffDateDay" type="text" inputmode="numeric" value="{{data['kickoffDateDay']}}">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="kickoffDateMonth">
+                              Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="kickoffDateMonth" name="kickoffDateMonth" type="text" inputmode="numeric" value="{{data['kickoffDateMonth']}}">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="kickoffDateYear">
+                              Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="kickoffDateYear" name="kickoffDateYear" type="text" inputmode="numeric" value="{{data['kickoffDateYear']}}">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="haveYouAgreedKickoffDate-2" name="haveYouAgreedKickoffDate" type="radio" value="No" data-aria-controls="conditional-haveYouAgreedKickoffDate-2" {{ checked("haveYouAgreedKickoffDate", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="haveYouAgreedKickoffDate-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

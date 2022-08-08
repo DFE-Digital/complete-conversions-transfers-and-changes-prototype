@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="check-conversion-documents" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Review the project and
+                    check the documents</h1>
+                </legend>
+                <div id="sign-in-hint" class="govuk-hint">
+                  Check there are no errors, no information is missing from the
+                  documents and you've done any additional research needed before 
+                  your meeting with the regional delivery officer.
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    Things to check
+                  </summary>
+                  <div class="govuk-details__text">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>Project information, such as advisory board conditions</li>
+                      <li>School or trust website for more information about the school</li>
+                      <li>Google maps for potential land issues</li>
+                      <li>Project documents in Sharepoint such as:
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>Academy order</li>
+                          <li>Application to convert</li>
+                          <li>Articles of association</li>
+                          <li>Model documents</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </span>
+                  </div>
+                </details>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

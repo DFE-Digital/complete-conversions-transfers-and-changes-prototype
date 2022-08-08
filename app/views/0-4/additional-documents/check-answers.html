@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="check-answers" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <span class="govuk-caption-l">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-fieldset__heading">Check answers</h1>
+                </legend>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Have you checked and cleared the Articles of association?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['checkArticlesOfAssociation']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="check-articles-of-association">
+                        Change<span class="govuk-visually-hidden"> Have you
+                          checked and cleared the Articles of association?</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Have you checked and cleared the Supplementary funding
+                      agreement?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['checkSupplementaryFundingAgreement']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="check-supplementary-funding-agreement">
+                        Change<span class="govuk-visually-hidden"> Have you
+                          checked and cleared the Supplementary funding
+                          agreement?</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Have you checked and cleared the Church supplementary
+                      agreement?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['checkChurchSupplementaryAgreement']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="check-church-supplementary-agreement">
+                        Change<span class="govuk-visually-hidden"> Have you
+                          checked and cleared the Church supplementary agreement?
+                        </span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Have you checked and cleared the Deed of variation?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['checkDeedOfVariation']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="check-deed-of-variation">
+                        Change<span class="govuk-visually-hidden"> Have you
+                          checked and cleared the Deed of variation?
+                        </span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Have you checked and cleared the Master funding agreement?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      {{data['checkMasterFundingAgreement']}}
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="check-master-funding-agreement">
+                        Change<span class="govuk-visually-hidden"> Have you
+                          checked and cleared the Master funding agreement?
+                        </span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

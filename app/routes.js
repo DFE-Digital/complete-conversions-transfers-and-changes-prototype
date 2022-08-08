@@ -20,6 +20,13 @@ const router = express.Router()
   require('./routes/0-3/additional-documents.js')(router);
   require('./routes/0-3/routes.js')(router);
 
+  require('./routes/0-4/project-kick-off.js')(router);
+  require('./routes/0-4/external-stakeholder-kick-off.js')(router);
+  require('./routes/0-4/process-conversion-grant.js')(router);
+  require('./routes/0-4/land-questionnaire-registry-title.js')(router);
+  require('./routes/0-4/additional-documents.js')(router);
+  require('./routes/0-4/routes.js')(router);
+
 
 
 module.exports = router

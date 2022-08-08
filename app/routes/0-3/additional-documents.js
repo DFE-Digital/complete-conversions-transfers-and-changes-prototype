@@ -40,15 +40,15 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/additional-documents/check-deed-of-variation', function (req, res) {
-    res.redirect('check-main-funding-agreement')
+    res.redirect('check-master-funding-agreement')
   })
 
 
-  router.get('/' + version + '/additional-documents/check-main-funding-agreement', function (req, res) {
-    res.render(version + '/additional-documents/check-main-funding-agreement', {})
+  router.get('/' + version + '/additional-documents/check-master-funding-agreement', function (req, res) {
+    res.render(version + '/additional-documents/check-master-funding-agreement', {})
   })
 
-  router.post('/' + version + '/additional-documents/check-main-funding-agreement', function (req, res) {
+  router.post('/' + version + '/additional-documents/check-master-funding-agreement', function (req, res) {
     res.redirect('check-answers')
   })
 
@@ -58,13 +58,13 @@ module.exports = function (router) {
     const checkSupplementaryFundingAgreement = req.session.data['checkSupplementaryFundingAgreement']
     const checkChurchSupplementaryAgreement = req.session.data['checkChurchSupplementaryAgreement']
     const checkDeedOfVariation = req.session.data['checkDeedOfVariation']
-    const checkMainFundingAgreement = req.session.data['checkMainFundingAgreement']
+    const checkMasterFundingAgreement = req.session.data['checkMasterFundingAgreement']
 
     if ( checkArticlesOfAssociation != 'Yes, the Articles of association have been cleared' ||
       checkSupplementaryFundingAgreement != 'Yes, the Supplementary funding agreement has been cleared' ||
       checkChurchSupplementaryAgreement != 'Yes, the Church supplementary agreement has been cleared' ||
       checkDeedOfVariation != 'Yes, the Deed of variation has been cleared' ||
-      checkMainFundingAgreement != 'Yes, the Main funding agreement has been cleared'){
+      checkMasterFundingAgreement != 'Yes, the Master funding agreement has been cleared'){
       req.session.data.additionalDocumentsStatus = 'inProgress'
     } else {
       req.session.data.additionalDocumentsStatus = 'complete'
@@ -87,13 +87,13 @@ module.exports = function (router) {
     const checkSupplementaryFundingAgreement = req.session.data['checkSupplementaryFundingAgreement']
     const checkChurchSupplementaryAgreement = req.session.data['checkChurchSupplementaryAgreement']
     const checkDeedOfVariation = req.session.data['checkDeedOfVariation']
-    const checkMainFundingAgreement = req.session.data['checkMainFundingAgreement']
+    const checkMasterFundingAgreement = req.session.data['checkMasterFundingAgreement']
 
     if ( checkArticlesOfAssociation != 'Yes, the Articles of association have been cleared' ||
       checkSupplementaryFundingAgreement != 'Yes, the Supplementary funding agreement has been cleared' ||
       checkChurchSupplementaryAgreement != 'Yes, the Church supplementary agreement has been cleared' ||
       checkDeedOfVariation != 'Yes, the Deed of variation has been cleared' ||
-      checkMainFundingAgreement != 'Yes, the Main funding agreement has been cleared'){
+      checkMasterFundingAgreement != 'Yes, the Master funding agreement has been cleared'){
       req.session.data.additionalDocumentsStatus = 'inProgress'
     } else {
       req.session.data.additionalDocumentsStatus = 'complete'

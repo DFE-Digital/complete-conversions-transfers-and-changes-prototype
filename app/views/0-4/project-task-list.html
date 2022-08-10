@@ -130,6 +130,22 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
+                    <a href="land-registry-title-plans/single-page-questions" aria-describedby="landRegistryStatus">
+                      Land registry title plans</a>
+                  </span>
+                  {% if (data['landRegistryStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="landRegistryStatus">
+                      Complete</strong>
+                  {% elseif (data['landRegistryStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="landRegistryStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="landRegistryStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
                     <a href="additional-documents/single-page-questions" aria-describedby="additionalDocumentsStatus">
                       Additional documents</a>
                   </span>

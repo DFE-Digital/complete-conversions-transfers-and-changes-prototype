@@ -27,6 +27,7 @@ const router = express.Router()
   require('./routes/0-4/land-registry-title-plans.js')(router);
   require('./routes/0-4/trust-modification-order.js')(router);
   require('./routes/0-4/direction-to-transfer.js')(router);
+  require('./routes/0-4/articles-of-association.js')(router);
   require('./routes/0-4/additional-documents.js')(router);
   require('./routes/0-4/routes.js')(router);
 

@@ -146,6 +146,22 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
+                    <a href="trust-modification-order/single-page-questions" aria-describedby="trustModificationOrderStatus">
+                      Trust modification order</a>
+                  </span>
+                  {% if (data['trustModificationOrderStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="trustModificationOrderStatus">
+                      Complete</strong>
+                  {% elseif (data['trustModificationOrderStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="trustModificationOrderStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="trustModificationOrderStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
                     <a href="additional-documents/single-page-questions" aria-describedby="additionalDocumentsStatus">
                       Additional documents</a>
                   </span>

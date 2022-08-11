@@ -114,8 +114,8 @@
               <ul class="app-task-list__items">
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="land-questionnaire-registry-title/single-page-questions" aria-describedby="landQuestionnaireStatus">
-                      Land questionnaire and land registry title</a>
+                    <a href="land-questionnaire/single-page-questions" aria-describedby="landQuestionnaireStatus">
+                      Land questionnaire</a>
                   </span>
                   {% if (data['landQuestionnaireStatus'] == 'complete') %}
                     <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="landQuestionnaireStatus">
@@ -130,17 +130,129 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="additional-documents/single-page-questions" aria-describedby="additionalDocumentsStatus">
-                      Additional documents</a>
+                    <a href="land-registry-title-plans/single-page-questions" aria-describedby="landRegistryStatus">
+                      Land registry title plans</a>
                   </span>
-                  {% if (data['additionalDocumentsStatus'] == 'complete') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="additionalDocumentsStatus">
+                  {% if (data['landRegistryStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="landRegistryStatus">
                       Complete</strong>
-                  {% elseif (data['additionalDocumentsStatus'] == 'inProgress') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="additionalDocumentsStatus">
+                  {% elseif (data['landRegistryStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="landRegistryStatus">
                       In progress</strong>
                   {% else %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="additionalDocumentsStatus">
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="landRegistryStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="trust-modification-order/single-page-questions" aria-describedby="trustModificationOrderStatus">
+                      Trust modification order</a>
+                  </span>
+                  {% if (data['trustModificationOrderStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="trustModificationOrderStatus">
+                      Complete</strong>
+                  {% elseif (data['trustModificationOrderStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="trustModificationOrderStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="trustModificationOrderStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="direction-to-transfer/single-page-questions" aria-describedby="directionToTransferStatus">
+                      Direction to transfer</a>
+                  </span>
+                  {% if (data['directionToTransferStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="directionToTransferStatus">
+                      Complete</strong>
+                  {% elseif (data['directionToTransferStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="directionToTransferStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="directionToTransferStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="articles-of-association/single-page-questions" aria-describedby="articlesOfAssociationStatus">
+                      Articles of association</a>
+                  </span>
+                  {% if (data['articlesOfAssociationStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="articlesOfAssociationStatus">
+                      Complete</strong>
+                  {% elseif (data['articlesOfAssociationStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="articlesOfAssociationStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="articlesOfAssociationStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="supplementary-funding-agreement/single-page-questions" aria-describedby="supplementaryFundingAgreementStatus">
+                      Supplementary funding agreement</a>
+                  </span>
+                  {% if (data['supplementaryFundingAgreementStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="supplementaryFundingAgreementStatus">
+                      Complete</strong>
+                  {% elseif (data['supplementaryFundingAgreementStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="supplementaryFundingAgreementStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="supplementaryFundingAgreementStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="church-supplementary-agreement/single-page-questions" aria-describedby="churchSupplementaryFundingAgreementStatus">
+                      Church supplementary agreement</a>
+                  </span>
+                  {% if (data['churchSupplementaryFundingAgreementStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="churchSupplementaryFundingAgreementStatus">
+                      Complete</strong>
+                  {% elseif (data['churchSupplementaryFundingAgreementStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="churchSupplementaryFundingAgreementStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="churchSupplementaryFundingAgreementStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="deed-of-variation/single-page-questions" aria-describedby="deedOfVariationStatus">
+                      Deed of variation</a>
+                  </span>
+                  {% if (data['deedOfVariationStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="deedOfVariationStatus">
+                      Complete</strong>
+                  {% elseif (data['deedOfVariationStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="deedOfVariationStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="deedOfVariationStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="master-funding-agreement/single-page-questions" aria-describedby="masterFundingAgreementStatus">
+                      Master funding agreement</a>
+                  </span>
+                  {% if (data['masterFundingAgreementStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="masterFundingAgreementStatus">
+                      Complete</strong>
+                  {% elseif (data['masterFundingAgreementStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="masterFundingAgreementStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="masterFundingAgreementStatus">
                       Not started</strong>
                   {% endif %}
                 </li>

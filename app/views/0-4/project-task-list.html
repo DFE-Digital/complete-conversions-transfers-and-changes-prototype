@@ -146,49 +146,17 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="trust-modification-order/single-page-questions" aria-describedby="trustModificationOrderStatus">
-                      Trust modification order</a>
+                    <a href="master-funding-agreement/single-page-questions" aria-describedby="masterFundingAgreementStatus">
+                      Master funding agreement</a>
                   </span>
-                  {% if (data['trustModificationOrderStatus'] == 'complete') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="trustModificationOrderStatus">
+                  {% if (data['masterFundingAgreementStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="masterFundingAgreementStatus">
                       Complete</strong>
-                  {% elseif (data['trustModificationOrderStatus'] == 'inProgress') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="trustModificationOrderStatus">
+                  {% elseif (data['masterFundingAgreementStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="masterFundingAgreementStatus">
                       In progress</strong>
                   {% else %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="trustModificationOrderStatus">
-                      Not started</strong>
-                  {% endif %}
-                </li>
-                <li class="app-task-list__item">
-                  <span class="app-task-list__task-name">
-                    <a href="direction-to-transfer/single-page-questions" aria-describedby="directionToTransferStatus">
-                      Direction to transfer</a>
-                  </span>
-                  {% if (data['directionToTransferStatus'] == 'complete') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="directionToTransferStatus">
-                      Complete</strong>
-                  {% elseif (data['directionToTransferStatus'] == 'inProgress') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="directionToTransferStatus">
-                      In progress</strong>
-                  {% else %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="directionToTransferStatus">
-                      Not started</strong>
-                  {% endif %}
-                </li>
-                <li class="app-task-list__item">
-                  <span class="app-task-list__task-name">
-                    <a href="articles-of-association/single-page-questions" aria-describedby="articlesOfAssociationStatus">
-                      Articles of association</a>
-                  </span>
-                  {% if (data['articlesOfAssociationStatus'] == 'complete') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="articlesOfAssociationStatus">
-                      Complete</strong>
-                  {% elseif (data['articlesOfAssociationStatus'] == 'inProgress') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="articlesOfAssociationStatus">
-                      In progress</strong>
-                  {% else %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="articlesOfAssociationStatus">
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="masterFundingAgreementStatus">
                       Not started</strong>
                   {% endif %}
                 </li>
@@ -226,6 +194,22 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
+                    <a href="articles-of-association/single-page-questions" aria-describedby="articlesOfAssociationStatus">
+                      Articles of association</a>
+                  </span>
+                  {% if (data['articlesOfAssociationStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="articlesOfAssociationStatus">
+                      Complete</strong>
+                  {% elseif (data['articlesOfAssociationStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="articlesOfAssociationStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="articlesOfAssociationStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
                     <a href="deed-of-variation/single-page-questions" aria-describedby="deedOfVariationStatus">
                       Deed of variation</a>
                   </span>
@@ -242,17 +226,33 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="master-funding-agreement/single-page-questions" aria-describedby="masterFundingAgreementStatus">
-                      Master funding agreement</a>
+                    <a href="trust-modification-order/single-page-questions" aria-describedby="trustModificationOrderStatus">
+                      Trust modification order</a>
                   </span>
-                  {% if (data['masterFundingAgreementStatus'] == 'complete') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="masterFundingAgreementStatus">
+                  {% if (data['trustModificationOrderStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="trustModificationOrderStatus">
                       Complete</strong>
-                  {% elseif (data['masterFundingAgreementStatus'] == 'inProgress') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="masterFundingAgreementStatus">
+                  {% elseif (data['trustModificationOrderStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="trustModificationOrderStatus">
                       In progress</strong>
                   {% else %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="masterFundingAgreementStatus">
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="trustModificationOrderStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="direction-to-transfer/single-page-questions" aria-describedby="directionToTransferStatus">
+                      Direction to transfer</a>
+                  </span>
+                  {% if (data['directionToTransferStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="directionToTransferStatus">
+                      Complete</strong>
+                  {% elseif (data['directionToTransferStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="directionToTransferStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="directionToTransferStatus">
                       Not started</strong>
                   {% endif %}
                 </li>

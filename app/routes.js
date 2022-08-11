@@ -20,18 +20,18 @@ const router = express.Router()
   require('./routes/0-3/additional-documents.js')(router);
   require('./routes/0-3/routes.js')(router);
 
-  require('./routes/0-4/project-kick-off.js')(router);
-  require('./routes/0-4/external-stakeholder-kick-off.js')(router);
-  require('./routes/0-4/process-conversion-grant.js')(router);
-  require('./routes/0-4/land-questionnaire.js')(router);
-  require('./routes/0-4/land-registry-title-plans.js')(router);
-  require('./routes/0-4/trust-modification-order.js')(router);
-  require('./routes/0-4/direction-to-transfer.js')(router);
   require('./routes/0-4/articles-of-association.js')(router);
-  require('./routes/0-4/supplementary-funding-agreement.js')(router);
   require('./routes/0-4/church-supplementary-agreement.js')(router);
   require('./routes/0-4/deed-of-variation.js')(router);
-  require('./routes/0-4/additional-documents.js')(router);
+  require('./routes/0-4/direction-to-transfer.js')(router);
+  require('./routes/0-4/external-stakeholder-kick-off.js')(router);
+  require('./routes/0-4/land-questionnaire.js')(router);
+  require('./routes/0-4/land-registry-title-plans.js')(router);
+  require('./routes/0-4/master-funding-agreement.js')(router);
+  require('./routes/0-4/process-conversion-grant.js')(router);
+  require('./routes/0-4/project-kick-off.js')(router);
+  require('./routes/0-4/supplementary-funding-agreement.js')(router);
+  require('./routes/0-4/trust-modification-order.js')(router);
   require('./routes/0-4/routes.js')(router);
 
 

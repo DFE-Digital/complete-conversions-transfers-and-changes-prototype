@@ -242,17 +242,17 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="additional-documents/single-page-questions" aria-describedby="additionalDocumentsStatus">
-                      Additional documents</a>
+                    <a href="master-funding-agreement/single-page-questions" aria-describedby="masterFundingAgreementStatus">
+                      Master funding agreement</a>
                   </span>
-                  {% if (data['additionalDocumentsStatus'] == 'complete') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="additionalDocumentsStatus">
+                  {% if (data['masterFundingAgreementStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="masterFundingAgreementStatus">
                       Complete</strong>
-                  {% elseif (data['additionalDocumentsStatus'] == 'inProgress') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="additionalDocumentsStatus">
+                  {% elseif (data['masterFundingAgreementStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="masterFundingAgreementStatus">
                       In progress</strong>
                   {% else %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="additionalDocumentsStatus">
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="masterFundingAgreementStatus">
                       Not started</strong>
                   {% endif %}
                 </li>

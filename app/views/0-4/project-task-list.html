@@ -226,6 +226,22 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
+                    <a href="deed-of-variation/single-page-questions" aria-describedby="deedOfVariationStatus">
+                      Deed of variation</a>
+                  </span>
+                  {% if (data['deedOfVariationStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="deedOfVariationStatus">
+                      Complete</strong>
+                  {% elseif (data['deedOfVariationStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="deedOfVariationStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="deedOfVariationStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
                     <a href="additional-documents/single-page-questions" aria-describedby="additionalDocumentsStatus">
                       Additional documents</a>
                   </span>

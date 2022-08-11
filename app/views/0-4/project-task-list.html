@@ -210,6 +210,22 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
+                    <a href="church-supplementary-agreement/single-page-questions" aria-describedby="churchSupplementaryFundingAgreementStatus">
+                      Church supplementary agreement</a>
+                  </span>
+                  {% if (data['churchSupplementaryFundingAgreementStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="churchSupplementaryFundingAgreementStatus">
+                      Complete</strong>
+                  {% elseif (data['churchSupplementaryFundingAgreementStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="churchSupplementaryFundingAgreementStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="churchSupplementaryFundingAgreementStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
                     <a href="additional-documents/single-page-questions" aria-describedby="additionalDocumentsStatus">
                       Additional documents</a>
                   </span>

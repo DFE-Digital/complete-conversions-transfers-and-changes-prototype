@@ -194,6 +194,22 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
+                    <a href="supplementary-funding-agreement/single-page-questions" aria-describedby="supplementaryFundingAgreementStatus">
+                      Supplementary funding agreement</a>
+                  </span>
+                  {% if (data['supplementaryFundingAgreementStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="supplementaryFundingAgreementStatus">
+                      Complete</strong>
+                  {% elseif (data['supplementaryFundingAgreementStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="supplementaryFundingAgreementStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="supplementaryFundingAgreementStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
                     <a href="additional-documents/single-page-questions" aria-describedby="additionalDocumentsStatus">
                       Additional documents</a>
                   </span>

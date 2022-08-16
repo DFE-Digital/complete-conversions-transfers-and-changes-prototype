@@ -146,22 +146,6 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="master-funding-agreement/single-page-questions" aria-describedby="masterFundingAgreementStatus">
-                      Master funding agreement</a>
-                  </span>
-                  {% if (data['masterFundingAgreementStatus'] == 'complete') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="masterFundingAgreementStatus">
-                      Complete</strong>
-                  {% elseif (data['masterFundingAgreementStatus'] == 'inProgress') %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="masterFundingAgreementStatus">
-                      In progress</strong>
-                  {% else %}
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="masterFundingAgreementStatus">
-                      Not started</strong>
-                  {% endif %}
-                </li>
-                <li class="app-task-list__item">
-                  <span class="app-task-list__task-name">
                     <a href="supplementary-funding-agreement/single-page-questions" aria-describedby="supplementaryFundingAgreementStatus">
                       Supplementary funding agreement</a>
                   </span>
@@ -189,6 +173,22 @@
                       In progress</strong>
                   {% else %}
                     <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="churchSupplementaryFundingAgreementStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="master-funding-agreement/single-page-questions" aria-describedby="masterFundingAgreementStatus">
+                      Master funding agreement</a>
+                  </span>
+                  {% if (data['masterFundingAgreementStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="masterFundingAgreementStatus">
+                      Complete</strong>
+                  {% elseif (data['masterFundingAgreementStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="masterFundingAgreementStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="masterFundingAgreementStatus">
                       Not started</strong>
                   {% endif %}
                 </li>

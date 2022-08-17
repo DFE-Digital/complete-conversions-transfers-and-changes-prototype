@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "./includes/phase.html" %}
+  <a href="start" class="govuk-back-link">Back to all projects</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">URN 102062</span>
+      <h1 class="govuk-heading-l">St. Wilfred's Primary School</h1>
+      <div class="govuk-inset-text">
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">School type: </span>
+          Voluntary aided school</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Incoming trust:</span>
+          Dynamics Trust</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Local authority:</span>
+          Warrington Borough Council</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Target opening date:</span>
+          21 July 2022</p>
+      </div>
+
+      <nav class="sub-navigation" aria-label="Sub navigation">
+        <ul class="sub-navigation__list">
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-task-list">Task list</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-information">Project information</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" aria-current="page" href="#">Notes</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-form-group">
+            <form action="project-notes" method="post" class="form">
+              <h2 class="govuk-heading-l">
+                <label class="govuk-label govuk-label--l" for="project-notes">Notes
+                </label>
+              </h2>
+              <div id="project-notes-hint" class="govuk-hint">
+                Do not include personal or financial information.
+              </div>
+              <textarea class="govuk-textarea" id="project-notes" name="project-notes" rows="10" aria-describedby="project-notes-hint"></textarea>
+              {{ govukButton({ text: "Add note" }) }}
+              <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+            </form>
+          </div>
+          {% if (data['project-notes']) %}
+            <span class="govuk-caption-m">1 August 2022</span>
+            <h3 class="govuk-heading-m">Jo Wade</h3>
+            <p class="govuk-body">{{data['project-notes']}}</p>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+          {% endif %}
+          <span class="govuk-caption-m">29 July 2022</span>
+          <h3 class="govuk-heading-m">Jo Wade</h3>
+          <p class="govuk-body">The regional delivery officer came back with all
+            the required documents so I can now book in a handover call.</p>
+          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+          <span class="govuk-caption-m">22 July 2022</span>
+          <h3 class="govuk-heading-m">Jo Wade</h3>
+          <p class="govuk-body">Received the SharePoint folder but some things
+            are missing, I've reached back out to the regional delivery officer
+            to ask for these to be added in.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

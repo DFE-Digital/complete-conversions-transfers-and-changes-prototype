@@ -1,0 +1,8 @@
+.govuk-summary-list--last-border{
+  .govuk-summary-list__row:not(:last-of-type){
+    border-bottom:0 none;
+  }
+  .govuk-summary-list__row:last-of-type > *{
+    padding-bottom: govuk-spacing(4);
+  }
+}

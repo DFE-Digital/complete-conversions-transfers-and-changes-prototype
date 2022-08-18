@@ -17,14 +17,10 @@ module.exports = function (router) {
     if (journeyType == null){
       req.session.data.journeyType = ['multiPage']
     }
-
     res.render(version + '/start', {})
   })
 
   router.post('/' + version + '/start', function (req, res) {
-
     res.redirect('start')
   })
-
-
 }

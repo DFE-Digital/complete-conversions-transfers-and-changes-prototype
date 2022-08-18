@@ -36,6 +36,7 @@ const router = express.Router()
 
   require('./routes/0-5/articles-of-association.js')(router);
   require('./routes/0-5/church-supplementary-agreement.js')(router);
+  require('./routes/0-5/contacts.js')(router);
   require('./routes/0-5/deed-of-variation.js')(router);
   require('./routes/0-5/direction-to-transfer.js')(router);
   require('./routes/0-5/external-stakeholder-kick-off.js')(router);

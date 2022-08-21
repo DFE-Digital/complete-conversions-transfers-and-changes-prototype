@@ -18,4 +18,12 @@ module.exports = function (router) {
   router.post('/' + version + '/contacts/edit-contact', function (req, res) {
     res.redirect('../contacts')
   })
+
+  router.get('/' + version + '/contacts/delete-contact', function (req, res) {
+    res.render(version + '/contacts/delete-contact', {})
+  })
+
+  router.post('/' + version + '/contacts/delete-contact', function (req, res) {
+    res.redirect('../contacts')
+  })
 }

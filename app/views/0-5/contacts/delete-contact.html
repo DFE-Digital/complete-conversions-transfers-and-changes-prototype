@@ -9,98 +9,27 @@
 
 {% block beforeContent %}
   {% include "../includes/phase.html" %}
-  <a href="start" class="govuk-back-link">Back to all projects</a>
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <span class="govuk-caption-l">URN 102062</span>
-      <h1 class="govuk-heading-l">St. Wilfred's Primary School</h1>
-      <div class="govuk-inset-text">
-        <p class="govuk-body govuk-!-margin-0">
-          <span class="govuk-!-font-weight-bold">School type: </span>
-          Voluntary aided school</p>
-        <p class="govuk-body govuk-!-margin-0">
-          <span class="govuk-!-font-weight-bold">Incoming trust:</span>
-          Dynamics Trust</p>
-        <p class="govuk-body govuk-!-margin-0">
-          <span class="govuk-!-font-weight-bold">Local authority:</span>
-          Warrington Borough Council</p>
-        <p class="govuk-body govuk-!-margin-0">
-          <span class="govuk-!-font-weight-bold">Target opening date:</span>
-          21 July 2022</p>
-      </div>
-
-      <nav class="sub-navigation" aria-label="Sub navigation">
-        <ul class="sub-navigation__list">
-          <li class="sub-navigation__item">
-            <a class="sub-navigation__link" href="../project-task-list">Task list</a>
-          </li>
-          <li class="sub-navigation__item">
-            <a class="sub-navigation__link" href="../project-information">Project information</a>
-          </li>
-          <li class="sub-navigation__item">
-            <a class="sub-navigation__link" href="../project-notes.html">Notes</a>
-          </li>
-          <li class="sub-navigation__item">
-            <a class="sub-navigation__link" aria-current="page" href="#">Contacts</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <form action="edit-contact" method="post" class="form">
+          <h1 class="govuk-heading-l">
+            <label class="govuk-label govuk-label--l">Are you sure you want to
+              delete {Contact Name}?
+            </label>
+          </h1>
           <div class="govuk-form-group">
-            <form action="edit-contact" method="post" class="form">
-              <h2 class="govuk-heading-l">
-                <label class="govuk-label govuk-label--l">Add contact
-                </label>
-              </h2>
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contactFor">
-                  Contact for
-                </label>
-                <select class="govuk-select" id="contactFor" name="contactFor">
-                  <option value="School">School</option>
-                  <option value="Trust">Trust</option>
-                  <option value="Local authority">Local authority</option>
-                  <option value="Solicitor">Solicitor</option>
-                  <option value="Diocese">Diocese</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contactRole">
-                  Role
-                </label>
-                <input class="govuk-input govuk-input--width-20" id="contactRole" name="contactRole" type="text">
-              </div>
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contactName">
-                  Name
-                </label>
-                <input class="govuk-input" id="contactName" name="contactName" type="text">
-              </div>
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contactEmail">
-                  Email
-                </label>
-                <input class="govuk-input" id="contactEmail" name="contactEmail" type="text">
-              </div>
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contactPhone">
-                  Phone
-                </label>
-                <input class="govuk-input govuk-input--width-10" id="contactPhone" name="contactPhone" type="text">
-              </div>
-              <div class="govuk-button-group">
-                {{ govukButton({ text: "Add contact" }) }}
-                {{ govukButton({ text: "Delete", classes: "govuk-button--warning" }) }}
-                <a class="govuk-link" href="#">Cancel</a>
-              </div>
-            </form>
+            <p class="govuk-body">This will remove the contact for {Contact For}
+              called {Contact Name} from the contacts list.</p>
           </div>
-        </div>
+          <div class="govuk-button-group">
+            {{ govukButton({ text: "Delete", classes: "govuk-button--warning"}) }}
+            <a class="govuk-link" href="#">Cancel</a>
+          </div>
+        </form>
       </div>
     </div>
   </div>

@@ -23,4 +23,5 @@ module.exports = function (router) {
   router.post('/' + version + '/start', function (req, res) {
     res.redirect('start')
   })
+
 }

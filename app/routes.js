@@ -48,7 +48,6 @@ const router = express.Router()
   require('./routes/0-5/supplementary-funding-agreement.js')(router);
   require('./routes/0-5/trust-modification-order.js')(router);
   require('./routes/0-5/routes.js')(router);
-
-
+  require('./routes/0-5/checklist-test.js')(router);
 
 module.exports = router

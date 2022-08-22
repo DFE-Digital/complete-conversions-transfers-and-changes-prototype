@@ -16,7 +16,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <span class="govuk-caption-l">URN 102062</span>
-      <h1 class="govuk-heading-l">St. Wilfred's Primary School</h1>
+      <h1 class="govuk-heading-l">St. Wilfred's Primary School <br>
+      testReceivedDocumentStatus: {{data['testReceivedDocumentStatus']}}</h1>
       <div class="govuk-inset-text">
         <p class="govuk-body govuk-!-margin-0">
           <span class="govuk-!-font-weight-bold">School type: </span>
@@ -270,11 +271,19 @@
               <ul class="app-task-list__items">
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="#" aria-describedby="contact-details-status">
+                    <a href="checklist-test/single-page-questions.html" aria-describedby="contact-details-status">
                       Baseline checks</a>
                   </span>
-                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
-                    id="contact-details-status">Cannot start yet</strong>
+                  {% if (data['testReceivedDocumentStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="testReceivedDocumentStatus">
+                      Complete</strong>
+                  {% elseif (data['testReceivedDocumentStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="testReceivedDocumentStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="testReceivedDocumentStatus">
+                      Not started</strong>
+                  {% endif %}
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">

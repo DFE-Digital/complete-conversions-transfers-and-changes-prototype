@@ -2,17 +2,17 @@ module.exports = function (router) {
 
   var version = "0-5";
 
-  router.get('/' + version + '/supplementary-funding-agreement/single-page-questions', function (req, res) {
-    res.render(version + '/supplementary-funding-agreement/single-page-questions', {})
+  router.get('/' + version + '/supplemental-funding-agreement/single-page-questions', function (req, res) {
+    res.render(version + '/supplemental-funding-agreement/single-page-questions', {})
   })
 
-  router.post('/' + version + '/supplementary-funding-agreement/single-page-questions', function (req, res) {
-    const checkSupplementaryFundingAgreement = req.session.data['checkSupplementaryFundingAgreement']
+  router.post('/' + version + '/supplemental-funding-agreement/single-page-questions', function (req, res) {
+    const checkSupplementalFundingAgreement = req.session.data['checkSupplementalFundingAgreement']
 
-    if (checkSupplementaryFundingAgreement != 'Yes, the Supplementary funding agreement has been cleared'){
-      req.session.data.supplementaryFundingAgreementStatus = 'inProgress'
+    if (checkSupplementalFundingAgreement != 'Yes, the Supplemental funding agreement has been cleared'){
+      req.session.data.supplementalFundingAgreementStatus = 'inProgress'
     } else {
-      req.session.data.supplementaryFundingAgreementStatus = 'complete'
+      req.session.data.supplementalFundingAgreementStatus = 'complete'
     }
 
     res.redirect('../project-task-list')

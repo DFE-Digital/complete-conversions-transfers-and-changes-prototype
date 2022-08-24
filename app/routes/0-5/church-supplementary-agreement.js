@@ -2,17 +2,17 @@ module.exports = function (router) {
 
   var version = "0-5";
 
-  router.get('/' + version + '/church-supplementary-agreement/single-page-questions', function (req, res) {
-    res.render(version + '/church-supplementary-agreement/single-page-questions', {})
+  router.get('/' + version + '/church-supplemental-agreement/single-page-questions', function (req, res) {
+    res.render(version + '/church-supplemental-agreement/single-page-questions', {})
   })
 
-  router.post('/' + version + '/church-supplementary-agreement/single-page-questions', function (req, res) {
-    const checkChurchSupplementaryAgreement = req.session.data['checkChurchSupplementaryAgreement']
+  router.post('/' + version + '/church-supplemental-agreement/single-page-questions', function (req, res) {
+    const checkChurchSupplementalAgreement = req.session.data['checkChurchSupplementalAgreement']
 
-    if (checkChurchSupplementaryAgreement != 'Yes, the Church supplementary agreement has been cleared'){
-      req.session.data.churchSupplementaryFundingAgreementStatus = 'inProgress'
+    if (checkChurchSupplementalAgreement != 'Yes, the Church supplemental agreement has been cleared'){
+      req.session.data.churchSupplementalFundingAgreementStatus = 'inProgress'
     } else {
-      req.session.data.churchSupplementaryFundingAgreementStatus = 'complete'
+      req.session.data.churchSupplementalFundingAgreementStatus = 'complete'
     }
 
     res.redirect('../project-task-list')

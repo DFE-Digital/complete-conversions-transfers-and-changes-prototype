@@ -1,0 +1,378 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "./includes/phase.html" %}
+  <a href="start" class="govuk-back-link">Back to all projects</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">URN 102062</span>
+      <h1 class="govuk-heading-l">St. Wilfred's Primary School</h1>
+      <div class="govuk-inset-text">
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">School type: </span>
+          Voluntary aided school</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Incoming trust:</span>
+          Dynamics Trust</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Local authority:</span>
+          Warrington Borough Council</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Target opening date:</span>
+          21 July 2022</p>
+      </div>
+
+      <nav class="sub-navigation" aria-label="Sub navigation">
+        <ul class="sub-navigation__list">
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" aria-current="page" href="#">Task list</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-information">Project information</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-notes">Notes</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-l">Project task list</h2>
+          <ol class="app-task-list">
+            <li>
+              <h2 class="app-task-list__section">
+                <span class="app-task-list__section-number">1. </span> Project
+                kick-off
+              </h2>
+              <ul class="app-task-list__items">
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="project-kick-off/single-page-questions" aria-describedby="handoverStatus">
+                      Handover with regional delivery officer</a>
+                  </span>
+                  {% if (data['handoverStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="handoverStatus">
+                      Complete</strong>
+                  {% elseif (data['handoverStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="handoverStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="handoverStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="external-stakeholder-kick-off/single-page-questions" aria-describedby="externalStakeHolderKickoff">
+                      External stakeholder kick-off</a>
+                  </span>
+                  {% if (data['externalStakeHolderKickoffStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="externalStakeHolderKickoff">
+                      Complete</strong>
+                  {% elseif (data['externalStakeHolderKickoffStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="externalStakeHolderKickoff">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="externalStakeHolderKickoff">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="process-conversion-grant/single-page-questions" aria-describedby="processConversionGrantStatus">
+                      Process conversion grant</a>
+                  </span>
+                  {% if (data['processConversionGrantStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="processConversionGrantStatus">
+                      Complete</strong>
+                  {% elseif (data['processConversionGrantStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="processConversionGrantStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="processConversionGrantStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <h2 class="app-task-list__section">
+                <span class="app-task-list__section-number">2. </span> Clear
+                legal documents
+              </h2>
+              <ul class="app-task-list__items">
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="land-questionnaire/single-page-questions" aria-describedby="landQuestionnaireStatus">
+                      Land questionnaire</a>
+                  </span>
+                  {% if (data['landQuestionnaireStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="landQuestionnaireStatus">
+                      Complete</strong>
+                  {% elseif (data['landQuestionnaireStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="landQuestionnaireStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="landQuestionnaireStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="land-registry-title-plans/single-page-questions" aria-describedby="landRegistryStatus">
+                      Land registry title plans</a>
+                  </span>
+                  {% if (data['landRegistryStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="landRegistryStatus">
+                      Complete</strong>
+                  {% elseif (data['landRegistryStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="landRegistryStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="landRegistryStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="supplemental-funding-agreement/single-page-questions" aria-describedby="supplementalFundingAgreementStatus">
+                      Supplemental funding agreement</a>
+                  </span>
+                  {% if (data['supplementalFundingAgreementStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="supplementalFundingAgreementStatus">
+                      Complete</strong>
+                  {% elseif (data['supplementalFundingAgreementStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="supplementalFundingAgreementStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="supplementalFundingAgreementStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="church-supplemental-agreement/single-page-questions" aria-describedby="churchSupplementalFundingAgreementStatus">
+                      Church supplemental agreement</a>
+                  </span>
+                  {% if (data['churchSupplementalFundingAgreementStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="churchSupplementalFundingAgreementStatus">
+                      Complete</strong>
+                  {% elseif (data['churchSupplementalFundingAgreementStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="churchSupplementalFundingAgreementStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="churchSupplementalFundingAgreementStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="master-funding-agreement/single-page-questions" aria-describedby="masterFundingAgreementStatus">
+                      Master funding agreement</a>
+                  </span>
+                  {% if (data['masterFundingAgreementStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="masterFundingAgreementStatus">
+                      Complete</strong>
+                  {% elseif (data['masterFundingAgreementStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="masterFundingAgreementStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="masterFundingAgreementStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="articles-of-association/single-page-questions" aria-describedby="articlesOfAssociationStatus">
+                      Articles of association</a>
+                  </span>
+                  {% if (data['articlesOfAssociationStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="articlesOfAssociationStatus">
+                      Complete</strong>
+                  {% elseif (data['articlesOfAssociationStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="articlesOfAssociationStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="articlesOfAssociationStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="deed-of-variation/single-page-questions" aria-describedby="deedOfVariationStatus">
+                      Deed of variation</a>
+                  </span>
+                  {% if (data['deedOfVariationStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="deedOfVariationStatus">
+                      Complete</strong>
+                  {% elseif (data['deedOfVariationStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="deedOfVariationStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="deedOfVariationStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="trust-modification-order/single-page-questions" aria-describedby="trustModificationOrderStatus">
+                      Trust modification order</a>
+                  </span>
+                  {% if (data['trustModificationOrderStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="trustModificationOrderStatus">
+                      Complete</strong>
+                  {% elseif (data['trustModificationOrderStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="trustModificationOrderStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="trustModificationOrderStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="direction-to-transfer/single-page-questions" aria-describedby="directionToTransferStatus">
+                      Direction to transfer</a>
+                  </span>
+                  {% if (data['directionToTransferStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="directionToTransferStatus">
+                      Complete</strong>
+                  {% elseif (data['directionToTransferStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="directionToTransferStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="directionToTransferStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <h2 class="app-task-list__section">
+                <span class="app-task-list__section-number">3. </span> Get ready
+                for opening
+              </h2>
+              <ul class="app-task-list__items">
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="checklist-test/single-page-questions.html" aria-describedby="contact-details-status">
+                      Baseline checks</a>
+                  </span>
+                  {% if (data['testReceivedDocumentStatus'] == 'complete') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="testReceivedDocumentStatus">
+                      Complete</strong>
+                  {% elseif (data['testReceivedDocumentStatus'] == 'inProgress') %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="testReceivedDocumentStatus">
+                      In progress</strong>
+                  {% else %}
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="testReceivedDocumentStatus">
+                      Not started</strong>
+                  {% endif %}
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Stakeholder checks</a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Sign off sign worksheet</a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Confirm all conditions met</a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Grant funding agreement</a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Stakeholder handover</a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <h2 class="app-task-list__section">
+                <span class="app-task-list__section-number">4. </span> Completing
+                the project
+              </h2>
+              <ul class="app-task-list__items">
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="contact-details-status">
+                      Send redacted documents
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Education and Skills Funding Agency handover</a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Handover to regional delivery officer</a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="list-convictions-status">
+                      Process grant funding
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag govuk-tag--grey"
+                    id="contact-details-status">Cannot start yet</strong>
+                </li>
+              </ul>
+            </li>
+          </ol>
+          {{ govukButton({ text: "Complete project" }) }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

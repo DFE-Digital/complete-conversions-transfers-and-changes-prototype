@@ -50,4 +50,20 @@ const router = express.Router()
   require('./routes/0-5/routes.js')(router);
   require('./routes/0-5/checklist-test.js')(router);
 
+  require('./routes/0-6/articles-of-association.js')(router);
+  require('./routes/0-6/church-supplementary-agreement.js')(router);
+  require('./routes/0-6/contacts.js')(router);
+  require('./routes/0-6/deed-of-variation.js')(router);
+  require('./routes/0-6/direction-to-transfer.js')(router);
+  require('./routes/0-6/external-stakeholder-kick-off.js')(router);
+  require('./routes/0-6/land-questionnaire.js')(router);
+  require('./routes/0-6/land-registry-title-plans.js')(router);
+  require('./routes/0-6/master-funding-agreement.js')(router);
+  require('./routes/0-6/process-conversion-grant.js')(router);
+  require('./routes/0-6/project-kick-off.js')(router);
+  require('./routes/0-6/supplementary-funding-agreement.js')(router);
+  require('./routes/0-6/trust-modification-order.js')(router);
+  require('./routes/0-6/routes.js')(router);
+  require('./routes/0-6/checklist-test.js')(router);
+
 module.exports = router

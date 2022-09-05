@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+              <h1 class="govuk-heading-xl">Process conversion grant</h1>
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h2 class="govuk-fieldset__heading">Does the school or trust
+                    have a vendor account?</h2>
+                </legend>
+                <p class="govuk-body">The school or trust receiving the conversion 
+                  grant must have a vendor account.</p>
+                  <p class="govuk-body">You can <a href="https://educationgovuk.sharepoint.com/sites/lvedfe00083/SitePages/Set-up-and-mainta.aspx" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                  check if the school or trust has a vendor account (opens in new tab)</a> on Sharepoint.</p>
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        Help setting up a vendor account
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      <p class="govuk-body">Schools and trusts can 
+                        <a href="https://www.gov.uk/guidance/provide-information-about-your-banking-and-payments-to-dfe" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                        set up a vendor account (opens in new tab)</a> 
+                        when they provide information about their banking and payments to DfE.</p>
+                        <p class="govuk-body">Share the link with them so they can register if needed.</p>
+                    </div>
+                  </details>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkVendorAccount" name="checkVendorAccount" type="radio" value="Yes" {{ checked("checkVendorAccount", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkVendorAccount">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkVendorAccount-2" name="checkVendorAccount" type="radio" value="No" {{ checked("checkVendorAccount", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkVendorAccount-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h2 class="govuk-fieldset__heading">Have you received the
+                    completed Grant payment form?</h2>
+                </legend>
+                <p class="govuk-body">Check the form is complete
+                  and that there is no missing information.</p>
+                <p class="govuk-body">Save the completed form in 
+                  the school SharePoint.</p>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkGrantPaymentForm" name="checkGrantPaymentForm" type="radio" value="Yes" {{ checked("checkGrantPaymentForm", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkGrantPaymentForm">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkGrantPaymentForm-2" name="checkGrantPaymentForm" type="radio" value="No" {{ checked("checkGrantPaymentForm", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkGrantPaymentForm-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h2 class="govuk-fieldset__heading">Have you emailed the
+                    required documents to the Education and Skills Funding
+                    Agency (ESFA)?</h2>
+                </legend>
+                <div id="sign-in-hint" class="govuk-hint">
+                  You need to send the Grant claim form, Application to 
+                  convert and Academy order to the ESFA.
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkEmailEsfa" name="checkEmailEsfa" type="radio" value="Yes" {{ checked("checkEmailEsfa", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkEmailEsfa">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkEmailEsfa-2" name="checkEmailEsfa" type="radio" value="No" {{ checked("checkEmailEsfa", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkEmailEsfa-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

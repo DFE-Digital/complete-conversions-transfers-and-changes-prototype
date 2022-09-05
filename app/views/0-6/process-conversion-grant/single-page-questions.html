@@ -22,14 +22,24 @@
               <fieldset class="govuk-fieldset">
                 <div class="govuk-form-group">
                   <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
-                  <h1 class="govuk-heading-xl">Process conversion grant</h1>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-0">Process conversion grant</h1>
                 </div>
-                <p class="govuk-body">Check the grant payment form is ready, the
-                  school or trust has a vendor account and send the correct
-                  information to the Grant payment's team.</p>
-                <p class="govuk-body">Start this as soon as possible. Schools
-                  and trust can start incurring solicitor and local authority
-                  fees early in the process.</p>
+                <details class="govuk-details govuk-!-margin-bottom-9" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      General guidance
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <p class="govuk-body">Check the grant payment form is ready, the
+                      school or trust has a vendor account and send the correct
+                      information to the Grant payment's team.</p>
+                    <p class="govuk-body">Start this as soon as possible (because schools incur costs?). Schools
+                      and trust can start incurring solicitor and local authority
+                      fees early in the process.</p>
+                  </div>
+                </details>
+
                 <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="processConversionGrant" name="checkVendorAccount" type="checkbox" value="Received document" {{ checked("processConversionGrant", "Received document") }}>
@@ -38,23 +48,26 @@
                     </label>
                     <div class="govuk-checkboxes__guidance">
                       <div id="changed-name-hint" class="govuk-hint">
-                        The school or trust receiving the conversion grant must
-                        have a vendor account.
+                        You can <a href="https://educationgovuk.sharepoint.com/sites/lvedfe00083/SitePages/Set-up-and-mainta.aspx" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                          check if the school or trust has a vendor account (opens in new tab)</a> on Sharepoint.
+
                       </div>
-                      <p class="govuk-body">You can <a href="https://educationgovuk.sharepoint.com/sites/lvedfe00083/SitePages/Set-up-and-mainta.aspx" class="govuk-link" rel="noreferrer noopener" target="_blank">
-                        check if the school or trust has a vendor account (opens in new tab)</a> on Sharepoint.</p>
                       <details class="govuk-details" data-module="govuk-details">
                         <summary class="govuk-details__summary">
                           <span class="govuk-details__summary-text">
-                            Help setting up a vendor account
+                            Guidance for vendor accounts
                           </span>
                         </summary>
                         <div class="govuk-details__text">
+                          <p class="govuk-body">The school or trust receiving the conversion grant must
+                            have a vendor account.</p>
                           <p class="govuk-body">Schools and trusts can
                             <a href="https://www.gov.uk/guidance/provide-information-about-your-banking-and-payments-to-dfe" class="govuk-link" rel="noreferrer noopener" target="_blank">
-                            set up a vendor account (opens in new tab)</a>
-                            when they provide information about their banking and payments to DfE.</p>
-                            <p class="govuk-body">Share the link with them so they can register if needed.</p>
+                              set up a vendor account (opens in new tab)</a>
+                            when they provide information about their banking
+                            and payments to DfE.</p>
+                          <p class="govuk-body">Share the link with them so they
+                            can register if needed.</p>
                         </div>
                       </details>
                     </div>
@@ -65,20 +78,20 @@
                       Check and confirm the school's grant eligibility
                     </label>
                     <div class="govuk-checkboxes__guidance">
-                      <div id="changed-name-hint" class="govuk-hint">
-                        You need to confirm the amount of money the school can
-                        receive.
-                      </div>
-                      <p class="govuk-body">This information must be included in
-                        your email to the Grants payment team later.</p>
                       <details class="govuk-details" data-module="govuk-details">
                         <summary class="govuk-details__summary">
                           <span class="govuk-details__summary-text">
-                            How to check grant eligibility
+                            Guidance for checking grant eligibility
                           </span>
                         </summary>
                         <div class="govuk-details__text">
-                          <p class="govuk-body">Some copy here.</p>
+                          <div id="changed-name-hint" class="govuk-hint">
+                            You need to confirm the amount of money the school
+                            can receive.
+                          </div>
+                          <p class="govuk-body">This information must be
+                            included in your email to the Grants payment team
+                            later.</p>
                         </div>
                       </details>
                     </div>
@@ -86,19 +99,28 @@
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="processConversionGrant" name="checkVendorAccount" type="checkbox" value="Received document" {{ checked("processConversionGrant", "Received document") }}>
                     <label class="govuk-label govuk-checkboxes__label" for="checkVendorAccount">
-                      Receive, check and cave the Grant payment form
+                      Receive, check and save the Grant payment form
                     </label>
                     <div class="govuk-checkboxes__guidance">
                       <div id="changed-name-hint" class="govuk-hint">
-                        The school or trust must send you the Grant payment
-                        form.
+                        Make sure there's no missing information.
                       </div>
-                      <p class="govuk-body">Once they have, check the Grant
-                        payment form is complete. Make sure there's no missing
-                        information</p>
-                      <p class="govuk-body">Save the completed form in the
-                        School's SharePoint folder.
-                      </p>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            Guidance for checking grant eligibility
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">The school or trust must send
+                            you the Grant payment form.</p>
+                          <p class="govuk-body">Once they have, check the Grant
+                            payment form is complete. Make sure there's no missing
+                            information</p>
+                          <p class="govuk-body">Save the completed form in the
+                            School's SharePoint folder.</p>
+                        </div>
+                      </details>
                     </div>
                   </div>
                   <div class="govuk-checkboxes__item">
@@ -107,15 +129,22 @@
                       Send the grant information form to the payments team
                     </label>
                     <div class="govuk-checkboxes__guidance">
-                      <div id="changed-name-hint" class="govuk-hint">
-                        <p class="govuk-body">You need to send the following
-                          documents and information to the Grant payments team:</p>
-                        <ul class="govuk-list govuk-list--bullet">
-                          <li>Application to convert</li>
-                          <li>Academy order</li>
-                          <li>Grant claim form</li>
-                        </ul>
-                      </div>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            Guidance on what information to send
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">You need to send the following
+                            documents and information to the Grant payments team:</p>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>Application to convert</li>
+                            <li>Academy order</li>
+                            <li>Grant claim form</li>
+                          </ul>
+                        </div>
+                      </details>
                     </div>
                   </div>
                 </div>

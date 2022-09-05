@@ -23,4 +23,15 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/back-to-top";
 @import "patterns/_summary-list--last-border";
 
+.govuk-checkboxes__guidance{
+  padding-left: govuk-spacing(3);
+  margin-bottom: govuk-spacing(9);
+}
+
+.govuk-checkboxes__checklist{
+  label{
+    font-weight: bold;
+    margin-bottom: govuk-spacing(2);
+  }
+}
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you

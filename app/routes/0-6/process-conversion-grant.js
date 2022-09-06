@@ -23,8 +23,6 @@ module.exports = function (router) {
       req.session.data.processConversionGrantStatus = 'inProgress'
     }
 
-    // Need to make a checkbox for empty that I can look against
-
     res.redirect('../project-task-list')
   })
 

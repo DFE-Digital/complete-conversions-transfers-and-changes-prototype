@@ -7,20 +7,24 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/process-conversion-grant/single-page-questions', function (req, res) {
-    const checkVendorAccount = req.session.data['checkVendorAccount']
-    const checkGrantPaymentForm = req.session.data['checkGrantPaymentForm']
-    const checkEmailEsfa = req.session.data['checkEmailEsfa']
+    const processConversionGrant = req.session.data['processConversionGrant']
 
-    if (checkVendorAccount == 'No' ||
-      checkVendorAccount == null ||
-      checkGrantPaymentForm == 'No' ||
-      checkGrantPaymentForm == null ||
-      checkEmailEsfa == 'No' ||
-      checkEmailEsfa == null){
-      req.session.data.processConversionGrantStatus = 'inProgress'
-    } else {
+    if (processConversionGrant.includes('checkVendorAccount') &
+      processConversionGrant.includes('checkSchoolEligibility') &
+      processConversionGrant.includes('checkGrantForm') &
+      processConversionGrant.includes('sendToPaymentsTeam') &
+      processConversionGrant.includes('giveSchoolPaymentDate') &
+      processConversionGrant.includes('checkSchoolGotGrant') &
+      processConversionGrant.includes('empty')){
       req.session.data.processConversionGrantStatus = 'complete'
+    }else if (processConversionGrant == ('empty')){
+      req.session.data.processConversionGrantStatus = 'notStarted'
+    }else {
+      req.session.data.processConversionGrantStatus = 'inProgress'
     }
+
+    // Need to make a checkbox for empty that I can look against
+
     res.redirect('../project-task-list')
   })
 

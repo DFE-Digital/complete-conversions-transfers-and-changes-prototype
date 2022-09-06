@@ -19,214 +19,206 @@
         <div class="govuk-grid-column-two-thirds">
           <form action="single-page-questions" method="post" class="form">
             <div class="govuk-form-group">
-              <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
-              <h1 class="govuk-heading-xl">External stakeholder kick-off</h1>
-            </div>
-            <div class="govuk-form-group">
               <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h2 class="govuk-fieldset__heading">Have you sent the
-                    introduction emails?</h2>
-                </legend>
-                <p class="govul-body">
-                  Kick-off and introduction emails should be sent to the trust,
-                  school and their solicitors. Contact the local authority separately.
-                </p>
+                <div class="govuk-form-group">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-0">External
+                    stakeholder kick-off</h1>
+                </div>
                 <div class="govuk-hint">
-                  Introduction emails should include documents that schools and 
-                  trusts will need to complete, as well as any important dates.
+                  You should start this work after you've had the handover with
+                  the regional delivery officer.
                 </div>
-                <details class="govuk-details" data-module="govuk-details">
-                  <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                      Recommended content for kick-off emails
-                    </span>
-                  </summary>
-                  <div class="govuk-details__text">
-                    <p class="govuk-body">Emails should include:</p>
-                    <ul class="govuk-list govuk-list--bullet">
-                      <li>attached documents that school, trusts or their 
-                        solicitors will need to complete and return</li>
-                      <li>a list of who should complete each document, 
-                        with an appropriate due date</li>
-                      <li>a project end date and a list of key dates or
-                        milestones</li>
-                      <li>suggested ways of working, such as monthly progress calls</li>
-                      <li>link to useful websites and forms that need completing, such 
-                        as the vendor account form</li>
-                      <li>an explanation that the bank details they enter in the 
-                        vendor account form are only valid for 4 months and we 
-                        may need to ask them for bank details again</li>
-                      <li>some suggested dates for the kick-off meeting</li>
-                    </ul>
-                  </div>
-                </details>
-                <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="checkIntroductoryEmailSent" name="checkIntroductoryEmailSent" type="radio" value="Yes" {{ checked("checkIntroductoryEmailSent", "Yes") }}>
-                    <label class="govuk-label govuk-radios__label" for="checkIntroductoryEmailSent">
-                      Yes
+                <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff">
+                      Send introductory emails
                     </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="checkIntroductoryEmailSent-2" name="checkIntroductoryEmailSent" type="radio" value="No" {{ checked("checkIntroductoryEmailSent", "No") }}>
-                    <label class="govuk-label govuk-radios__label" for="checkIntroductoryEmailSent-2">
-                      No
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h2 class="govuk-fieldset__heading">Have you agreed a date
-                    for the kick-off meeting?</h2>
-                </legend>
-                <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="haveYouAgreedKickoffDate" name="haveYouAgreedKickoffDate" type="radio" value="Yes" data-aria-controls="conditional-haveYouAgreedKickoffDate">
-                    <label class="govuk-label govuk-radios__label" for="haveYouAgreedKickoffDate">
-                      Yes
-                    </label>
-                  </div>
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-haveYouAgreedKickoffDate">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="kickoffDate">
-                        What is the kick-off meeting date?
-                      </label>
-                      <div id="kickoffDate-hint" class="govuk-hint">
-                        For example, 27 3 2007
+                    <div class="govuk-checkboxes__guidance">
+                      <div id="changed-name-hint" class="govuk-hint">
+                        Introduce yourself to the school, trust and their
+                        solicitors. You should also contact the local authority,
+                        but do this separately.
                       </div>
-                      <div class="govuk-date-input" id="kickoffDate">
-                        <div class="govuk-date-input__item">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="kickoffDateDay">
-                              Day
-                            </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="kickoffDateDay" name="kickoffDateDay" type="text" inputmode="numeric">
-                          </div>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            What to include in introductory emails
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">You can <a href="https://educationgovuk.sharepoint.com/:f:/r/sites/ServiceDeliveryDirectorate/Shared%20Documents/Operational%20Delivery/Training%20and%20Resources/Resources/Project%20templates?csf=1&web=1&e=Hf4exC" target="_blank">
+                            choose an email template (opens in a new tab)</a> to
+                            help you write your introductory emails. There are
+                            templates for the school or trust, their solicitors
+                            and the local authority.</p>
+                          <p class="govuk-body">This will help you to:</p>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>organise kick-off meetings</li>
+                            <li>clarify roles and expectations</li>
+                            <li>establish dates and deadlines</li>
+                            <li>provide links to documents that need to be
+                              completed</li>
+                            <li>agree ways of working</li>
+                          </ul>
+                          <p class="govuk-body">You should aim to do this in the
+                            first week of picking up the project. Ideally the
+                            kick-off meeting should take place within the first \
+                            couple of weeks.</p>
                         </div>
-                        <div class="govuk-date-input__item">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="kickoffDateMonth">
-                              Month
-                            </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="kickoffDateMonth" name="kickoffDateMonth" type="text" inputmode="numeric">
-                          </div>
-                        </div>
-                        <div class="govuk-date-input__item">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="kickoffDateYear">
-                              Year
-                            </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="kickoffDateYear" name="kickoffDateYear" type="text" inputmode="numeric">
-                          </div>
-                        </div>
-                      </div>
+                      </details>
                     </div>
                   </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="haveYouAgreedKickoffDate-2" name="haveYouAgreedKickoffDate" type="radio" value="No" data-aria-controls="conditional-haveYouAgreedKickoffDate-2">
-                    <label class="govuk-label govuk-radios__label" for="haveYouAgreedKickoffDate-2">
-                      No
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-2" name="externalStakeHolderKickoff" type="checkbox" value="saveProforma" {{ checked("externalStakeHolderKickoff", "saveProforma") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-2">
+                      Check and save the Local authority proforma in SharePoint
+                    </label>
+                    <div class="govuk-checkboxes__guidance">
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            Help with the Local authority proforma
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">The regional delivery officer
+                            should have sent the Local authority proforma to the
+                            local authority to complete.</p>
+                          <p class="govuk-body">If you haven't received it yet,
+                            check that the regional delivery officer sent it and
+                            then ask the local authority if they have completed
+                            and shared it.</p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-3" name="externalStakeHolderKickoff" type="checkbox" value="confirmConversionDate" {{ checked("externalStakeHolderKickoff", "confirmConversionDate") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-3">
+                      Confirm the target conversion date with the local authority
+                    </label>
+                    <div class="govuk-checkboxes__guidance">
+                      <div id="changed-name-hint" class="govuk-hint">
+                        Check that the local authority has capacity to convert
+                        the school by the target date.
+                      </div>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            What to do if the local authority does not have
+                            capacity
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">The school and trust will have
+                            given a target date they want to convert on.</p>
+                          <p class="govuk-body">Tell them if the local authority
+                            cannot complete the conversion by the target date.</p>
+                          <p class="govuk-body">If the local authority cannot
+                            complete the conversion by the target date, you'll
+                            need to work with the school, trust and local
+                            authority to agree a new date.</p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-4" name="externalStakeHolderKickoff" type="checkbox" value="sendKickOffInvites" {{ checked("externalStakeHolderKickoff", "sendKickOffInvites") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-4">
+                      Send invites to the kick-off meeting or call
+                    </label>
+                    <div class="govuk-checkboxes__guidance">
+                      <div id="changed-name-hint" class="govuk-hint">
+                        Check who the school and trust would like to attend the
+                        kick-off meeting.
+                      </div>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            How to arrange the kick-off meeting
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">Your introductory email should
+                            have included some possible dates for a kick-off
+                            meeting.</p>
+                          <p class="govuk-body">Once the school have got back to
+                            you with a suitable date and list of attendees, send
+                            out invites to arrange the time, date and location
+                            of the meeting. It's likely to be a video call over
+                            Microsoft Teams. </p>
+                          <p class="govuk-body">Some schools and trusts may
+                            prefer to have a 1-to-1 call with you, rather than a
+                            meeting involving all stakeholders.</p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-5" name="externalStakeHolderKickoff" type="checkbox" value="hostKickOffMeeting" {{ checked("externalStakeHolderKickoff", "hostKickOffMeeting") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-5">
+                      Host the kick-off meeting or call
+                    </label>
+                    <div class="govuk-checkboxes__guidance">
+                      <div id="changed-name-hint" class="govuk-hint">
+                        Make sure all attendees understand what they need to do,
+                        and when they need to do it by.
+                      </div>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            What to talk about in the meeting
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">You should discuss and record
+                            issues that might complicate or delay the project.</p>
+                          <p class="govuk-body">You can use the <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/254958/academy_converter_checklist_for_schools.pdf" target="_blank">
+                            conversion checklist [PDF] (opens in a new tab)</a>
+                            to guide the conversation and make sure you talk
+                            about everything you need to.</p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-6" name="externalStakeHolderKickoff" type="checkbox" value="shareConversionChecklist" {{ checked("externalStakeHolderKickoff", "shareConversionChecklist") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-6">
+                      Share the conversion checklist
+                    </label>
+                    <div class="govuk-checkboxes__guidance">
+                      <div id="changed-name-hint" class="govuk-hint">
+                        Update the conversion checklist with any agreed actions,
+                        dates and comments from the kick-off meeting or call.
+                      </div>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            Who to share the checklist with
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">You should share the updated
+                            checklist with everyone invited to the kick-off
+                            meeting or call.</p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item" style="display: none;">
+                    <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-7" name="externalStakeHolderKickoff" type="checkbox" value="empty" checked="empty">
+                    <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-7">
+                      empty
                     </label>
                   </div>
                 </div>
-              </fieldset>
+                {{ govukButton({ text: "Continue" }) }}
+                </fieldset>
+                </div>
+              </form>
             </div>
-            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h2 class="govuk-fieldset__heading">Have you had the school
-                    and trust kick-off meeting?</h2>
-                </legend>
-                <div id="sign-in-hint" class="govuk-hint">
-                  <p class="govuk-body">Check that the school, trust and their solicitors have 
-                    received all the documents they need.</p> 
-                  <p class="govuk-body">Make sure they know who needs to complete the documents and when they 
-                    need to return them.</p>
-                </div>
-                <details class="govuk-details" data-module="govuk-details">
-                  <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                      Documents to check and questions to ask at the meeting
-                    </span>
-                  </summary>
-                  <div class="govuk-details__text">
-                    <p class="govuk-body">You should check that the:</p>
-                    <ul class="govuk-list govuk-list--bullet">
-                      <li>school and trust have all the necessary documents</li>
-                      <li>right people know they're responsible for completing 
-                        certain documents and due dates</li>
-                      <li>school has decided whether to have Risk Protection 
-                        Agreement insurance or not</li>
-                      <li>ways of working have been agreed</li>
-                      <li>number of high needs places are confirmed</li>
-                      <li>bank details have been provided for the conversion
-                        grant, if needed</li>
-                      <li>grant payment amount is confirmed. Some schools 
-                        may have tried to convert before so they may not 
-                        have the full £25,000 available
-                      </li>
-                    </ul>
-                    <p class="govuk-body">Make sure schools or trusts are aware 
-                      they will need to submit bank details separately for the 
-                      General annual grant payment.</p>
-                  </div>
-                </details>
-                <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="hadKickoff" name="hadKickoff" type="radio" value="Yes" {{ checked("hadKickoff", "Yes") }}>
-                    <label class="govuk-label govuk-radios__label" for="hadKickoff">
-                      Yes
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="hadKickoff-2" name="hadKickoff" type="radio" value="No" {{ checked("hadKickoff", "No") }}>
-                    <label class="govuk-label govuk-radios__label" for="hadKickoff-2">
-                      No
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h2 class="govuk-fieldset__heading">Have you contacted the local
-                    authority?</h2>
-                </legend>
-                <div id="sign-in-hint" class="govuk-hint">
-                  You should check that the local authority have received 
-                  the land questionnaire and agree to the conversion date.
-                </div>
-                <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="hadLocalAuthorityKickoff" name="hadLocalAuthorityKickoff" type="radio" value="Yes" {{ checked("hadLocalAuthorityKickoff", "Yes") }}>
-                    <label class="govuk-label govuk-radios__label" for="hadLocalAuthorityKickoff">
-                      Yes
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="hadLocalAuthorityKickoff-2" name="hadLocalAuthorityKickoff" type="radio" value="No" {{ checked("hadLocalAuthorityKickoff", "No") }}>
-                    <label class="govuk-label govuk-radios__label" for="hadLocalAuthorityKickoff-2">
-                      No
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-
-            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-            {{ govukButton({ text: "Continue" }) }}
-          </form>
         </div>
       </div>
     </div>

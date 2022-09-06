@@ -60,7 +60,7 @@ const router = express.Router()
   require('./routes/0-6/land-registry-title-plans.js')(router);
   require('./routes/0-6/master-funding-agreement.js')(router);
   require('./routes/0-6/process-conversion-grant.js')(router);
-  require('./routes/0-6/project-kick-off.js')(router);
+  require('./routes/0-6/regional-delivery-officer-handover.js')(router);
   require('./routes/0-6/supplementary-funding-agreement.js')(router);
   require('./routes/0-6/trust-modification-order.js')(router);
   require('./routes/0-6/routes.js')(router);

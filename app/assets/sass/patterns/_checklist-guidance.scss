@@ -1,0 +1,12 @@
+.govuk-checkboxes__guidance{
+  padding-left: govuk-spacing(3);
+}
+
+.govuk-checkboxes__checklist{
+  label{
+    font-weight: bold;
+  }
+  .govuk-checkboxes__item{
+    margin-bottom: govuk-spacing(9);
+  }
+}

@@ -7,32 +7,22 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/external-stakeholder-kick-off/single-page-questions', function (req, res) {
-    const checkIntroductoryEmailSent = req.session.data['checkIntroductoryEmailSent']
-    const haveYouAgreedKickoffDate = req.session.data['haveYouAgreedKickoffDate']
-    const kickoffDateDay = req.session.data['kickoffDateDay']
-    const kickoffDateMonth = req.session.data['kickoffDateMonth']
-    const kickoffDateYear = req.session.data['kickoffDateYear']
-    const hadKickoff = req.session.data['hadKickoff']
-    const hadLocalAuthorityKickoff = req.session.data['hadLocalAuthorityKickoff']
+    const externalStakeHolderKickoff = req.session.data['externalStakeHolderKickoff']
 
-    if ( checkIntroductoryEmailSent == 'No' ||
-      checkIntroductoryEmailSent == null ||
-      haveYouAgreedKickoffDate == 'No' ||
-      haveYouAgreedKickoffDate == null ||
-      kickoffDateDay == null ||
-      kickoffDateDay == '' ||
-      kickoffDateMonth == null ||
-      kickoffDateMonth == '' ||
-      kickoffDateYear == null ||
-      kickoffDateYear == '' ||
-      hadKickoff == 'No' ||
-      hadKickoff == null ||
-      hadLocalAuthorityKickoff == 'No' ||
-      hadLocalAuthorityKickoff == null){
-      req.session.data.externalStakeHolderKickoffStatus = 'inProgress'
-    } else {
+    if (externalStakeHolderKickoff.includes('sendIntroductoryEmails') &
+      externalStakeHolderKickoff.includes('saveProforma') &
+      externalStakeHolderKickoff.includes('confirmConversionDate') &
+      externalStakeHolderKickoff.includes('sendKickOffInvites') &
+      externalStakeHolderKickoff.includes('hostKickOffMeeting') &
+      externalStakeHolderKickoff.includes('shareConversionChecklist') &
+      externalStakeHolderKickoff.includes('empty')){
       req.session.data.externalStakeHolderKickoffStatus = 'complete'
+    }else if (externalStakeHolderKickoff == ('empty')){
+      req.session.data.externalStakeHolderKickoffStatus = 'notStarted'
+    }else {
+      req.session.data.externalStakeHolderKickoffStatus = 'inProgress'
     }
+
     res.redirect('../project-task-list')
   })
 

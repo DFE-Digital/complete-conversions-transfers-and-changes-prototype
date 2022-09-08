@@ -1,3 +1,10 @@
+.govuk-checklist__header{
+  margin-bottom: govuk-spacing(6);
+  h1,h2,h3,h4,h5,h6{
+    margin-bottom: govuk-spacing(2);
+  }
+}
+
 .govuk-checkboxes__guidance{
   padding-left: govuk-spacing(3);
 }
@@ -6,7 +13,10 @@
   label{
     font-weight: bold;
   }
+
   .govuk-checkboxes__item{
-    margin-bottom: govuk-spacing(9);
+    .govuk-checkboxes__guidance{
+        margin-bottom: govuk-spacing(9);
+    }
   }
 }

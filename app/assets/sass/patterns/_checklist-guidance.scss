@@ -3,10 +3,17 @@
   h1,h2,h3,h4,h5,h6{
     margin-bottom: govuk-spacing(2);
   }
+  &:not(:last-of-type){
+    margin-bottom: govuk-spacing(6);
+  }
 }
 
 .govuk-checkboxes__guidance{
   padding-left: govuk-spacing(3);
+}
+
+.govuk-checklist__group{
+  margin-bottom: govuk-spacing(9);
 }
 
 .govuk-checkboxes__checklist{

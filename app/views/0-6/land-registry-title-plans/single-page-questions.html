@@ -29,63 +29,65 @@
                     all conversions.
                   </div>
                 </div>
-                <div class="govuk-checklist__header">
-                  <h2 class="govuk-heading-l">Check and
-                    clear the Land registry title plans</h2>
-                  <div class="govuk-hint">
-                    Check an official copy of the title plans for boundary issues
-                    and buildings that have not been excluded.
-                  </div>
-                  <details class="govuk-details" data-module="govuk-details">
-                    <summary class="govuk-details__summary">
-                      <span class="govuk-details__summary-text">
-                        Help checking Land registry title plans
-                      </span>
-                    </summary>
-                    <div class="govuk-details__text">
-                      <p class="govuk-body">Check you have an official copy of
-                        the title plans. An official copy will state it's from
-                        the Land registry, include a title plan and title number.</p>
-                      <p class="govuk-body">It's a good idea to look at the site
-                        on Google maps and compare that to the site plan. This
-                        can help you find out if there's anything to question on
-                        the title plan.</p>
-                      <p class="govuk-body">The boundary should include all
-                        school or trust buildings. If the land has become
-                        unregistered you should check the title plan.</p>
-                      <p class="govuk-body">Talk to your line manager or the
-                        relevant solicitor if you have questions about anything
-                        on the title plan.</p>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checklist__header">
+                    <h2 class="govuk-heading-l">Check and
+                      clear the Land registry title plans</h2>
+                    <div class="govuk-hint">
+                      Check an official copy of the title plans for boundary issues
+                      and buildings that have not been excluded.
                     </div>
-                  </details>
+                    <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Help checking Land registry title plans
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <p class="govuk-body">Check you have an official copy of
+                          the title plans. An official copy will state it's from
+                          the Land registry, include a title plan and title number.</p>
+                        <p class="govuk-body">It's a good idea to look at the site
+                          on Google maps and compare that to the site plan. This
+                          can help you find out if there's anything to question on
+                          the title plan.</p>
+                        <p class="govuk-body">The boundary should include all
+                          school or trust buildings. If the land has become
+                          unregistered you should check the title plan.</p>
+                        <p class="govuk-body">Talk to your line manager or the
+                          relevant solicitor if you have questions about anything
+                          on the title plan.</p>
+                      </div>
+                    </details>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff">
+                        Received
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-2" name="externalStakeHolderKickoff" type="checkbox" value="saveProforma" {{ checked("externalStakeHolderKickoff", "saveProforma") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-2">
+                        Cleared
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-3" name="externalStakeHolderKickoff" type="checkbox" value="confirmConversionDate" {{ checked("externalStakeHolderKickoff", "confirmConversionDate") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-3">
+                        Saved in SharePoint
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-7" name="externalStakeHolderKickoff" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-7">
+                        empty
+                      </label>
+                    </div>
+                  </div>
                 </div>
-                <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
-                    <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff">
-                      Received
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-2" name="externalStakeHolderKickoff" type="checkbox" value="saveProforma" {{ checked("externalStakeHolderKickoff", "saveProforma") }}>
-                    <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-2">
-                      Cleared
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-3" name="externalStakeHolderKickoff" type="checkbox" value="confirmConversionDate" {{ checked("externalStakeHolderKickoff", "confirmConversionDate") }}>
-                    <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-3">
-                      Saved in SharePoint
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item" style="display: none;">
-                    <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-7" name="externalStakeHolderKickoff" type="checkbox" value="empty" checked="empty">
-                    <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-7">
-                      empty
-                    </label>
-                  </div>
-                </div>
-                <div class="govuk-form-group govuk-!-margin-top-9">
+                <div class="govuk-form-group">
                   {{ govukButton({ text: "Continue" }) }}
                 </div>
               </fieldset>

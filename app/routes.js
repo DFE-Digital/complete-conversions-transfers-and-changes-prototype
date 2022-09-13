@@ -67,6 +67,7 @@ const router = express.Router()
   require('./routes/0-6/checklist-test.js')(router);
 
   require('./routes/0-7/articles-of-association.js')(router);
+  require('./routes/0-7/baseline-checks.js')(router);
   require('./routes/0-7/church-supplementary-agreement.js')(router);
   require('./routes/0-7/contacts.js')(router);
   require('./routes/0-7/deed-of-variation.js')(router);

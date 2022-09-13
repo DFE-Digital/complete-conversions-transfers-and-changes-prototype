@@ -1,6 +1,6 @@
 module.exports = function (router) {
 
-  var version = "0-7";
+  var version = "0-6";
 
   router.get('/' + version + '/contacts', function (req, res) {
     res.render(version + '/contacts', {})

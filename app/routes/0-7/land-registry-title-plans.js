@@ -1,6 +1,6 @@
 module.exports = function (router) {
 
-  var version = "0-7";
+  var version = "0-6";
 
   router.get('/' + version + '/land-registry-title-plans/single-page-questions', function (req, res) {
     res.render(version + '/land-registry-title-plans/single-page-questions', {})

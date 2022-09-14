@@ -83,7 +83,6 @@ const router = express.Router()
   require('./routes/0-7/school-opening-date.js')(router);
   require('./routes/0-7/single-worksheet.js')(router);
   require('./routes/0-7/supplementary-funding-agreement.js')(router);
-  require('./routes/0-7/tupe.js')(router);
   require('./routes/0-7/trust-modification-order.js')(router);
   require('./routes/0-7/routes.js')(router);
 

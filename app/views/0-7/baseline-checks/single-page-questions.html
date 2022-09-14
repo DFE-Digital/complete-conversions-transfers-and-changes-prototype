@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Check the
+                    Baseline</h1>
+                  <div class="govuk-hint">
+                    You must confirm the conversion date within 3 working days
+                    of receiving the Baseline email.
+                  </div>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checklist__header">
+                    <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          How to check the Baseline
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <p class="govuk-body">The Academy operations team will
+                          usually email the Baseline spreadsheet to you in the
+                          first week of each month.</p>
+                        <p class="govuk-body">The Baseline spreadsheet contains
+                          a list of all the schools expected to open as
+                          academies the following month. The school should
+                          appear on that list.</p>
+                        <p class="govuk-body">The Academy operations team may
+                          refer to the Baseline as the Openers list.</p>
+                        <p class="govuk-body govuk-!-font-weight-bold">What to
+                          do if your school is not on the Baseline</p>
+                        <p class="govuk-body">There is a Baseline spreadsheet
+                          for each region. If the school does not appear in
+                          the right Baseline check the other Baselines to see if
+                          the school has been added to the wrong one. </p>
+                        <p class="govuk-body">If the school is in the wrong
+                          region, remove it from that Baseline and place the
+                          information in the correct region.</p>
+                        <p class="govuk-body">If it doesn't appear at all, enter
+                          the school's information in the correct Baseline
+                          spreadsheet.</p>
+                        <p class="govuk-body">Email the Academy operations
+                          team to tell them if you have had to move or add the
+                          school to the correct Baseline.</p>
+                      </div>
+                    </details>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff">
+                        Confirm the school is on the correct Baseline
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-7" name="externalStakeHolderKickoff" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-7">
+                        empty
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-form-group">
+                  {{ govukButton({ text: "Continue" }) }}
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

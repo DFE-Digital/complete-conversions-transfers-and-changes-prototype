@@ -74,6 +74,7 @@ const router = express.Router()
   require('./routes/0-7/contacts.js')(router);
   require('./routes/0-7/deed-of-variation.js')(router);
   require('./routes/0-7/direction-to-transfer.js')(router);
+  require('./routes/0-7/education-skills-funding-agency-handover.js')(router);
   require('./routes/0-7/external-stakeholder-kick-off.js')(router);
   require('./routes/0-7/land-questionnaire.js')(router);
   require('./routes/0-7/land-registry-title-plans.js')(router);

@@ -80,6 +80,7 @@ const router = express.Router()
   require('./routes/0-7/master-funding-agreement.js')(router);
   require('./routes/0-7/process-conversion-grant.js')(router);
   require('./routes/0-7/readiness-for-opening.js')(router);
+  require('./routes/0-7/redact-and-send-documents.js')(router);
   require('./routes/0-7/regional-delivery-officer-handover.js')(router);
   require('./routes/0-7/school-opening-date.js')(router);
   require('./routes/0-7/single-worksheet.js')(router);

@@ -70,6 +70,7 @@ const router = express.Router()
   require('./routes/0-7/baseline-checks.js')(router);
   require('./routes/0-7/checklist-test.js')(router);
   require('./routes/0-7/church-supplementary-agreement.js')(router);
+  require('./routes/0-7/complete-processing-of-conversion-grant.js')(router);
   require('./routes/0-7/confirm-all-conditions-met.js')(router);
   require('./routes/0-7/contacts.js')(router);
   require('./routes/0-7/deed-of-variation.js')(router);

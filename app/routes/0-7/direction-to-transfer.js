@@ -1,6 +1,6 @@
 module.exports = function (router) {
 
-  var version = "0-6";
+  var version = "0-7";
 
   router.get('/' + version + '/direction-to-transfer/single-page-questions', function (req, res) {
     res.render(version + '/direction-to-transfer/single-page-questions', {})

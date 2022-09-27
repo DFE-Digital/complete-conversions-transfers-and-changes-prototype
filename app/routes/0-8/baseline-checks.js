@@ -1,6 +1,6 @@
 module.exports = function (router) {
 
-  var version = "0-7";
+  var version = "0-8";
 
   router.get('/' + version + '/baseline-checks/single-page-questions', function (req, res) {
     res.render(version + '/baseline-checks/single-page-questions', {})

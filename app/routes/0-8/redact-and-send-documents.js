@@ -1,6 +1,6 @@
 module.exports = function (router) {
 
-  var version = "0-7";
+  var version = "0-8";
 
   router.get('/' + version + '/redact-and-send-documents/single-page-questions', function (req, res) {
     res.render(version + '/redact-and-send-documents/single-page-questions', {})

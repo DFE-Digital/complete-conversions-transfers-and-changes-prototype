@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  <a href="/design-history/contents" class="govuk-back-link">Back to design history contents</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">August 2022</span>
+      <h1 class="govuk-heading-xl">Choosing check boxes or radio buttons</h1>
+      <p class="govuk-body">After deciding to present all actions for a task on
+        a single page, we had to consider if radio buttons were still
+        appropriate. Checkboxes might provide a better solution.</p>
+      <h2 class="govuk-heading-l">Thinking about alternatives to questions and
+        radio buttons</h2>
+      <p class="govuk-body">While asking questions and providing radio buttons
+        for response options works well for many services, it felt like it might
+        not be the best experience for users in this instance.</p>
+      <p class="govuk-body">The work caseworkers will carry out on our system is
+        repetitive, and can require them to go back and forth, in and out of
+        tasks, to update them as tasks progress.</p>
+      <p class="govuk-body">Re-entering tasks and flicking through multiple
+        questions was going to be too time-consuming. Now we felt that framing
+        actions and questions and providing yes or no answers wouldn't give
+        users the clear and quick view of task progress that research had found
+        they wanted.</p>
+      <p class="govuk-body">As a team, we felt that it was sensible to try an
+        alternative and see how that tested with users.</p>
+      <h2 class="govuk-heading-l">Collaborating to define a design template for
+        a task</h2>
+      <p class="govuk-body">We ran a session where members of the team, from
+        across all disciplines, sketched out <a href="https://lucid.app/lucidspark/8631409b-3034-443e-9d6d-cfef0b2fd8ef/edit?invitationId=inv_1c6e5618-fd17-4d9a-b12b-cac481ac650d" class="govuk-link" rel="noreferrer noopener" target="_blank">
+          how we envisaged the actions within a task (opens in a new tab)
+        </a>.</p>
+      <p class="govuk-body">Independently created, these ideas converged around
+        a common approach.</p>
+      <p class="govuk-body">Actions used clear, active language to instruct the
+        user on what to do to complete the task.</p>
+      <p class="govuk-body">Actions had some guidance that provided context and
+        often linked to useful resources, such as forms, SharePoint locations or
+        detailed guidance documents.</p>
+      <p class="govuk-body">Every action also had at least one checkbox that
+        users could select when a piece of work had been done.</p>
+      <p class="govuk-body">Our hypothesis was that, based on the consistent
+        user feedback around the idea of ticking things off to keep track of
+        progress, that this would meet their mental model.</p>
+      <h2 class="govuk-heading-l">Checkboxes were what users consistently asked
+        for</h2>
+      <p class="govuk-body">Research had consistently brought up the idea that
+        users want to tick off tasks, or actions within a task.</p>
+      <p class="govuk-body">That knowledge from previous research observations
+        and playbacks informed each of our sketches.</p>
+      <p class="govuk-body">A checkbox-based thing felt like the natural design
+        to answer the needs to manage workload and understand project progress.</p>
+      <p class="govuk-body">Our informed assumption was that using checkboxes
+        would also help users identify what steps to take to complete a task and
+        get a view of task progress. This could be particularly helpful for new
+        caseworkers, people returning to the role after a prolonged absence or
+        those who struggled to remember how to complete tasks for any reason.</p>
+      <p class="govuk-body">We felt that another advantage of checkboxes was
+        that they could give us an opportunity to be more direct, active and
+        instructive in our language. This could help to make content succinct,
+        simpler to read and actions could be used as guidance or instructions
+        rather than simply querying if a thing had been done.</p>
+      <p class="govuk-body">It would also mean we could bring the existing
+        prototype closer to the proof on concept that had been created in the
+        build.</p>
+        <h2 class="govuk-heading-l">What we'll do next</h2>
+      <p class="govuk-body">Next, we'll iterate the prototype to switch from
+        radio buttons to check boxes.</p>
+      <p class="govuk-body">We'll also start to check the order of the tasks on
+        the task list.</p>
+      <p class="govuk-body">Then, we'll carry out research with users to test
+        our assumptions, iterate the design, and then use those findings and
+        designs to expand on the build.</p>
+      <p class="govuk-body">That will lead us to an important milestone where
+        the prototype and build move beyond an exploratory phase, to a point
+        where they are closely aligned and the design and development work is
+        tightly focussed and linked together.</p>
+    </div>
+  </div>
+{% endblock %}

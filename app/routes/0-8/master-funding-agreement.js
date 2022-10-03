@@ -12,7 +12,7 @@ module.exports = function (router) {
     if (checkMasterFundingAgreement != 'Yes, the Master funding agreement has been cleared'){
       req.session.data.masterFundingAgreementStatus = 'inProgress'
     } else {
-      req.session.data.masterFundingAgreementStatus = 'complete'
+      req.session.data.masterFundingAgreementStatus = 'completed'
     }
 
     res.redirect('../project-task-list')

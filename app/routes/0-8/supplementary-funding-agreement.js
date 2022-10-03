@@ -12,7 +12,7 @@ module.exports = function (router) {
     if (checkSupplementalFundingAgreement != 'Yes, the Supplemental funding agreement has been cleared'){
       req.session.data.supplementalFundingAgreementStatus = 'inProgress'
     } else {
-      req.session.data.supplementalFundingAgreementStatus = 'complete'
+      req.session.data.supplementalFundingAgreementStatus = 'completed'
     }
 
     res.redirect('../project-task-list')

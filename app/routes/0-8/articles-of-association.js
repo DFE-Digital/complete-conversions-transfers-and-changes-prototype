@@ -12,7 +12,7 @@ module.exports = function (router) {
     if (checkArticlesOfAssociation != 'Yes, the Articles of association have been cleared'){
       req.session.data.articlesOfAssociationStatus = 'inProgress'
     } else {
-      req.session.data.articlesOfAssociationStatus = 'complete'
+      req.session.data.articlesOfAssociationStatus = 'completed'
     }
 
     res.redirect('../project-task-list')

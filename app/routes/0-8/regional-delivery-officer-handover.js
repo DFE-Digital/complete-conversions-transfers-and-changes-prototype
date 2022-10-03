@@ -13,7 +13,7 @@ module.exports = function (router) {
       regionalDeliveryOfficerHandover.includes('makeNotes') &
       regionalDeliveryOfficerHandover.includes('doHandover') &
       regionalDeliveryOfficerHandover.includes('empty')){
-      req.session.data.handoverStatus = 'complete'
+      req.session.data.handoverStatus = 'completed'
     }else if (regionalDeliveryOfficerHandover == ('empty')){
       req.session.data.handoverStatus = 'notStarted'
     }else {

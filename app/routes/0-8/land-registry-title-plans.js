@@ -12,7 +12,7 @@ module.exports = function (router) {
     if (clearLandRegistry != 'Yes, the Land registry title plans or site plans have been cleared'){
       req.session.data.landRegistryStatus = 'inProgress'
     } else {
-      req.session.data.landRegistryStatus = 'complete'
+      req.session.data.landRegistryStatus = 'completed'
     }
 
     res.redirect('../project-task-list')

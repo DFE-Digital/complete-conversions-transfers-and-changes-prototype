@@ -12,7 +12,7 @@ module.exports = function (router) {
     if (checkDeedOfVariation != 'Yes, the Deed of variation has been cleared'){
       req.session.data.deedOfVariationStatus = 'inProgress'
     } else {
-      req.session.data.deedOfVariationStatus = 'complete'
+      req.session.data.deedOfVariationStatus = 'completed'
     }
 
     res.redirect('../project-task-list')

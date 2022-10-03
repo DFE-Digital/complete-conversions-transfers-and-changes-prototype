@@ -16,7 +16,7 @@ module.exports = function (router) {
       processConversionGrant.includes('giveSchoolPaymentDate') &
       processConversionGrant.includes('checkSchoolGotGrant') &
       processConversionGrant.includes('empty')){
-      req.session.data.processConversionGrantStatus = 'complete'
+      req.session.data.processConversionGrantStatus = 'completed'
     }else if (processConversionGrant == ('empty')){
       req.session.data.processConversionGrantStatus = 'notStarted'
     }else {

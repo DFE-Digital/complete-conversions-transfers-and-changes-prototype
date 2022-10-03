@@ -12,7 +12,7 @@ module.exports = function (router) {
     if (clearDirectionToTransfer != 'Yes, the Direction to transfer has cleared'){
       req.session.data.directionToTransferStatus = 'inProgress'
     } else {
-      req.session.data.directionToTransferStatus = 'complete'
+      req.session.data.directionToTransferStatus = 'completed'
     }
 
     res.redirect('../project-task-list')

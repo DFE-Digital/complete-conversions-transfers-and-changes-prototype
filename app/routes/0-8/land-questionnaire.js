@@ -12,7 +12,7 @@ module.exports = function (router) {
     if ( clearLandQuestionnaire != 'Yes, the Land questionnaire has been cleared'){
       req.session.data.landQuestionnaireStatus = 'inProgress'
     } else {
-      req.session.data.landQuestionnaireStatus = 'complete'
+      req.session.data.landQuestionnaireStatus = 'completed'
     }
 
     res.redirect('../project-task-list')

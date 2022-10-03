@@ -12,7 +12,7 @@ module.exports = function (router) {
     if (clearTrustModificationOrder != 'Yes the legal team has cleared the Trust modification order'){
       req.session.data.trustModificationOrderStatus = 'inProgress'
     } else {
-      req.session.data.trustModificationOrderStatus = 'complete'
+      req.session.data.trustModificationOrderStatus = 'completed'
     }
 
     res.redirect('../project-task-list')

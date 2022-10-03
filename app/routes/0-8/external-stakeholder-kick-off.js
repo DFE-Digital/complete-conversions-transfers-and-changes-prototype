@@ -16,7 +16,7 @@ module.exports = function (router) {
       externalStakeHolderKickoff.includes('hostKickOffMeeting') &
       externalStakeHolderKickoff.includes('shareConversionChecklist') &
       externalStakeHolderKickoff.includes('empty')){
-      req.session.data.externalStakeHolderKickoffStatus = 'complete'
+      req.session.data.externalStakeHolderKickoffStatus = 'completed'
     }else if (externalStakeHolderKickoff == ('empty')){
       req.session.data.externalStakeHolderKickoffStatus = 'notStarted'
     }else {

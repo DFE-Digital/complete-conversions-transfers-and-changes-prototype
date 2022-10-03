@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  <a href="/design-history/contents" class="govuk-back-link">Back to design history contents</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">September 2022</span>
+      <h1 class="govuk-heading-xl">Adding sign and seal actions to the task list</h1>
+      <p class="govuk-body">Up to this point our work and research had been
+        focussed on the first few groups of tasks. As we spoke to more users
+        about the later part of the process, we understood more about how the
+        conversion is completed and what that meant for the content and design
+        patterns we'd created.</p>
+      <h2 class="govuk-heading-l">Not all documents are equal</h2>
+      <p class="govuk-body">We already knew that some documents are always used
+        on every conversion.</p>
+      <p class="govuk-body">Those documents are:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Land questionnaire</li>
+        <li>Land Registry title deeds</li>
+        <li>Supplemental funding agreement</li>
+      </ul>
+      <p class="govuk-body">The rest are dependent on the school's situation.
+        Case workers may add documents, or solicitors might decided certain
+        documents, such as the direction to transfer, are required.</p>
+      <h2 class="govuk-heading-l">Document statuses vary</h2>
+      <p class="govuk-body">Those documents that are used, do not necessarily
+        all go through the same stages.</p>
+      <p class="govuk-body">Documents can be:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Received by the caseworker</li>
+        <li>Cleared by the caseworker</li>
+        <li>Cleared by the legal advisers office</li>
+        <li>Signed by the school, trust or their solicitors</li>
+        <li>Saved to SharePoint</li>
+        <li>Signed and sealed by the Secretary of State or their representative</li>
+        <li>Redacted by the caseworker</li>
+        <li>Uploaded to GOV.UK</li>
+      </ul>
+      <p class="govuk-body">But while most documents need to be “cleared”
+        (language caseworkers use to describe a document being checked and
+        agreed), not all of them have to be.</p>
+      <p class="govuk-body">Similarly, not all documents need to be signed and
+        sealed by the Secretary of State or their representative.</p>
+      <h2 class="govuk-heading-l">Deciding how to include signing and sealing
+        actions</h2>
+      <p class="govuk-body">Initially we wondered how users thought about
+        signing, sealing and redacting documents.</p>
+      <p class="govuk-body">We spoke to some users to understand this. Through
+        that research it became clear that users think of redacting the
+        documents as separate to the rest of the document tasks.</p>
+      <p class="govuk-body">This meant that we'd need a separate task on the
+        task list for redaction. Would we need a separate task for signing and
+        sealing documents too?</p>
+      <p class="govuk-body">Discussing the changes as a team, we felt there were
+        two options.</p>
+      <ol class="govuk-list govuk-list--number">
+        <li>Add the signing and sealing actions to the existing clearing
+          document tasks</li>
+        <li>Create another section of tasks for signing and sealing documents.</li>
+      </ol>
+      <p class="govuk-body">Adding the actions to the existing tasks would mean
+        some refactoring for the developers in the work they've done in the
+        build.</p>
+      <p class="govuk-body">Creating another section of tasks might be less
+        effort from a development point of view, but the trade-off here is that
+        we end up with a longer task list that could start to feel overwhelming
+        and hard to navigate.</p>
+      <p class="govuk-body">As we currently understand the process, we felt it
+        would be most useful to go with the first option. We iterated the
+        document task design to include the signing and sealing actions.</p>
+      <h2 class="govuk-heading-l">How adding signing and sealing tasks changed
+        our current design</h2>
+      <p class="govuk-body">Adding the signing and sealing of documents to the
+        current design meant creating a second list of checkboxes in the current
+        design.</p>
+      <p class="govuk-body">The pattern for these actions is like the existing
+        one we've used for documents, so there's no major redesign required. We
+        did however, try to disambiguate between “signing” (done by schools
+        after the document is cleared) and “sign and seal” (done by/on behalf of
+        the secretary of state when the school is ready to convert).</p>
+      <h2 class="govuk-heading-l">Testing if the design made sense to users</h2>
+      <p class="govuk-body">After designing the new actions and adding them to
+        the prototype, we tested it with 3 users as part of a round of user
+        research.</p>
+      <p class="govuk-body">They expected to find tasks around the signing and
+        sealing documents in an additional section of tasks in the task list.
+        However, when they saw the actions in the existing document tasks, they
+        felt that made sense.</p>
+      <p class="govuk-body">They did emphasise that for that design approach to
+        work, they would need additional status tags that reflect whether a
+        document had been cleared, signed and sealed, rather than the current
+        not started, in progress and complete status tags.</p>
+      <p class="govuk-body">However, some of this may be due to the users having
+        already interacted with the prototype in previous research rounds. That
+        might mean they already have a mental model for how the new thing will
+        work.</p>
+      <p class="govuk-body">Also, content in the prototype that describes the
+        document tasks had not been updated ahead of the research. The heading
+        for that section said, “Clear legal documents”, which could have,
+        understandably, caused users to think that section had nothing to do
+        with signing and sealing.</p>
+      <h2 class="govuk-heading-l">What we'll do next</h2>
+      <p class="govuk-body">We need to fully understand if placing the signing
+        and sealing tasks in the legal documents section makes sense to users.</p>
+      <p class="govuk-body">The initial feedback gave us a sniff of how users
+        might feel about it but was only a small sample of users. We hope that
+        we'll learn more about whether this design works for users during
+        private beta.</p>
+      <p class="govuk-body">We need to find out if the additional status tags
+        used to describe document status give users a clear understanding of
+        where that document is up to and what remains to be done.</p>
+      <p class="govuk-body">We need to think about the naming of the “Clear
+        legal documents” section. This collection of tasks no longer just
+        focuses on clearing documents, but can include other statuses too.
+        Should it be renamed “Clear and sign legal documents”, which could imply
+        that all documents need clearing and signing when not all do, or
+        something else?</p>
+      <p class="govuk-body">We'll make any necessary changes before private beta
+        and look forward to what we can learn from that.</p>
+    </div>
+  </div>
+{% endblock %}

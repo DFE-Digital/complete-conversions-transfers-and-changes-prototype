@@ -15,7 +15,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-xl">September 2022</span>
-      <h1 class="govuk-heading-xl">Adding sign and seal actions to the task list</h1>
+      <h1 class="govuk-heading-xl">Adding sign and seal actions to the task
+        list</h1>
       <p class="govuk-body">Up to this point our work and research had been
         focussed on the first few groups of tasks. As we spoke to more users
         about the later part of the process, we understood more about how the
@@ -30,9 +31,12 @@
         <li>Land Registry title deeds</li>
         <li>Supplemental funding agreement</li>
       </ul>
-      <p class="govuk-body">The rest are dependent on the school's situation.
-        Case workers may add documents, or solicitors might decided certain
-        documents, such as the direction to transfer, are required.</p>
+      <p class="govuk-body">The rest are dependent on the school's situation.</p>
+      <p class="govuk-body">Church schools may need some documents that
+        non-Christian schools don't, such as the Church supplemental agreement.
+        Case workers may add documents where they realise a particular document
+        is needed. Solicitors might decide certain documents, such as the
+        direction to transfer, are required.</p>
       <h2 class="govuk-heading-l">Document statuses vary</h2>
       <p class="govuk-body">Those documents that are used, do not necessarily
         all go through the same stages.</p>
@@ -59,6 +63,10 @@
       <p class="govuk-body">We spoke to some users to understand this. Through
         that research it became clear that users think of redacting the
         documents as separate to the rest of the document tasks.</p>
+      <p class="govuk-body">They do these tasks after the school has opened, and
+        they set aside time to redact them all at once. Other document tasks are
+        done as and when the information is available, and they must be done
+        before the academy can open.</p>
       <p class="govuk-body">This meant that we'd need a separate task on the
         task list for redaction. Would we need a separate task for signing and
         sealing documents too?</p>
@@ -72,10 +80,14 @@
       <p class="govuk-body">Adding the actions to the existing tasks would mean
         some refactoring for the developers in the work they've done in the
         build.</p>
-      <p class="govuk-body">Creating another section of tasks might be less
-        effort from a development point of view, but the trade-off here is that
-        we end up with a longer task list that could start to feel overwhelming
-        and hard to navigate.</p>
+      <p class="govuk-body">Creating another section of tasks would be less
+        effort from a development point of view, but the benefit of putting the
+        additional actions in with the existing document steps is that the user
+        will see the document as being “complete” in the status tags.</p>
+      <p class="govuk-body">Conceptually, the users see the document as done
+        when it has been signed by the school and the Secretary of State. Our
+        hope and expectation is that this method fits with the users' mental
+        models.</p>
       <p class="govuk-body">As we currently understand the process, we felt it
         would be most useful to go with the first option. We iterated the
         document task design to include the signing and sealing actions.</p>
@@ -85,10 +97,11 @@
         current design meant creating a second list of checkboxes in the current
         design.</p>
       <p class="govuk-body">The pattern for these actions is like the existing
-        one we've used for documents, so there's no major redesign required. We
-        did however, try to disambiguate between “signing” (done by schools
-        after the document is cleared) and “sign and seal” (done by/on behalf of
-        the secretary of state when the school is ready to convert).</p>
+        one we've used for documents, so there's no major redesign required.</p>
+      <p class="govuk-body">However, we did try to clarify the difference
+        between “signing” (done by schools after the document is clears) and
+        “sign and seal” (done by/on behalf of the secretary of state when the
+        school is ready to convert).</p>
       <h2 class="govuk-heading-l">Testing if the design made sense to users</h2>
       <p class="govuk-body">After designing the new actions and adding them to
         the prototype, we tested it with 3 users as part of a round of user
@@ -100,12 +113,12 @@
       <p class="govuk-body">They did emphasise that for that design approach to
         work, they would need additional status tags that reflect whether a
         document had been cleared, signed and sealed, rather than the current
-        not started, in progress and complete status tags.</p>
-      <p class="govuk-body">However, some of this may be due to the users having
-        already interacted with the prototype in previous research rounds. That
-        might mean they already have a mental model for how the new thing will
-        work.</p>
-      <p class="govuk-body">Also, content in the prototype that describes the
+        “not started”, “in progress” and “complete” status tags.</p>
+      <p class="govuk-body">This feels entirely logical, but it's something
+        we'll need to explore further to understand what it is the status tags
+        need to communicate and the best language and colour to use for these
+        additional statuses.</p>
+      <p class="govuk-body">However, content in the prototype that describes the
         document tasks had not been updated ahead of the research. The heading
         for that section said, “Clear legal documents”, which could have,
         understandably, caused users to think that section had nothing to do

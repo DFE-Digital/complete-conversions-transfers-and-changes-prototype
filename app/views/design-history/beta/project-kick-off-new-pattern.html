@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  <a href="/design-history/contents" class="govuk-back-link">Back to design history contents</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">July to September 2022</span>
+      <h1 class="govuk-heading-xl">Deciding what the first set of tasks should be </h1>
+      <p class="govuk-body">With a new design pattern and some subsequent edits
+        to the content in tasks we'd created already, we need to check what we
+        had worked for users.</p>
+      <h2 class="govuk-heading-l">Understanding the first set of tasks</h2>
+      <p class="govuk-body">We felt we had a <a href="https://lucid.app/lucidspark/aa88e9e0-265e-4bcc-be05-d4bd75ae271d/edit?invitationId=inv_5a5fec47-219a-4357-b482-3ac2e4a62f6c#" class="govuk-link" rel="noreferrer noopener" target="_blank">
+        reasonable idea of what the first set of tasks should be (opens in a new
+        tab)</a>  .</p>
+      <p class="govuk-body">We knew that users would need to have a meeting or
+        conversation with a Regional Delivery Officer (RDO), where the RDO would
+        hand the project over to the caseworker.</p>
+      <p class="govuk-body">This was based on several points of information,
+        including:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the <a href="https://www.figma.com/file/GMaSKCSfWqYwA6Sejky54S/DesignOps---SDD-Prototypes?node-id=10392%3A232170" class="govuk-link" rel="noreferrer noopener" target="_blank">
+          initial Figma sketches (opens in a new tab)
+        </a></li>
+        <li>talking to users at the workshop and <a href="https://lucid.app/lucidspark/c3782374-a1d2-408a-8860-e4ceb51e80c0/edit?view_items=7okfk541wFIu&invitationId=inv_3b4332e5-0906-410b-9c9e-87da0a7ca6de#" class="govuk-link" rel="noreferrer noopener" target="_blank">
+          co-design sessions (opens in a new tab)</a> in April and
+          May 2022</li>
+        <li>research we'd done using the radio button design</li>
+        <li>guidance we'd read in <a href="https://lucid.app/lucidspark/c3782374-a1d2-408a-8860-e4ceb51e80c0/edit?view_items=7okfk541wFIu&invitationId=inv_3b4332e5-0906-410b-9c9e-87da0a7ca6de#" class="govuk-link" rel="noreferrer noopener" target="_blank">
+          caseworker training documents</a></li>
+        <li>collaborative <a href="https://lucid.app/lucidspark/c3782374-a1d2-408a-8860-e4ceb51e80c0/edit?view_items=7okfk541wFIu&invitationId=inv_3b4332e5-0906-410b-9c9e-87da0a7ca6de#" class="govuk-link" rel="noreferrer noopener" target="_blank">
+          sketches made by the team when designing the checkbox approach</a>
+        </li>
+        <li><a href="https://lucid.app/lucidspark/c3782374-a1d2-408a-8860-e4ceb51e80c0/edit?view_items=7okfk541wFIu&invitationId=inv_3b4332e5-0906-410b-9c9e-87da0a7ca6de#" class="govuk-link" rel="noreferrer noopener" target="_blank">
+          card sort with caseworkers (opens in a new tab)
+        </a> where they ordered task sections and tasks.</li>
+      </ul>
+      <p class="govuk-body">We needed to validate the tasks with users, in the
+        prototype, using the new design.</p>
+      <h2 class="govuk-heading-l">Testing the tasks and the new design</h2>
+      <p class="govuk-body">Rather than go over old ground, re-testing the tasks
+        in one dedicated research session, we chose to trust our collective
+        expertise and wait to test the new look of the project kick-off tasks
+        together with the legal documents we'd been working on.</p>
+      <p class="govuk-body">We made this decision for two reasons in
+        particular.</p>
+      <ol class="govuk-list govuk-list--number">
+        <li>We're working at pace in an Agile way and we didn't want to slow
+          ourselves down.</li>
+        <li>We want to keep users engaged and asking them to use something we've
+          already tested with them could cause them to feel that this was
+          tedious.</li>
+      </ol>
+      <h2 class="govuk-heading-l">Findings from the research</h2>
+      <p class="govuk-body">When we tested the legal documents tasks with users,
+        that was also the first time they had seen or interacted with the new
+        design pattern.</p>
+      <p class="govuk-body">When users were interacting with the new design
+        during the research to explore the legal document tasks, there was
+        positive feedback about the new design.</p>
+      <p class="govuk-body">There were no negative responses regarding the
+        checkbox approach. They felt it was clear and it made sense to them.</p>
+      <p class="govuk-body">Users remarked on the usefulness of the guidance and
+        checklists as tools to help them understand what to do and complete the
+        tasks.</p>
+      <p class="govuk-body">However, this feedback wasn't specifically about the
+        project kick-off tasks. We're extrapolating the positive feedback about
+        the design for the legal document tasks to the project kick-off too.</p>
+      <p class="govuk-body">What we need to do is see how the project kick-off
+        tasks go in private beta. Based on all our user research so far, we have
+        a very high level of confidence that what we have is helpful and fulfils
+        the user needs. We'll learn if there's anything more to do there in
+        private beta.</p>
+    </div>
+  </div>
+{% endblock %}

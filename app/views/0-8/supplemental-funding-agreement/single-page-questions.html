@@ -94,6 +94,39 @@
                     </div>
                   </div>
                 </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checklist__header">
+                    <h2 class="govuk-heading-l">Signed by Secretary of State</h2>
+                    <div class="govuk-hint">
+                      The Secretary of State, or somebody with the authority to
+                      act on their behalf, must sign the Supplemental funding
+                      agreement.
+                    </div>
+                    <div class="govuk-hint">
+                      Usually this is your team leader or the deputy director.
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff">
+                        Sent to team leader or deputy director
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-2" name="externalStakeHolderKickoff" type="checkbox" value="saveProforma" {{ checked("externalStakeHolderKickoff", "saveProforma") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-2">
+                        Document signed on behalf of Secretary of State
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-5" name="externalStakeHolderKickoff" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-5">
+                        empty
+                      </label>
+                    </div>
+                  </div>
+                </div>
                 <div class="govuk-form-group govuk-!-margin-top-9">
                   {{ govukButton({ text: "Continue" }) }}
                 </div>

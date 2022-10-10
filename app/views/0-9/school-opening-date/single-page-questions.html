@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Confirm
+                    opening date with the school</h1>
+                  <div class="govuk-hint">
+                    Once you've confirmed that all conditions have been met,
+                    contact the school and trust to tell them they can convert
+                    on the target conversion date.
+                  </div>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-5" name="externalStakeHolderKickoff" type="checkbox" value="hostKickOffMeeting" {{ checked("externalStakeHolderKickoff", "hostKickOffMeeting") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-5">
+                        Email relevant information to your main conversion contact
+                      </label>
+                      <div class="govuk-checkboxes__guidance">
+                        <details class="govuk-details" data-module="govuk-details">
+                          <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                              What to tell the school
+                            </span>
+                          </summary>
+                          <div class="govuk-details__text">
+                            <p class="govuk-body">Email your main contact at the
+                              school or trust.</p>
+                            <p class="govuk-body">Your email should include:</p>
+                            <ul class="govuk-list govuk-list--bullet">
+                              <li>confirmation the school will convert on the
+                                target date</li>
+                              <li>the school's new URN (unique reference number)</li>
+                              <li>all signed and sealed legal documents</li>
+                              <li>the <a href="https://www.gov.uk/government/publications/academy-support-grant" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                                Grant expenditure certificate (opens in a new
+                                tab)</a> that they need to complete
+                                and return</li>
+                            </ul>
+                            <p class="govuk-body">It can be helpful to mention
+                              that they'll soon get some welcome emails from
+                              other teams in government. These will contain more
+                              information about funding and opening as an
+                              academy.</p>
+                            <p class="govuk-body">You can split this information
+                              over more than one email if you don't immediately
+                              have everything you need.</p>
+                          </div>
+                        </details>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-7" name="externalStakeHolderKickoff" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-7">
+                        empty
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-form-group">
+                  {{ govukButton({ text: "Continue" }) }}
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

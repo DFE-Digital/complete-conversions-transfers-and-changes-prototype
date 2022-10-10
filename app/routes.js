@@ -114,4 +114,28 @@ const router = express.Router()
   require('./routes/0-8/trust-modification-order.js')(router);
   require('./routes/0-8/routes.js')(router);
 
+  require('./routes/0-9/articles-of-association.js')(router);
+  require('./routes/0-9/baseline-checks.js')(router);
+  require('./routes/0-9/checklist-test.js')(router);
+  require('./routes/0-9/church-supplementary-agreement.js')(router);
+  require('./routes/0-9/complete-processing-of-conversion-grant.js')(router);
+  require('./routes/0-9/confirm-all-conditions-met.js')(router);
+  require('./routes/0-9/contacts.js')(router);
+  require('./routes/0-9/deed-of-variation.js')(router);
+  require('./routes/0-9/direction-to-transfer.js')(router);
+  require('./routes/0-9/education-skills-funding-agency-handover.js')(router);
+  require('./routes/0-9/external-stakeholder-kick-off.js')(router);
+  require('./routes/0-9/land-questionnaire.js')(router);
+  require('./routes/0-9/land-registry-title-plans.js')(router);
+  require('./routes/0-9/master-funding-agreement.js')(router);
+  require('./routes/0-9/process-conversion-grant.js')(router);
+  require('./routes/0-9/readiness-for-opening.js')(router);
+  require('./routes/0-9/redact-and-send-documents.js')(router);
+  require('./routes/0-9/regional-delivery-officer-handover.js')(router);
+  require('./routes/0-9/school-opening-date.js')(router);
+  require('./routes/0-9/single-worksheet.js')(router);
+  require('./routes/0-9/supplementary-funding-agreement.js')(router);
+  require('./routes/0-9/trust-modification-order.js')(router);
+  require('./routes/0-9/routes.js')(router);
+
 module.exports = router

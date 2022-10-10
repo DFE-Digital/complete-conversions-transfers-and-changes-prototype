@@ -39,7 +39,7 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/project-closed', function (req, res) {
-    res.redirect('start')
+    res.redirect('project-list-after-school-closed')
   })
 
 }

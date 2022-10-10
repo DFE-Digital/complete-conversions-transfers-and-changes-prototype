@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "./includes/phase.html" %}
+  <a href="start" class="govuk-back-link">Back to all projects</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-width-container">
+      <form action="project-closed" method="post" class="form">
+        <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                  The project for St Wilfred's Primary School has successfully
+                  been closed.
+                </h1>
+              </div>
+              <p class="govuk-body">The project is now removed from your list of
+                active projects.</p>
+              <h2 class="govuk-heading-m">What to do next</h2>
+              <p class="govuk-body">
+                Click the continue to Task list button to identify the next
+                project to work on.
+              </p>
+              <p class="govuk-body">
+                <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                  What did you think of this service? (opens in a new tab)</a>
+                (takes 30 seconds).
+              </p>
+              <button class="govuk-button" data-module="govuk-button">
+                Continue to project list
+              </button>
+            </div>
+          </div>
+        </main>
+      </form>
+    </div>
+  </div>
+{% endblock %}

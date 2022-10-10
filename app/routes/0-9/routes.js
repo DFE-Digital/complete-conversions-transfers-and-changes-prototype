@@ -24,4 +24,22 @@ module.exports = function (router) {
     res.redirect('start')
   })
 
+
+  router.get('/' + version + '/project-task-list', function (req, res) {
+    res.render(version + '/project-task-list', {})
+  })
+
+  router.post('/' + version + '/project-task-list', function (req, res) {
+    res.redirect('project-closed')
+  })
+
+
+  router.get('/' + version + '/project-closed', function (req, res) {
+    res.render(version + '/project-closed', {})
+  })
+
+  router.post('/' + version + '/project-closed', function (req, res) {
+    res.redirect('start')
+  })
+
 }

@@ -124,6 +124,7 @@ const router = express.Router()
   require('./routes/0-9/deed-of-variation.js')(router);
   require('./routes/0-9/direction-to-transfer.js')(router);
   require('./routes/0-9/education-skills-funding-agency-handover.js')(router);
+  require('./routes/0-9/email-regional-delivery-officer-school-opened.js')(router);
   require('./routes/0-9/external-stakeholder-kick-off.js')(router);
   require('./routes/0-9/land-questionnaire.js')(router);
   require('./routes/0-9/land-registry-title-plans.js')(router);

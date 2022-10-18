@@ -270,6 +270,22 @@
                         Not started</strong>
                     {% endif %}
                   </li>
+                  <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                      <a href="125-year-lease/single-page-questions" aria-describedby="landRegistryStatus">
+                        125 year lease</a>
+                    </span>
+                    {% if (data['commercialTransferAgreementStatus'] == 'completed') %}
+                      <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="landRegistryStatus">
+                        Completed</strong>
+                    {% elseif (data['commercialTransferAgreementStatus'] == 'inProgress') %}
+                      <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="landRegistryStatus">
+                        In progress</strong>
+                    {% else %}
+                      <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="landRegistryStatus">
+                        Not started</strong>
+                    {% endif %}
+                  </li>
                 </ul>
               </li>
 

@@ -118,6 +118,7 @@ const router = express.Router()
   require('./routes/0-9/baseline-checks.js')(router);
   require('./routes/0-9/checklist-test.js')(router);
   require('./routes/0-9/church-supplementary-agreement.js')(router);
+  require('./routes/0-9/commercial-transfer-agreement.js')(router);
   require('./routes/0-9/complete-processing-of-conversion-grant.js')(router);
   require('./routes/0-9/confirm-all-conditions-met.js')(router);
   require('./routes/0-9/contacts.js')(router);

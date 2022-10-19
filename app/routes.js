@@ -114,6 +114,7 @@ const router = express.Router()
   require('./routes/0-8/trust-modification-order.js')(router);
   require('./routes/0-8/routes.js')(router);
 
+  require('./routes/0-9/125-year-lease.js')(router);
   require('./routes/0-9/articles-of-association.js')(router);
   require('./routes/0-9/baseline-checks.js')(router);
   require('./routes/0-9/checklist-test.js')(router);

@@ -114,10 +114,12 @@ const router = express.Router()
   require('./routes/0-8/trust-modification-order.js')(router);
   require('./routes/0-8/routes.js')(router);
 
+  require('./routes/0-9/125-year-lease.js')(router);
   require('./routes/0-9/articles-of-association.js')(router);
   require('./routes/0-9/baseline-checks.js')(router);
   require('./routes/0-9/checklist-test.js')(router);
   require('./routes/0-9/church-supplementary-agreement.js')(router);
+  require('./routes/0-9/commercial-transfer-agreement.js')(router);
   require('./routes/0-9/complete-processing-of-conversion-grant.js')(router);
   require('./routes/0-9/confirm-all-conditions-met.js')(router);
   require('./routes/0-9/contacts.js')(router);
@@ -135,7 +137,9 @@ const router = express.Router()
   require('./routes/0-9/regional-delivery-officer-handover.js')(router);
   require('./routes/0-9/school-opening-date.js')(router);
   require('./routes/0-9/single-worksheet.js')(router);
+  require('./routes/0-9/subleases.js')(router);
   require('./routes/0-9/supplementary-funding-agreement.js')(router);
+  require('./routes/0-9/tenancy-at-will.js')(router);
   require('./routes/0-9/trust-modification-order.js')(router);
   require('./routes/0-9/routes.js')(router);
 

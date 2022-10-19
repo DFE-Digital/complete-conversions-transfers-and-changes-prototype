@@ -137,6 +137,7 @@ const router = express.Router()
   require('./routes/0-9/regional-delivery-officer-handover.js')(router);
   require('./routes/0-9/school-opening-date.js')(router);
   require('./routes/0-9/single-worksheet.js')(router);
+  require('./routes/0-9/subleases.js')(router);
   require('./routes/0-9/supplementary-funding-agreement.js')(router);
   require('./routes/0-9/trust-modification-order.js')(router);
   require('./routes/0-9/routes.js')(router);

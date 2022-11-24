@@ -1,0 +1,97 @@
+2022-11-24T11:35:51.167Z
+cwd: /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes
+package: govuk-prototype-kit@13.0.0
+argv: /Users/richardcooley/.nvm/versions/node/v19.1.0/bin/node /Users/richardcooley/.npm/_npx/ab0cb2c39bc0319f/node_modules/.bin/govuk-prototype-kit migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Succeeded [Check migration is being applied to a pre v13 prototype]
+2022-11-24T11:36:10.210Z
+cwd: /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes
+package: govuk-prototype-kit@13.0.0
+argv: /Users/richardcooley/.nvm/versions/node/v19.1.0/bin/node /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/node_modules/.bin/govuk-prototype-kit migrate -- /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes
+Started [Migrate config.js to config.json]
+Started [Update application SCSS file]
+Started [Deleted files that are no longer needed]
+Started [Deleted directories that are no longer needed]
+Started [Delete /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/listen-on-port.js]
+Started [Delete /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/server.js]
+Started [Delete /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/start.js]
+Started [Delete /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/VERSION.txt]
+Started [Delete /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/Procfile]
+Started [Remove unused directory docs]
+Started [Remove unused directory lib]
+Started [Remove unused directory public]
+Succeeded [Migrate config.js to config.json]
+Started [Overwrite app/assets/javascripts/application.js]
+Started [Overwrite app/filters.js]
+Started [Overwrite app/views/layout.html]
+Succeeded [Delete /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/server.js]
+Succeeded [Delete /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/listen-on-port.js]
+Succeeded [Delete /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/VERSION.txt]
+Succeeded [Delete /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/Procfile]
+Succeeded [Delete /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/start.js]
+copying from [/Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/node_modules/govuk-prototype-kit/prototype-starter/app/assets/javascripts/application.js] to [/Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/app/assets/javascripts/application.js]
+copying from [/Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/node_modules/govuk-prototype-kit/prototype-starter/app/filters.js] to [/Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/app/filters.js]
+Started [Delete app/assets/images/separator-2x.png]
+Failed [Overwrite app/views/layout.html]
+Started [Delete app/assets/javascripts/auto-store-data.js]
+Started [Delete app/assets/sass/unbranded-ie8.scss]
+Started [Delete app/assets/images/unbranded.ico]
+Started [Delete app/assets/images/separator.png]
+Started [Delete app/assets/sass/unbranded.scss]
+Started [Delete app/views/includes/breadcrumb_examples.html]
+Started [Delete app/assets/sass/patterns/_contents-list.scss]
+Started [Delete app/views/layout_unbranded.html]
+Started [Delete app/assets/javascripts/jquery-1.11.3.js]
+Started [Delete app/assets/sass/patterns/_mainstream-guide.scss]
+Started [Delete app/assets/sass/patterns/_pagination.scss]
+Started [Delete app/assets/sass/patterns/_related-items.scss]
+Started [Delete app/assets/sass/patterns/_step-by-step-header.scss]
+Started [Delete app/assets/sass/patterns/_step-by-step-related.scss]
+Started [Delete app/assets/sass/patterns/_task-list.scss]
+Started [Delete app/assets/sass/patterns/_step-by-step-nav.scss]
+Succeeded [Deleted files that are no longer needed]
+Failed [Delete app/assets/sass/patterns/_task-list.scss]
+Found [// Add your routes here - above the module.exports line] in [/Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/app/routes.js, replacing
+Keeping these lines from old file
+Found [// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you] in [/Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/app/assets/sass/application.scss, replacing
+Keeping these lines from old file
+Succeeded [Delete app/assets/sass/unbranded-ie8.scss]
+Succeeded [Delete app/assets/images/unbranded.ico]
+Succeeded [Delete app/assets/javascripts/auto-store-data.js]
+Succeeded [Delete app/assets/images/separator-2x.png]
+Succeeded [Delete app/assets/images/separator.png]
+Succeeded [Delete app/assets/sass/unbranded.scss]
+Succeeded [Delete app/assets/sass/patterns/_contents-list.scss]
+Succeeded [Delete app/views/layout_unbranded.html]
+Succeeded [Delete app/views/includes/breadcrumb_examples.html]
+Succeeded [Delete app/assets/sass/patterns/_mainstream-guide.scss]
+Succeeded [Delete app/assets/javascripts/jquery-1.11.3.js]
+Succeeded [Delete app/assets/sass/patterns/_pagination.scss]
+Succeeded [Delete app/assets/sass/patterns/_step-by-step-related.scss]
+Succeeded [Delete app/assets/sass/patterns/_step-by-step-header.scss]
+Succeeded [Delete app/assets/sass/patterns/_related-items.scss]
+Succeeded [Delete app/assets/sass/patterns/_step-by-step-nav.scss]
+Succeeded [Update application SCSS file]
+// ,// For guidance on how to create routes see:,// https://prototype-kit.service.gov.uk/docs/routes,// ,,const govukPrototypeKit = require('govuk-prototype-kit'),const router = govukPrototypeKit.requests.setupRouter(),,// Add your routes here,,  require('./routes/0-1/routes.js')(router);,  require('./routes/0-1/project-kick-off.js')(router);,,  require('./routes/0-2/routes.js')(router);,  require('./routes/0-2/project-kick-off.js')(router);,  require('./routes/0-2/external-stakeholder-kick-off.js')(router);,  require('./routes/0-2/process-conversion-grant.js')(router);,  require('./routes/0-2/local-authority-questionnaire.js')(router);,  require('./routes/0-2/land-questionnaire-registry-title.js')(router);,  require('./routes/0-2/additional-documents.js')(router);,,  require('./routes/0-3/project-kick-off.js')(router);,  require('./routes/0-3/external-stakeholder-kick-off.js')(router);,  require('./routes/0-3/process-conversion-grant.js')(router);,  require('./routes/0-3/land-questionnaire-registry-title.js')(router);,  require('./routes/0-3/additional-documents.js')(router);,  require('./routes/0-3/routes.js')(router);,,  require('./routes/0-4/articles-of-association.js')(router);,  require('./routes/0-4/church-supplementary-agreement.js')(router);,  require('./routes/0-4/deed-of-variation.js')(router);,  require('./routes/0-4/direction-to-transfer.js')(router);,  require('./routes/0-4/external-stakeholder-kick-off.js')(router);,  require('./routes/0-4/land-questionnaire.js')(router);,  require('./routes/0-4/land-registry-title-plans.js')(router);,  require('./routes/0-4/master-funding-agreement.js')(router);,  require('./routes/0-4/process-conversion-grant.js')(router);,  require('./routes/0-4/project-kick-off.js')(router);,  require('./routes/0-4/supplementary-funding-agreement.js')(router);,  require('./routes/0-4/trust-modification-order.js')(router);,  require('./routes/0-4/routes.js')(router);,,  require('./routes/0-5/articles-of-association.js')(router);,  require('./routes/0-5/church-supplementary-agreement.js')(router);,  require('./routes/0-5/contacts.js')(router);,  require('./routes/0-5/deed-of-variation.js')(router);,  require('./routes/0-5/direction-to-transfer.js')(router);,  require('./routes/0-5/external-stakeholder-kick-off.js')(router);,  require('./routes/0-5/land-questionnaire.js')(router);,  require('./routes/0-5/land-registry-title-plans.js')(router);,  require('./routes/0-5/master-funding-agreement.js')(router);,  require('./routes/0-5/process-conversion-grant.js')(router);,  require('./routes/0-5/project-kick-off.js')(router);,  require('./routes/0-5/supplementary-funding-agreement.js')(router);,  require('./routes/0-5/trust-modification-order.js')(router);,  require('./routes/0-5/routes.js')(router);,  require('./routes/0-5/checklist-test.js')(router);,,  require('./routes/0-6/articles-of-association.js')(router);,  require('./routes/0-6/church-supplementary-agreement.js')(router);,  require('./routes/0-6/contacts.js')(router);,  require('./routes/0-6/deed-of-variation.js')(router);,  require('./routes/0-6/direction-to-transfer.js')(router);,  require('./routes/0-6/external-stakeholder-kick-off.js')(router);,  require('./routes/0-6/land-questionnaire.js')(router);,  require('./routes/0-6/land-registry-title-plans.js')(router);,  require('./routes/0-6/master-funding-agreement.js')(router);,  require('./routes/0-6/process-conversion-grant.js')(router);,  require('./routes/0-6/regional-delivery-officer-handover.js')(router);,  require('./routes/0-6/supplementary-funding-agreement.js')(router);,  require('./routes/0-6/trust-modification-order.js')(router);,  require('./routes/0-6/routes.js')(router);,  require('./routes/0-6/checklist-test.js')(router);,,  require('./routes/0-7/articles-of-association.js')(router);,  require('./routes/0-7/baseline-checks.js')(router);,  require('./routes/0-7/checklist-test.js')(router);,  require('./routes/0-7/church-supplementary-agreement.js')(router);,  require('./routes/0-7/complete-processing-of-conversion-grant.js')(router);,  require('./routes/0-7/confirm-all-conditions-met.js')(router);,  require('./routes/0-7/contacts.js')(router);,  require('./routes/0-7/deed-of-variation.js')(router);,  require('./routes/0-7/direction-to-transfer.js')(router);,  require('./routes/0-7/education-skills-funding-agency-handover.js')(router);,  require('./routes/0-7/external-stakeholder-kick-off.js')(router);,  require('./routes/0-7/land-questionnaire.js')(router);,  require('./routes/0-7/land-registry-title-plans.js')(router);,  require('./routes/0-7/master-funding-agreement.js')(router);,  require('./routes/0-7/process-conversion-grant.js')(router);,  require('./routes/0-7/readiness-for-opening.js')(router);,  require('./routes/0-7/redact-and-send-documents.js')(router);,  require('./routes/0-7/regional-delivery-officer-handover.js')(router);,  require('./routes/0-7/school-opening-date.js')(router);,  require('./routes/0-7/single-worksheet.js')(router);,  require('./routes/0-7/supplementary-funding-agreement.js')(router);,  require('./routes/0-7/trust-modification-order.js')(router);,  require('./routes/0-7/routes.js')(router);,,  require('./routes/0-8/articles-of-association.js')(router);,  require('./routes/0-8/baseline-checks.js')(router);,  require('./routes/0-8/checklist-test.js')(router);,  require('./routes/0-8/church-supplementary-agreement.js')(router);,  require('./routes/0-8/complete-processing-of-conversion-grant.js')(router);,  require('./routes/0-8/confirm-all-conditions-met.js')(router);,  require('./routes/0-8/contacts.js')(router);,  require('./routes/0-8/deed-of-variation.js')(router);,  require('./routes/0-8/direction-to-transfer.js')(router);,  require('./routes/0-8/education-skills-funding-agency-handover.js')(router);,  require('./routes/0-8/external-stakeholder-kick-off.js')(router);,  require('./routes/0-8/land-questionnaire.js')(router);,  require('./routes/0-8/land-registry-title-plans.js')(router);,  require('./routes/0-8/master-funding-agreement.js')(router);,  require('./routes/0-8/process-conversion-grant.js')(router);,  require('./routes/0-8/readiness-for-opening.js')(router);,  require('./routes/0-8/redact-and-send-documents.js')(router);,  require('./routes/0-8/regional-delivery-officer-handover.js')(router);,  require('./routes/0-8/school-opening-date.js')(router);,  require('./routes/0-8/single-worksheet.js')(router);,  require('./routes/0-8/supplementary-funding-agreement.js')(router);,  require('./routes/0-8/trust-modification-order.js')(router);,  require('./routes/0-8/routes.js')(router);,,  require('./routes/0-9/125-year-lease.js')(router);,  require('./routes/0-9/articles-of-association.js')(router);,  require('./routes/0-9/baseline-checks.js')(router);,  require('./routes/0-9/checklist-test.js')(router);,  require('./routes/0-9/church-supplementary-agreement.js')(router);,  require('./routes/0-9/commercial-transfer-agreement.js')(router);,  require('./routes/0-9/complete-processing-of-conversion-grant.js')(router);,  require('./routes/0-9/confirm-all-conditions-met.js')(router);,  require('./routes/0-9/contacts.js')(router);,  require('./routes/0-9/deed-of-variation.js')(router);,  require('./routes/0-9/direction-to-transfer.js')(router);,  require('./routes/0-9/education-skills-funding-agency-handover.js')(router);,  require('./routes/0-9/email-regional-delivery-officer-school-opened.js')(router);,  require('./routes/0-9/external-stakeholder-kick-off.js')(router);,  require('./routes/0-9/land-questionnaire.js')(router);,  require('./routes/0-9/land-registry-title-plans.js')(router);,  require('./routes/0-9/master-funding-agreement.js')(router);,  require('./routes/0-9/process-conversion-grant.js')(router);,  require('./routes/0-9/readiness-for-opening.js')(router);,  require('./routes/0-9/redact-and-send-documents.js')(router);,  require('./routes/0-9/regional-delivery-officer-handover.js')(router);,  require('./routes/0-9/school-opening-date.js')(router);,  require('./routes/0-9/single-worksheet.js')(router);,  require('./routes/0-9/subleases.js')(router);,  require('./routes/0-9/supplementary-funding-agreement.js')(router);,  require('./routes/0-9/tenancy-at-will.js')(router);,  require('./routes/0-9/trust-modification-order.js')(router);,  require('./routes/0-9/routes.js')(router);,,module.exports = router,
+Found [module.exports = router;,module.exports = router] in [/Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/app/routes.js, removing
+Succeeded [Remove unused directory public]
+Succeeded [Remove unused directory lib]
+Succeeded [Overwrite app/filters.js]
+Succeeded [Update routes file]
+Succeeded [Overwrite app/assets/javascripts/application.js]
+Succeeded [Remove unused directory docs]
+Succeeded [Deleted directories that are no longer needed]
+Started [Remove old pattern includes from application SCSS file]
+Succeeded [Remove old pattern includes from application SCSS file]
+Started [Remove empty directory /app/assets/sass/patterns]
+Started [Remove empty directory /app/assets/images]
+Started [Remove empty directory /app/views/includes]
+Skipped deleting /app/assets/sass/patterns
+Skipped deleting /app/assets/images
+Skipped deleting /app/views/includes
+2022-11-24T11:36:58.001Z
+cwd: /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes
+package: govuk-prototype-kit@13.0.0
+argv: /Users/richardcooley/.nvm/versions/node/v19.1.0/bin/node /Users/richardcooley/Documents/DfE/complete-conversions-transfers-and-changes/node_modules/.bin/govuk-prototype-kit migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Failed [Check migration is being applied to a pre v13 prototype]

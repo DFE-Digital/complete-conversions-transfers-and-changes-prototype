@@ -143,4 +143,33 @@ const router = express.Router()
   require('./routes/0-9/trust-modification-order.js')(router);
   require('./routes/0-9/routes.js')(router);
 
+  require('./routes/0-11/caseworker/125-year-lease.js')(router);
+  require('./routes/0-11/caseworker/articles-of-association.js')(router);
+  require('./routes/0-11/caseworker/baseline-checks.js')(router);
+  require('./routes/0-11/caseworker/checklist-test.js')(router);
+  require('./routes/0-11/caseworker/church-supplementary-agreement.js')(router);
+  require('./routes/0-11/caseworker/commercial-transfer-agreement.js')(router);
+  require('./routes/0-11/caseworker/complete-processing-of-conversion-grant.js')(router);
+  require('./routes/0-11/caseworker/confirm-all-conditions-met.js')(router);
+  require('./routes/0-11/caseworker/contacts.js')(router);
+  require('./routes/0-11/caseworker/deed-of-variation.js')(router);
+  require('./routes/0-11/caseworker/direction-to-transfer.js')(router);
+  require('./routes/0-11/caseworker/education-skills-funding-agency-handover.js')(router);
+  require('./routes/0-11/caseworker/email-regional-delivery-officer-school-opened.js')(router);
+  require('./routes/0-11/caseworker/external-stakeholder-kick-off.js')(router);
+  require('./routes/0-11/caseworker/land-questionnaire.js')(router);
+  require('./routes/0-11/caseworker/land-registry-title-plans.js')(router);
+  require('./routes/0-11/caseworker/master-funding-agreement.js')(router);
+  require('./routes/0-11/caseworker/process-conversion-grant.js')(router);
+  require('./routes/0-11/caseworker/readiness-for-opening.js')(router);
+  require('./routes/0-11/caseworker/redact-and-send-documents.js')(router);
+  require('./routes/0-11/caseworker/regional-delivery-officer-handover.js')(router);
+  require('./routes/0-11/caseworker/school-opening-date.js')(router);
+  require('./routes/0-11/caseworker/single-worksheet.js')(router);
+  require('./routes/0-11/caseworker/subleases.js')(router);
+  require('./routes/0-11/caseworker/supplementary-funding-agreement.js')(router);
+  require('./routes/0-11/caseworker/tenancy-at-will.js')(router);
+  require('./routes/0-11/caseworker/trust-modification-order.js')(router);
+  require('./routes/0-11/caseworker/routes.js')(router);
+
 module.exports = router

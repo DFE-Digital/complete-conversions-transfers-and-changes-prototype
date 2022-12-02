@@ -10,4 +10,12 @@ module.exports = function (router) {
     res.redirect('../project-task-list')
   })
 
+  router.get('/' + version + '/land-issues/land-building-leasing-arrangements-or-transfer-agreements', function (req, res) {
+    res.render(version + '/land-issues/land-building-leasing-arrangements-or-transfer-agreements', {})
+  })
+
+  router.post('/' + version + '/land-issues/land-building-leasing-arrangements-or-transfer-agreements', function (req, res) {
+    res.redirect('single-page-questions')
+  })
+
 }

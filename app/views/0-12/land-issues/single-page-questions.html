@@ -1,0 +1,86 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Describe
+                    land issues</h1>
+                  <div class="govuk-hint">
+                    This information will be shared with the Academies Operation
+                    Practice Unit so that they can process the Single worksheet.
+                  </div>
+                  <div class="govuk-hint">
+                    You only need to include information related to unresolved
+                    problems.
+                  </div>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff">
+                        Not applicable
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-7" name="externalStakeHolderKickoff" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-7">
+                        empty
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checklist__header">
+                    <h2 class="govuk-heading-l">Enter details of land issues</h2>
+                    <div class="govuk-inset-text">
+                      <p class="govuk-body">
+                        <a href="land-building-leasing-arrangements-or-transfer-agreements.html" class="govuk-link">
+                          Explain issues with land and building leasing
+                          arrangements, or transfer agreements</a>.
+                        </p>
+                      <p class="govuk-body">
+                        <a href="#" class="govuk-link">Explain issues with
+                          shared usage agreements</a>.
+                        </p>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
+                        <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff">
+                          Explain outstanding land issues
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-form-group">
+                  {{ govukButton({ text: "Continue" }) }}
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

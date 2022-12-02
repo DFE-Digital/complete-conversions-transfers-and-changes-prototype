@@ -18,4 +18,12 @@ module.exports = function (router) {
     res.redirect('single-page-questions')
   })
 
+  router.get('/' + version + '/land-issues/shared-usage-agreements', function (req, res) {
+    res.render(version + '/land-issues/shared-usage-agreements', {})
+  })
+
+  router.post('/' + version + '/land-issues/shared-usage-agreements', function (req, res) {
+    res.redirect('single-page-questions')
+  })
+
 }

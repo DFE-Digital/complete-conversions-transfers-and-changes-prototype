@@ -1,0 +1,67 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">
+                    Commercial transfer agreement
+                  </h1>
+                  <div class="govuk-hint">
+                    The Commercial transfer agreement is essential for all
+                    conversion projects.
+                  </div>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="CommercialTransferAgreement" name="emailCtaReceived" type="checkbox" value="sendIntroductoryEmails" {{ checked("emailRegionalDeliveryOfficerSchoolOpened", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="emailCtaReceived">
+                        Email the school to confirm all relevant parties have
+                        signed the Commercial Transfer agreement
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="CommercialTransferAgreement" name="CtaSaved" type="checkbox" value="sendIntroductoryEmails" {{ checked("emailRegionalDeliveryOfficerSchoolOpened", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="CtaSaved">
+                        Save a copy of the confirmation email in school's
+                        SharePoint folder
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="CommercialTransferAgreement" name="emailRegionalDeliveryOfficerSchoolOpened" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="emailRegionalDeliveryOfficerSchoolOpened-7">
+                        empty
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-form-group">
+                  {{ govukButton({ text: "Continue" }) }}
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

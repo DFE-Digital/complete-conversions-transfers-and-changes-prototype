@@ -1,7 +1,7 @@
-// 
+//
 // For guidance on how to create routes see:
 // https://prototype-kit.service.gov.uk/docs/routes
-// 
+//
 
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
@@ -149,3 +149,31 @@ const router = govukPrototypeKit.requests.setupRouter()
   require('./routes/0-9/trust-modification-order.js')(router);
   require('./routes/0-9/routes.js')(router);
 
+  require('./routes/0-12/125-year-lease.js')(router);
+  require('./routes/0-12/articles-of-association.js')(router);
+  require('./routes/0-12/baseline-checks.js')(router);
+  require('./routes/0-12/checklist-test.js')(router);
+  require('./routes/0-12/church-supplementary-agreement.js')(router);
+  require('./routes/0-12/commercial-transfer-agreement.js')(router);
+  require('./routes/0-12/complete-processing-of-conversion-grant.js')(router);
+  require('./routes/0-12/confirm-all-conditions-met.js')(router);
+  require('./routes/0-12/contacts.js')(router);
+  require('./routes/0-12/deed-of-variation.js')(router);
+  require('./routes/0-12/direction-to-transfer.js')(router);
+  require('./routes/0-12/education-skills-funding-agency-handover.js')(router);
+  require('./routes/0-12/email-regional-delivery-officer-school-opened.js')(router);
+  require('./routes/0-12/external-stakeholder-kick-off.js')(router);
+  require('./routes/0-12/land-issues.js')(router);
+  require('./routes/0-12/land-questionnaire.js')(router);
+  require('./routes/0-12/land-registry-title-plans.js')(router);
+  require('./routes/0-12/master-funding-agreement.js')(router);
+  require('./routes/0-12/process-conversion-grant.js')(router);
+  require('./routes/0-12/readiness-for-opening.js')(router);
+  require('./routes/0-12/redact-and-send-documents.js')(router);
+  require('./routes/0-12/regional-delivery-officer-handover.js')(router);
+  require('./routes/0-12/school-opening-date.js')(router);
+  require('./routes/0-12/subleases.js')(router);
+  require('./routes/0-12/supplementary-funding-agreement.js')(router);
+  require('./routes/0-12/tenancy-at-will.js')(router);
+  require('./routes/0-12/trust-modification-order.js')(router);
+  require('./routes/0-12/routes.js')(router);

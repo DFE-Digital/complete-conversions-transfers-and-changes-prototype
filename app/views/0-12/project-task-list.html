@@ -345,6 +345,8 @@
                     <span class="app-task-list__task-name">
                       <a href="land-issues/single-page-questions" aria-describedby="list-convictions-status">
                         Describe land issues</a>
+                        LAND ISSUES {{data["land-building-leasing-issues"]}}
+                        Shared ISSUES {{data["shared-usage-issues"]}}
                     </span>
                     {% if (data['describeLandIssues'] == 'completed') %}
                       <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="testReceivedDocumentStatus">
@@ -352,7 +354,7 @@
                     {% elseif (data['describeLandIssues'] == 'notApplicable') %}
                       <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="testReceivedDocumentStatus">
                         Not Applicable</strong>
-                    {% elseif (data['land-building-leasing-issues'] != '' or data['shared-usage-issues'] != '' ) %}
+                    {% elseif (data['land-building-leasing-issues'] != null or data['shared-usage-issues'] != null ) %}
                       <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="testReceivedDocumentStatus">
                         In progress</strong>
                     {% else %}

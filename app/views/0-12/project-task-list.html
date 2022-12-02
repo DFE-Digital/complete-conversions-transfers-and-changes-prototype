@@ -352,7 +352,7 @@
                     {% elseif (data['describeLandIssues'] == 'notApplicable') %}
                       <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="testReceivedDocumentStatus">
                         Not Applicable</strong>
-                    {% elseif (data['land-building-leasing-issues'] != null or data['shared-usage-issues'] != null ) %}
+                    {% elseif (data['land-building-leasing-issues'] or data['shared-usage-issues']) %}
                       <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="testReceivedDocumentStatus">
                         In progress</strong>
                     {% else %}

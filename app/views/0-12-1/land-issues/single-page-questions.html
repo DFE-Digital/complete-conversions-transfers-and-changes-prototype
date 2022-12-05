@@ -48,8 +48,8 @@
                     <h2 class="govuk-heading-l">Enter details of land issues</h2>
                       <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="describeLandIssues1" name="describeLandIssues" type="checkbox" value="completed" {{ checked("describeLandIssues", "completed") }}>
-                          <label class="govuk-label govuk-checkboxes__label" for="describeLandIssues1">
+                          <input class="govuk-checkboxes__input" id="describeLandIssues-1" name="describeLandIssues" type="checkbox" value="describeLandAndLeasingIssues" {{ checked("describeLandIssues", "describeLandAndLeasingIssues") }}>
+                          <label class="govuk-label govuk-checkboxes__label" for="describeLandIssues-1">
                             Record outstanding land and building leasing
                             arrangements, or transfer agreements issues
                           </label>
@@ -65,8 +65,8 @@
                       </div>
                       <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="describeLandIssues1" name="describeLandIssues" type="checkbox" value="completed" {{ checked("describeLandIssues", "completed") }}>
-                          <label class="govuk-label govuk-checkboxes__label" for="describeLandIssues1">
+                          <input class="govuk-checkboxes__input" id="describeLandIssues-2" name="describeLandIssues" type="checkbox" value="describeSharedUsageIssues" {{ checked("describeLandIssues", "describeSharedUsageIssues") }}>
+                          <label class="govuk-label govuk-checkboxes__label" for="describeLandIssues-2">
                             Record outstanding shared usage land issues
                           </label>
                           <div class="govuk-checkboxes__guidance">
@@ -77,6 +77,12 @@
                               </p>
                             </div>
                           </div>
+                      </div>
+                      <div class="govuk-checkboxes__item" style="display: none;">
+                        <input class="govuk-checkboxes__input" id="describeLandIssues-3" name="describeLandIssues" type="checkbox" value="empty" checked="empty">
+                        <label class="govuk-label govuk-checkboxes__label" for="describeLandIssues-3">
+                          empty
+                        </label>
                       </div>
                     </div>
                   </div>

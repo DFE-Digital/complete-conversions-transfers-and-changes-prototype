@@ -346,13 +346,13 @@
                       <a href="land-issues/single-page-questions" aria-describedby="list-convictions-status">
                         Describe land issues</a>
                     </span>
-                    {% if (data['describeLandIssues'] == 'completed') %}
+                    {% if (data['describeLandIssuesStatus'] == 'completed') %}
                       <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="testReceivedDocumentStatus">
                         Completed</strong>
-                    {% elseif (data['describeLandIssues'] == 'notApplicable') %}
+                    {% elseif (data['describeLandIssuesStatus'] == 'notApplicable') %}
                       <strong class="govuk-tag app-task-list__tag govuk-tag--grey" id="testReceivedDocumentStatus">
                         Not Applicable</strong>
-                    {% elseif (data['land-building-leasing-issues'] or data['shared-usage-issues']) %}
+                    {% elseif (data['describeLandIssuesStatus'] == 'inProgress') %}
                       <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="testReceivedDocumentStatus">
                         In progress</strong>
                     {% else %}

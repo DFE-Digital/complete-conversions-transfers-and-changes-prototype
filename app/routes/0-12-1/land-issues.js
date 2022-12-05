@@ -7,6 +7,21 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/land-issues/single-page-questions', function (req, res) {
+    const checkDescribeLandIssues = req.session.data['describeLandIssues']
+
+    if (checkDescribeLandIssues.includes('describeLandAndLeasingIssues') &
+    checkDescribeLandIssues.includes('describeSharedUsageIssues') ){
+      req.session.data.describeLandIssuesStatus = 'completed'
+    }else if (checkDescribeLandIssues == ('empty')){
+      req.session.data.describeLandIssuesStatus = 'notStarted'
+    }else if (checkDescribeLandIssues.includes('notApplicable')){
+      req.session.data.describeLandIssuesStatus = 'notApplicable'
+    }else {
+      req.session.data.describeLandIssuesStatus = 'inProgress'
+    }
+
+
+
     res.redirect('../project-task-list')
   })
 

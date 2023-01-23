@@ -209,6 +209,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 
   require('./routes/0-15/125-year-lease.js')(router);
   require('./routes/0-15/articles-of-association.js')(router);
+  require('./routes/0-15/assign-user.js')(router);
   require('./routes/0-15/baseline-checks.js')(router);
   require('./routes/0-15/checklist-test.js')(router);
   require('./routes/0-15/church-supplementary-agreement.js')(router);

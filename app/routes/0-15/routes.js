@@ -7,7 +7,14 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/set-up', function (req, res) {
-    res.redirect('start')
+    const userType = req.session.data['userType']
+
+    if (userType == 'team-lead'){
+      res.redirect('project-list/team-lead/unassigned')
+    } else {
+      res.redirect('start')
+    }
+
   })
 
 

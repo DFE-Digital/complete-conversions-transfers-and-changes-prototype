@@ -227,6 +227,7 @@ const router = govukPrototypeKit.requests.setupRouter()
   require('./routes/0-15/land-registry-title-plans.js')(router);
   require('./routes/0-15/master-funding-agreement.js')(router);
   require('./routes/0-15/process-conversion-grant.js')(router);
+  require('./routes/0-15/project-list.js')(router);
   require('./routes/0-15/readiness-for-opening.js')(router);
   require('./routes/0-15/redact-and-send-documents.js')(router);
   require('./routes/0-15/regional-delivery-officer-handover.js')(router);

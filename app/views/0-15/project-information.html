@@ -84,7 +84,13 @@
                 Completed by
               </dt>
               <dd class="govuk-summary-list__value">
-                {{data['completedBy']}}
+                {% if (data['completedBy']) %}
+                  {{data['completedBy']}}
+                {% else %}
+                  <strong class="govuk-tag govuk-tag--orange">
+                    Unassigned
+                  </strong>
+                {% endif %}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a href="assign-user/edit-completed-by" class="govuk-link">Change</a>

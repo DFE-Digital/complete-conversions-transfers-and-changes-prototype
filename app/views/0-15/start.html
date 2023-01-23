@@ -27,14 +27,15 @@
           </li>
         </ul>
       </nav>
-
-      {% if (data['userType'] == 'caseworker') %}
-        {% include "./includes/project-list.html" %}
-      {% elseif (data['userType'] == 'team-lead') %}
-        {% include "./includes/project-list-team-lead.html" %}
-      {% else %}
-        Not user type selected, you can pick one on the project set up page
-      {% endif %}
+      <form action="start" method="post" class="form">
+        {% if (data['userType'] == 'caseworker') %}
+          {% include "./includes/project-list.html" %}
+        {% elseif (data['userType'] == 'team-lead') %}
+          {% include "./includes/project-list-team-lead.html" %}
+        {% else %}
+          Not user type selected, you can pick one on the project set up page
+        {% endif %}
+      </form>
     </div>
   </div>
 {% endblock %}

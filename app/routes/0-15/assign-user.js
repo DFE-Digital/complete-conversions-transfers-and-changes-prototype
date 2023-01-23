@@ -7,7 +7,15 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/assign-user/edit-contact', function (req, res) {
-    res.redirect('../project-information')
+
+    if ( req.session.data['fromTeamLeadProjectList'] == 'true' ){
+      res.redirect('../start')
+    } else {
+      res.redirect('../project-information')
+    }
+
   })
+
+
 
 }

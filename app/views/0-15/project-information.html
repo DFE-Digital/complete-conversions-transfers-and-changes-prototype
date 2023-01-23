@@ -17,6 +17,7 @@
     <div class="govuk-grid-column-full">
       <span class="govuk-caption-l">URN 102062</span>
       <h1 class="govuk-heading-l">St. Wilfred's Primary School</h1>
+      {{data['fromTeamLeadProjectList']}}
       <div class="govuk-inset-text">
         <p class="govuk-body govuk-!-margin-0">
           <span class="govuk-!-font-weight-bold">School type: </span>
@@ -93,7 +94,7 @@
                 {% endif %}
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a href="assign-user/edit-completed-by" class="govuk-link">Change</a>
+                <a href="assign-user/edit-completed-by?fromTeamLeadProjectList=false" class="govuk-link">Change</a>
               </dd>
             </div>
             <div class="govuk-summary-list__row">

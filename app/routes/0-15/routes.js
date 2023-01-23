@@ -14,7 +14,6 @@ module.exports = function (router) {
   router.get('/' + version + '/start', function (req, res) {
     const journeyType = req.session.data['journeyType']
 
-
     if (journeyType == null){
       req.session.data.journeyType = ['multiPage']
     }
@@ -22,7 +21,9 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/start', function (req, res) {
-    res.redirect('start')
+    req.session.data.fromTeamLeadProjectList = 'true'
+
+    res.redirect('assign-user/edit-completed-by')
   })
 
 

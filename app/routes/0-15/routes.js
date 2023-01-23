@@ -48,7 +48,13 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/project-closed', function (req, res) {
-    res.redirect('project-list-2')
+    const userType = req.session.data['userType']
+
+    if (userType == 'team-lead'){
+      res.redirect('project-list/team-lead/unassigned')
+    } else {
+      res.redirect('project-list/caseworker/active')
+    }
   })
 
 }

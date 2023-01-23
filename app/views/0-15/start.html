@@ -28,7 +28,13 @@
         </ul>
       </nav>
 
-      {% include "./includes/project-list.html" %}
+      {% if (data['userType'] == 'caseworker') %}
+        {% include "./includes/project-list.html" %}
+      {% elseif (data['userType'] == 'team-lead') %}
+        {% include "./includes/project-list-team-lead.html" %}
+      {% else %}
+        Not user type selected, you can pick one on the project set up page
+      {% endif %}
     </div>
   </div>
 {% endblock %}

@@ -13,6 +13,8 @@ module.exports = function (router) {
 
   router.get('/' + version + '/start', function (req, res) {
     const journeyType = req.session.data['journeyType']
+    req.session.data.completedBy = ['Julie Walters']
+
 
     if (journeyType == null){
       req.session.data.journeyType = ['multiPage']

@@ -12,7 +12,7 @@ module.exports = function (router) {
     if (userType == 'team-lead'){
       res.redirect('project-list/team-lead/unassigned')
     } else {
-      res.redirect('start')
+      res.redirect('project-list/caseworker/active')
     }
 
   })

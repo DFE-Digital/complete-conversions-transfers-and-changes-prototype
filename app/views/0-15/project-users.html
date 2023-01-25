@@ -45,23 +45,24 @@
             <a class="sub-navigation__link"  href="project-information">Project information</a>
           </li>
           <li class="sub-navigation__item">
-            <a class="sub-navigation__link" aria-current="page">Users</a>
+            <a class="sub-navigation__link" aria-current="page">DfE People</a>
           </li>
           <li class="sub-navigation__item">
             <a class="sub-navigation__link" href="project-notes">Notes</a>
           </li>
           <li class="sub-navigation__item">
-            <a class="sub-navigation__link" href="contacts">Contacts</a>
+            <a class="sub-navigation__link" href="contacts">External Contacts</a>
           </li>
         </ul>
       </nav>
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <h2 class="govuk-heading-l">Complete Users</h2>
+          <h2 class="govuk-heading-l">Internal People</h2>
+          <h2 class="govuk-heading-m">Completing project</h2>
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                User completing project
+                Person completing project
               </dt>
               <dd class="govuk-summary-list__value">
                 {% if (data['completedBy']) %}
@@ -81,7 +82,7 @@
                 Team completing project
               </dt>
               <dd class="govuk-summary-list__value">
-                Regional Case Work Services
+                Regional Casework Services
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a href="#" class="govuk-link">Change</a>
@@ -89,26 +90,69 @@
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Team lead who assigned user
+                Project assigned by
               </dt>
               <dd class="govuk-summary-list__value">
                 Jovan George
               </dd>
               <dd class="govuk-summary-list__actions">
+                <a href="mailto:jovan.GEORGE2@education.gov.uk">Email</a> |
+                <a href="#changePerson">Change</a>
               </dd>
             </div>
           </dl>
 
-          <h2 class="govuk-heading-l" id="schoolDetails">Prepare Users</h2>
+          <h2 class="govuk-heading-m">Completing project (RDO keeps it)</h2>
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Delivery officer from Prepare
+                Person completing project
               </dt>
               <dd class="govuk-summary-list__value">
                 Shayla Rubio
               </dd>
               <dd class="govuk-summary-list__actions">
+                <a href="mailto:shayla.RUBIO@education.gov.uk">Email</a> |
+                <a href="assign-user/edit-completed-by?fromTeamLeadProjectList=false" class="govuk-link">Change</a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Team completing project
+              </dt>
+              <dd class="govuk-summary-list__value">
+                A Region
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="#" class="govuk-link">Change</a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Project assigned by
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Shayla Rubio
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="mailto:shayla.RUBIO@education.gov.uk">Email</a> |
+                <a href="assign-user/edit-completed-by?fromTeamLeadProjectList=false" class="govuk-link">Change</a>
+              </dd>
+            </div>
+          </dl>
+
+
+          <h2 class="govuk-heading-m" id="schoolDetails">Prepared for advisory board</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Person who prepared project
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Shayla Rubio
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="mailto:shayla.RUBIO@education.gov.uk">Email</a>
               </dd>
             </div>
           </dl>

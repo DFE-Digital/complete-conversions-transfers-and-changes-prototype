@@ -1,0 +1,119 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "./includes/phase.html" %}
+  {% if (data['userType'] == 'team-lead') %}
+    <a href="project-list/team-lead/unassigned" class="govuk-back-link">Back to all projects</a>
+  {% else %}
+    <a href="project-list/caseworker/active" class="govuk-back-link">Back to all projects</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">URN 102062</span>
+      <h1 class="govuk-heading-l">St. Wilfred's Primary School</h1>
+      {{data['fromTeamLeadProjectList']}}
+      <div class="govuk-inset-text">
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">School type: </span>
+          Voluntary aided school</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Incoming trust:</span>
+          Dynamics Trust</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Local authority:</span>
+          Warrington Borough Council</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Target opening date:</span>
+          21 July 2022</p>
+      </div>
+      <nav class="sub-navigation" aria-label="Sub navigation">
+        <ul class="sub-navigation__list">
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-task-list">Task list</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link"  href="project-information">Project information</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" aria-current="page">Users</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-notes">Notes</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-l">Complete Users</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                User completing project
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {% if (data['completedBy']) %}
+                  {{data['completedBy']}}
+                {% else %}
+                  <strong class="govuk-tag govuk-tag--orange">
+                    Unassigned
+                  </strong>
+                {% endif %}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="assign-user/edit-completed-by?fromTeamLeadProjectList=false" class="govuk-link">Change</a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Team completing project
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Regional Case Work Services
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="#" class="govuk-link">Change</a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Team lead who assigned user
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Jovan George
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+          </dl>
+
+          <h2 class="govuk-heading-l" id="schoolDetails">Prepare Users</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Delivery officer from Prepare
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Shayla Rubio
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -48,7 +48,7 @@
             <a class="sub-navigation__link" href="project-notes">Notes</a>
           </li>
           <li class="sub-navigation__item">
-            <a class="sub-navigation__link" href="contacts">Contacts</a>
+            <a class="sub-navigation__link" href="contacts">External contacts</a>
           </li>
           <li class="sub-navigation__item">
             <a class="sub-navigation__link" href="project-dfe-people">DfE people</a>
@@ -61,9 +61,13 @@
           <p class="govuk-body govuk-!-margin-bottom-1"><a href="#projectDetails" class="govuk-link">
             Project details</a></p>
           <p class="govuk-body govuk-!-margin-bottom-1"><a href="#schoolDetails" class="govuk-link">
-            School details</a></p>
+            School</a></p>
           <p class="govuk-body govuk-!-margin-bottom-1"><a href="#trustDetails" class="govuk-link">
-            Trust details</a></p>
+            Trust</a></p>
+          <p class="govuk-body govuk-!-margin-bottom-1"><a href="#localAuthorityDetails" class="govuk-link">
+            Local authority</a></p>
+          <p class="govuk-body govuk-!-margin-bottom-1"><a href="#dioceseDetails" class="govuk-link">
+            Diocese</a></p>
           <div class="app-back-to-top app-back-to-top--fixed" data-module="app-back-to-top">
             <a class="govuk-link govuk-link--no-visited-state app-back-to-top__link" href="#top">
               <svg role="presentation" focusable="false" class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
@@ -76,61 +80,13 @@
         <div class="govuk-grid-column-two-thirds">
           <h2 class="govuk-heading-l" id="projectDetails">Project details</h2>
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Prepared by
+                Date of advisory board
               </dt>
               <dd class="govuk-summary-list__value">
-                Jo Wade
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a href="#" class="govuk-link">Change</a>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Completed by
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {% if (data['completedBy']) %}
-                  {{data['completedBy']}}
-                {% else %}
-                  <strong class="govuk-tag govuk-tag--orange">
-                    Unassigned
-                  </strong>
-                {% endif %}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a href="assign-user/edit-completed-by?fromTeamLeadProjectList=false" class="govuk-link">Change</a>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Assigned by
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Nikkita Reynolds
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a href="#" class="govuk-link">Change</a>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Regional delivery officer
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Jovan George
-              </dd>
-              <dd class="govuk-summary-list__actions">
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Academies and Maintained Schools lead
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Arlo Freeman
+                1 January 2023
               </dd>
               <dd class="govuk-summary-list__actions">
               </dd>
@@ -147,18 +103,17 @@
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Academy type and route
+                School SharePoint folder
               </dt>
               <dd class="govuk-summary-list__value">
-                <p class="govuk-body">Route: grant only - £25,000</p>
-                <p class="govuk-body">Type: converter</p>
+                <a class="govuk-link" href="#">sharepoint/conversions/dynamics/StWilfreds</a>
               </dd>
               <dd class="govuk-summary-list__actions">
               </dd>
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Sharepoint folder
+                Trust SharePoint folder
               </dt>
               <dd class="govuk-summary-list__value">
                 <a class="govuk-link" href="#">sharepoint/conversions/dynamics/StWilfreds</a>
@@ -168,7 +123,7 @@
             </div>
           </dl>
 
-          <h2 class="govuk-heading-l" id="schoolDetails">School details</h2>
+          <h2 class="govuk-heading-l" id="schoolDetails">School</h2>
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
@@ -208,7 +163,6 @@
                 <span class="empty">Empty</span>
               </dd>
               <dd class="govuk-summary-list__actions">
-
               </dd>
             </div>
             <div class="govuk-summary-list__row">
@@ -231,29 +185,9 @@
               <dd class="govuk-summary-list__actions">
               </dd>
             </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Local authority
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Warrington Borough Council
-              </dd>
-              <dd class="govuk-summary-list__actions">
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Diocese
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Warrington
-              </dd>
-              <dd class="govuk-summary-list__actions">
-              </dd>
-            </div>
           </dl>
 
-          <h2 class="govuk-heading-l" id="trustDetails">Trust details</h2>
+          <h2 class="govuk-heading-l" id="trustDetails">Trust</h2>
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
@@ -267,7 +201,7 @@
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Trust Unique Reference Number
+                UK Provider Reference Number
               </dt>
               <dd class="govuk-summary-list__value">
                 11223344
@@ -277,16 +211,43 @@
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Trust template
+                Companies house number
               </dt>
               <dd class="govuk-summary-list__value">
-                <a class="govuk-link" href="#">KIM/conversions/dynamics/StWilfreds/TrustTemplate</a>
+                078787878
               </dd>
               <dd class="govuk-summary-list__actions">
               </dd>
             </div>
           </dl>
 
+          <h2 class="govuk-heading-l" id="localAuthorityDetails">Local authority</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Local authority
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Warrington Borough Council
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+          </dl>
+
+          <h2 class="govuk-heading-l" id="dioceseDetails">Diocese</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Diocese
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Warrington
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+          </dl>
         </div>
       </div>
     </div>

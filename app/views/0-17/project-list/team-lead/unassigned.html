@@ -1,0 +1,272 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Project list
+      </h1>
+      <div class="govuk-button-group">
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+        {{ govukButton({
+          text: "Add new voluntary conversion project",
+          href: "../../add-project/add-project"
+        }) }}
+        {{ govukButton({
+          text: "Add new involuntary conversion project",
+          href: "../../add-project/add-project"
+        }) }}
+      </div>
+      <form action="unassigned" method="post" class="form">
+        <nav class="sub-navigation" aria-label="Sub navigation">
+          <ul class="sub-navigation__list">
+            <li class="sub-navigation__item">
+              <a class="sub-navigation__link" aria-current="page" href="unassigned">Unassigned projects</a>
+            </li>
+            <li class="sub-navigation__item">
+              <a class="sub-navigation__link" href="active">Active projects</a>
+            </li>
+            <li class="sub-navigation__item">
+              <a class="sub-navigation__link" href="closed">Closed projects</a>
+            </li>
+            <li class="sub-navigation__item">
+              <a class="sub-navigation__link" href="../../monthly-openers/monthly-openers">Monthly openers</a>
+            </li>
+          </ul>
+        </nav>
+        <h2 class="govuk-heading-m">June openers</h2>
+        <dl class="govuk-summary-list govuk-summary-list--school-details govuk-!-margin-bottom-9">
+          <span class="govuk-caption-m">URN 356790</span>
+          <h3 class="govuk-heading-m govuk-heading-m--school-name">
+            <a href="#" class="govuk-link">Bridgewater County High School</a>
+          </h3>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              <span class="govuk-!-font-weight-bold">School type:</span>
+              Voluntary controlled school
+            </dt>
+            <dd class="govuk-summary-list__actions">
+              <span class="govuk-!-font-weight-bold">Target opening date:</span>
+              1 June 2022
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              <span class="govuk-!-font-weight-bold">Incoming trust:</span>
+              TCAT The Challenge Academy Trust
+            </dt>
+            <dd class="govuk-summary-list__actions">
+              <span class="govuk-!-font-weight-bold">Local authority:</span>
+              Wigan Borough Council
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+            <dt class="govuk-summary-list__value">
+              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Assign
+              </button>
+            </dt>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+          </div>
+        </dl>
+        <dl class="govuk-summary-list govuk-summary-list--school-details govuk-!-margin-bottom-9">
+          <span class="govuk-caption-m">URN 231763</span>
+          <h3 class="govuk-heading-m govuk-heading-m--school-name">
+            <a href="#" class="govuk-link">Eastview Grammar School</a>
+          </h3>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              <span class="govuk-!-font-weight-bold">School type:</span>
+              Community special school
+            </dt>
+            <dd class="govuk-summary-list__actions">
+              <span class="govuk-!-font-weight-bold">Target opening date:</span>
+              1 June 2022
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__value">
+              <span class="govuk-!-font-weight-bold">Incoming trust:</span>
+              Creating Champions Academy Trust
+            </dt>
+            <dd class="govuk-summary-list__actions">
+              <span class="govuk-!-font-weight-bold">Local authority:</span>
+              Islington Borough Council
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+            <dt class="govuk-summary-list__value">
+              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Assign
+              </button>
+            </dt>
+            <dd class="govuk-summary-list__actions">
+            </dd>
+          </div>
+        </dl>
+        {% if (data['completedBy'] == ?? ) %}
+          <h2 class="govuk-heading-m">July openers</h2>
+            <dl class="govuk-summary-list govuk-summary-list--school-details govuk-!-margin-bottom-9">
+              <span class="govuk-caption-m">URN 120620</span>
+              <h3 class="govuk-heading-m govuk-heading-m--school-name">
+                <a href="../../project-task-list" class="govuk-link">St. Wilfred's Primary School</a>
+              </h3>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__value">
+                  <span class="govuk-!-font-weight-bold">School type:</span>
+                  Community special school
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                  <span class="govuk-!-font-weight-bold">Incoming trust:</span>
+                  Dynamics Trust
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__value">
+                  <span class="govuk-!-font-weight-bold">Local authority:</span>
+                  Warrington Borough Council
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                  <span class="govuk-!-font-weight-bold">Completed by:</span>
+                  {% if (data['completedBy']) %}
+                    {{data['completedBy']}}
+                  {% else %}
+                    <strong class="govuk-tag govuk-tag--orange">
+                      Unassigned
+                    </strong>
+                  {% endif %}
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+                <dt class="govuk-summary-list__value">
+                  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    Assign
+                  </button>
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                </dd>
+              </div>
+            </dl>
+          {% endif %}
+          <h2 class="govuk-heading-m">August openers</h2>
+          <dl class="govuk-summary-list govuk-summary-list--school-details govuk-!-margin-bottom-9">
+            <span class="govuk-caption-m">URN 345342</span>
+            <h3 class="govuk-heading-m govuk-heading-m--school-name">
+              <a href="#" class="govuk-link">Sacred Heart Country Primary School</a>
+            </h3>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__value">
+                <span class="govuk-!-font-weight-bold">School type:</span>
+                Foundation special school
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <span class="govuk-!-font-weight-bold">Target opening date:</span>
+                1 August 2022
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__value">
+                <span class="govuk-!-font-weight-bold">Incoming trust:</span>
+                The Oxford Warriors Academy Trust
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <span class="govuk-!-font-weight-bold">Local authority:</span>
+                Oxford
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+              <dt class="govuk-summary-list__value">
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                  Assign
+                </button>
+              </dt>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+          </dl>
+          <dl class="govuk-summary-list govuk-summary-list--school-details govuk-!-margin-bottom-9">
+            <span class="govuk-caption-m">URN 267890</span>
+            <h3 class="govuk-heading-m govuk-heading-m--school-name">
+              <a href="#" class="govuk-link">Horsendale Primary School</a>
+            </h3>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__value">
+                <span class="govuk-!-font-weight-bold">School type:</span>
+                Community school
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <span class="govuk-!-font-weight-bold">Target opening date:</span>
+                1 August 2022
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__value">
+                <span class="govuk-!-font-weight-bold">Incoming trust:</span>
+                Catalyst Academy Trust
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <span class="govuk-!-font-weight-bold">Local authority:</span>
+                Rutland
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+              <dt class="govuk-summary-list__value">
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                  Assign
+                </button>
+              </dt>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+          </dl>
+          <dl class="govuk-summary-list govuk-summary-list--school-details govuk-!-margin-bottom-9">
+            <span class="govuk-caption-m">URN 345342</span>
+            <h3 class="govuk-heading-m govuk-heading-m--school-name">
+              <a href="#" class="govuk-link">Abbey Park Middle School</a>
+            </h3>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__value">
+                <span class="govuk-!-font-weight-bold">School type:</span>
+                Community school
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <span class="govuk-!-font-weight-bold">Target opening date:</span>
+                1 August 2022
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__value">
+                <span class="govuk-!-font-weight-bold">Incoming trust:</span>
+                Student Stars Trust
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <span class="govuk-!-font-weight-bold">Local authority:</span>
+                Oxford
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+              <dt class="govuk-summary-list__value">
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                  Assign
+                </button>
+              </dt>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+          </dl>
+      </form>
+    </div>
+  </div>
+{% endblock %}

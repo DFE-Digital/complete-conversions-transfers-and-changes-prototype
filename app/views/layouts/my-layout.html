@@ -1,0 +1,178 @@
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+{% from "govuk/components/error-message/macro.njk" import govukErrorMessage %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/hint/macro.njk" import govukHint %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/label/macro.njk" import govukLabel %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+{% from "govuk/components/skip-link/macro.njk" import govukSkipLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+{%- set assetPath = '/plugin-assets/govuk-frontend/govuk/assets' -%}
+
+{% extends "govuk/template.njk" %}
+
+{% block head %}
+  {% block meta %}{% endblock %}
+  {% block stylesheets %}
+    {% include "govuk-prototype-kit/includes/stylesheets.html" %}
+  {% endblock %}
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+  <div class="govuk-width-container">
+    <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
+      <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
+      <ul class="app-navigation__list app-width-container">
+        <li class="app-navigation__list-item ">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/get-started/">
+            Do projects
+          </a>
+
+          <button hidden="" class="app-navigation__button js-app-navigation__button" id="js-mobile-nav-subnav-toggler-0" aria-expanded="false" aria-controls="js-mobile-nav__subnav-0">
+            Navigation
+          </button>
+
+          <ul class="app-navigation__subnav js-app-navigation__subnav " aria-label="Get started" hidden="" id="js-mobile-nav__subnav-0">
+            <li class="app-navigation__subnav-item">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+                Do projects
+              </a>
+            </li>
+
+              <li>
+                <h3 class="app-navigation__theme">Sub nav title</h3>
+                <ul class="app-navigation__list">
+                    <li class="app-navigation__subnav-item">
+                      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+                        Sub Nav 1
+                      </a>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+        </li>
+        <li class="app-navigation__list-item ">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="#">
+            Assign people
+          </a>
+
+          <button hidden="" class="app-navigation__button js-app-navigation__button" id="js-mobile-nav-subnav-toggler-1" aria-expanded="false" aria-controls="js-mobile-nav__subnav-1">
+            Assign people
+          </button>
+
+          <ul class="app-navigation__subnav js-app-navigation__subnav " aria-label="Styles" hidden="" id="js-mobile-nav__subnav-1">
+            <li class="app-navigation__subnav-item">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+                Sub Nav 1
+              </a>
+            </li>
+          </ul>
+        </li>
+      </li>
+      <li class="app-navigation__list-item  app-navigation__list-item--current">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="#">
+          Reporting
+        </a>
+
+        <button hidden="" class="app-navigation__button js-app-navigation__button" id="js-mobile-nav-subnav-toggler-2" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">
+          Reporting
+        </button>
+
+        <ul class="app-navigation__subnav js-app-navigation__subnav app-navigation__subnav--active" aria-label="Components" hidden="" id="js-mobile-nav__subnav-2">
+          <li class="app-navigation__subnav-item app-navigation__subnav-item--current">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+              Sub Nav 1
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="app-navigation__list-item ">
+        <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="#ß">
+          Settings
+        </a>
+
+          <button hidden="" class="app-navigation__button js-app-navigation__button" id="js-mobile-nav-subnav-toggler-3" aria-expanded="false" aria-controls="js-mobile-nav__subnav-3">
+            Settings
+          </button>
+
+          <ul class="app-navigation__subnav js-app-navigation__subnav " aria-label="Patterns" hidden="" id="js-mobile-nav__subnav-3">
+            <li class="app-navigation__subnav-item">
+              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+                Sub Nav 1
+              </a>
+            </li>
+          </ul>
+      </li>
+      </ul>
+    </nav>
+  </div>
+{% endblock %}
+
+{% if (GOVUKPrototypeKit.isDevelopment) %}
+  {% set footerItems = [
+    {
+      href: "/manage-prototype",
+      text: "Manage your prototype"
+    }, {
+      href: "/manage-prototype/clear-data",
+      text: "Clear data"
+    }
+  ] %}
+{% else %}
+  {% set footerItems = [
+    {
+      href: "/manage-prototype/clear-data",
+      text: "Clear data"
+    }
+  ] %}
+{% endif %}
+
+{% block footer %}
+  {{ govukFooter({
+    meta: {
+      items: footerItems,
+      visuallyHiddenTitle: "Footer links"
+    }
+  }) }}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    {% include "govuk-prototype-kit/includes/scripts.html" %}
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}

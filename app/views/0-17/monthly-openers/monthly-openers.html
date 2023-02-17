@@ -1,0 +1,193 @@
+{% extends "layouts/my-layout.html" %}
+
+{% block pageTitle %}
+  Projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Project list
+      </h1>
+      <div class="govuk-button-group">
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+        {{ govukButton({
+          text: "Add new voluntary conversion project",
+          href: "../../add-project/add-project"
+        }) }}
+        {{ govukButton({
+          text: "Add new involuntary conversion project",
+          href: "../../add-project/add-project"
+        }) }}
+      </div>
+      <form action="unassigned" method="post" class="form">
+        <nav class="sub-navigation" aria-label="Sub navigation">
+          <ul class="sub-navigation__list">
+            <li class="sub-navigation__item">
+              <a class="sub-navigation__link" href="../project-list/team-lead/unassigned">Unassigned projects</a>
+            </li>
+            <li class="sub-navigation__item">
+              <a class="sub-navigation__link" href="../project-list/team-lead/active">Active projects</a>
+            </li>
+            <li class="sub-navigation__item">
+              <a class="sub-navigation__link" href="../project-list/team-lead/closed">Closed projects</a>
+            </li>
+            <li class="sub-navigation__item">
+              <a class="sub-navigation__link" aria-current="page" href="#">Monthly openers</a>
+            </li>
+          </ul>
+        </nav>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <h2><caption class="govuk-table__caption govuk-table__caption--m">
+            {{ "__month_name__ Openers" | insertMonth(1) }}</caption></h2>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">School name</th>
+              <th scope="col" class="govuk-table__header">Region</th>
+              <th scope="col" class="govuk-table__header">Completed by</th>
+              <th scope="col" class="govuk-table__header">Cleared Legal docs</th>
+              <th scope="col" class="govuk-table__header">All conditions met</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                <a href="#">Brooke Hill</a><br>
+                <p class="govuk-body">Oakham Schools Trust</p>
+              </th>
+              <td class="govuk-table__cell">East Midlands</td>
+              <td class="govuk-table__cell"><a href="#">Steve Milnes</a></td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--turquoise">
+                  Completed</strong>
+              </td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--turquoise">
+                  Completed</strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                <a href="#">Dumfries City College</a><br>
+                <p class="govuk-body">The Elizabeth (Liz) Trust</p>
+              </th>
+              <td class="govuk-table__cell">Scotland</td>
+              <td class="govuk-table__cell"><a href="#">Meyric Rawlings</a></td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--orange">
+                In progress 12/13</strong></td>
+              <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--blue">
+                Pending</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                <a href="#">Peterborough Grammar</a><br>
+                <p class="govuk-body">Trusty McTrust Face</p>
+              </th>
+              <td class="govuk-table__cell">East Midlands</td>
+              <td class="govuk-table__cell"><a href="#">Steve Milnes</a></td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--turquoise">
+                Completed</strong></td>
+              <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--blue">
+                Pending</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                <a href="#">Young Achievers Academy</a><br>
+                <p class="govuk-body">Trust me I'm a doctor</p>
+              </th>
+              <td class="govuk-table__cell">South East</td>
+              <td class="govuk-table__cell"><a href="#">Rebecca Stag</a></td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--orange">
+                In progress 7/13</strong></td>
+              <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--blue">
+                Pending</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="govuk-table govuk-!-margin-bottom-9">
+          <h2><caption class="govuk-table__caption govuk-table__caption--m">
+            {{ "__month_name__ Openers" | insertMonth(2) }}</caption></h2>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">School name</th>
+              <th scope="col" class="govuk-table__header">Region</th>
+              <th scope="col" class="govuk-table__header">Ready to open</th>
+              <th scope="col" class="govuk-table__header">All conditions met</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Brooke Hill<br>
+                <p class="govuk-body">Oakham Schools Trust</p>
+              </th>
+              <td class="govuk-table__cell">East Midlands</td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--turquoise">
+                  Completed</strong>
+              </td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--turquoise">
+                  Completed</strong>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Dumfries City College<br>
+                <p class="govuk-body">The Elizabeth (Liz) Trust</p>
+              </th>
+              <td class="govuk-table__cell">Scotland</td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--orange">
+                In progress 12/13</strong></td>
+              <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--blue">
+                Pending</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Peterborough Grammar<br>
+                <p class="govuk-body">Trusty McTrust Face</p>
+              </th>
+              <td class="govuk-table__cell">East Midlands</td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--turquoise">
+                Completed</strong></td>
+              <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--blue">
+                Pending</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Young Achievers Academy<br>
+                <p class="govuk-body">Trust me I'm a doctor</p>
+              </th>
+              <td class="govuk-table__cell">South East</td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--orange">
+                In progress 7/13</strong></td>
+              <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--blue">
+                Pending</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -7,8 +7,11 @@
   "dependencies": {
     "@govuk-prototype-kit/step-by-step": "^2.1.0",
     "govuk-frontend": "^4.4.0",
+    "govuk-prototype-filters": "^0.1.0",
     "govuk-prototype-kit": "^13.0.0",
     "jquery": "^3.6.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
     "notifications-node-client": "^5.2.3"
   }
 }

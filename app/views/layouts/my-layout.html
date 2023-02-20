@@ -53,8 +53,8 @@
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
   }) }}
-  <div class="govuk-width-container">
-    <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
+  <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
+    <div class="govuk-width-container">
       <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
       <ul class="app-navigation__list app-width-container">
         <li class="app-navigation__list-item ">
@@ -138,8 +138,8 @@
           </ul>
       </li>
       </ul>
-    </nav>
-  </div>
+    </div>
+  </nav>
 {% endblock %}
 
 {% if (GOVUKPrototypeKit.isDevelopment) %}

@@ -60,7 +60,49 @@
         <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
         <ul class="app-navigation__list app-width-container">
           <li class="app-navigation__list-item ">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="../../project-list/team-lead/unassigned">
+              Assign projects
+            </a>
+
+            <button hidden="" class="app-navigation__button js-app-navigation__button" id="js-mobile-nav-subnav-toggler-1" aria-expanded="false" aria-controls="js-mobile-nav__subnav-1">
+              Assign people
+            </button>
+
+            <ul class="app-navigation__subnav js-app-navigation__subnav " aria-label="Styles" hidden="" id="js-mobile-nav__subnav-1">
+              <li class="app-navigation__subnav-item">
+                <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+                  Sub Nav 1
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="../../academies-opening/academies-opening">
+              Academies opening
+            </a>
+
+            <button hidden="" class="app-navigation__button js-app-navigation__button" id="js-mobile-nav-subnav-toggler-2" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">
+              Academies opening
+            </button>
+
+            <ul class="app-navigation__subnav js-app-navigation__subnav app-navigation__subnav--active" aria-label="Components" hidden="" id="js-mobile-nav__subnav-2">
+              <li class="app-navigation__subnav-item app-navigation__subnav-item--current">
+                <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
+                  Sub nav 1
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  {% elseif (data['userType'] == 'caseworker') %}
+    <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
+      <div class="govuk-width-container">
+        <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
+        <ul class="app-navigation__list app-width-container">
+          <li class="app-navigation__list-item ">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="../../project-list/team-lead/unassigned">
               Your projects
             </a>
 
@@ -87,62 +129,27 @@
                 </li>
               </ul>
           </li>
-          <li class="app-navigation__list-item ">
-            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="#">
-              Assign
+          <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="../../academies-opening/academies-opening">
+              Academies opening
             </a>
 
-            <button hidden="" class="app-navigation__button js-app-navigation__button" id="js-mobile-nav-subnav-toggler-1" aria-expanded="false" aria-controls="js-mobile-nav__subnav-1">
-              Assign people
+            <button hidden="" class="app-navigation__button js-app-navigation__button" id="js-mobile-nav-subnav-toggler-2" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">
+              Reporting
             </button>
 
-            <ul class="app-navigation__subnav js-app-navigation__subnav " aria-label="Styles" hidden="" id="js-mobile-nav__subnav-1">
-              <li class="app-navigation__subnav-item">
+            <ul class="app-navigation__subnav js-app-navigation__subnav app-navigation__subnav--active" aria-label="Components" hidden="" id="js-mobile-nav__subnav-2">
+              <li class="app-navigation__subnav-item app-navigation__subnav-item--current">
                 <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
-                  Sub Nav 1
+                  Sub nav 1
                 </a>
               </li>
             </ul>
           </li>
-        </li>
-        <li class="app-navigation__list-item  app-navigation__list-item--current">
-          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="#">
-            Academies opening
-          </a>
-
-          <button hidden="" class="app-navigation__button js-app-navigation__button" id="js-mobile-nav-subnav-toggler-2" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">
-            Reporting
-          </button>
-
-          <ul class="app-navigation__subnav js-app-navigation__subnav app-navigation__subnav--active" aria-label="Components" hidden="" id="js-mobile-nav__subnav-2">
-            <li class="app-navigation__subnav-item app-navigation__subnav-item--current">
-              <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
-                Sub nav 1
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="app-navigation__list-item ">
-          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="#ß">
-            Reports
-          </a>
-
-            <button hidden="" class="app-navigation__button js-app-navigation__button" id="js-mobile-nav-subnav-toggler-3" aria-expanded="false" aria-controls="js-mobile-nav__subnav-3">
-              Reports
-            </button>
-
-            <ul class="app-navigation__subnav js-app-navigation__subnav " aria-label="Patterns" hidden="" id="js-mobile-nav__subnav-3">
-              <li class="app-navigation__subnav-item">
-                <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">
-                  Sub Nav 1
-                </a>
-              </li>
-            </ul>
-        </li>
         </ul>
       </div>
     </nav>
-    {% endif %}
+  {% endif %}
 {% endblock %}
 
 {% if (GOVUKPrototypeKit.isDevelopment) %}

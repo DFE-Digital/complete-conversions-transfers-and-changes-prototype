@@ -15,175 +15,229 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-l">
-        Project list
-      </h1>
-      <div class="govuk-button-group">
-        {% from "govuk/components/button/macro.njk" import govukButton %}
-        {{ govukButton({
-          text: "Add new voluntary conversion project",
-          href: "../../add-project/add-project"
-        }) }}
-        {{ govukButton({
-          text: "Add new involuntary conversion project",
-          href: "../../add-project/add-project"
-        }) }}
-      </div>
-      <form action="unassigned" method="post" class="form">
-        <nav class="sub-navigation" aria-label="Sub navigation">
-          <ul class="sub-navigation__list">
-            <li class="sub-navigation__item">
-              <a class="sub-navigation__link" href="../project-list/team-lead/unassigned">Unassigned projects</a>
-            </li>
-            <li class="sub-navigation__item">
-              <a class="sub-navigation__link" href="../project-list/team-lead/active">Active projects</a>
-            </li>
-            <li class="sub-navigation__item">
-              <a class="sub-navigation__link" href="../project-list/team-lead/closed">Closed projects</a>
-            </li>
-            <li class="sub-navigation__item">
-              <a class="sub-navigation__link" aria-current="page" href="#">Monthly openers</a>
-            </li>
-          </ul>
-        </nav>
-        <table class="govuk-table govuk-!-margin-bottom-9">
-          <h2><caption class="govuk-table__caption govuk-table__caption--m">
-            {{ "__month_name__ Openers" | insertMonth(1) }}</caption></h2>
+      <table class="govuk-table govuk-!-margin-bottom-9">
+        <caption class="govuk-table__caption govuk-table__caption--m">
+            <h1 class="govuk-heading-l">
+              {{ "Academies opening in __month_name__" | insertMonth(1) }}
+            </h1>
+            <p class="govuk-body">A list of schools becoming academies</p>
+          </caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">School name</th>
-              <th scope="col" class="govuk-table__header">Region</th>
-              <th scope="col" class="govuk-table__header">Completed by</th>
-              <th scope="col" class="govuk-table__header">Cleared Legal docs</th>
-              <th scope="col" class="govuk-table__header">All conditions met</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">
-                <a href="#">Brooke Hill</a><br>
-                <p class="govuk-body">Oakham Schools Trust</p>
-              </th>
-              <td class="govuk-table__cell">East Midlands</td>
-              <td class="govuk-table__cell"><a href="#">Steve Milnes</a></td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--turquoise">
-                  Completed</strong>
-              </td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--turquoise">
-                  Completed</strong>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">
-                <a href="#">Dumfries City College</a><br>
-                <p class="govuk-body">The Elizabeth (Liz) Trust</p>
-              </th>
-              <td class="govuk-table__cell">Scotland</td>
-              <td class="govuk-table__cell"><a href="#">Meyric Rawlings</a></td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--orange">
-                In progress 12/13</strong></td>
-              <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--blue">
-                Pending</strong></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">
-                <a href="#">Peterborough Grammar</a><br>
-                <p class="govuk-body">Trusty McTrust Face</p>
-              </th>
-              <td class="govuk-table__cell">East Midlands</td>
-              <td class="govuk-table__cell"><a href="#">Steve Milnes</a></td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--turquoise">
-                Completed</strong></td>
-              <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--blue">
-                Pending</strong></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">
-                <a href="#">Young Achievers Academy</a><br>
-                <p class="govuk-body">Trust me I'm a doctor</p>
-              </th>
-              <td class="govuk-table__cell">South East</td>
-              <td class="govuk-table__cell"><a href="#">Rebecca Stag</a></td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--orange">
-                In progress 7/13</strong></td>
-              <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--blue">
-                Pending</strong></td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="govuk-table govuk-!-margin-bottom-9">
-          <h2><caption class="govuk-table__caption govuk-table__caption--m">
-            {{ "__month_name__ Openers" | insertMonth(2) }}</caption></h2>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">School name</th>
-              <th scope="col" class="govuk-table__header">Region</th>
-              <th scope="col" class="govuk-table__header">Ready to open</th>
-              <th scope="col" class="govuk-table__header">All conditions met</th>
+              <th scope="col" class="govuk-table__header">School</th>
+              <th scope="col" class="govuk-table__header">URN</th>
+              <th scope="col" class="govuk-table__header">Trust</th>
+              <th scope="col" class="govuk-table__header">View project</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">
                 Brooke Hill<br>
-                <p class="govuk-body">Oakham Schools Trust</p>
               </th>
-              <td class="govuk-table__cell">East Midlands</td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--turquoise">
-                  Completed</strong>
-              </td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--turquoise">
-                  Completed</strong>
-              </td>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">Rutland Achievers Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">
-                Dumfries City College<br>
-                <p class="govuk-body">The Elizabeth (Liz) Trust</p>
+                Bradford Grammar<br>
               </th>
-              <td class="govuk-table__cell">Scotland</td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--orange">
-                In progress 12/13</strong></td>
-              <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--blue">
-                Pending</strong></td>
+              <td class="govuk-table__cell">456123</td>
+              <td class="govuk-table__cell">The Smith Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">
-                Peterborough Grammar<br>
-                <p class="govuk-body">Trusty McTrust Face</p>
+                Sarson High School<br>
               </th>
-              <td class="govuk-table__cell">East Midlands</td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--turquoise">
-                Completed</strong></td>
-              <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--blue">
-                Pending</strong></td>
+              <td class="govuk-table__cell">789465</td>
+              <td class="govuk-table__cell">Melton Mowbary Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">
-                Young Achievers Academy<br>
-                <p class="govuk-body">Trust me I'm a doctor</p>
+                St Mungo's Catholic School<br>
               </th>
-              <td class="govuk-table__cell">South East</td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--orange">
-                In progress 7/13</strong></td>
-              <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--blue">
-                Pending</strong></td>
+              <td class="govuk-table__cell">741584</td>
+              <td class="govuk-table__cell">Acorn Foundation Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Hirst Wood Primary School<br>
+              </th>
+              <td class="govuk-table__cell">123485</td>
+              <td class="govuk-table__cell">Salt's Schools Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Stoney Creek School<br>
+              </th>
+              <td class="govuk-table__cell">852469</td>
+              <td class="govuk-table__cell">Beckfoot Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Stone Court School<br>
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">North Dales Foundation Schools</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Chalkhill College<br>
+              </th>
+              <td class="govuk-table__cell">753541</td>
+              <td class="govuk-table__cell">Kensington County School Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Farrow High School<br>
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">Leslie Farrow Academic Trust of Schools</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Greybourne Sixth Form<br>
+              </th>
+              <td class="govuk-table__cell">684591</td>
+              <td class="govuk-table__cell">Trent River School Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Haversham Secondary School<br>
+              </th>
+              <td class="govuk-table__cell">147852</td>
+              <td class="govuk-table__cell">Greater Oaks Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Dunmill School<br>
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">Wirral Association of Schools</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Preston Lower School<br>
+              </th>
+              <td class="govuk-table__cell">147588</td>
+              <td class="govuk-table__cell">Chorley Foundation Schools Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Brooke Hill<br>
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">Rutland Achievers Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Bradford Grammar<br>
+              </th>
+              <td class="govuk-table__cell">456123</td>
+              <td class="govuk-table__cell">The Smith Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Sarson High School<br>
+              </th>
+              <td class="govuk-table__cell">789465</td>
+              <td class="govuk-table__cell">Melton Mowbary Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                St Mungo's Catholic School<br>
+              </th>
+              <td class="govuk-table__cell">741584</td>
+              <td class="govuk-table__cell">Acorn Foundation Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Hirst Wood Primary School<br>
+              </th>
+              <td class="govuk-table__cell">123485</td>
+              <td class="govuk-table__cell">Salt's Schools Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Stoney Creek School<br>
+              </th>
+              <td class="govuk-table__cell">852469</td>
+              <td class="govuk-table__cell">Beckfoot Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Stone Court School<br>
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">North Dales Foundation Schools</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Chalkhill College<br>
+              </th>
+              <td class="govuk-table__cell">753541</td>
+              <td class="govuk-table__cell">Kensington County School Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Farrow High School<br>
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">Leslie Farrow Academic Trust of Schools</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Greybourne Sixth Form<br>
+              </th>
+              <td class="govuk-table__cell">684591</td>
+              <td class="govuk-table__cell">Trent River School Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Haversham Secondary School<br>
+              </th>
+              <td class="govuk-table__cell">147852</td>
+              <td class="govuk-table__cell">Greater Oaks Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Dunmill School<br>
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">Wirral Association of Schools</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Preston Lower School<br>
+              </th>
+              <td class="govuk-table__cell">147588</td>
+              <td class="govuk-table__cell">Chorley Foundation Schools Trust</td>
+              <td class="govuk-table__cell"><a href="#">Open <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
             </tr>
           </tbody>
         </table>

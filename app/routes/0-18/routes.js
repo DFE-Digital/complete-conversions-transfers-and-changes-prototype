@@ -39,15 +39,15 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/project-task-list', function (req, res) {
-    res.redirect('project-closed')
+    res.redirect('project-completed')
   })
 
 
-  router.get('/' + version + '/project-closed', function (req, res) {
-    res.render(version + '/project-closed', {})
+  router.get('/' + version + '/project-completed', function (req, res) {
+    res.render(version + '/project-completed', {})
   })
 
-  router.post('/' + version + '/project-closed', function (req, res) {
+  router.post('/' + version + '/project-completed', function (req, res) {
     const userType = req.session.data['userType']
 
     if (userType == 'team-lead'){

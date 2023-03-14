@@ -1,0 +1,46 @@
+{% extends "layouts/my-layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "./includes/phase.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-width-container">
+      <form action="project-completed" method="post" class="form">
+        <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                  Project completed
+                </h1>
+              </div>
+              <p class="govuk-body">The conversion project is completed.</p>
+              <p class="govuk-body">The project will not appear on your list of
+                active projects anymore.</p>
+              <h2 class="govuk-heading-m">Give us your feedback</h2>
+              <p class="govuk-body"><a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                Complete the survey (opens in a new tab)</a> to
+                tell us if there's anything we can do to make this service
+                better.</p>
+              <h2 class="govuk-heading-m">What to do next</h2>
+              <p class="govuk-body">Go back to your project list and choose
+                another project to work on.</p>
+              <button class="govuk-button" data-module="govuk-button">
+                Return to project list
+              </button>
+            </div>
+          </div>
+        </main>
+      </form>
+    </div>
+  </div>
+{% endblock %}

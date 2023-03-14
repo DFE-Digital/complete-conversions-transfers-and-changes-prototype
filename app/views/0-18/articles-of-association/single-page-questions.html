@@ -1,0 +1,101 @@
+{% extends "layouts/my-layout.html" %}
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Articles
+                    of association</h1>
+                  <div class="govuk-hint">
+                    The Articles of association must be updated if the trust
+                    currently uses a version from February 2016 or earlier.
+                  </div>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checklist__header">
+                    <h2 class="govuk-heading-l">Check and clear the Articles of
+                      association</h2>
+                    <div class="govuk-hint">
+                      You can use the <a href="https://educationgovuk.sharepoint.com/sites/lvedfe00116/SitePages/Land-Transfer-and-shared-land-use.aspx" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                        land transfer advice and guidance to check for common
+                        problems (opens in new tab)</a>.
+                    </div>
+                    <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Help checking for changes
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <p class="govuk-body">Changes that personalise the model
+                          documents to a school or trust, and remove or add
+                          optional clauses, are expected. The wording of clauses
+                          should not change.</p>
+                        <p class="govuk-body">You'll need to <a href="https://educationgovuk.sharepoint.com/sites/lvedfe00116/SitePages/Land-Transfer-and-shared-land-use.aspx" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                          contact the policy team (opens in a new tab)</a>
+                          about changes to clause text.</p>
+                      </div>
+                    </details>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff">
+                        Received
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-2" name="externalStakeHolderKickoff" type="checkbox" value="saveProforma" {{ checked("externalStakeHolderKickoff", "saveProforma") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-2">
+                        Cleared
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-3" name="externalStakeHolderKickoff" type="checkbox" value="confirmConversionDate" {{ checked("externalStakeHolderKickoff", "confirmConversionDate") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-3">
+                        Signed by school or trust
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-4" name="externalStakeHolderKickoff" type="checkbox" value="confirmConversionDate" {{ checked("externalStakeHolderKickoff", "confirmConversionDate") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-4">
+                        Saved in the school's SharePoint folder
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-5" name="externalStakeHolderKickoff" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-5">
+                        empty
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-form-group">
+                  {{ govukButton({ text: "Continue" }) }}
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

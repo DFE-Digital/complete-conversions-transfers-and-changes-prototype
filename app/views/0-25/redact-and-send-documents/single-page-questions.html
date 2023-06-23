@@ -1,0 +1,113 @@
+{% extends "layouts/with-navigation.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Redact
+                    and send funding agreement documents</h1>
+                  <div class="govuk-hint">
+                    Funding agreement documents relating to the conversion will
+                    be added to GOV.UK. These must be redacted to remove
+                    sensitive information.
+                  </div>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff">
+                        Redact all relevant documents
+                      </label>
+                      <div class="govuk-checkboxes__guidance">
+                        <details class="govuk-details" data-module="govuk-details">
+                          <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                              Help redacting the documents
+                            </span>
+                          </summary>
+                          <div class="govuk-details__text">
+                            <p class="govuk-body">You need to create a redacted
+                              version of each applicable document after they've
+                              been signed by the Secretary of State:</p>
+                            <ul class="govuk-list govuk-list--bullet">
+                              <li>Supplemental Funding Agreement</li>
+                              <li>Master Funding Agreement (if applicable)</li>
+                              <li>Church Supplemental Agreement (if applicable)</li>
+                              <li>Deed of Variation (if applicable)</li>
+                            </ul>
+                            <p class="govuk-body">You must remove or hide:</p>
+                            <ul class="govuk-list govuk-list--bullet">
+                              <li>names</li>
+                              <li>signatures</li>
+                              <li>home addresses</li>
+                              <li>any other personal information</li>
+                            </ul>
+                          </div>
+                        </details>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-3" name="externalStakeHolderKickoff" type="checkbox" value="KIM" >
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-3">
+                        Save relevant documents in the school's SharePoint folder
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-2" name="externalStakeHolderKickoff" type="checkbox" value="KIM" >
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-2">
+                        Send relevant documents to the funding team
+                      </label>
+                      <div class="govuk-checkboxes__guidance">
+                        <details class="govuk-details" data-module="govuk-details">
+                          <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                              Help sending documents
+                            </span>
+                          </summary>
+                          <div class="govuk-details__text">
+                            <p class="govuk-body">Send the redacted funding
+                              agreement documents to the funding team at <a href="mailto:FundingAgreements.CONVERTERS@education.gov.uk" class="govuk-link">
+                                FundingAgreements.CONVERTERS@education.gov.uk</a>.</p>
+                          </div>
+                        </details>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-7" name="externalStakeHolderKickoff" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-7">
+                        empty
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-form-group">
+                  {{ govukButton({ text: "Continue" }) }}
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,238 @@
+{% extends "layouts/with-navigation.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Process conversion grant</h1>
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        How to process a conversion grant
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      <p class="govuk-body">Check the grant claim form is ready,
+                        the school or trust has a vendor account and send the
+                        correct information to the Grant payments team.</p>
+                      <p class="govuk-body">Start this as soon as possible.
+                        Schools and trusts can start getting charged by solicitors
+                        and the local authority early in the process.</p>
+                    </div>
+                  </details>
+                </div>
+                <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="processConversionGrant" name="processConversionGrant" type="checkbox" value="checkVendorAccount" {{ checked("processConversionGrant", "checkVendorAccount") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="processConversionGrant">
+                      Check the school or trust have a vendor account
+                    </label>
+                    <div class="govuk-checkboxes__guidance">
+                      <div id="changed-name-hint" class="govuk-hint">
+                        You can <a href="https://educationgovuk.sharepoint.com/sites/lvedfe00083/SitePages/Set-up-and-mainta.aspx" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                          check if the school or trust has a vendor account
+                          (opens in new tab)</a> on Sharepoint.
+                      </div>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            How to set up a vendor account
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">The school or trust receiving
+                            the conversion grant must have a vendor account.</p>
+                          <p class="govuk-body">Schools and trusts can
+                            <a href="https://www.gov.uk/guidance/provide-information-about-your-banking-and-payments-to-dfe" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                              set up a vendor account (opens in new tab)</a>
+                            when they provide information about their banking
+                            and payments to DfE. </p>
+                          <p class="govuk-body">Share the link with them so they
+                            can register if needed.</p>
+                          <p class="govuk-body">It can take 15 to 20 days for an
+                            account to be created. </p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="processConversionGrant-2" name="processConversionGrant" type="checkbox" value="checkSchoolEligibility" {{ checked("processConversionGrant", "checkSchoolEligibility") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="processConversionGrant-2">
+                      Check and confirm the school's grant eligibility
+                    </label>
+                    <div class="govuk-checkboxes__guidance">
+                      <div id="changed-name-hint" class="govuk-hint">
+                        A school may have already had some of the grant if
+                        they've tried to become an academy before.
+                      </div>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            How to check grant eligibility
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">Usually, a converting school
+                            will be eligible for a £25,000 grant to help with
+                            the costs of becoming an academy.</p>
+                          <p class="govuk-body">If the school has applied to
+                            become an academy in the past but not completed the
+                            process, they may already have been given some of
+                            the money.</p>
+                          <p class="govuk-body">Check in the school's SharePoint
+                            folder to see if a Grant claim form has been
+                            submitted before.</p>
+                          <p class="govuk-body">You can also email the Grant
+                            payments team at <a href="mailto:CFUGrantPayments.REGIONSGROUP@education.gov.uk">CFUGrantPayments.REGIONSGROUP@education.gov.uk</a>
+                            to check if the school has previously received any
+                            money, and how much they're still eligible for.</p>
+                          <p class="govuk-body">You must include this
+                            information in your email to the Grant payments team
+                            later.</p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="processConversionGrant-3" name="processConversionGrant" type="checkbox" value="checkGrantForm" {{ checked("processConversionGrant", "checkGrantForm") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="processConversionGrant-3">
+                      Receive, check and save the grant claim form
+                    </label>
+                    <div class="govuk-checkboxes__guidance">
+                      <div id="changed-name-hint" class="govuk-hint">
+                        Make sure there's no missing information.
+                      </div>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            How to check and save the form
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">The school or trust must send
+                            you the grant claim form.</p>
+                          <p class="govuk-body">Check it's complete and save it
+                            in the school's SharePoint folder.</p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="processConversionGrant-4" name="processConversionGrant" type="checkbox" value="sendToPaymentsTeam" {{ checked("processConversionGrant", "sendToPaymentsTeam") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="processConversionGrant-4">
+                      Send the grant information form to the payments team
+                    </label>
+                    <div class="govuk-checkboxes__guidance">
+                      <div id="changed-name-hint" class="govuk-hint">
+                        Send them the Application to convert, Academy order and
+                        Grant claim form.
+                      </div>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            Guidance on what information to send
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">You'll find the Academy order,
+                            Application to convert and Grant claim form in the
+                            school's SharePoint folder.</p>
+                          <p class="govuk-body">You should send the documents to
+                            the Grant payments team by email at <a href="mailto:CFUGrantPayments.REGIONSGROUP@education.gov.uk">CFUGrantPayments.REGIONSGROUP@education.gov.uk</a>.</p>
+                          <p class="govuk-body">The subject line of the email
+                            must include the:</p>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>region the school is in</li>
+                            <li>grant type (converter grant)</li>
+                            <li>school's name </li>
+                          </ul>
+                          <p class="govuk-body">The content of the email must
+                            include the:</p>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>type of grant needed</li>
+                            <li>amount of money the school is eligible for</li>
+                            <li>school's name</li>
+                            <li>trust it's joining</li>
+                            <li>target conversion date</li>
+                          </ul>
+                          <p class="govuk-body">It's helpful to include the
+                            school or trust's vendor account number too. The
+                            Grant payments team will need this to be able to
+                            send the money to whoever will receive it.</p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="processConversionGrant-5" name="processConversionGrant" type="checkbox" value="giveSchoolPaymentDate" {{ checked("processConversionGrant", "giveSchoolPaymentDate") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="processConversionGrant-5">
+                      Give the school and trust the grant payment date
+                    </label>
+                    <div class="govuk-checkboxes__guidance">
+                      <div id="changed-name-hint" class="govuk-hint">
+                        The Grant payments team will confirm the date with you
+                        first.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="processConversionGrant-6" name="processConversionGrant" type="checkbox" value="checkSchoolGotGrant" {{ checked("processConversionGrant", "checkSchoolGotGrant") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="processConversionGrant-6">
+                      Check the school or trust have received the grant
+                    </label>
+                    <div class="govuk-checkboxes__guidance">
+                      <div id="changed-name-hint" class="govuk-hint">
+                        Get in touch with the school or trust the month after
+                        you contact the Grant payments team.
+                      </div>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            When to check the funds have been received
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">It can take several weeks to
+                            process the grant payment.</p>
+                          <p class="govuk-body">Get in touch with the school or
+                            trust the month after you contact the Grant payments
+                            team. </p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item" style="display: none;">
+                    <input class="govuk-checkboxes__input" id="processConversionGrant-7" name="processConversionGrant" type="checkbox" value="empty" checked="empty">
+                    <label class="govuk-label govuk-checkboxes__label" for="processConversionGrant-7">
+                      empty
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

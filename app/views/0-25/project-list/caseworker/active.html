@@ -12,6 +12,25 @@
 
 {% block beforeContent %}
   {% include "../../includes/phase.html" %}
+
+  </div>
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+  {{ mojPrimaryNavigation({
+    label: 'Primary navigation',
+    items: [
+      {
+        text: 'In progress',
+        href: 'in progress',
+        active: true
+      },
+      {
+        text: 'Completed',
+        href: 'completed'
+      }
+    ]
+  }) }}
+  <div class="govuk-width-container">
+
 {% endblock %}
 
 {% block content %}
@@ -21,21 +40,11 @@
         Project list
       </h1>
       <form action="unassigned" method="post" class="form">
-        <nav class="sub-navigation" aria-label="Sub navigation">
-          <ul class="sub-navigation__list">
-            <li class="sub-navigation__item">
-              <a class="sub-navigation__link" aria-current="page" href="#">Active projects</a>
-            </li>
-            <li class="sub-navigation__item">
-              <a class="sub-navigation__link" href="completed">Completed projects</a>
-            </li>
-          </ul>
-        </nav>
         <h2 class="govuk-heading-m">June openers</h2>
         <dl class="govuk-summary-list govuk-summary-list--school-details govuk-!-margin-bottom-9">
           <span class="govuk-caption-m">URN 356790</span>
           <h3 class="govuk-heading-m govuk-heading-m--school-name">
-            <a href="project-task-list-2" class="govuk-link">Bridgewater County High School</a>
+            <a href="../../project-task-list-2" class="govuk-link">Bridgewater County High School</a>
           </h3>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__value">

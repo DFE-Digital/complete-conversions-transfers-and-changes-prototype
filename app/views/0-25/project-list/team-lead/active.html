@@ -10,6 +10,29 @@
 
 {% block beforeContent %}
   {% include "../../includes/phase.html" %}
+
+  </div>
+    {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+    {{ mojPrimaryNavigation({
+      label: 'Primary navigation',
+      items: [
+        {
+          text: 'Unassigned',
+          href: 'unassigned'
+        },
+        {
+          text: 'In progress',
+          href: 'active',
+          active: true
+        },
+        {
+          text: 'Completed',
+          href: 'completed'
+        }
+      ]
+    }) }}
+  <div class="govuk-width-container">
+
 {% endblock %}
 
 {% block content %}
@@ -19,19 +42,6 @@
         Project list
       </h1>
       <form action="unassigned" method="post" class="form">
-        <nav class="sub-navigation" aria-label="Sub navigation">
-          <ul class="sub-navigation__list">
-            <li class="sub-navigation__item">
-              <a class="sub-navigation__link" href="unassigned">Unassigned projects</a>
-            </li>
-            <li class="sub-navigation__item">
-              <a class="sub-navigation__link" aria-current="page" href="#">Active projects</a>
-            </li>
-            <li class="sub-navigation__item">
-              <a class="sub-navigation__link" href="completed">Completed projects</a>
-            </li>
-          </ul>
-        </nav>
         {% if (data['completedBy']) %}
           <h2 class="govuk-heading-m">July openers</h2>
             <dl class="govuk-summary-list govuk-summary-list--school-details govuk-!-margin-bottom-9">

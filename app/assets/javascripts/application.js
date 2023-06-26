@@ -4,5 +4,17 @@
 // 
 
 window.GOVUKPrototypeKit.documentReady(() => {
-  // Add JavaScript here
+  
+  // v0-25+ Highlight header nav item if nav text equals XXXX and page title also includes XXXX
+  const pageTitle = document.title;
+  const elements = document.querySelectorAll(".moj-header__navigation-link");
+
+  elements.forEach((element) => {
+    const elementText = element.textContent;
+
+    if (pageTitle.includes(elementText) && elementText === elementText) {
+      element.setAttribute("aria-current", "page");
+    }
+  });
+
 })

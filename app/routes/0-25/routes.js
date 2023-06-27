@@ -6,16 +6,22 @@ module.exports = function (router) {
     res.render(version + '/set-up', {})
   })
 
-  router.post('/' + version + '/set-up', function (req, res) {
-    const userType = req.session.data['userType']
-
-    if (userType == 'team-lead'){
-      res.redirect('project-list/team-lead/unassigned')
-    } else {
-      res.redirect('project-list/caseworker/active')
+  router.post("/" + version + "/set-up", function (req, res) {
+    
+    const userType = req.session.data["userType"];
+    const setPrototypeVariant = req.session.data["prototypeVariant"];
+    
+    let variant = "";
+    if (setPrototypeVariant == "2") {
+      variant = "-2";
     }
 
-  })
+    if (userType == "team-lead") {
+      res.redirect("project-list" + variant + "/team-lead/unassigned");
+    } else {
+      res.redirect("project-list" + variant + "/caseworker/active");
+    }
+  });
 
 
   router.get('/' + version + '/start', function (req, res) {

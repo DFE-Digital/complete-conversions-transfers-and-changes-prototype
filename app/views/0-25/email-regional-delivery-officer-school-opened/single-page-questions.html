@@ -1,0 +1,61 @@
+{% extends "0-25/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Tell the
+                    regional delivery officer that the academy has opened
+                  </h1>
+                  <div class="govuk-hint">
+                    You should email the regional delivery officer. Send the
+                    school's name, date it opened as an academy and link to the
+                    project.
+                  </div>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="emailRegionalDeliveryOfficerSchoolOpened" name="emailRegionalDeliveryOfficerSchoolOpened" type="checkbox" value="sendIntroductoryEmails" {{ checked("emailRegionalDeliveryOfficerSchoolOpened", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="emailRegionalDeliveryOfficerSchoolOpened">
+                        Email the regional delivery officer
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="emailRegionalDeliveryOfficerSchoolOpened-7" name="emailRegionalDeliveryOfficerSchoolOpened" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="emailRegionalDeliveryOfficerSchoolOpened-7">
+                        empty
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-form-group">
+                  {{ govukButton({ text: "Continue" }) }}
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

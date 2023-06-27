@@ -1,0 +1,80 @@
+{% extends "0-25/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  Projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "./includes/phase.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Project list
+      </h1>
+      <nav class="sub-navigation" aria-label="Sub navigation">
+        <ul class="sub-navigation__list">
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link"  href="project-list-2">In progress</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" aria-current="page" href="#">Completed</a>
+          </li>
+        </ul>
+      </nav>
+
+      <dl class="govuk-summary-list govuk-summary-list--school-details govuk-!-margin-bottom-9">
+        <span class="govuk-caption-m">URN 120620</span>
+        <h3 class="govuk-heading-m govuk-heading-m--school-name">
+          <a href="project-task-list" class="govuk-link">Catmose College</a>
+        </h3>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__value">
+            <span class="govuk-!-font-weight-bold">Date opened</span>
+          </dt>
+          <dd class="govuk-summary-list__actions">
+            1 September 2022
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__value">
+            <span class="govuk-!-font-weight-bold">Trust</span>
+          </dt>
+          <dd class="govuk-summary-list__actions">
+              The Oakham School's Trust
+          </dd>
+        </div>
+      </dl>
+      <dl class="govuk-summary-list govuk-summary-list--school-details govuk-!-margin-bottom-9">
+        <span class="govuk-caption-m">URN 120620</span>
+        <h3 class="govuk-heading-m govuk-heading-m--school-name">
+          <a href="project-task-list" class="govuk-link">St. Wilfred's Primary School</a>
+        </h3>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__value">
+            <span class="govuk-!-font-weight-bold">Date opened</span>
+          </dt>
+          <dd class="govuk-summary-list__actions">
+            1 October 2022
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__value">
+            <span class="govuk-!-font-weight-bold">Trust</span>
+          </dt>
+          <dd class="govuk-summary-list__actions">
+              Dynamics Trust
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+{% endblock %}

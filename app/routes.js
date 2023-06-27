@@ -334,3 +334,38 @@ const router = govukPrototypeKit.requests.setupRouter()
   require('./routes/0-18/tenancy-at-will.js')(router);
   require('./routes/0-18/trust-modification-order.js')(router);
   require('./routes/0-18/routes.js')(router);
+
+
+  require("./routes/0-18/125-year-lease.js")(router);
+  require("./routes/0-18/add-project.js")(router);
+  require("./routes/0-18/articles-of-association.js")(router);
+  require("./routes/0-18/assign-user.js")(router);
+  require("./routes/0-18/baseline-checks.js")(router);
+  require("./routes/0-18/checklist-test.js")(router);
+  require("./routes/0-18/church-supplementary-agreement.js")(router);
+  require("./routes/0-18/commercial-transfer-agreement.js")(router);
+  require("./routes/0-18/complete-processing-of-conversion-grant.js")(router);
+  require("./routes/0-18/confirm-all-conditions-met.js")(router);
+  require("./routes/0-18/contacts.js")(router);
+  require("./routes/0-18/deed-of-variation.js")(router);
+  require("./routes/0-18/direction-to-transfer.js")(router);
+  require("./routes/0-18/education-skills-funding-agency-handover.js")(router);
+  require("./routes/0-18/email-regional-delivery-officer-school-opened.js")(
+    router
+  );
+  require("./routes/0-25/external-stakeholder-kick-off.js")(router);
+  require("./routes/0-25/land-issues.js")(router);
+  require("./routes/0-25/land-questionnaire.js")(router);
+  require("./routes/0-25/land-registry-title-plans.js")(router);
+  require("./routes/0-25/master-funding-agreement.js")(router);
+  require("./routes/0-25/process-conversion-grant.js")(router);
+  require("./routes/0-25/project-list.js")(router);
+  require("./routes/0-25/readiness-for-opening.js")(router);
+  require("./routes/0-25/redact-and-send-documents.js")(router);
+  require("./routes/0-25/regional-delivery-officer-handover.js")(router);
+  require("./routes/0-25/school-opening-date.js")(router);
+  require("./routes/0-25/subleases.js")(router);
+  require("./routes/0-25/supplementary-funding-agreement.js")(router);
+  require("./routes/0-25/tenancy-at-will.js")(router);
+  require("./routes/0-25/trust-modification-order.js")(router);
+  require("./routes/0-25/routes.js")(router);

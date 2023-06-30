@@ -19,3 +19,25 @@
 
 // MOJ Frontend styles
 @import "node_modules/@ministryofjustice/frontend/moj/all";
+
+
+
+.app-content {
+    h4,
+    h5,
+    h6,
+    p,
+    img,
+    video,
+    .govuk-hint,
+    .app-table--constrained {
+        max-width: 38em;
+    }
+    > ul:not(.app-tabs),
+    > ol:not(.app-task-list),
+    > :not(.sub-navigation) {
+        ul.app-tabs {
+        max-width: initial;
+        }
+    }
+}

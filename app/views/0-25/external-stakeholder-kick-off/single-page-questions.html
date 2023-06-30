@@ -18,18 +18,22 @@
     <div class="govuk-grid-column-full">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-form-group govuk-!-margin-bottom-9">
+            <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">External
+              stakeholder kick-off</h1>
+            <div class="govuk-hint">
+              <p>This is where you make sure everyone involved in the conversion knows what they need to do, and when to do it, so the school can become an academy on time.</p>
+              <p>This is also a good opportunity to talk about common problems and how to avoid them.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
           <form action="single-page-questions" method="post" class="form">
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset">
-                <div class="govuk-form-group govuk-!-margin-bottom-9">
-                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
-                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">External
-                    stakeholder kick-off</h1>
-                  <div class="govuk-hint">
-                    You should start this work after you've had the handover with
-                    the regional delivery officer.
-                  </div>
-                </div>
                 <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
@@ -71,6 +75,7 @@
                       </details>
                     </div>
                   </div>
+                </div>
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-2" name="externalStakeHolderKickoff" type="checkbox" value="saveProforma" {{ checked("externalStakeHolderKickoff", "saveProforma") }}>
                     <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-2">
@@ -214,12 +219,16 @@
                       empty
                     </label>
                   </div>
-                </div>
                 {{ govukButton({ text: "Continue" }) }}
-                </fieldset>
-                </div>
-              </form>
+              </fieldset>
             </div>
+          </form>
+        </div>
+         <div class="govuk-grid-column-one-third">
+          <aside>
+            <h2 class="govuk-heading-m">Task notes</h2>
+            <a draggable="false" data-module="govuk-button" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-3" href="/projects/4657A4BA-E2FB-4B19-9788-CCC48154650D/notes/new?task_identifier=handover">Add a new task note</a>
+          </aside>
         </div>
       </div>
     </div>

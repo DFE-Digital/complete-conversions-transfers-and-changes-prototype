@@ -369,3 +369,20 @@ const router = govukPrototypeKit.requests.setupRouter()
   require("./routes/0-25/tenancy-at-will.js")(router);
   require("./routes/0-25/trust-modification-order.js")(router);
   require("./routes/0-25/routes.js")(router);
+
+    require("./routes/0-26/external-stakeholder-kick-off.js")(router);
+    require("./routes/0-26/land-issues.js")(router);
+    require("./routes/0-26/land-questionnaire.js")(router);
+    require("./routes/0-26/land-registry-title-plans.js")(router);
+    require("./routes/0-26/master-funding-agreement.js")(router);
+    require("./routes/0-26/process-conversion-grant.js")(router);
+    require("./routes/0-26/project-list.js")(router);
+    require("./routes/0-26/readiness-for-opening.js")(router);
+    require("./routes/0-26/redact-and-send-documents.js")(router);
+    require("./routes/0-26/regional-delivery-officer-handover.js")(router);
+    require("./routes/0-26/school-opening-date.js")(router);
+    require("./routes/0-26/subleases.js")(router);
+    require("./routes/0-26/supplementary-funding-agreement.js")(router);
+    require("./routes/0-26/tenancy-at-will.js")(router);
+    require("./routes/0-26/trust-modification-order.js")(router);
+    require("./routes/0-26/routes.js")(router);

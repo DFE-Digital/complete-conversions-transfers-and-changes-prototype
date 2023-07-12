@@ -1,0 +1,52 @@
+{% extends "0-26/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="land-building-leasing-arrangements-or-transfer-agreements" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl">Record outstanding land and
+                    building leasing arrangements, or transfer agreement issues
+                  </h1>
+                  <div class="govuk-hint">
+                    Enter "Not applicable" if there are no issues.
+                  </div>
+                  <div class="govuk-hint">
+                    <p class="govuk-body">If there are issues enter:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>a short description of the issue</li>
+                      <li>how you plan to resolve the issue</li>
+                      <li>what is happening now and next</li>
+                    </ul>
+                  </div>
+                  <textarea class="govuk-textarea" id="land-building-leasing-issues" name="land-building-leasing-issues" rows="5">{{data['land-building-leasing-issues']}}</textarea>
+                </div>
+                <div class="govuk-form-group">
+                  {{ govukButton({ text: "Save and return" }) }}
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

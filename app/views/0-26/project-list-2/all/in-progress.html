@@ -1,0 +1,300 @@
+{% extends "0-26/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  All projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+
+  </div>
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+  {{ mojPrimaryNavigation({
+    label: 'Primary navigation',
+    items: [
+      {
+        text: 'In progress',
+        href: 'in-progress',
+        active: true
+      },
+      {
+        text: 'Opening',
+        href: 'opening'
+      },
+      {
+        text: 'By trust',
+        href: '#'
+      },
+      {
+        text: 'By local authority',
+        href: '#'
+      },
+      {
+        text: 'Completed',
+        href: '#'
+      },
+      {
+        text: 'Statistics',
+        href: '#'
+      }
+    ]
+  }) }}
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        All projects in progress
+      </h1>
+      <form action="unassigned" method="post" class="form">
+        
+        <table class="govuk-table" name="projects_table" aria-label="Projects table">
+					<thead class="govuk-table__head">
+						<tr class="govuk-table__row">
+							<th class="govuk-table__header" scope="col">School</th>
+							<th class="govuk-table__header" scope="col">URN</th>
+							<th class="govuk-table__header" scope="col">Trust</th>
+							<th class="govuk-table__header" scope="col">UKPRN</th>
+							<th class="govuk-table__header" scope="col">Region</th>
+							<th class="govuk-table__header" scope="col">Conversion date</th>
+							<th class="govuk-table__header" scope="col">Assigned to</th>
+							<th class="govuk-table__header" scope="col">Action</th>
+						</tr>
+					</thead>
+					<tbody class="govuk-table__body">
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Fleetville Infant and Nursery School</td>
+							<td class="govuk-table__cell">138206</td>
+							<td class="govuk-table__cell">Spiral Partnership Trust</td>
+							<td class="govuk-table__cell">TR00796</td>
+							<td class="govuk-table__cell">East of England</td>
+							<td class="govuk-table__cell">1 Jul 2023</td>
+							<td class="govuk-table__cell">Mike Morant</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Broadfield Primary School</td>
+							<td class="govuk-table__cell">105676</td>
+							<td class="govuk-table__cell">The Romero Catholic Academy</td>
+							<td class="govuk-table__cell">TR03094</td>
+							<td class="govuk-table__cell">North West</td>
+							<td class="govuk-table__cell">1 Nov 2023</td>
+							<td class="govuk-table__cell">Richard Cooley</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Swell Church of England Primary School</td>
+							<td class="govuk-table__cell">115652</td>
+							<td class="govuk-table__cell">North Cotswold Schools Federation Mat</td>
+							<td class="govuk-table__cell">TR04003</td>
+							<td class="govuk-table__cell">South West</td>
+							<td class="govuk-table__cell">1 Jue 2023</td>
+							<td class="govuk-table__cell">Meyric Rawlings</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">St Joseph's Rc Primary School</td>
+							<td class="govuk-table__cell">101133</td>
+							<td class="govuk-table__cell">5 Dimensions Trustt</td>
+							<td class="govuk-table__cell">TR01904</td>
+							<td class="govuk-table__cell">London</td>
+							<td class="govuk-table__cell">1 Aug 2023</td>
+							<td class="govuk-table__cell">Mike Morant</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Weydon School</td>
+							<td class="govuk-table__cell">136531</td>
+							<td class="govuk-table__cell">5 Dimensions Trust</td>
+							<td class="govuk-table__cell">TR01904</td>
+							<td class="govuk-table__cell">South East</td>
+							<td class="govuk-table__cell">1 Mar 2030</td>
+							<td class="govuk-table__cell">Stephen Milnes</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Deanshanger Primary School</td>
+							<td class="govuk-table__cell">121813</td>
+							<td class="govuk-table__cell">The Grand Union Partnership</td>
+							<td class="govuk-table__cell">TR03819</td>
+							<td class="govuk-table__cell">East Midlands</td>
+							<td class="govuk-table__cell">1 Oct 2025</td>
+							<td class="govuk-table__cell">Lorna Harwood</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">The Mill School</td>
+							<td class="govuk-table__cell">126530</td>
+							<td class="govuk-table__cell">Rawlins Academy</td>
+							<td class="govuk-table__cell">TR03819</td>
+							<td class="govuk-table__cell">South West</td>
+							<td class="govuk-table__cell">1 Aug 2025</td>
+							<td class="govuk-table__cell">Stephen Milnes</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Catmose College</td>
+							<td class="govuk-table__cell">136530</td>
+							<td class="govuk-table__cell">5 Dimensions Trust</td>
+							<td class="govuk-table__cell">TR01904</td>
+							<td class="govuk-table__cell">East Midlands</td>
+							<td class="govuk-table__cell">1 Oct 2023</td>
+							<td class="govuk-table__cell">Richard Cooley</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Sunbury Manor School</td>
+							<td class="govuk-table__cell">136529</td>
+							<td class="govuk-table__cell">5 Dimensions Trust</td>
+							<td class="govuk-table__cell">TR01904</td>
+							<td class="govuk-table__cell">South East</td>
+							<td class="govuk-table__cell">1 Jun 2027</td>
+							<td class="govuk-table__cell">Stephen Milnes</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Vickerstown School</td>
+							<td class="govuk-table__cell">112209</td>
+							<td class="govuk-table__cell">The Diocese Of Norwich Education And Academies Trust</td>
+							<td class="govuk-table__cell">TR00663</td>
+							<td class="govuk-table__cell">North West</td>
+							<td class="govuk-table__cell">1 May 2023</td>
+							<td class="govuk-table__cell">Meyric Rawlings</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">The Coopers' Company and Coborn School</td>
+							<td class="govuk-table__cell">136600</td>
+							<td class="govuk-table__cell">The Cedars Academy Trust</td>
+							<td class="govuk-table__cell">TR00424</td>
+							<td class="govuk-table__cell">London</td>
+							<td class="govuk-table__cell">1 Sep 2024</td>
+							<td class="govuk-table__cell">Don Gazara</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Church of The Ascension Cofe Primary School</td>
+							<td class="govuk-table__cell">103835</td>
+							<td class="govuk-table__cell">Elements Diocesan Learning Trust</td>
+							<td class="govuk-table__cell">TR03991</td>
+							<td class="govuk-table__cell">West Midlands</td>
+							<td class="govuk-table__cell">1 Aug 2023</td>
+							<td class="govuk-table__cell">Morrighan Humpleby</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Kings Norton Girls' School</td>
+							<td class="govuk-table__cell">136590</td>
+							<td class="govuk-table__cell">Shires Multi Academy Trust</td>
+							<td class="govuk-table__cell">TR02216</td>
+							<td class="govuk-table__cell">West Midlands</td>
+							<td class="govuk-table__cell">1 Sep 3000</td>
+							<td class="govuk-table__cell">Stephen Milnes</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Fleetville Junior School</td>
+							<td class="govuk-table__cell">117137</td>
+							<td class="govuk-table__cell">Spiral Partnership Trust</td>
+							<td class="govuk-table__cell">TR00796</td>
+							<td class="govuk-table__cell">East of England</td>
+							<td class="govuk-table__cell">1 Sep 2023</td>
+							<td class="govuk-table__cell">Mike Morant</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Francis Bacon School</td>
+							<td class="govuk-table__cell">117574</td>
+							<td class="govuk-table__cell">Scholars' Education Trust</td>
+							<td class="govuk-table__cell">TR01926</td>
+							<td class="govuk-table__cell">North</td>
+							<td class="govuk-table__cell">1 Oct 2023</td>
+							<td class="govuk-table__cell">Meyric Rawlings</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Lyng Church of England Primary School</td>
+							<td class="govuk-table__cell">121102</td>
+							<td class="govuk-table__cell">The Diocese Of Norwich Education And Academies Trust</td>
+							<td class="govuk-table__cell">TR00663</td>
+							<td class="govuk-table__cell">East of England</td>
+							<td class="govuk-table__cell">1 Sep 2024</td>
+							<td class="govuk-table__cell">Lorna Harwood</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Roecliffe Church of England Primary School</td>
+							<td class="govuk-table__cell">121583</td>
+							<td class="govuk-table__cell">Leeds Diocesan Learning Trust</td>
+							<td class="govuk-table__cell">TR04002</td>
+							<td class="govuk-table__cell">Yorkshire and the Humber</td>
+							<td class="govuk-table__cell">1 OCt 2023</td>
+							<td class="govuk-table__cell">Meyric Rawlings</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">St Peter's Catholic Primary School, Shoreham-By-Sea</td>
+							<td class="govuk-table__cell">126041</td>
+							<td class="govuk-table__cell">Bosco Catholic Education Trust</td>
+							<td class="govuk-table__cell">TR03680</td>
+							<td class="govuk-table__cell">South East</td>
+							<td class="govuk-table__cell">1 Jun 2023</td>
+							<td class="govuk-table__cell">Meyric Rawlings</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">Brooke Weston Academy</td>
+							<td class="govuk-table__cell">135317</td>
+							<td class="govuk-table__cell">The Brooke Weston Trust</td>
+							<td class="govuk-table__cell">TR00327</td>
+							<td class="govuk-table__cell">East Midlands</td>
+							<td class="govuk-table__cell">1 Sep 2023</td>
+							<td class="govuk-table__cell">Stephen Milnes</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell">The Ravensbourne School</td>
+							<td class="govuk-table__cell">136540</td>
+							<td class="govuk-table__cell">5 Dimensions Trust</td>
+							<td class="govuk-table__cell">TR01904</td>
+							<td class="govuk-table__cell">London</td>
+							<td class="govuk-table__cell">1 Jan 2040</td>
+							<td class="govuk-table__cell">Anthony O'Malley</td>
+							<td class="govuk-table__cell"><a href="#">Open project</a></td>
+						</tr>
+					</tbody>
+				</table>
+        {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+        {{ govukPagination({
+          next: {
+            href: "#"
+          },
+          items: [
+            {
+              number: 1,
+              current: true,
+              href: "#"
+            },
+            {
+              number: 2,
+              href: "#"
+            },
+            {
+              number: 3,
+              href: "#"
+            }
+          ]
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

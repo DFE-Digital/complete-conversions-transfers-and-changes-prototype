@@ -1,0 +1,238 @@
+{% extends "0-26/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "./includes/phase.html" %}
+  {% if (data['userType'] == 'team-lead') %}
+    <a href="project-list/team-lead/unassigned" class="govuk-back-link">Back to all projects</a>
+  {% else %}
+    <a href="project-list/caseworker/active" class="govuk-back-link">Back to all projects</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">URN 102062</span>
+      <h1 class="govuk-heading-l">St. Wilfred's Primary School</h1>
+      <div class="govuk-inset-text">
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Converting on:</span>
+          21 July 2022</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Incoming trust:</span>
+          Dynamics Trust</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Route: </span>
+          Voluntary</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Local authority:</span>
+          Warrington Borough Council (South East region)</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">SharePoint Folders:</span>
+          <a href="#">School folder (opens in tab)</a> | <a href="#">Trust folder (opens in tab)</a></p>
+      </div>
+      <nav class="sub-navigation" aria-label="Sub navigation">
+        <ul class="sub-navigation__list">
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-task-list">Task list</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" aria-current="page" href="#">Project information</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-notes">Notes</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-external-contacts">External contacts</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-internal-contacts">Internal contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <h3 class="govuk-heading-m">Jump to section</h3>
+          <p class="govuk-body govuk-!-margin-bottom-1"><a href="#projectDetails" class="govuk-link">
+            Project details</a></p>
+          <p class="govuk-body govuk-!-margin-bottom-1"><a href="#schoolDetails" class="govuk-link">
+            School</a></p>
+          <p class="govuk-body govuk-!-margin-bottom-1"><a href="#trustDetails" class="govuk-link">
+            Trust</a></p>
+          <p class="govuk-body govuk-!-margin-bottom-1"><a href="#localAuthorityDetails" class="govuk-link">
+            Local authority</a></p>
+          <p class="govuk-body govuk-!-margin-bottom-1"><a href="#dioceseDetails" class="govuk-link">
+            Diocese</a></p>
+          <div class="app-back-to-top app-back-to-top--fixed" data-module="app-back-to-top">
+            <a class="govuk-link govuk-link--no-visited-state app-back-to-top__link" href="#top">
+              <svg role="presentation" focusable="false" class="app-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+                <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+              </svg>Back to top
+            </a>
+          </div>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-l" id="projectDetails">Project details</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Date of advisory board
+              </dt>
+              <dd class="govuk-summary-list__value">
+                1 January 2023
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Conditions from advisory board
+              </dt>
+              <dd class="govuk-summary-list__value">
+                None
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+          </dl>
+
+          <h2 class="govuk-heading-l" id="schoolDetails">School</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                School name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                St. Wilfred's Primary School
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Academy name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <span class="empty">Empty</span>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                URN (Unique Reference Number)
+              </dt>
+              <dd class="govuk-summary-list__value">
+                123456
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Academy URN
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <span class="empty">Empty</span>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                School phase
+              </dt>
+              <dd class="govuk-summary-list__value">
+                3 to 11 (primary)
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                School type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Voluntary aided
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+          </dl>
+
+          <h2 class="govuk-heading-l" id="trustDetails">Trust</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Incoming trust name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Dynamics Trust
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                UKPRN (UK Provider Reference Number)
+              </dt>
+              <dd class="govuk-summary-list__value">
+                11223344
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Companies house number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                078787878
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+          </dl>
+
+          <h2 class="govuk-heading-l" id="localAuthorityDetails">Local authority</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Local authority
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Warrington Borough Council
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+          </dl>
+
+          <h2 class="govuk-heading-l" id="dioceseDetails">Diocese</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Diocese
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Warrington
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

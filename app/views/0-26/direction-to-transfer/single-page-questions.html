@@ -1,0 +1,166 @@
+{% extends "0-26/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Direction
+                    to transfer</h1>
+                  <div class="govuk-hint">
+                    A Direction to transfer is only needed when freehold land is
+                    owned by a foundation school, governing body or trustees and
+                    that land needs to be transferred to the trust or diocese.
+                  </div>
+                  <div class="govuk-hint">
+                    You can <a href="https://www.get-information-schools.service.gov.uk/Search" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                    search Get Information About Schools (opens in new tab)</a>
+                    to check if it's needed for this school.
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff">
+                        Not applicable
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checklist__header">
+                    <h2 class="govuk-heading-l">Check and clear the Direction to
+                      transfer</h2>
+                    <div class="govuk-hint">
+                      Make sure information in the Direction to transfer is
+                      correct and compare it against the model document.
+                    </div>
+                    <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          How to clear a Direction to transfer
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <p class="govuk-body">You need to <a href="https://www.get-information-schools.service.gov.uk/Search" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                        compare the Direction to transfer against the model
+                        documents (opens in a new tab)</a> to check
+                        for any changes.</p>
+                        <p class="govuk-body">Changes that personalise the model
+                          documents to a school or trust, and remove or add
+                          optional clauses, are expected. The wording of clauses
+                          should not change.</p>
+                        <p class="govuk-body">You'll need to <a href="https://educationgovuk.sharepoint.com/sites/lvedfe00116/SitePages/Commissioning%20Form.aspx" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                          contact the policy team (opens in a new tab)</a>
+                          about changes to clause text.</p>
+                      </div>
+                    </details>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff">
+                        Received
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-2" name="externalStakeHolderKickoff" type="checkbox" value="saveProforma" {{ checked("externalStakeHolderKickoff", "saveProforma") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-2">
+                        Cleared
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-3" name="externalStakeHolderKickoff" type="checkbox" value="confirmConversionDate" {{ checked("externalStakeHolderKickoff", "confirmConversionDate") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-3">
+                        Signed by caseworker
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-4" name="externalStakeHolderKickoff" type="checkbox" value="confirmConversionDate" {{ checked("externalStakeHolderKickoff", "confirmConversionDate") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-4">
+                        Saved in the school's SharePoint folder
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-5" name="externalStakeHolderKickoff" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-5">
+                        empty
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checklist__header">
+                    <h2 class="govuk-heading-l">Signed by Secretary of State</h2>
+                    <div class="govuk-hint">
+                      Send the Direction to transfer to the Academies
+                      Operational Practice Unit.
+                    </div>
+                    <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          How to get the Direction to transfer signed
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <p class="govuk-body">The Academies Operational Practice Unit will
+                          arrange for the Direction to transfer to be signed
+                          by the deputy director or a grade 6 team member, on
+                          behalf of the Secretary of State.</p>
+                        <p class="govuk-body">You can email the Academies
+                          Operational Practice Unit at <a href="mailto:academiesdelivery.operations@education.gov.uk" class="govuk-link" rel="noreferrer noopener">
+                            academiesdelivery.operations@education.gov.uk</a>.</p>
+                        <p class="govuk-body">It can take several weeks to hear
+                          back from the Academies Operational Practice Unit.</p>
+                      </div>
+                    </details>
+                  </div>
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff">
+                        Sent to the Academies Operational Practice Unit
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-2" name="externalStakeHolderKickoff" type="checkbox" value="saveProforma" {{ checked("externalStakeHolderKickoff", "saveProforma") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-2">
+                        Document signed on behalf of Secretary of State
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-5" name="externalStakeHolderKickoff" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-5">
+                        empty
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-form-group govuk-!-margin-top-9">
+                  {{ govukButton({ text: "Continue" }) }}
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

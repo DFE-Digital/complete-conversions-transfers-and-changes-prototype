@@ -4,17 +4,15 @@
 // 
 
 window.GOVUKPrototypeKit.documentReady(() => {
-  
   // v0-25+ Highlight header nav item if nav text equals XXXX and page title also includes XXXX
   const pageTitle = document.title;
-  const elements = document.querySelectorAll(".moj-header__navigation-link");
+  const elements = document.querySelectorAll("[class*='header__navigation-link']");
 
   elements.forEach((element) => {
-    const elementText = element.textContent;
-
-    if (pageTitle.includes(elementText) && elementText === elementText) {
+    const elementText = element.textContent.trim();
+    if (elementText && pageTitle.includes(elementText)) {
       element.setAttribute("aria-current", "page");
     }
   });
 
-})
+});

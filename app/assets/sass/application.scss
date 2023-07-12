@@ -16,11 +16,13 @@
 @import "patterns/view-by";
 @import "patterns/1200px-container";
 @import "patterns/moj-header-nav-highlighting";
+@import "patterns/dfe-header-nav-highlighting";
 
 // MOJ Frontend styles
 @import "node_modules/@ministryofjustice/frontend/moj/all";
 
-
+// DfE Frontend styles
+@import "dfe_frontend";
 
 .app-content {
     h4,

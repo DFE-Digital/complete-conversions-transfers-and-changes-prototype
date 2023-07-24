@@ -1,0 +1,90 @@
+{% extends "0-28/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Update ESFA data in KIM</h1>
+                  <div class="govuk-hint">
+                    Carry out final checks and update project information if
+                    necessary so the ESFA (Education and Skills Funding Agency)
+                    can issue the funding when the project is handed over.
+                  </div>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="esfaHandover" name="esfaHandover" type="checkbox" value="sendIntroductoryEmails" {{ checked("esfaHandover", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="esfaHandover">
+                        Update any ESFA fields in KIM and add notes if necessary
+                      </label>
+                      <div class="govuk-checkboxes__guidance">
+                        <details class="govuk-details" data-module="govuk-details">
+                          <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                              Things you may want to write notes about
+                            </span>
+                          </summary>
+                          <div class="govuk-details__text">
+                            <p class="govuk-body">It can be helpful to include
+                              notes about:</p>
+                            <ul class="govuk-list govuk-list--bullet">
+                              <li>funding or financial issues</li>
+                              <li>significant changes to the model funding
+                                agreements and articles</li>
+                              <li>issues relating to governance</li>
+                              <li>land issues including tenancies at will,
+                                condition of buildings, carve out of children's
+                                centre, access disputes and sub-leases </li>
+                              <li>falling rolls</li>
+                              <li>fluctuation in Key Stage 2 or 4 performance</li>
+                              <li>enquires about expanding the age range or any
+                                other <a href="https://educationgovuk.sharepoint.com/sites/lvedfe00116/SitePages/Significant-Change.aspx?OR=Teams-HL&CT=1663336368280&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMjA3MzEwMTAwNSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3d%3d" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                                  significant changes (opens in new tab)</a></li>
+                              <li>audit trail for resolved disputes with the
+                                local authority or complex</li>
+                              <li>schools joining a single academy trust to
+                                enable it to become a multi academy trust</li>
+                            </ul>
+                          </div>
+                        </details>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="esfaHandover-7" name="esfaHandover" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="esfaHandover-7">
+                        empty.
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-form-group">
+                  {{ govukButton({ text: "Continue" }) }}
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

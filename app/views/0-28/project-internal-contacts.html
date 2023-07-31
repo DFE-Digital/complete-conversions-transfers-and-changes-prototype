@@ -11,9 +11,9 @@
 {% block beforeContent %}
   {% include "./includes/phase.html" %}
   {% if (data['userType'] == 'team-lead') %}
-    <a href="project-list/team-lead/unassigned" class="govuk-back-link">Back to all projects</a>
+    <a href="project-list/team/unassigned" class="govuk-back-link">Back to all projects</a>
   {% else %}
-    <a href="project-list/caseworker/active" class="govuk-back-link">Back to all projects</a>
+    <a href="project-list/caseworker/in-progress" class="govuk-back-link">Back to all projects</a>
   {% endif %}
 {% endblock %}
 

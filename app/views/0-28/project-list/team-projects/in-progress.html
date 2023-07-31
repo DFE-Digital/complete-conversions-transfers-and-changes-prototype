@@ -1,0 +1,235 @@
+{% extends "0-28/layout.html" %}
+
+
+{% block pageTitle %}
+  Team projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+
+  </div>
+    {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+    {{ mojPrimaryNavigation({
+      label: 'Primary navigation',
+      items: [
+        {
+          text: 'Unassigned',
+          href: 'unassigned'
+        },
+        {
+          text: 'In progress',
+          href: 'in-progress',
+          active: true
+        },
+        {
+          text: 'Opening',
+          href: 'opening'
+        },
+        {
+          text: 'By user',
+          href: 'by-user'
+        },
+        {
+          text: 'Completed',
+          href: 'completed'
+        }
+      ]
+    }) }}
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        In progress
+      </h1>
+      <form action="unassigned" method="post" class="form">
+        <table class="govuk-table" name="projects_table" aria-label="Projects table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col">School/academy</th>
+              <th class="govuk-table__header" scope="col">URN</th>
+              <th class="govuk-table__header" scope="col">Local authority</th>
+              <th class="govuk-table__header" scope="col">Region</th>
+              <th class="govuk-table__header" scope="col">Assigned to</th>
+              <th class="govuk-table__header" scope="col">Project type</th>
+              <th class="govuk-table__header" scope="col">Conversion/<wbr>transfer date</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header govuk-table__cell"><a href="#">Fleetville Infant and Nursery School</a></td>
+                <td class="govuk-table__cell">138206</td>
+                <td class="govuk-table__cell">Manchester</td>
+                <td class="govuk-table__cell">North West</td>
+                <td class="govuk-table__cell">Mike Morant</td>
+                <td class="govuk-table__cell">Conversion</td>
+                <td class="govuk-table__cell">1 Jul 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header govuk-table__cell"><a href="#">Broadfield Primary School</a></td>
+                <td class="govuk-table__cell">105676</td>
+                <td class="govuk-table__cell">Blackpool</td>
+                <td class="govuk-table__cell">North West</td>
+                <td class="govuk-table__cell">Richard Cooley</td>
+                <td class="govuk-table__cell">Transfer</td>
+                <td class="govuk-table__cell">1 Nov 2023</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header govuk-table__cell"><a href="#">Swell Church of England Primary School</a></td>
+                <td class="govuk-table__cell">115652</td>
+                <td class="govuk-table__cell">Warrington</td>
+                <td class="govuk-table__cell">North West</td>
+                <td class="govuk-table__cell">Meyric Rawlings</td>
+                <td class="govuk-table__cell">Conversion</td>
+                <td class="govuk-table__cell">1 Jun 2024</td>
+            </tr>
+            <!-- Continue with the rest of the rows, replacing the third and fourth cells as mentioned -->
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header govuk-table__cell"><a href="#">Newtown Cofe Primary School</a></td>
+                <td class="govuk-table__cell">123490</td>
+                <td class="govuk-table__cell">Liverpool</td>
+                <td class="govuk-table__cell">North West</td>
+                <td class="govuk-table__cell">Stephen Milnes</td>
+                <td class="govuk-table__cell">Conversion</td>
+                <td class="govuk-table__cell">1 Sep 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header govuk-table__cell"><a href="#">Weydon School</a></td>
+                <td class="govuk-table__cell">136531</td>
+                <td class="govuk-table__cell">Lancaster</td>
+                <td class="govuk-table__cell">North West</td>
+                <td class="govuk-table__cell">Stephen Milnes</td>
+                <td class="govuk-table__cell">Conversion</td>
+                <td class="govuk-table__cell">1 Sep 2023</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header govuk-table__cell"><a href="#">Newham Bridge Primary School</a></td>
+                <td class="govuk-table__cell">111585</td>
+                <td class="govuk-table__cell">Salford</td>
+                <td class="govuk-table__cell">North West</td>
+                <td class="govuk-table__cell">Meyric Rawlings</td>
+                <td class="govuk-table__cell">Transfer</td>
+                <td class="govuk-table__cell">1 Sep 2023</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header govuk-table__cell"><a href="#">The Mill School</a></td>
+                <td class="govuk-table__cell">126530</td>
+                <td class="govuk-table__cell">Lancashire</td>
+                <td class="govuk-table__cell">North West</td>
+                <td class="govuk-table__cell">Stephen Milnes</td>
+                <td class="govuk-table__cell">Conversion</td>
+                <td class="govuk-table__cell">1 Aug 2025</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header govuk-table__cell"><a href="#">Catmose College</a></td>
+                <td class="govuk-table__cell">136530</td>
+                <td class="govuk-table__cell">Manchester</td>
+                <td class="govuk-table__cell">North West</td>
+                <td class="govuk-table__cell">Richard Cooley</td>
+                <td class="govuk-table__cell">Conversion</td>
+                <td class="govuk-table__cell">1 Oct 2023</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header govuk-table__cell"><a href="#">Sunbury Manor School</a></td>
+                <td class="govuk-table__cell">136529</td>
+                <td class="govuk-table__cell">Cumbria</td>
+                <td class="govuk-table__cell">North West</td>
+                <td class="govuk-table__cell">Stephen Milnes</td>
+                <td class="govuk-table__cell">Conversion</td>
+                <td class="govuk-table__cell">1 Jun 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header govuk-table__cell"><a href="#">Vickerstown School</a></td>
+                <td class="govuk-table__cell">112209</td>
+                <td class="govuk-table__cell">Preston</td>
+                <td class="govuk-table__cell">North West</td>
+                <td class="govuk-table__cell">Meyric Rawlings</td>
+                <td class="govuk-table__cell">Conversion</td>
+                <td class="govuk-table__cell">1 May 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header govuk-table__cell"><a href="#">Ladygrove Primary School</a></td>
+                <td class="govuk-table__cell">123438</td>
+                <td class="govuk-table__cell">Wigan</td>
+                <td class="govuk-table__cell">North West</td>
+                <td class="govuk-table__cell">Stephen Milnes</td>
+                <td class="govuk-table__cell">Transfer</td>
+                <td class="govuk-table__cell">1 Sep 2023</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header govuk-table__cell"><a href="#">The Coopers' Company and Coborn School</a></td>
+                <td class="govuk-table__cell">136600</td>
+                <td class="govuk-table__cell">Bury</td>
+                <td class="govuk-table__cell">North West</td>
+                <td class="govuk-table__cell">Don Gazara</td>
+                <td class="govuk-table__cell">Conversion</td>
+                <td class="govuk-table__cell">1 Sep 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header govuk-table__cell"><a href="#">Ford Cofe Primary School</a></td>
+                <td class="govuk-table__cell">123476</td>
+                <td class="govuk-table__cell">Liverpool</td>
+                <td class="govuk-table__cell">North West</td>
+                <td class="govuk-table__cell">Stephen Milnes</td>
+                <td class="govuk-table__cell">Conversion</td>
+                <td class="govuk-table__cell">1 Sep 2026</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__header govuk-table__cell"><a href="#">Church of The Ascension Cofe Primary School</a></td>
+                <td class="govuk-table__cell">103835</td>
+                <td class="govuk-table__cell">Manchester</td>
+                <td class="govuk-table__cell">North West</td>
+                <td class="govuk-table__cell">Morrighan Humpleby</td>
+                <td class="govuk-table__cell">Transfer</td>
+                <td class="govuk-table__cell">1 Aug 2023</td>
+            </tr>
+          </tbody>
+  </table>
+        {% if (data['completedBy']) %}
+          <h2 class="govuk-heading-m">July openers</h2>
+            <dl class="govuk-summary-list govuk-summary-list--school-details govuk-!-margin-bottom-9">
+              <span class="govuk-caption-m">URN 120620</span>
+              <h3 class="govuk-heading-m govuk-heading-m--school-name">
+                <a href="../../project-task-list" class="govuk-link">St. Wilfred's Primary School</a>
+              </h3>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__value">
+                  <span class="govuk-!-font-weight-bold">School type:</span>
+                  Community special school
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                  <span class="govuk-!-font-weight-bold">Incoming trust:</span>
+                  Dynamics Trust
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__value">
+                  <span class="govuk-!-font-weight-bold">Local authority:</span>
+                  Warrington Borough Council
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                  <span class="govuk-!-font-weight-bold">Completed by:</span>
+                  {% if (data['completedBy']) %}
+                    {{data['completedBy']}}
+                  {% else %}
+                    <strong class="govuk-tag govuk-tag--orange">
+                      Unassigned
+                    </strong>
+                  {% endif %}
+                </dd>
+              </div>
+            </dl>
+        {% else %}
+          {# There are no active projects #}
+        {% endif %}
+      </form>
+    </div>
+  </div>
+{% endblock %}

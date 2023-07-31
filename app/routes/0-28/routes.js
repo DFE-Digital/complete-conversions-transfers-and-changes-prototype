@@ -16,9 +16,9 @@ module.exports = function (router) {
     }
 
     if (userType == "team-lead") {
-      res.redirect("project-list" + variant + "/team-lead/unassigned");
+      res.redirect("project-list" + variant + "/team-projects/unassigned");
     } else {
-      res.redirect("project-list" + variant + "/caseworker/active");
+      res.redirect("project-list" + variant + "/your-projects/in-progress");
     }
   });
 
@@ -56,9 +56,9 @@ module.exports = function (router) {
     const userType = req.session.data['userType']
 
     if (userType == 'team-lead'){
-      res.redirect('project-list/team-lead/unassigned')
+      res.redirect('project-list/team-projects/unassigned')
     } else {
-      res.redirect('project-list/caseworker/active')
+      res.redirect('project-list/caseworker/in-progress')
     }
   })
 

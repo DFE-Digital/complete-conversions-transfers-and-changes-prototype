@@ -1,0 +1,203 @@
+{% extends "0-25/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "./includes/phase.html" %}
+  <a href="start" class="govuk-back-link">Back to all projects</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">URN 102062</span>
+      <h1 class="govuk-heading-l">St. Wilfred's Primary School</h1>
+      <div class="govuk-inset-text">
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Converting on:</span>
+          21 July 2022</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Incoming trust:</span>
+          Dynamics Trust</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Route: </span>
+          Voluntary</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">Local authority:</span>
+          Warrington Borough Council (South East region)</p>
+        <p class="govuk-body govuk-!-margin-0">
+          <span class="govuk-!-font-weight-bold">SharePoint Folders:</span>
+          <a href="#">School folder (opens in tab)</a> | <a href="#">Trust folder (opens in tab)</a></p>
+      </div>
+      <nav class="sub-navigation" aria-label="Sub navigation">
+        <ul class="sub-navigation__list">
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-task-list">Task list</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-information">Project information</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-notes">Notes</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" aria-current="page" href="#">External contacts</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-internal-contacts">Internal contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-form-group">
+            <form action="contacts" method="post" class="form">
+              <h2 class="govuk-heading-l">
+                <label class="govuk-label govuk-label--l" for="project-notes">
+                  External contacts
+                </label>
+              </h2>
+              {{ govukButton({ text: "Add contact" }) }}
+            </form>
+          </div>
+          {% if (data['project-notes']) %}
+            <span class="govuk-caption-m">1 August 2022</span>
+            <h3 class="govuk-heading-m">Jo Wade</h3>
+            <p class="govuk-body">{{data['project-notes']}}</p>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+          {% endif %}
+          <h3 class="govuk-heading-m" id="school-contacts">School contacts</h3>
+          <!-- summary card -->
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">Main contact</h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                    Change<span class="govuk-visually-hidden"> main contact</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Jane Smith
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Email
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <a href="#">jane.s@school.com</a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Phone
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <a href="#">07785 187463</a>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <!-- summary card -->
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title" id="">Main contact</h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                    Change<span class="govuk-visually-hidden"> main contact</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Kevin Carter
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Email
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <a href="#">kevin.c@school.com</a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Phone
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <a href="#">1234 567890</a>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <h3 class="govuk-heading-m govuk-!-margin-top-9" id="trust-contacts">Trust contacts</h3>
+          <!-- summary card -->
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">Senior finance manager</h2>
+              <ul class="govuk-summary-card__actions">
+                <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+                    Change<span class="govuk-visually-hidden"> senior finance manager</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Bob Belcher
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Email
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <a href="#">bob.belcher@trust.com</a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Phone
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <a href="#">07986 567890</a>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

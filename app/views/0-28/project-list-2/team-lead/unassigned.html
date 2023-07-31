@@ -1,0 +1,427 @@
+{% extends "0-28/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  Team projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+
+  </div>
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+  {{ mojPrimaryNavigation({
+    label: 'Primary navigation',
+    items: [
+      {
+        text: 'Unassigned',
+        href: 'unassigned',
+        active: true
+      },
+      {
+        text: 'In progress',
+        href: 'active'
+      },
+      {
+        text: 'Completed',
+        href: 'completed'
+      }
+    ]
+  }) }}
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Unassigned
+      </h1>
+      <form action="unassigned" method="post" class="form">
+        <table class="govuk-table">
+          <caption class="govuk-visually-hidden">Table of unassigned projects</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">School</th>
+              <th scope="col" class="govuk-table__header">URN</th>
+              <th scope="col" class="govuk-table__header">Region</th>
+              <th scope="col" class="govuk-table__header">Added by</th>
+              <th scope="col" class="govuk-table__header">Conversion date</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+              {% if (data['userType'] == 'team-lead') %}
+                <th scope="col" class="govuk-table__header">Action</th>
+              {% endif %}
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                Bridgewater County High School
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">London</td>
+              <td class="govuk-table__cell">Meyric Rawlings</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z">13 Dec 2023</time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Bradford Grammar
+              </th>
+              <td class="govuk-table__cell">456123</td>
+              <td class="govuk-table__cell">West Midlands</td>
+              <td class="govuk-table__cell">Anthony O'Malley</td>
+              <td class="govuk-table__cell"><time datatime="2023-11-02T15:49.000Z"><abbr aria-label="2 November 2023">2 Nov 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Bradford Grammar</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Sarson High School
+              </th>
+              <td class="govuk-table__cell">789465</td>
+              <td class="govuk-table__cell">North East</td>
+              <td class="govuk-table__cell">Steve Milnes</td>
+              <td class="govuk-table__cell govuk-"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Sarson High School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  St Mungo's Catholic School
+              </th>
+              <td class="govuk-table__cell">741584</td>
+              <td class="govuk-table__cell">North West</td>
+              <td class="govuk-table__cell">Morrighan Humpleby</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">St Mungo's Catholic School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Hirst Wood Primary School
+              </th>
+              <td class="govuk-table__cell">123485</td>
+              <td class="govuk-table__cell">London</td>
+              <td class="govuk-table__cell">Anthony O'Malley</td>
+              <td class="govuk-table__cell"><time datatime="2023-11-02T15:49.000Z"><abbr aria-label="2 November 2023">2 Nov 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Hirst Wood Primary School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Stoney Creek School
+              </th>
+              <td class="govuk-table__cell">852469</td>
+              <td class="govuk-table__cell">North West</td>
+              <td class="govuk-table__cell">Joseph Doe</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Stoney Creek School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Stone Court School
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">East Midlands</td>
+              <td class="govuk-table__cell">Dale Carnige</td>
+              <td class="govuk-table__cell"><time datatime="2023-11-02T15:49.000Z"><abbr aria-label="2 November 2023">2 Nov 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Stone Court School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Chalkhill College
+              </th>
+              <td class="govuk-table__cell">753541</td>
+              <td class="govuk-table__cell">North East</td>
+              <td class="govuk-table__cell">Sarah Seddon</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Chalkhill College</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Farrow High School
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">South West</td>
+              <td class="govuk-table__cell">Leslie Farrow</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Farrow High School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Greybourne Sixth Form
+              </th>
+              <td class="govuk-table__cell">684591</td>
+              <td class="govuk-table__cell">York and Humber</td>
+              <td class="govuk-table__cell">Pius Trent</td>
+              <td class="govuk-table__cell"><time datatime="2023-11-02T15:49.000Z"><abbr aria-label="2 November 2023">2 Nov 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Greybourne Sixth Form</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Haversham Secondary School
+              </th>
+              <td class="govuk-table__cell">147852</td>
+              <td class="govuk-table__cell">North West</td>
+              <td class="govuk-table__cell">William Oaks</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Haversham Secondary School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Dunmill School
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">North West</td>
+              <td class="govuk-table__cell">Charlotte Winters</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Dunmill School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Preston Lower School
+              </th>
+              <td class="govuk-table__cell">147588</td>
+              <td class="govuk-table__cell">York and Humber</td>
+              <td class="govuk-table__cell">Dudley Humphreys</td>
+              <td class="govuk-table__cell"><time datatime="2023-11-02T15:49.000Z"><abbr aria-label="2 November 2023">2 Nov 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Preston Lower School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Brooke Hill
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">London</td>
+              <td class="govuk-table__cell">Meyric Rawlings</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Brooke Hill</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Bradford Grammar
+              </th>
+              <td class="govuk-table__cell">456123</td>
+              <td class="govuk-table__cell">South West</td>
+              <td class="govuk-table__cell">Anthony O'Malley</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Bradford Grammar</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Sarson High School
+              </th>
+              <td class="govuk-table__cell">789465</td>
+              <td class="govuk-table__cell">North West</td>
+              <td class="govuk-table__cell">Steve Milnes</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Sarson High School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  St Mungo's Catholic School
+              </th>
+              <td class="govuk-table__cell">741584</td>
+              <td class="govuk-table__cell">North West</td>
+              <td class="govuk-table__cell">Peter Acorne</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">St Mungo's Catholic School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Hirst Wood Primary School
+              </th>
+              <td class="govuk-table__cell">123485</td>
+              <td class="govuk-table__cell">London</td>
+              <td class="govuk-table__cell">Anthony O'Malley</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Hirst Wood Primary School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Stoney Creek School
+              </th>
+              <td class="govuk-table__cell">852469</td>
+              <td class="govuk-table__cell">London</td>
+              <td class="govuk-table__cell">Joseph Doe</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Stoney Creek School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Stone Court School
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">London</td>
+              <td class="govuk-table__cell">Dale Carnige</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Stone Court School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Chalkhill College
+              </th>
+              <td class="govuk-table__cell">753541</td>
+              <td class="govuk-table__cell">North East</td>
+              <td class="govuk-table__cell">Caroline Kensington</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Chalkhill College</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Farrow High School
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">South West</td>
+              <td class="govuk-table__cell">Leslie Farrow</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Farrow High School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Greybourne Sixth Form
+              </th>
+              <td class="govuk-table__cell">684591</td>
+              <td class="govuk-table__cell">South East</td>
+              <td class="govuk-table__cell">Pius Trent</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Greybourne Sixth Form</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Haversham Secondary School
+              </th>
+              <td class="govuk-table__cell">147852</td>
+              <td class="govuk-table__cell">North West</td>
+              <td class="govuk-table__cell">William Oaks</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Haversham Secondary School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Dunmill School
+              </th>
+              <td class="govuk-table__cell">123456</td>
+              <td class="govuk-table__cell">London</td>
+              <td class="govuk-table__cell">Charlotte Winters</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Dunmill School</span> project</a></td>
+              {% endif %}
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">
+                  Preston Lower School
+              </th>
+              <td class="govuk-table__cell">147588</td>
+              <td class="govuk-table__cell">York and Humber</td>
+              <td class="govuk-table__cell">Dudley Humphreys</td>
+              <td class="govuk-table__cell"><time datatime="2023-12-13T15:49.000Z"><abbr aria-label="13 December 2023">13 Dec 2023</abbr></time></td>
+              <td class="govuk-table__cell"><a href="../../project-task-list">Open project</a></td>
+              {% if (data['userType'] == 'team-lead') %}
+                <td class="govuk-table__cell"><a href="../../assign-user/edit-completed-by">Assign <span class="govuk-visually-hidden">Preston Lower School</span> project</a></td>
+              {% endif %}
+              </tr>
+          </tbody>
+        </table>
+        {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+        {{ govukPagination({
+          next: {
+            href: "#"
+          },
+          items: [
+            {
+              number: 1,
+              current: true,
+              href: "#"
+            },
+            {
+              number: 2,
+              href: "#"
+            },
+            {
+              number: 3,
+              href: "#"
+            }
+          ]
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

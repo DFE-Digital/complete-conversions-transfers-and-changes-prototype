@@ -1,0 +1,110 @@
+{% extends "0-28/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  Team projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+
+  </div>
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+  {{ mojPrimaryNavigation({
+    label: 'Primary navigation',
+    items: [
+      {
+        text: 'Unassigned',
+        href: 'unassigned'
+      },
+      {
+        text: 'In progress',
+        href: 'in-progress'
+      },
+      {
+        text: 'Opening',
+        href: 'opening'
+      },
+      {
+        text: 'By user',
+        href: 'by-user',
+        active: true
+      },
+      {
+        text: 'Completed',
+        href: 'completed'
+      }
+    ]
+  }) }}
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        All projects by user
+      </h1>
+
+			
+      <div>
+        
+        <table class="govuk-table" name="projects_table" aria-label="Projects table">
+          <caption class="govuk-table__caption govuk-!-display-none">Table of users who have in-progress projects</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col">User name</th>
+              <th class="govuk-table__header" scope="col">Email</th>
+              <th class="govuk-table__header" scope="col"><span class="translation_missing" title="translation missing: en.project.table.headers.team">Team</span></th>
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">Conversions</th>
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">Transfers</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="user/sarah-philips">Sarah Philips</a></td>
+              <td class="govuk-table__cell">sarah.philips@education.gov.uk</td>
+              <td class="govuk-table__cell">North West</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Don Gazara</a></td>
+              <td class="govuk-table__cell">Don.GAZARA@education.gov.uk</td>
+              <td class="govuk-table__cell">North West</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">7</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Lorna Harwood</a></td>
+              <td class="govuk-table__cell">lorna1.harwood@education.gov.uk</td>
+              <td class="govuk-table__cell">North West</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">12</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Meyric Rawlings</a></td>
+              <td class="govuk-table__cell">meyric.rawlings@education.gov.uk</td>
+              <td class="govuk-table__cell">North West</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">17</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">12</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Mike Morant</a></td>
+              <td class="govuk-table__cell">michael.morant@education.gov.uk</td>
+              <td class="govuk-table__cell">North West</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}

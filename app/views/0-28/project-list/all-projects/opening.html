@@ -1,0 +1,223 @@
+{% extends "0-28/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  All projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+
+  </div>
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+  {{ mojPrimaryNavigation({
+    label: 'Primary navigation',
+    items: [
+      {
+        text: 'In progress',
+        href: 'in-progress'
+      },
+      {
+        text: 'Opening',
+        href: 'opening',
+		active: true
+      },
+	  {
+        text: 'By region',
+        href: 'by-region'
+      },
+	  {
+        text: 'By user',
+        href: 'by-user'
+      },
+      {
+        text: 'By trust',
+        href: 'by-trust'
+      },
+      {
+        text: 'By local authority',
+        href: 'by-local-authority'
+      },
+      {
+        text: 'Completed',
+        href: 'completed'
+      },
+      {
+        text: 'Statistics',
+        href: '#'
+      }
+    ]
+  }) }}
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Academies opening in July 2023
+      </h1>
+			<p>Schools that are expected to become academies.</p>
+			
+			{%- from "moj/components/sub-navigation/macro.njk" import mojSubNavigation -%}
+
+			{{ mojSubNavigation({
+				label: 'Sub navigation',
+				items: [{
+					text: 'Opening as planned',
+					href: 'opening',
+					active: true
+				}, {
+					text: 'Revised conversion date',
+					href: '#'
+				}]
+			}) }}
+
+			
+      <form action="unassigned" method="post" class="form">
+        
+        <table class="govuk-table" name="projects_table" aria-label="Projects table">
+					<thead class="govuk-table__head">
+						<tr class="govuk-table__row">
+							<th class="govuk-table__header" scope="col">School</th>
+							<th class="govuk-table__header" scope="col">URN</th>
+							<th class="govuk-table__header" scope="col">Local authority</th>
+							<th class="govuk-table__header" scope="col">Region</th>
+							<th class="govuk-table__header" scope="col">Team</th>
+							<th class="govuk-table__header" scope="col">Project type</th>
+							<th class="govuk-table__header" scope="col">All conditions met</th>
+						</tr>
+					</thead>
+					<tbody class="govuk-table__body">
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell"><a href="#">Inglehurst Infant School</a></td>
+							<td class="govuk-table__cell">120015</td>
+							<td class="govuk-table__cell">Leicester</td>
+							<td class="govuk-table__cell">West Midlands</td>
+							<td class="govuk-table__cell">West Midlands</td>
+							<td class="govuk-table__cell">Conversion</td>
+							<td class="govuk-table__cell">Not yet</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell"><a href="#">St Michael's Church of England Primary School</a></td>
+							<td class="govuk-table__cell">122280</td>
+							<td class="govuk-table__cell">Lancashire</td>
+							<td class="govuk-table__cell">North West</td>
+							<td class="govuk-table__cell">North West</td>
+							<td class="govuk-table__cell">Conversion</td>
+							<td class="govuk-table__cell">Yes</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell"><a href="#">Bosco Catholic Education Trust</a></td>
+							<td class="govuk-table__cell">103165</td>
+							<td class="govuk-table__cell">West Sussex</td>
+							<td class="govuk-table__cell">South East</td>
+							<td class="govuk-table__cell">RCS (Regional Casework Services)</td>
+							<td class="govuk-table__cell">Transfer</td>
+							<td class="govuk-table__cell">Yes</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell"><a href="#">Witton-Le-Wear Primary School</a></td>
+							<td class="govuk-table__cell">109241</td>
+							<td class="govuk-table__cell">County Durham</td>
+							<td class="govuk-table__cell">North East</td>
+							<td class="govuk-table__cell">RCS (Regional Casework Services)</td>
+							<td class="govuk-table__cell">Transfer</td>
+							<td class="govuk-table__cell">Yes</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell"><a href="#">St John The Evangelist Catholic Primary</a></td>
+							<td class="govuk-table__cell">106212</td>
+							<td class="govuk-table__cell">Staffordshire</td>
+							<td class="govuk-table__cell">West Midlands</td>
+							<td class="govuk-table__cell">West Midlands</td>
+							<td class="govuk-table__cell">Conversion</td>
+							<td class="govuk-table__cell">Not yet</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell"><a href="#">Farlow Cofe Primary School</a></td>
+							<td class="govuk-table__cell">107877</td>
+							<td class="govuk-table__cell">Shropshire</td>
+							<td class="govuk-table__cell">West Midlands</td>
+							<td class="govuk-table__cell">RCS (Regional Casework Services)</td>
+							<td class="govuk-table__cell">Conversion</td>
+							<td class="govuk-table__cell">Yes</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell"><a href="#">Hollinswood Primary School</a></td>
+							<td class="govuk-table__cell">107240</td>
+							<td class="govuk-table__cell">Telford and Wrekin</td>
+							<td class="govuk-table__cell">West Midlands</td>
+							<td class="govuk-table__cell">West Midlands</td>
+							<td class="govuk-table__cell">Transfer</td>
+							<td class="govuk-table__cell">Not yet</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell"><a href="#">Crosslee Community Primary School</a></td>
+							<td class="govuk-table__cell">105412</td>
+							<td class="govuk-table__cell">Highbury and Islington</td>
+							<td class="govuk-table__cell">London</td>
+							<td class="govuk-table__cell">RCS (Regional Casework Services)</td>
+							<td class="govuk-table__cell">Transfer</td>
+							<td class="govuk-table__cell">Not yet</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell"><a href="#">Newtown Cofe Primary School</a></td>
+							<td class="govuk-table__cell">103786</td>
+							<td class="govuk-table__cell">Shropshire</td>
+							<td class="govuk-table__cell">West Midlands</td>
+							<td class="govuk-table__cell">West Midlands</td>
+							<td class="govuk-table__cell">Transfer</td>
+							<td class="govuk-table__cell">Yes</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell"><a href="#">Swavesey Village College</a></td>
+							<td class="govuk-table__cell">106618</td>
+							<td class="govuk-table__cell">Cambridgeshire</td>
+							<td class="govuk-table__cell">East of England</td>
+							<td class="govuk-table__cell">East of England</td>
+							<td class="govuk-table__cell">Conversion</td>
+							<td class="govuk-table__cell">Yes</td>
+						</tr>
+						<tr class="govuk-table__row">
+							<td class="govuk-table__header govuk-table__cell"><a href="#">Appleford School</a></td>
+							<td class="govuk-table__cell">107698</td>
+							<td class="govuk-table__cell">Wiltshire</td>
+							<td class="govuk-table__cell">South West</td>
+							<td class="govuk-table__cell">South West</td>
+							<td class="govuk-table__cell">Conversion</td>
+							<td class="govuk-table__cell">Not yet</td>
+						</tr>
+					</tbody>
+				</table>
+        {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+        {{ govukPagination({
+          next: {
+            href: "#"
+          },
+          items: [
+            {
+              number: 1,
+              current: true,
+              href: "#"
+            },
+            {
+              number: 2,
+              href: "#"
+            },
+            {
+              number: 3,
+              href: "#"
+            }
+          ]
+        }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

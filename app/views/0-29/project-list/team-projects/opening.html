@@ -1,0 +1,121 @@
+{% extends "0-29/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  Team projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+
+  </div>
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+	{{ mojPrimaryNavigation({
+		label: 'Primary navigation',
+		items: [
+		{
+			text: 'Unassigned',
+			href: 'unassigned'
+		},
+		{
+			text: 'In progress',
+			href: 'in-progress'
+		},
+		{
+			text: 'Opening',
+			href: 'opening',
+			active: true
+		},
+		{
+			text: 'By user',
+			href: 'by-user'
+		},
+		{
+			text: 'Completed',
+			href: 'completed'
+		}
+		]
+	}) }}
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Academies opening in July 2023
+      </h1>
+			<p>Schools that are expected to become academies.</p>
+			
+			{%- from "moj/components/sub-navigation/macro.njk" import mojSubNavigation -%}
+
+			{{ mojSubNavigation({
+				label: 'Sub navigation',
+				items: [{
+					text: 'Opening as planned',
+					href: 'opening',
+					active: true
+				}, {
+					text: 'Revised conversion date',
+					href: '#'
+				}]
+			}) }}
+
+			
+      <form action="unassigned" method="post" class="form">
+        
+        <table class="govuk-table" name="projects_table" aria-label="Projects table">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th class="govuk-table__header" scope="col">School</th>
+					<th class="govuk-table__header" scope="col">URN</th>
+					<th class="govuk-table__header" scope="col">Local authority</th>
+					<th class="govuk-table__header" scope="col">Team</th>
+					<th class="govuk-table__header" scope="col">Project type</th>
+					<th class="govuk-table__header" scope="col">All conditions met</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<td class="govuk-table__header govuk-table__cell"><a href="#">Inglehurst Infant School</a></td>
+					<td class="govuk-table__cell">120015</td>
+					<td class="govuk-table__cell">Blackpool</td>
+					<td class="govuk-table__cell">North West</td>
+					<td class="govuk-table__cell">Conversion</td>
+					<td class="govuk-table__cell">Not yet</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__header govuk-table__cell"><a href="#">St Michael's Church of England Primary School</a></td>
+					<td class="govuk-table__cell">122280</td>
+					<td class="govuk-table__cell">Lancashire</td>
+					<td class="govuk-table__cell">North West</td>
+					<td class="govuk-table__cell">Conversion</td>
+					<td class="govuk-table__cell">Yes</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__header govuk-table__cell"><a href="#">Bosco Catholic Education Trust</a></td>
+					<td class="govuk-table__cell">103165</td>
+					<td class="govuk-table__cell">Manchester</td>
+					<td class="govuk-table__cell">North West</td>
+					<td class="govuk-table__cell">Transfer</td>
+					<td class="govuk-table__cell">Yes</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__header govuk-table__cell"><a href="#">Witton-Le-Wear Primary School</a></td>
+					<td class="govuk-table__cell">109241</td>
+					<td class="govuk-table__cell">Preston</td>
+					<td class="govuk-table__cell">North West</td>
+					<td class="govuk-table__cell">Transfer</td>
+					<td class="govuk-table__cell">Yes</td>
+				</tr>
+			</tbody>
+		</table>
+    </div>
+  </div>
+{% endblock %}

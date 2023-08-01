@@ -1,0 +1,310 @@
+{% extends "0-29/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  All projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+
+  </div>
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+  {{ mojPrimaryNavigation({
+    label: 'Primary navigation',
+    items: [
+      {
+        text: 'In progress',
+        href: 'in-progress'
+      },
+      {
+        text: 'Opening',
+        href: 'opening'
+      },
+	    {
+        text: 'By region',
+        href: 'by-region'
+      },
+      {
+        text: 'By user',
+        href: 'by-user'
+      },
+      {
+        text: 'By trust',
+        href: 'by-trust'
+      },
+      {
+        text: 'By local authority',
+        href: 'by-local-authority'
+      },
+      {
+        text: 'Completed',
+        href: 'completed',
+        active: true
+      },
+      {
+        text: 'Statistics',
+        href: '#'
+      }
+    ]
+  }) }}
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        All completed projects
+      </h1>
+
+			
+      <div class="">
+        
+        <table class="govuk-table" name="projects_table" aria-label="Projects table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col">School</th>
+              <th class="govuk-table__header" scope="col">URN</th>
+              <th class="govuk-table__header" scope="col">Local authority</th>
+              <th class="govuk-table__header" scope="col">Region</th>
+              <th class="govuk-table__header" scope="col">Team</th>
+              <th class="govuk-table__header" scope="col">Type of project</th>
+              <th class="govuk-table__header" scope="col">conversion/<wbr>Transfer date</th>
+              <th class="govuk-table__header" scope="col">Project completion date</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">St Joseph's Rc Primary School</a></td>
+              <td class="govuk-table__cell">101133</td>
+              <td class="govuk-table__cell">Camden</td>
+              <td class="govuk-table__cell">London</td>
+              <td class="govuk-table__cell">Team</td>
+              <td class="govuk-table__cell">Transfer</td>
+              <td class="govuk-table__cell">16 May 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Woodland Middle School Academy</a></td>
+              <td class="govuk-table__cell">136560</td>
+              <td class="govuk-table__cell">Herefordshire</td>
+              <td class="govuk-table__cell">South East</td>
+              <td class="govuk-table__cell">Team</td>
+              <td class="govuk-table__cell">Conversion</td>
+              <td class="govuk-table__cell">12 May 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Glyn School</a></td>
+              <td class="govuk-table__cell">136534</td>
+              <td class="govuk-table__cell">Blackpool</td>
+              <td class="govuk-table__cell">North West</td>
+              <td class="govuk-table__cell">RCS (Regional Casework Services)</td>
+              <td class="govuk-table__cell">Conversion</td>
+              <td class="govuk-table__cell">4 Apr 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Cheam Park Farm Junior School</a></td>
+              <td class="govuk-table__cell">136535</td>
+              <td class="govuk-table__cell">Camden</td>
+              <td class="govuk-table__cell">London</td>
+              <td class="govuk-table__cell">RCS (Regional Casework Services)</td>
+              <td class="govuk-table__cell">Transfer</td>
+              <td class="govuk-table__cell">4 Apr 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Catmose College</a></td>
+              <td class="govuk-table__cell">136530</td>
+              <td class="govuk-table__cell">Walthamstow</td>
+              <td class="govuk-table__cell">London</td>
+              <td class="govuk-table__cell">Team</td>
+              <td class="govuk-table__cell">Conversion</td>
+              <td class="govuk-table__cell">28 Mar 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Catmose College</a></td>
+              <td class="govuk-table__cell">136530</td>
+              <td class="govuk-table__cell">Local</td>
+              <td class="govuk-table__cell">Region</td>
+              <td class="govuk-table__cell">Team</td>
+              <td class="govuk-table__cell">Transfer</td>
+              <td class="govuk-table__cell">28 Mar 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Catmose College</a></td>
+              <td class="govuk-table__cell">136530</td>
+              <td class="govuk-table__cell">Birmingham</td>
+              <td class="govuk-table__cell">Birmingham</td>
+              <td class="govuk-table__cell">Team</td>
+              <td class="govuk-table__cell">Conversion</td>
+              <td class="govuk-table__cell">28 Mar 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Catmose College</a></td>
+              <td class="govuk-table__cell">136530</td>
+              <td class="govuk-table__cell">Withinton</td>
+              <td class="govuk-table__cell">Manchester</td>
+              <td class="govuk-table__cell">Team</td>
+              <td class="govuk-table__cell">Conversion</td>
+              <td class="govuk-table__cell">24 Mar 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Broadfield Primary School</a></td>
+              <td class="govuk-table__cell">105676</td>
+              <td class="govuk-table__cell">Middlesbrough</td>
+              <td class="govuk-table__cell">York and Humber</td>
+              <td class="govuk-table__cell">RCS (Regional Casework Services)</td>
+              <td class="govuk-table__cell">Transfer</td>
+              <td class="govuk-table__cell">24 Mar 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Catmose College</a></td>
+              <td class="govuk-table__cell">136530</td>
+              <td class="govuk-table__cell">Kesington</td>
+              <td class="govuk-table__cell">London</td>
+              <td class="govuk-table__cell">Team</td>
+              <td class="govuk-table__cell">Conversion</td>
+              <td class="govuk-table__cell">24 Mar 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Broadfield Primary School</a></td>
+              <td class="govuk-table__cell">105676</td>
+              <td class="govuk-table__cell">Hook</td>
+              <td class="govuk-table__cell">Hampshire</td>
+              <td class="govuk-table__cell">Team</td>
+              <td class="govuk-table__cell">Conversion</td>
+              <td class="govuk-table__cell">24 Mar 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Church of The Ascension Cofe Primary School</a></td>
+              <td class="govuk-table__cell">103835</td>
+              <td class="govuk-table__cell">Bordon</td>
+              <td class="govuk-table__cell">Hampshire</td>
+              <td class="govuk-table__cell">RCS (Regional Casework Services)</td>
+              <td class="govuk-table__cell">Conversion</td>
+              <td class="govuk-table__cell">16 Mar 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Broadfield Primary School</a></td>
+              <td class="govuk-table__cell">105676</td>
+              <td class="govuk-table__cell">Local</td>
+              <td class="govuk-table__cell">Region</td>
+              <td class="govuk-table__cell">Team</td>
+              <td class="govuk-table__cell">Transfer</td>
+              <td class="govuk-table__cell">23 Feb 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Bracken Hill School</a></td>
+              <td class="govuk-table__cell">122961</td>
+              <td class="govuk-table__cell">Leicester</td>
+              <td class="govuk-table__cell">West Midlands</td>
+              <td class="govuk-table__cell">Team</td>
+              <td class="govuk-table__cell">Transfer</td>
+              <td class="govuk-table__cell">23 Feb 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">New Horizons School (Part of The Sabden Multi Academy Trust)</a></td>
+              <td class="govuk-table__cell">142151</td>
+              <td class="govuk-table__cell">County Durham</td>
+              <td class="govuk-table__cell">North East</td>
+              <td class="govuk-table__cell">RCS (Regional Casework Services)</td>
+              <td class="govuk-table__cell">Conversion</td>
+              <td class="govuk-table__cell">23 Feb 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Lyng Church of England Primary School</a></td>
+              <td class="govuk-table__cell">121102</td>
+              <td class="govuk-table__cell">Staffordshire</td>
+              <td class="govuk-table__cell">West Midlands</td>
+              <td class="govuk-table__cell">Team</td>
+              <td class="govuk-table__cell">Transfer</td>
+              <td class="govuk-table__cell">22 Feb 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Catmose College</a></td>
+              <td class="govuk-table__cell">136530</td>
+              <td class="govuk-table__cell">Shropshire</td>
+              <td class="govuk-table__cell">West Midlands</td>
+              <td class="govuk-table__cell">Team</td>
+              <td class="govuk-table__cell">Conversion</td>
+              <td class="govuk-table__cell">22 Feb 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Catmose College</a></td>
+              <td class="govuk-table__cell">136530</td>
+              <td class="govuk-table__cell">Highbury and Islington</td>
+              <td class="govuk-table__cell">London</td>
+              <td class="govuk-table__cell">Team</td>
+              <td class="govuk-table__cell">Conversion</td>
+              <td class="govuk-table__cell">22 Feb 2023</td>
+              <td class="govuk-table__cell">18 Mar 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Broadfield Primary School</a></td>
+              <td class="govuk-table__cell">105676</td>
+              <td class="govuk-table__cell">Cambridgeshire</td>
+              <td class="govuk-table__cell">East of England</td>
+              <td class="govuk-table__cell">RCS (Regional Casework Services)</td>
+              <td class="govuk-table__cell">Transfer</td>
+              <td class="govuk-table__cell">20 Feb 2023</td>
+              <td class="govuk-table__cell">6 Mar 2023</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Broadfield Primary School</a></td>
+              <td class="govuk-table__cell">105676</td>
+              <td class="govuk-table__cell">Wiltshire</td>
+              <td class="govuk-table__cell">South Wes</td>
+              <td class="govuk-table__cell">Team</td>
+              <td class="govuk-table__cell">Conversion</td>
+              <td class="govuk-table__cell">3 Feb 2023</td>
+              <td class="govuk-table__cell">18 Dec 2023</td>
+            </tr>
+          </tbody>
+        </table>
+        {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+        {{ govukPagination({
+          next: {
+            href: "#"
+          },
+          items: [
+            {
+              number: 1,
+              current: true,
+              href: "#"
+            },
+            {
+              number: 2,
+              href: "#"
+            },
+            {
+              number: 3,
+              href: "#"
+            }
+          ]
+        }) }}
+      </div>
+    </div>
+  </div>
+{% endblock %}

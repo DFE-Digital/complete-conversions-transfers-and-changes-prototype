@@ -8,17 +8,11 @@ module.exports = function (router) {
 
   router.post("/" + version + "/set-up", function (req, res) {
     const userType = req.session.data["userType"];
-    const setPrototypeVariant = req.session.data["setPrototypeVariant"];
-
-    let variant = "";
-    if (setPrototypeVariant == "2") {
-      variant = "-2";
-    }
 
     if (userType == "team-lead") {
-      res.redirect("project-list" + variant + "/team-projects/unassigned");
+      res.redirect("project-list/team-projects/unassigned");
     } else {
-      res.redirect("project-list" + variant + "/your-projects/in-progress");
+      res.redirect("project-list/your-projects/in-progress");
     }
   });
 

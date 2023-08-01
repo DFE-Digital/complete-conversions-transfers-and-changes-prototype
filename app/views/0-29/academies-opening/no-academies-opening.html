@@ -1,0 +1,37 @@
+{% extends "0-29/layout.html" %}
+
+
+{% block pageTitle %}
+  Projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">
+        {{ "Academies opening in __month_name__" | insertMonth(1) }}
+      </h1>
+      <p class="govuk-body">A list of schools becoming academies.</p>
+
+      <div class="govuk-inset-text">
+        <p class="govuk-body">There are currently no schools expected to
+          become academies in March.</p>
+        <p class="govuk-body">Check with your line manager if you were
+          expecting some schools to convert next month.</p>
+      </div>
+
+
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

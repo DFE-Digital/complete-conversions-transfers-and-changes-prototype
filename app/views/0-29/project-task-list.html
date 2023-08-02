@@ -9,43 +9,22 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {% block beforeContent %}
-  {% include "./includes/phase.html" %}
-  {% if (data['userType'] == 'team-lead') %}
-    <a href="project-list/team/unassigned" class="govuk-back-link">Back to all projects</a>
-  {% else %}
-    <a href="project-list/your-projects/in-progress" class="govuk-back-link">Back to all projects</a>
-  {% endif %}
+{% include "./includes/phase.html" %}
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <span class="govuk-caption-l">URN 102062</span>
-      <h1 class="govuk-heading-l">St. Wilfred's Primary School</h1>
-      <div class="govuk-inset-text">
-        <p class="govuk-body govuk-!-margin-0">
-          <span class="govuk-!-font-weight-bold">Converting on:</span>
-          21 July 2022</p>
-        <p class="govuk-body govuk-!-margin-0">
-          <span class="govuk-!-font-weight-bold">Incoming trust:</span>
-          Dynamics Trust</p>
-        <p class="govuk-body govuk-!-margin-0">
-          <span class="govuk-!-font-weight-bold">Route: </span>
-          Voluntary</p>
-        <p class="govuk-body govuk-!-margin-0">
-          <span class="govuk-!-font-weight-bold">Local authority:</span>
-          Warrington Borough Council (South East region)</p>
-        <p class="govuk-body govuk-!-margin-0">
-          <span class="govuk-!-font-weight-bold">SharePoint Folders:</span>
-          <a href="#">School folder (opens in tab)</a> | <a href="#">Trust folder (opens in tab)</a></p>
-      </div>
+      <h1 class="govuk-heading-xl">St. Wilfred's Primary School</h1>
+      
       <nav class="sub-navigation" aria-label="Sub navigation">
         <ul class="sub-navigation__list">
           <li class="sub-navigation__item">
-            <a class="sub-navigation__link" aria-current="page" href="#">Task list</a>
+            <a class="sub-navigation__link" href="project-information">Project information</a>
           </li>
           <li class="sub-navigation__item">
-            <a class="sub-navigation__link" href="project-information">Project information</a>
+            <a class="sub-navigation__link" aria-current="page" href="#">Task list</a>
           </li>
           <li class="sub-navigation__item">
             <a class="sub-navigation__link" href="project-notes">Notes</a>
@@ -59,11 +38,30 @@
         </ul>
       </nav>
       <div class="govuk-grid-row">
-        <form action="project-task-list" method="post" class="form">
-          <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-one-quarter">
+          <nav>
+            <h2 class="govuk-heading-m">Jump to section</h2>
+            <ul class="govuk-list govuk-list--spaced govuk-!-padding-0">
+              <li>
+                <a class="govuk-link" href="#project-kick-off">Project kick off</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#clear-and-sign-legal-documents">Clear and sign legal documents</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#get-ready-for-opening">Get ready for opening</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#after-opening">After opening</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+          <form action="project-task-list" method="post" class="form">
             <h2 class="govuk-heading-l">Project task list</h2>
             <ol class="app-task-list">
-              <li>
+              <li id="project-kick-off">
                 <h2 class="app-task-list__section">Project kick-off</h2>
                 <ul class="app-task-list__items">
                   <li class="app-task-list__item">
@@ -117,7 +115,7 @@
                 </ul>
               </li>
 
-              <li>
+              <li id="clear-and-sign-legal-documents">
                 <h2 class="app-task-list__section">Clear and sign legal documents</h2>
                 <ul class="app-task-list__items">
                   <li class="app-task-list__item">
@@ -332,7 +330,7 @@
                 </ul>
               </li>
 
-              <li>
+              <li id="get-ready-for-opening">
                 <h2 class="app-task-list__section">Get ready for opening</h2>
                 <ul class="app-task-list__items">
                   <li class="app-task-list__item">
@@ -397,7 +395,7 @@
                 </ul>
               </li>
 
-              <li>
+              <li id="after-opening">
                 <h2 class="app-task-list__section">After opening</h2>
                 <ul class="app-task-list__items">
                   <li class="app-task-list__item">
@@ -447,8 +445,8 @@
                 {{ govukButton({ text: "Mark project as completed" }) }}
               </li>
             </ol>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </div>

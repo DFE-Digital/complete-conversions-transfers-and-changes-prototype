@@ -1,0 +1,160 @@
+{% extends "0-29/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+{% include "../includes/phase.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-l">URN 102062</span>
+      <h1 class="govuk-heading-xl">Eastview Grammar School</h1>
+      <nav class="sub-navigation" aria-label="Sub navigation">
+        <ul class="sub-navigation__list">
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" aria-current="page" href="#">Project information</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-task-list">Task list</a>
+          </li>
+          
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-notes">Notes</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-external-contacts">External contacts</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="project-internal-contacts">Internal contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <nav>
+            <h2 class="govuk-heading-m">Jump to section</h2>
+            <ul class="govuk-list govuk-list--spaced govuk-!-padding-0">
+              <li>
+                <a class="govuk-link" href="#projectDetails">Project details</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#directive-academy-order-details">Directive academy order details</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#advisoryBoardDetails">Advisory board details</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#schoolDetails">School details</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#academyDetails">Academy details</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#localAuthorityDetails">Local authority details</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#director-of-child-services">Director of child services</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#localAuthorityDetails">Local authority details</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#dioceseDetails">Diocese details</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="govuk-grid-column-three-quarters" id="projectInformationList">
+          <div class="govuk-!-margin-bottom-9" id="projectDetails">
+            <h2 class="govuk-heading-l">Project information</h2>
+            <h2 class="govuk-heading-m">Project details</h2>
+            <dl class="govuk-summary-list" id="project-summary">
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Type</dt><dd class="govuk-summary-list__value">Transfer</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Outgoing trust</dt><dd class="govuk-summary-list__value">Duns Scotus Education Trust</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Incoming trust</dt><dd class="govuk-summary-list__value">Bosco Catholic Education Trust</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Convertion date</dt><dd class="govuk-summary-list__value">1 June 2023</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Completion date</dt><dd class="govuk-summary-list__value">1 July 2023</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Local authority</dt><dd class="govuk-summary-list__value">West Sussex</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Region</dt><dd class="govuk-summary-list__value">South East</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Route</dt><dd class="govuk-summary-list__value">Voluntary</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Team</dt><dd class="govuk-summary-list__value">Regional Casework Services</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">School SharePoint folder</dt><dd class="govuk-summary-list__value"><a target="_blank" href="https://educationgovuk.sharepoint.com/:f:/r/sites/ServiceDeliveryDirectorate/Shared%20Documents/A2C%20and%20Interventions/Complete%20conversions,%20transfers%20and%20changes/Technical?csf=1&amp;web=1&amp;e=FWzEMP">Open the school SharePoint folder in a new tab</a></dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Trust SharePoint folder</dt><dd class="govuk-summary-list__value"><a target="_blank" href="https://educationgovuk.sharepoint.com/:f:/r/sites/ServiceDeliveryDirectorate/Shared%20Documents/A2C%20and%20Interventions/Complete%20conversions,%20transfers%20and%20changes/Technical?csf=1&amp;web=1&amp;e=FWzEMP">Open the trust SharePoint folder in a new tab</a></dd></div>
+            </dl>
+          </div>
+          <div class="govuk-!-margin-bottom-9" id="directive-academy-order-details">
+            <h2 class="govuk-heading-m">Directive academy order details</h2>
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row govuk-summary-list__row--no-actions"><dt class="govuk-summary-list__key">Has a directive academy order been issued?</dt><dd class="govuk-summary-list__value">No</dd></div>
+              <div class="govuk-summary-list__row govuk-summary-list__row--no-actions"><dt class="govuk-summary-list__key">Is this conversion due to intervention following 2RI?</dt><dd class="govuk-summary-list__value"><span class="empty">Empty</span></dd></div>
+              <div class="govuk-summary-list__row govuk-summary-list__row--no-actions"><dt class="govuk-summary-list__key">Grant type</dt><dd class="govuk-summary-list__value"><span class="empty">Empty</span></dd></div>
+            </dl>
+          </div>
+          <div class="govuk-!-margin-bottom-9" id="advisoryBoardDetails">
+            <h2 class="govuk-heading-m">Advisory board details</h2>
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row govuk-summary-list__row--no-actions"><dt class="govuk-summary-list__key">Date of advisory board</dt><dd class="govuk-summary-list__value">1 March 2023</dd></div>
+              <div class="govuk-summary-list__row govuk-summary-list__row--no-actions"><dt class="govuk-summary-list__key">Conditions from advisory board</dt><dd class="govuk-summary-list__value"><span class="empty">Empty</span></dd></div>
+            </dl>
+          </div>
+          <div class="govuk-!-margin-bottom-9" id="schoolDetails">
+            <h2 class="govuk-heading-m">School details</h2>
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Original school name</dt><dd class="govuk-summary-list__value">Eastview Grammar School<br><a target="_blank" href="https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/126041">View the school's information in GIAS (opens in new tab)</a></dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Addresss</dt><dd class="govuk-summary-list__value"><address class="govuk-address">Sullington Way<br>Shoreham-by-Sea<br>BN43 6PJ</address></dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">DfE number</dt><dd class="govuk-summary-list__value">938/3333</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Old Unique Reference Number</dt><dd class="govuk-summary-list__value">126041</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">School type</dt><dd class="govuk-summary-list__value">Voluntary aided school</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Age range</dt><dd class="govuk-summary-list__value">4 to 11</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">School phase</dt><dd class="govuk-summary-list__value">Primary</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Region</dt><dd class="govuk-summary-list__value">South East</dd></div>
+            </dl>
+         </div>
+        <div class="govuk-!-margin-bottom-9" id="academyDetails">
+          <h2 class="govuk-heading-m">Academy details</h2>
+          <div class="govuk-inset-text">Academy URN has not been provided</div>
+        </div>
+        <div class="govuk-!-margin-bottom-9" id="incomingTrustDetails">
+          <h2 class="govuk-heading-m">Incoming trust details</h2>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Incoming trust name</dt><dd class="govuk-summary-list__value">Bosco Catholic Education Trust<br><a target="_blank" href="https://get-information-schools.service.gov.uk/Groups/Search?GroupSearchModel.Text=10064181">View the trust information in GIAS (opens in new tab)</a></dd></div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Address</dt><dd class="govuk-summary-list__value"><address class="govuk-address">St Philip Howard Catholic School Elm Grove South<br>Barnham<br>Bognor Regis<br>PO22 0EN</address></dd></div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">UK Provider Reference Number</dt><dd class="govuk-summary-list__value">10064181</dd></div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Group identifier (ID)</dt><dd class="govuk-summary-list__value">TR03680</dd></div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Companies House number</dt><dd class="govuk-summary-list__value">10573272<br><a target="_blank" href="https://find-and-update.company-information.service.gov.uk/company/10573272">View the Companies House information (opens in new tab)</a></dd></div>
+          </dl>
+        </div>
+        <div class="govuk-!-margin-bottom-9" id="localAuthorityDetails">
+          <h2 class="govuk-heading-m">Local authority details</h2>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Local authority</dt><dd class="govuk-summary-list__value">West Sussex</dd></div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Address</dt><dd class="govuk-summary-list__value"><address class="govuk-address">County Hall<br>Chichester<br>West Sussex<br>PO19 1RQ</address></dd></div>
+          </dl>
+        </div>
+        <div class="govuk-!-margin-bottom-9" id="director-of-child-services">
+          <h2 class="govuk-heading-m">Director of child services</h2>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">DCS Position</dt><dd class="govuk-summary-list__value">Executive Director of Children, Young People and Learning</dd></div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Name</dt><dd class="govuk-summary-list__value">Lucy Butler</dd></div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Email</dt><dd class="govuk-summary-list__value">lucy.butler@westsussex.gov.uk</dd></div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Phone</dt><dd class="govuk-summary-list__value">0330 222 9331</dd></div>
+          </dl>
+        </div>
+        <div class="govuk-!-margin-bottom-9" id="dioceseDetails">
+          <h2 class="govuk-heading-m">Diocese details</h2>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Diocese</dt><dd class="govuk-summary-list__value">Diocese of Arundel and Brighton</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

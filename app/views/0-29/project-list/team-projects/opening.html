@@ -4,7 +4,7 @@
 
 
 {% block pageTitle %}
-  Team projects | {{serviceName}}
+  {{ 'RCS' if data['userType'] in ['team-lead', 'regional-casework-services'] else 'Your team' }} projects | {{serviceName}}
 {% endblock %}
 
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}

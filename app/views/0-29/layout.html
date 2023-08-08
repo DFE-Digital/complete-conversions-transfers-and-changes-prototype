@@ -84,7 +84,7 @@
         {% else %}
           {% set variant = "" %}
         {% endif %}
-        {% if (data['userType'] == 'caseworker') %}
+        {% if (data['userType'] !== 'team-lead') %}
         <li class="dfe-header__navigation-item">
           <a class="dfe-header__navigation-link" href="/0-29/project-list{{ variant }}/your-projects/in-progress">
             Your projects
@@ -108,7 +108,7 @@
             </svg>
           </a>
         </li>
-        {% if (data['userType'] !== 'caseworker') %}
+        {% if (data['userType'] == 'team-lead') %}
         <li class="dfe-header__navigation-item ">
           <a class="dfe-header__navigation-link" href="#">
             Service support

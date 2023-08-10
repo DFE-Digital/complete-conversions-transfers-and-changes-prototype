@@ -56,7 +56,7 @@
               <th class="govuk-table__header" scope="col">School or academy</th>
               <th class="govuk-table__header" scope="col">URN</th>
               <th class="govuk-table__header" scope="col">Local authority</th>
-              {% if (data['userType'] == 'regional-casework-services') %}
+              {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                 <th class="govuk-table__header" scope="col">Region</th>
               {% else %}
                 <th class="govuk-table__header" scope="col">Team</th>
@@ -71,7 +71,7 @@
                 <td class="govuk-table__header govuk-table__cell"><a href="#">Fleetville Infant and Nursery School</a></td>
                 <td class="govuk-table__cell">138206</td>
                 <td class="govuk-table__cell">Manchester</td>
-                {% if (data['userType'] == 'regional-casework-services') %}
+                {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                   <td class="govuk-table__cell">North West</td>
                 {% else %}
                   <td class="govuk-table__cell">North West</td>
@@ -84,7 +84,7 @@
                 <td class="govuk-table__header govuk-table__cell"><a href="#">Broadfield Primary School</a></td>
                 <td class="govuk-table__cell">105676</td>
                 <td class="govuk-table__cell">Barsetshire</td>
-                {% if (data['userType'] == 'regional-casework-services') %}
+                {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                   <td class="govuk-table__cell">North West</td>
                 {% else %}
                   <td class="govuk-table__cell">Regional Casework Services</td>
@@ -97,7 +97,7 @@
                 <td class="govuk-table__header govuk-table__cell"><a href="#">Swell Church of England Primary School</a></td>
                 <td class="govuk-table__cell">115652</td>
                 <td class="govuk-table__cell">Wherton</td>
-                {% if (data['userType'] == 'regional-casework-services') %}
+                {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                   <td class="govuk-table__cell">South West</td>
                 {% else %}
                   <td class="govuk-table__cell">North West</td>
@@ -110,7 +110,7 @@
                 <td class="govuk-table__header govuk-table__cell"><a href="#">Newtown Cofe Primary School</a></td>
                 <td class="govuk-table__cell">123490</td>
                 <td class="govuk-table__cell">Little Hangleton</td>
-                {% if (data['userType'] == 'regional-casework-services') %}
+                {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                   <td class="govuk-table__cell">London</td>
                 {% else %}
                   <td class="govuk-table__cell">North West</td>
@@ -123,7 +123,7 @@
                 <td class="govuk-table__header govuk-table__cell"><a href="#">Weydon School</a></td>
                 <td class="govuk-table__cell">136531</td>
                 <td class="govuk-table__cell">Lancaster</td>
-                {% if (data['userType'] == 'regional-casework-services') %}
+                {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                   <td class="govuk-table__cell">North West</td>
                 {% else %}
                   <td class="govuk-table__cell">Regional Casework Services</td>
@@ -136,7 +136,7 @@
                 <td class="govuk-table__header govuk-table__cell"><a href="#">Newham Bridge Primary School</a></td>
                 <td class="govuk-table__cell">111585</td>
                 <td class="govuk-table__cell">Scarfolk</td>
-                {% if (data['userType'] == 'regional-casework-services') %}
+                {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                   <td class="govuk-table__cell">London</td>
                 {% else %}
                   <td class="govuk-table__cell">North West</td>
@@ -149,7 +149,7 @@
                 <td class="govuk-table__header govuk-table__cell"><a href="#">The Mill School</a></td>
                 <td class="govuk-table__cell">126530</td>
                 <td class="govuk-table__cell">Lancashire</td>
-                {% if (data['userType'] == 'regional-casework-services') %}
+                {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                   <td class="govuk-table__cell">North West</td>
                 {% else %}
                   <td class="govuk-table__cell">Regional Casework Services</td>
@@ -162,7 +162,7 @@
                 <td class="govuk-table__header govuk-table__cell"><a href="#">Catmose College</a></td>
                 <td class="govuk-table__cell">136530</td>
                 <td class="govuk-table__cell">Market Basing</td>
-                {% if (data['userType'] == 'regional-casework-services') %}
+                {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                   <td class="govuk-table__cell">South East</td>
                 {% else %}
                   <td class="govuk-table__cell">North West</td>
@@ -175,7 +175,7 @@
                 <td class="govuk-table__header govuk-table__cell"><a href="#">Sunbury Manor School</a></td>
                 <td class="govuk-table__cell">136529</td>
                 <td class="govuk-table__cell">Cumbria</td>
-                {% if (data['userType'] == 'regional-casework-services') %}
+                {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                   <td class="govuk-table__cell">North West</td>
                 {% else %}
                   <td class="govuk-table__cell">Regional Casework Services</td>
@@ -188,7 +188,7 @@
                 <td class="govuk-table__header govuk-table__cell"><a href="#">Vickerstown School</a></td>
                 <td class="govuk-table__cell">112209</td>
                 <td class="govuk-table__cell">Preston</td>
-                {% if (data['userType'] == 'regional-casework-services') %}
+                {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                   <td class="govuk-table__cell">North West</td>
                 {% else %}
                   <td class="govuk-table__cell">North West</td>
@@ -201,7 +201,7 @@
                 <td class="govuk-table__header govuk-table__cell"><a href="#">Ladygrove Primary School</a></td>
                 <td class="govuk-table__cell">123438</td>
                 <td class="govuk-table__cell">Weatherfield</td>
-                {% if (data['userType'] == 'regional-casework-services') %}
+                {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                   <td class="govuk-table__cell">London</td>
                 {% else %}
                   <td class="govuk-table__cell">North West</td>
@@ -214,7 +214,7 @@
                 <td class="govuk-table__header govuk-table__cell"><a href="#">The Coopers' Company and Coborn School</a></td>
                 <td class="govuk-table__cell">136600</td>
                 <td class="govuk-table__cell">Bury</td>
-                {% if (data['userType'] == 'regional-casework-services') %}
+                {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                   <td class="govuk-table__cell">North West</td>
                 {% else %}
                   <td class="govuk-table__cell">North West</td>
@@ -227,7 +227,7 @@
                 <td class="govuk-table__header govuk-table__cell"><a href="#">Ford Cofe Primary School</a></td>
                 <td class="govuk-table__cell">123476</td>
                 <td class="govuk-table__cell">Liverpool</td>
-                {% if (data['userType'] == 'regional-casework-services') %}
+                {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                   <td class="govuk-table__cell">North West</td>
                 {% else %}
                   <td class="govuk-table__cell">North West</td>
@@ -240,7 +240,7 @@
                 <td class="govuk-table__header govuk-table__cell"><a href="#">Church of The Ascension Cofe Primary School</a></td>
                 <td class="govuk-table__cell">103835</td>
                 <td class="govuk-table__cell">Malbry</td>
-                {% if (data['userType'] == 'regional-casework-services') %}
+                {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
                   <td class="govuk-table__cell">Yorkshire and the Humber</td>
                 {% else %}
                   <td class="govuk-table__cell">Regional Casework Services</td>

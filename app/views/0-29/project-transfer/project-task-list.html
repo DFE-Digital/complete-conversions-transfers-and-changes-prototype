@@ -59,14 +59,14 @@
         </div>
         <div class="govuk-grid-column-two-thirds">
           <form action="project-task-list" method="post" class="form">
-            <h2 class="govuk-heading-l">Project task list</h2>
+            <h2 class="govuk-heading-l">Task list</h2>
             <ol class="app-task-list">
               <li id="project-kick-off">
                 <h2 class="app-task-list__section">Project kick-off</h2>
                 <ul class="app-task-list__items">
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="regional-delivery-officer-handover/single-page-questions" aria-describedby="handoverStatus">
+                      <a href="#">
                         Handover with regional delivery officer</a>
                     </span>
                     {% if (data['handoverStatus'] == 'completed') %}
@@ -82,7 +82,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="external-stakeholder-kick-off/single-page-questions" aria-describedby="externalStakeHolderKickoff">
+                      <a href="#">
                         External stakeholder kick-off</a>
                     </span>
                     {% if (data['externalStakeHolderKickoffStatus'] == 'completed') %}
@@ -98,7 +98,23 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="process-conversion-grant/single-page-questions" aria-describedby="processConversionGrantStatus">
+                      <a href="#">
+                        Check accuracy of high needs places information</a>
+                    </span>
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="">
+                        Not started</strong>
+                  </li>
+                  <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                      <a href="#">
+                        Complete a notification of change document</a>
+                    </span>
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="">
+                        Not started</strong>
+                  </li>
+                  <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                      <a href="#">
                         Process conversion grant</a>
                     </span>
                     {% if (data['processConversionGrantStatus'] == 'completed') %}
@@ -112,6 +128,30 @@
                         Not started</strong>
                     {% endif %}
                   </li>
+                  <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                      <a href="#">
+                        Confirm and process the sponsored support grant</a>
+                    </span>
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="">
+                        Not started</strong>
+                  </li>
+                  <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                      <a href="#">
+                        Confirm the academy name</a>
+                    </span>
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="">
+                        Not started</strong>
+                  </li>
+                  <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                      <a href="#">
+                        Confirm who will get the funding agreement letter</a>
+                    </span>
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="">
+                        Not started</strong>
+                  </li>
                 </ul>
               </li>
 
@@ -120,7 +160,7 @@
                 <ul class="app-task-list__items">
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="land-questionnaire/single-page-questions" aria-describedby="landQuestionnaireStatus">
+                      <a href="#">
                         Land questionnaire</a>
                     </span>
                     {% if (data['landQuestionnaireStatus'] == 'completed') %}
@@ -136,7 +176,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="land-registry-title-plans/single-page-questions" aria-describedby="landRegistryStatus">
+                      <a href="#">
                         Land registry title plans</a>
                     </span>
                     {% if (data['landRegistryStatus'] == 'completed') %}
@@ -152,7 +192,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="supplemental-funding-agreement/single-page-questions" aria-describedby="supplementalFundingAgreementStatus">
+                      <a href="#">
                         Supplemental funding agreement</a>
                     </span>
                     {% if (data['supplementalFundingAgreementStatus'] == 'completed') %}
@@ -168,7 +208,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="church-supplemental-agreement/single-page-questions" aria-describedby="churchSupplementalFundingAgreementStatus">
+                      <a href="#">
                         Church supplemental agreement</a>
                     </span>
                     {% if (data['churchSupplementalFundingAgreementStatus'] == 'completed') %}
@@ -184,7 +224,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="master-funding-agreement/single-page-questions" aria-describedby="masterFundingAgreementStatus">
+                      <a href="#">
                         Master funding agreement</a>
                     </span>
                     {% if (data['masterFundingAgreementStatus'] == 'completed') %}
@@ -200,7 +240,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="articles-of-association/single-page-questions" aria-describedby="articlesOfAssociationStatus">
+                      <a href="#">
                         Articles of association</a>
                     </span>
                     {% if (data['articlesOfAssociationStatus'] == 'completed') %}
@@ -216,7 +256,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="deed-of-variation/single-page-questions" aria-describedby="deedOfVariationStatus">
+                      <a href="#">
                         Deed of variation</a>
                     </span>
                     {% if (data['deedOfVariationStatus'] == 'completed') %}
@@ -232,7 +272,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="trust-modification-order/single-page-questions" aria-describedby="trustModificationOrderStatus">
+                      <a href="#">
                         Trust modification order</a>
                     </span>
                     {% if (data['trustModificationOrderStatus'] == 'completed') %}
@@ -248,7 +288,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="direction-to-transfer/single-page-questions" aria-describedby="directionToTransferStatus">
+                      <a href="#">
                         Direction to transfer</a>
                     </span>
                     {% if (data['directionToTransferStatus'] == 'completed') %}
@@ -264,23 +304,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="commercial-transfer-agreement/single-page-questions" aria-describedby="landRegistryStatus">
-                        Commercial transfer agreement</a>
-                    </span>
-                    {% if (data['commercialTransferAgreementStatus'] == 'completed') %}
-                      <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="landRegistryStatus">
-                        Completed</strong>
-                    {% elseif (data['commercialTransferAgreementStatus'] == 'inProgress') %}
-                      <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="landRegistryStatus">
-                        In progress</strong>
-                    {% else %}
-                      <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="landRegistryStatus">
-                        Not started</strong>
-                    {% endif %}
-                  </li>
-                  <li class="app-task-list__item">
-                    <span class="app-task-list__task-name">
-                      <a href="125-year-lease/single-page-questions" aria-describedby="landRegistryStatus">
+                      <a href="#">
                         125 year lease</a>
                     </span>
                     {% if (data['commercialTransferAgreementStatus'] == 'completed') %}
@@ -297,7 +321,7 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="subleases/single-page-questions" aria-describedby="landRegistryStatus">
+                    <a href="#">
                       Subleases</a>
                   </span>
                   {% if (data['commercialTransferAgreementStatus'] == 'completed') %}
@@ -313,7 +337,7 @@
                 </li>
                 <li class="app-task-list__item">
                   <span class="app-task-list__task-name">
-                    <a href="tenancy-at-will/single-page-questions" aria-describedby="landRegistryStatus">
+                    <a href="#">
                       Tenancy at will</a>
                   </span>
                   {% if (data['commercialTransferAgreementStatus'] == 'completed') %}
@@ -327,6 +351,22 @@
                       Not started</strong>
                   {% endif %}
                 </li>
+                <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                      <a href="#">
+                        Commercial transfer agreement</a>
+                    </span>
+                    {% if (data['commercialTransferAgreementStatus'] == 'completed') %}
+                      <strong class="govuk-tag app-task-list__tag govuk-tag--turquoise" id="landRegistryStatus">
+                        Completed</strong>
+                    {% elseif (data['commercialTransferAgreementStatus'] == 'inProgress') %}
+                      <strong class="govuk-tag app-task-list__tag govuk-tag--orange" id="landRegistryStatus">
+                        In progress</strong>
+                    {% else %}
+                      <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="landRegistryStatus">
+                        Not started</strong>
+                    {% endif %}
+                  </li>
                 </ul>
               </li>
 
@@ -335,7 +375,24 @@
                 <ul class="app-task-list__items">
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="baseline-checks/single-page-questions" aria-describedby="contact-details-status">
+                      <a href="#">
+                        Confirm the academy's risk protection arrangement</a>
+                    </span>
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="">
+                        Not started</strong>
+                  </li>
+                  <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                      <a href="#">
+                        Complete and send single worksheet</a>
+                    </span>
+                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="">
+                        Not started</strong>
+                  </li>
+                  {# 
+                  <li class="app-task-list__item">
+                    <span class="app-task-list__task-name">
+                      <a href="#">
                         Check the Baseline</a>
                     </span>
                     {% if (data['testReceivedDocumentStatus'] == 'completed') %}
@@ -351,7 +408,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="land-issues/single-page-questions" aria-describedby="list-convictions-status">
+                      <a href="#">
                         Describe land issues</a>
                     </span>
                     {% if (data['describeLandIssuesStatus'] == 'completed') %}
@@ -368,9 +425,10 @@
                         Not started</strong>
                     {% endif %}
                   </li>
+                  #}
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="confirm-school-actions-completed/single-page-questions" aria-describedby="list-convictions-status">
+                      <a href="#">
                         Confirm the school has completed all actions</a>
                     </span>
                     <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="articlesOfAssociationStatus">
@@ -378,7 +436,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="confirm-all-conditions-met/single-page-questions" aria-describedby="list-convictions-status">
+                      <a href="#">
                         Confirm all conditions have been met</a>
                     </span>
                     <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="articlesOfAssociationStatus">
@@ -386,8 +444,8 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="school-opening-date/single-page-questions" aria-describedby="list-convictions-status">
-                        Confirm opening date with the school</a>
+                      <a href="#">
+                        Share the grant certifcate and information about opening</a>
                     </span>
                     <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="articlesOfAssociationStatus">
                       Not started</strong>
@@ -400,17 +458,7 @@
                 <ul class="app-task-list__items">
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="email-regional-delivery-officer-school-opened/single-page-questions" aria-describedby="contact-details-status">
-                        Tell the regional delivery officer that the academy has
-                        opened
-                      </a>
-                    </span>
-                    <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="articlesOfAssociationStatus">
-                      Not started</strong>
-                  </li>
-                  <li class="app-task-list__item">
-                    <span class="app-task-list__task-name">
-                      <a href="redact-and-send-documents/single-page-questions" aria-describedby="contact-details-status">
+                      <a href="#">
                         Redact and send documents
                       </a>
                     </span>
@@ -419,7 +467,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="education-skills-funding-agency-handover/single-page-questions" aria-describedby="list-convictions-status">
+                      <a href="#">
                         Update ESFA data in KIM</a>
                     </span>
                     <strong class="govuk-tag app-task-list__tag govuk-tag--blue" id="articlesOfAssociationStatus">
@@ -427,7 +475,7 @@
                   </li>
                   <li class="app-task-list__item">
                     <span class="app-task-list__task-name">
-                      <a href="complete-processing-of-conversion-grant/single-page-questions" aria-describedby="list-convictions-status">
+                      <a href="#">
                         Receive grant payment certificate
                       </a>
                     </span>

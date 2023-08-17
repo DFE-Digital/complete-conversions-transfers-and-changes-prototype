@@ -9,9 +9,9 @@ module.exports = function (router) {
   router.post('/' + version + '/assign-user/edit-contact', function (req, res) {
 
     if ( req.session.data['fromTeamLeadProjectList'] == 'true' ){
-      res.redirect('/' + version + '/project-list/team/unassigned')
+      res.redirect('/' + version + '/projects/team/unassigned')
     } else {
-      res.redirect('../about-the-project')
+      res.redirect('../project/conversion/about-the-project')
     }
 
   })

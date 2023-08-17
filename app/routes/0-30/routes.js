@@ -10,9 +10,9 @@ module.exports = function (router) {
     const userType = req.session.data["userType"];
 
     if (userType == "team-lead") {
-      res.redirect("project-list/team-projects/unassigned");
+      res.redirect("projects/team-projects/unassigned");
     } else {
-      res.redirect("project-list/your-projects/in-progress");
+      res.redirect("projects/your-projects/in-progress");
     }
   });
 
@@ -50,9 +50,9 @@ module.exports = function (router) {
     const userType = req.session.data['userType']
 
     if (userType == 'team-lead'){
-      res.redirect('project-list/team-projects/unassigned')
+      res.redirect('projects/team-projects/unassigned')
     } else {
-      res.redirect('project-list/caseworker/in-progress')
+      res.redirect('projects/caseworker/in-progress')
     }
   })
 

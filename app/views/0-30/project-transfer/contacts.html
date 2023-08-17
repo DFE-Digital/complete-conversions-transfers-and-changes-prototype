@@ -9,21 +9,21 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {% block beforeContent %}
-  {% include "./includes/phase.html" %}
+  {% include "../includes/phase.html" %}
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <header class="govuk-!-margin-bottom-8">
-      <span class="govuk-caption-l">URN 102062</span>
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">St. Wilfred's Primary School</h1>
-      <p class="govuk-body-l">Incoming trust: Bosco Catholic Education Trust</p>
-    </header>
+        <span class="govuk-caption-l">URN 102062</span>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">Witton-Le-Wear Primary School</h1>
+        <p class="govuk-body-l">Incoming trust: Advance Learning Partnership</p>
+      </header>
       <nav class="sub-navigation" aria-label="Sub navigation">
         <ul class="sub-navigation__list">
            <li class="sub-navigation__item">
-            <a class="sub-navigation__link" href="project-information">Project information</a>
+            <a class="sub-navigation__link" href="about-the-project">About the project</a>
           </li>
           <li class="sub-navigation__item">
             <a class="sub-navigation__link" href="project-task-list">Task list</a>
@@ -32,10 +32,10 @@
             <a class="sub-navigation__link" href="project-notes">Notes</a>
           </li>
           <li class="sub-navigation__item">
-            <a class="sub-navigation__link" aria-current="page" href="#">External contacts</a>
+            <a class="sub-navigation__link" aria-current="page" href="#">Contacts</a>
           </li>
           <li class="sub-navigation__item">
-            <a class="sub-navigation__link" href="project-internal-contacts">Internal contacts</a>
+            <a class="sub-navigation__link" href="assignment">Assignment</a>
           </li>
         </ul>
       </nav>
@@ -45,7 +45,7 @@
             <form action="contacts" method="post" class="form">
               <h2 class="govuk-heading-l">
                 <label class="govuk-label govuk-label--l" for="project-notes">
-                  External contacts
+                  Contacts
                 </label>
               </h2>
               {{ govukButton({ text: "Add contact" }) }}

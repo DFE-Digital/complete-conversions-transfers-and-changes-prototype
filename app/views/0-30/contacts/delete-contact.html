@@ -1,0 +1,37 @@
+{% extends "0-30/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <form action="edit-contact" method="post" class="form">
+          <h1 class="govuk-heading-l">
+            <label class="govuk-label govuk-label--l">Are you sure you want to
+              delete {Contact Name}?
+            </label>
+          </h1>
+          <div class="govuk-form-group">
+            <p class="govuk-body">This will remove the contact for {Contact For}
+              called {Contact Name} from the contacts list.</p>
+          </div>
+          <div class="govuk-button-group">
+            {{ govukButton({ text: "Delete", classes: "govuk-button--warning"}) }}
+            <a class="govuk-link" href="#">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

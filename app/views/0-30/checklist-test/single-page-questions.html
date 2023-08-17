@@ -1,0 +1,97 @@
+{% extends "0-30/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl">CHECKLIST TEST</h1>
+                </div>
+                <div id="changed-name-hint" class="govuk-hint">
+                  <p class="govuk-body">This is a task level hint, that
+                    articulates something relevant.</p>
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Help doing this task
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <p class="govuk-body">Send the Trust modification order
+                      to the legal department with a copy of the original
+                      deed so that it can be cleared.</p>
+                    <p class="govuk-body">It can take a number of weeks to
+                      hear back from the legal team.</p>
+                  </div>
+                </details>
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="testReceivedDocument" name="testReceivedDocument" type="checkbox" value="Received document" {{ checked("testReceivedDocument", "Received document") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="testReceivedDocument">
+                      Received document
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="testReceivedDocument-2" name="testReceivedDocument" type="checkbox" value="Sent to policy team" aria-describedby="testReceivedDocument-item-hint" {{ checked("testReceivedDocument", "Sent to policy team") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="testReceivedDocument-2">
+                      Sent to policy team
+                    </label>
+                    <div id="testReceivedDocument-item-hint" class="govuk-hint govuk-checkboxes__hint" >
+                      Action level hint, this is also a useful thing to know,
+                      but related to this specific action.
+                    </div>
+                    <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Help sending this to the policy team
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        <p class="govuk-body">Send this to the policy team,
+                          via electronic mail.</p>
+                        <p class="govuk-body">It can take a number of weeks to
+                          hear back from the legal team.</p>
+                      </div>
+                    </details>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="testReceivedDocument-3" name="testReceivedDocument" type="checkbox" value="Cleared document" {{ checked("testReceivedDocument", "Cleared document") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="testReceivedDocument-3">
+                      Cleared document
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item" style="display: none;">
+                    <input class="govuk-checkboxes__input" id="testReceivedDocument-4" name="testReceivedDocument" type="checkbox" value="" checked="checked">
+                    <label class="govuk-label govuk-checkboxes__label" for="testReceivedDocument-4">
+                      Empty
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,183 @@
+{% extends "0-30/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  All projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../../includes/phase.html" %}
+
+  </div>
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+  {{ mojPrimaryNavigation({
+    label: 'Primary navigation',
+    items: [
+      {
+        text: 'In progress',
+        href: '../in-progress'
+      },
+      {
+        text: 'Opening',
+        href: '../opening'
+      },
+	    {
+        text: 'By region',
+        href: '../by-region',
+         active: true
+      },
+      {
+        text: 'By user',
+        href: '../by-user'
+      },
+      {
+        text: 'By trust',
+        href: '../by-trust'
+      },
+      {
+        text: 'By local authority',
+        href: '../by-local-authority'
+      },
+      {
+        text: 'Completed',
+        href: '../completed'
+      },
+      {
+        text: 'Statistics',
+        href: '#'
+      }
+    ]
+  }) }}
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Projects in the East Midlands
+      </h1>
+
+			
+      <div>
+        
+        <table class="govuk-table" name="projects_table" aria-label="Projects table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col">Schools</th>
+              <th class="govuk-table__header" scope="col">URN</th>
+              <th class="govuk-table__header" scope="col">Local authority</th>
+              <th class="govuk-table__header" scope="col">Team</th>
+              <th class="govuk-table__header" scope="col">Assigned to</th>
+              <th class="govuk-table__header" scope="col">Conversion or transfer date</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">The Coopers's Company and Coborn School</a></td>
+              <td class="govuk-table__cell">136600</td>
+              <td class="govuk-table__cell">Amber Valley</td>
+              <td class="govuk-table__cell">Regional Casework Services</td>
+              <td class="govuk-table__cell">Joseph Bloggs</td>
+              <td class="govuk-table__cell">Sep 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Westbourne Road Primary School</a></td>
+              <td class="govuk-table__cell">136600</td>
+              <td class="govuk-table__cell">Ashfield</td>
+              <td class="govuk-table__cell">East Midlands</td>
+              <td class="govuk-table__cell">Philip Sparks</td>
+              <td class="govuk-table__cell">Oct 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Fleet Primary School</a></td>
+              <td class="govuk-table__cell">136600</td>
+              <td class="govuk-table__cell">Bolsover</td>
+              <td class="govuk-table__cell">East Midlands</td>
+              <td class="govuk-table__cell">Sarah Doe</td>
+              <td class="govuk-table__cell">Dec 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">The Coopers's Company and Coborn School</a></td>
+              <td class="govuk-table__cell">136600</td>
+              <td class="govuk-table__cell">Amber Valley</td>
+              <td class="govuk-table__cell">East Midlands</td>
+              <td class="govuk-table__cell">Joseph Bloggs</td>
+              <td class="govuk-table__cell">Sep 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Westbourne Road Primary School</a></td>
+              <td class="govuk-table__cell">136600</td>
+              <td class="govuk-table__cell">Ashfield</td>
+              <td class="govuk-table__cell">East Midlands</td>
+              <td class="govuk-table__cell">Philip Sparks</td>
+              <td class="govuk-table__cell">Oct 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">St Mary's Primary School</a></td>
+              <td class="govuk-table__cell">136600</td>
+              <td class="govuk-table__cell">Bolsover</td>
+              <td class="govuk-table__cell">Regional Casework Services</td>
+              <td class="govuk-table__cell">Sarah Doe</td>
+              <td class="govuk-table__cell">Dec 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">St Michael's School</a></td>
+              <td class="govuk-table__cell">136600</td>
+              <td class="govuk-table__cell">Amber Valley</td>
+              <td class="govuk-table__cell">Regional Casework Services</td>
+              <td class="govuk-table__cell">Markus Pickering</td>
+              <td class="govuk-table__cell">Sep 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Westbourne Baptist Primary School</a></td>
+              <td class="govuk-table__cell">136600</td>
+              <td class="govuk-table__cell">Ashfield</td>
+              <td class="govuk-table__cell">East Midlands</td>
+              <td class="govuk-table__cell">Philip Sparks</td>
+              <td class="govuk-table__cell">Oct 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">St John's Primary School</a></td>
+              <td class="govuk-table__cell">136600</td>
+              <td class="govuk-table__cell">Bolsover</td>
+              <td class="govuk-table__cell">East Midlands</td>
+              <td class="govuk-table__cell">Sarah Doe</td>
+              <td class="govuk-table__cell">Dec 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">The Coopers's Company and Coborn School</a></td>
+              <td class="govuk-table__cell">136600</td>
+              <td class="govuk-table__cell">Amber Valley</td>
+              <td class="govuk-table__cell">East Midlands</td>
+              <td class="govuk-table__cell">Joseph Bloggs</td>
+              <td class="govuk-table__cell">Sep 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">River Road Primary School</a></td>
+              <td class="govuk-table__cell">136600</td>
+              <td class="govuk-table__cell">Ashfield</td>
+              <td class="govuk-table__cell">Regional Casework Services</td>
+              <td class="govuk-table__cell">Philip Sparks</td>
+              <td class="govuk-table__cell">Oct 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Fleet Primary School</a></td>
+              <td class="govuk-table__cell">136600</td>
+              <td class="govuk-table__cell">Bolsover</td>
+              <td class="govuk-table__cell">East Midlands</td>
+              <td class="govuk-table__cell">Sarah Doe</td>
+              <td class="govuk-table__cell">Dec 2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}

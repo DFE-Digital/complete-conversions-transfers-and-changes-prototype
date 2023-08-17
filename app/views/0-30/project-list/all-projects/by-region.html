@@ -1,0 +1,129 @@
+{% extends "0-30/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  All projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+
+  </div>
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+  {{ mojPrimaryNavigation({
+    label: 'Primary navigation',
+    items: [
+      {
+        text: 'In progress',
+        href: 'in-progress'
+      },
+      {
+        text: 'Opening',
+        href: 'opening'
+      },
+	    {
+        text: 'By region',
+        href: 'by-region',
+		    active: true
+      },
+      {
+        text: 'By user',
+        href: 'by-user'
+      },
+      {
+        text: 'By trust',
+        href: 'by-trust'
+      },
+      {
+        text: 'By local authority',
+        href: 'by-local-authority'
+      },
+      {
+        text: 'Completed',
+        href: 'completed'
+      },
+      {
+        text: 'Statistics',
+        href: '#'
+      }
+    ]
+  }) }}
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        All projects by region
+      </h1>
+
+			
+      <div class="govuk-body">
+        
+        <table class="govuk-table" name="projects_table" aria-label="Projects table">
+					<thead class="govuk-table__head">
+						<tr class="govuk-table__row">
+							<th class="govuk-table__header" scope="col">Region</th>
+							<th class="govuk-table__header govuk-table__header--numeric" scope="col">Conversions</th>
+							<th class="govuk-table__header govuk-table__header--numeric" scope="col">Transfers</th>
+						</tr>
+					</thead>
+					<tbody class="govuk-table__body">
+						<tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="./region/east-midlands">East Midlands</a></td>
+							<td class="govuk-table__cell govuk-table__cell--numeric">22</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">33</td>
+						</tr>
+						<tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">East of England</a></td>
+							<td class="govuk-table__cell govuk-table__cell--numeric">13</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">33</td>
+						</tr>
+						<tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">London</a></td>
+							<td class="govuk-table__cell govuk-table__cell--numeric">345</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">125</td>
+						</tr>
+						<tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">North East</a></td>
+							<td class="govuk-table__cell govuk-table__cell--numeric">76</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">14</td>
+						</tr>
+						<tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">North West</a></td>
+							<td class="govuk-table__cell govuk-table__cell--numeric">48</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">23</td>
+						</tr>
+						<tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">South East</a></td>
+							<td class="govuk-table__cell govuk-table__cell--numeric">150</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">94</td>
+						</tr>
+						<tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">South West</a></td>
+							<td class="govuk-table__cell govuk-table__cell--numeric">230</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+						</tr>
+						<tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">West Midlands</a></td>
+							<td class="govuk-table__cell govuk-table__cell--numeric">22</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">76</td>
+						</tr>
+						<tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Yorkshire and Humber</a></td>
+							<td class="govuk-table__cell govuk-table__cell--numeric">22</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">12</td>
+						</tr>
+					</tbody>
+				</table>
+      </div>
+    </div>
+  </div>
+{% endblock %}

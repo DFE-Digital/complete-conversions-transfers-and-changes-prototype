@@ -1,0 +1,141 @@
+{% extends "0-30/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  {{ 'RCS' if data['userType'] in ['team-lead', 'regional-casework-services'] else 'Your team' }} projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+
+  </div>
+  <div class="moj-primary-navigation">
+    <div class="moj-primary-navigation__container">
+      <div class="moj-primary-navigation__nav">
+        <nav class="moj-primary-navigation" aria-label="Primary navigation">
+          <ul class="moj-primary-navigation__list">
+            {% if (data['userType'] == 'team-lead') %}
+              <li class="moj-primary-navigation__item">
+                <a class="moj-primary-navigation__link" href="unassigned">Unassigned</a>
+              </li>
+            {% endif %}
+            <li class="moj-primary-navigation__item">
+				<a class="moj-primary-navigation__link" href="in-progress">In progress</a>
+            </li>
+            <li class="moj-primary-navigation__item">
+              <a class="moj-primary-navigation__link" aria-current="page" href="opening">Opening</a>
+            </li>
+            <li class="moj-primary-navigation__item">
+              <a class="moj-primary-navigation__link" href="by-user">By user</a>
+            </li>
+            <li class="moj-primary-navigation__item">
+              <a class="moj-primary-navigation__link" href="completed">Completed</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+</div>
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Academies opening in July 2023
+      </h1>
+			<p>Schools that are expected to become academies.</p>
+			
+			{%- from "moj/components/sub-navigation/macro.njk" import mojSubNavigation -%}
+
+			{{ mojSubNavigation({
+				label: 'Sub navigation',
+				items: [{
+					text: 'Opening as planned',
+					href: 'opening',
+					active: true
+				}, {
+					text: 'Revised conversion date',
+					href: '#'
+				}]
+			}) }}
+
+			
+      <form action="unassigned" method="post" class="form">
+        
+        <table class="govuk-table" name="projects_table" aria-label="Projects table">
+			<thead class="govuk-table__head">
+				<tr class="govuk-table__row">
+					<th class="govuk-table__header" scope="col">School</th>
+					<th class="govuk-table__header" scope="col">URN</th>
+					<th class="govuk-table__header" scope="col">Local authority</th>
+					{% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
+						<th class="govuk-table__header" scope="col">Region</th>
+					{% else %}
+						<th class="govuk-table__header" scope="col">Team</th>
+					{% endif %}
+					<th class="govuk-table__header" scope="col">Project type</th>
+					<th class="govuk-table__header" scope="col">All conditions met</th>
+				</tr>
+			</thead>
+			<tbody class="govuk-table__body">
+				<tr class="govuk-table__row">
+					<td class="govuk-table__header govuk-table__cell"><a href="#">Inglehurst Infant School</a></td>
+					<td class="govuk-table__cell">120015</td>
+					<td class="govuk-table__cell">Blackhall</td>
+					{% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
+						<td class="govuk-table__cell">East Midlands</td>
+					{% else %}
+						<td class="govuk-table__cell">North West</td>
+					{% endif %}
+					<td class="govuk-table__cell">Conversion</td>
+					<td class="govuk-table__cell">Not yet</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__header govuk-table__cell"><a href="#">St Michael's Church of England Primary School</a></td>
+					<td class="govuk-table__cell">122280</td>
+					<td class="govuk-table__cell">Larnashire</td>
+					{% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
+						<td class="govuk-table__cell">North East</td>
+					{% else %}
+						<td class="govuk-table__cell">North West</td>
+					{% endif %}
+					<td class="govuk-table__cell">Conversion</td>
+					<td class="govuk-table__cell">Yes</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__header govuk-table__cell"><a href="#">Bosco Catholic Education Trust</a></td>
+					<td class="govuk-table__cell">103165</td>
+					<td class="govuk-table__cell">West Morton</td>
+					{% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
+						<td class="govuk-table__cell">South East</td>
+					{% else %}
+						<td class="govuk-table__cell">Regional Casework Services</td>
+					{% endif %}
+					<td class="govuk-table__cell">Transfer</td>
+					<td class="govuk-table__cell">Yes</td>
+				</tr>
+				<tr class="govuk-table__row">
+					<td class="govuk-table__header govuk-table__cell"><a href="#">Witton-Le-Wear Primary School</a></td>
+					<td class="govuk-table__cell">109241</td>
+					<td class="govuk-table__cell">Preston</td>
+					{% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
+						<td class="govuk-table__cell">North West</td>
+					{% else %}
+						<td class="govuk-table__cell">North West</td>
+					{% endif %}
+					<td class="govuk-table__cell">Transfer</td>
+					<td class="govuk-table__cell">Yes</td>
+				</tr>
+			</tbody>
+		</table>
+    </div>
+  </div>
+{% endblock %}

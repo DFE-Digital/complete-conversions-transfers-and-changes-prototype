@@ -1,0 +1,112 @@
+{% extends "0-30/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Confirm
+                    the school has completed all actions</h1>
+                  <div class="govuk-hint">
+                    Check the school have completed all their tasks and save
+                    their responses in the school's SharePoint folder.
+                  </div>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-5" name="externalStakeHolderKickoff" type="checkbox" value="hostKickOffMeeting" {{ checked("externalStakeHolderKickoff", "hostKickOffMeeting") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-5">
+                        Email the main contact for the conversion
+                      </label>
+                      <div class="govuk-checkboxes__guidance">
+                        <details class="govuk-details" data-module="govuk-details">
+                          <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                              How to structure your email
+                            </span>
+                          </summary>
+                          <div class="govuk-details__text">
+                            <p class="govuk-body">You should ask them to check
+                              and confirm they've completed all tasks.</p>
+                            <p class="govuk-body">You can <a href="https://educationgovuk.sharepoint.com/:w:/r/sites/lvedfe00116/_layouts/15/Doc.aspx?sourcedoc=%7BA4E75C24-7E01-4732-9065-EEC840AFE132%7D&file=RSCApprovaltoAcademyOpeningDeskInstructions20200922.docx&action=default&mobileredirect=true" target="_blank">
+                              use the email template (opens in a new tab)</a> on
+                              pages 19 and 20 in your desk instructions to help
+                              structure your email.</p>
+                          </div>
+                        </details>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff">
+                        Save the responses to the checklist in the school's
+                        SharePoint folder
+                      </label>
+                      <div class="govuk-checkboxes__guidance">
+                        <details class="govuk-details" data-module="govuk-details">
+                          <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                              What to do if the school has not completed the
+                              tasks
+                            </span>
+                          </summary>
+                          <div class="govuk-details__text">
+                            <p class="govuk-body">Depending on the scale of the
+                              outstanding tasks, you may need to move the target
+                              conversion date to the next month, or later.</p>
+                            <p class="govuk-body">If the conversion date needs
+                              to be moved, you must:</p>
+                            <ol class="govuk-list govuk-list--number">
+                              <li>inform the school of the outstanding tasks</li>
+                              <li>agree a new target conversion date with all
+                                stakeholders</li>
+                              <li>email the Academies Operational Practice Unit
+                                at <a href="mailto:academiesdelivery.operations@education.gov.uk">
+                                  academiesdelivery.operations@education.gov.uk</a>
+                                with the new date</li>
+                              <li>change the date in KIM</li>
+                              <li>inform the regional delivery officer who
+                                started on this project</li>
+                            </ol>
+                          </div>
+                        </details>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-7" name="externalStakeHolderKickoff" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-7">
+                        empty
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-form-group">
+                  {{ govukButton({ text: "Continue" }) }}
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

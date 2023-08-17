@@ -1,0 +1,206 @@
+{% extends "0-30/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  All projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+
+  </div>
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+  {{ mojPrimaryNavigation({
+    label: 'Primary navigation',
+    items: [
+      {
+        text: 'In progress',
+        href: 'in-progress'
+      },
+      {
+        text: 'Opening',
+        href: 'opening'
+      },
+	    {
+        text: 'By region',
+        href: 'by-region'
+      },
+      {
+        text: 'By user',
+        href: 'by-user'
+      },
+      {
+        text: 'By trust',
+        href: 'by-trust',
+        active: true
+      },
+      {
+        text: 'By local authority',
+        href: 'by-local-authority'
+      },
+      {
+        text: 'Completed',
+        href: 'completed'
+      },
+      {
+        text: 'Statistics',
+        href: '#'
+      }
+    ]
+  }) }}
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        All projects by trust
+      </h1>
+
+			
+      <div class="govuk-body">
+        
+        <table class="govuk-table" name="projects_table" aria-label="Projects table">
+          <caption class="govuk-table__caption govuk-!-display-none">Table of trusts that have in-progress projects</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col">Trust</th>
+              <th class="govuk-table__header" scope="col">Group identifier</th>
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">Conversions</th>
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">Transfers</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">5 Dimensions Trust</a></td>
+              <td class="govuk-table__cell">TR01904</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">6</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Advance Learning Partnership</a></td>
+              <td class="govuk-table__cell">TR01611</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Bosco Catholic Education Trust</a></td>
+              <td class="govuk-table__cell">TR03680</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Britannia Education Trust</a></td>
+              <td class="govuk-table__cell">TR03687</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Brooke Hill Academy Trust Limited</a></td>
+              <td class="govuk-table__cell">TR00326</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Derby Diocesan Academy Trust</a></td>
+              <td class="govuk-table__cell">TR02659</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Elements Diocesan Learning Trust</a></td>
+              <td class="govuk-table__cell">TR03991</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Hisp Multi Academy Trust Ltd</a></td>
+              <td class="govuk-table__cell">TR02285</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Leeds Diocesan Learning Trust</a></td>
+              <td class="govuk-table__cell">TR04002</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Moulsham Infant School</a></td>
+              <td class="govuk-table__cell">TR01463</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">North Cotswold Schools Federation Mat</a></td>
+              <td class="govuk-table__cell">TR04003</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Queen Mary's High School (Walsall)</a></td>
+              <td class="govuk-table__cell">TR01716</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Rawlins Academy</a></td>
+              <td class="govuk-table__cell">TR01740</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Scholars' Education Trust</a></td>
+              <td class="govuk-table__cell">TR01926</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Shires Multi Academy Trust</a></td>
+              <td class="govuk-table__cell">TR02216</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Spiral Partnership Trust</a></td>
+              <td class="govuk-table__cell">TR00796</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">The Brooke Weston Trust</a></td>
+              <td class="govuk-table__cell">TR00327</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">The Cedars Academy Trust</a></td>
+              <td class="govuk-table__cell">TR00424</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">The Chalfonts Community College</a></td>
+              <td class="govuk-table__cell">TR00434</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">The Diocese Of Norwich Education And Academies Trust</a></td>
+              <td class="govuk-table__cell">TR00663</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}

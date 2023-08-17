@@ -11,7 +11,7 @@ module.exports = function (router) {
     if ( req.session.data['fromTeamLeadProjectList'] == 'true' ){
       res.redirect('/' + version + '/project-list/team/unassigned')
     } else {
-      res.redirect('../project-information')
+      res.redirect('../about-the-project')
     }
 
   })

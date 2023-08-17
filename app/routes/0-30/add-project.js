@@ -7,7 +7,7 @@ module.exports = function (router) {
   })
 
   router.post('/' + version + '/add-project/add-project', function (req, res) {
-    res.redirect('../project-information')
+    res.redirect('../about-the-project')
   })
 
 }

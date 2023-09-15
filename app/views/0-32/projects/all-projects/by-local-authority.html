@@ -1,0 +1,206 @@
+{% extends "0-32/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  All projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+
+  </div>
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+  {{ mojPrimaryNavigation({
+    label: 'Primary navigation',
+    items: [
+      {
+        text: 'In progress',
+        href: 'in-progress'
+      },
+      {
+        text: 'Opening',
+        href: 'opening'
+      },
+	    {
+        text: 'By region',
+        href: 'by-region'
+      },
+      {
+        text: 'By user',
+        href: 'by-user'
+      },
+      {
+        text: 'By trust',
+        href: 'by-trust'
+      },
+      {
+        text: 'By local authority',
+        href: 'by-local-authority',
+        active: true
+      },
+      {
+        text: 'Completed',
+        href: 'completed'
+      },
+      {
+        text: 'Statistics',
+        href: '#'
+      }
+    ]
+  }) }}
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        All projects by trust
+      </h1>
+
+			
+      <div class="govuk-body">
+        
+        <table class="govuk-table" name="projects_table" aria-label="Projects table">
+          <caption class="govuk-table__caption govuk-!-display-none">Table of local authorities that have in-progress projects</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col">Local authority</th>
+              <th class="govuk-table__header" scope="col">Code</th>
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">Conversions</th>
+              <th class="govuk-table__header govuk-table__header--numeric" scope="col">Transfers</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Bedford Borough Council</a></td>
+              <td class="govuk-table__cell">822</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Birmingham City Council</a></td>
+              <td class="govuk-table__cell">330</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Bromley London Borough Council</a></td>
+              <td class="govuk-table__cell">305</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Cambridgeshire County Council</a></td>
+              <td class="govuk-table__cell">873</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Cumbria County Council</a></td>
+              <td class="govuk-table__cell">909</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Dudley Metropolitan Borough Council</a></td>
+              <td class="govuk-table__cell">332</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Durham County Council</a></td>
+              <td class="govuk-table__cell">840</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Essex County Council</a></td>
+              <td class="govuk-table__cell">881</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Gloucestershire County Council</a></td>
+              <td class="govuk-table__cell">916</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Halton Borough Council</a></td>
+              <td class="govuk-table__cell">876</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Havering London Borough Council</a></td>
+              <td class="govuk-table__cell">311</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Hertfordshire County Council</a></td>
+              <td class="govuk-table__cell">919</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Middlesbrough Council</a></td>
+              <td class="govuk-table__cell">806</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Norfolk County Council</a></td>
+              <td class="govuk-table__cell">926</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">North Northamptonshire Council</a></td>
+              <td class="govuk-table__cell">940</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">North Yorkshire County Council</a></td>
+              <td class="govuk-table__cell">815</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Oldham Council</a></td>
+              <td class="govuk-table__cell">353</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Rutland County Council</a></td>
+              <td class="govuk-table__cell">857</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Shropshire Council</a></td>
+              <td class="govuk-table__cell">893</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">6</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Staffordshire County Council</a></td>
+              <td class="govuk-table__cell">860</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}

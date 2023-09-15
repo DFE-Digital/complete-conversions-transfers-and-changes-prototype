@@ -1,0 +1,109 @@
+{% extends "0-32/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../../../includes/phase.html" %}
+  <a href="../../task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Check the
+                    Baseline</h1>
+                  <div class="govuk-hint">
+                    You must confirm the conversion date within 3 working days
+                    of receiving the Baseline email. Indicate on the Baseline
+                    that the school is on track to open.
+                  </div>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff" name="externalStakeHolderKickoff" type="checkbox" value="sendIntroductoryEmails" {{ checked("externalStakeHolderKickoff", "sendIntroductoryEmails") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff">
+                        Confirm the school is on track to open on the target date
+                      </label>
+                      <div class="govuk-checkboxes__guidance">
+                        <details class="govuk-details" data-module="govuk-details">
+                          <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                              How to check the Baseline
+                            </span>
+                          </summary>
+                          <div class="govuk-details__text">
+                            <p class="govuk-body">
+                              The Academies Operational Practice Unit will
+                              usually email the Baseline spreadsheet to you
+                              in the first week of each month.</p>
+                            <p class="govuk-body">Your projects should be on the
+                              Regional Casework Services Baseline spreadsheet.
+                              This contains a list of all the schools expected
+                              to open as academies the following month, across
+                              all regions.</p>
+                            <p class="govuk-body">Check the Regional Casework
+                              Services Baseline spreadsheet to confirm:</p>
+                            <ul class="govuk-list govuk-list--bullet">
+                              <li>your school is on it</li>
+                              <li>the information about the school is correct</li>
+                            </ul>
+                            <p class="govuk-body">Enter yes if the project is on
+                               track to convert, or no if it will not open on
+                               the target date.</p>
+                            <p class="govuk-body govuk-!-font-weight-bold">What
+                              to do if your school is not on the Baseline</p>
+                            <p class="govuk-body">There is one Baseline
+                              spreadsheet for each region. These are only used
+                              by regional delivery officers.</p>
+                            <p class="govuk-body">Sometimes Regional Casework
+                              Services projects will show in the regional
+                              Baseline spreadsheets by accident.</p>
+                            <p class="govuk-body">If this happens, remove your
+                              school from the regional Baseline spreadsheet and
+                              add it to the Regional Casework Services Baseline
+                              spreadsheet.</p>
+                            <p class="govuk-body">If it doesn't appear at all,
+                              enter the school's information in the correct
+                              Baseline spreadsheet.</p>
+                            <p class="govuk-body">Email the Academy Operational
+                              Practice Unit at <a href="mailto:academiesdelivery.operations@education.gov.uk">
+                                academiesdelivery.operations@education.gov.uk</a>
+                              to tell them if you have had to move or add the
+                              school to the correct Baseline.</p>
+                          </div>
+                        </details>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-7" name="externalStakeHolderKickoff" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-7">
+                        empty
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-form-group">
+                  {{ govukButton({ text: "Continue" }) }}
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

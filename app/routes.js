@@ -437,3 +437,4 @@ const router = govukPrototypeKit.requests.setupRouter()
     require("./routes/0-30/tenancy-at-will.js")(router);
     require("./routes/0-30/trust-modification-order.js")(router);
     require("./routes/0-30/routes.js")(router);
+    require("./routes/0-32/routes.js")(router);

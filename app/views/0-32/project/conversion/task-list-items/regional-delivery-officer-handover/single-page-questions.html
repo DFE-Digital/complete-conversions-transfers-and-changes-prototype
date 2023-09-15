@@ -1,0 +1,150 @@
+{% extends "0-32/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../../../includes/phase.html" %}
+  <a href="../../task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-form-group govuk-!-margin-bottom-9">
+            <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Handover
+              with regional delivery officer</h1>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="regionalDeliveryOfficerHandover" name="regionalDeliveryOfficerHandover" type="checkbox" value="doResearch" {{ checked("regionalDeliveryOfficerHandover", "doResearch") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="regionalDeliveryOfficerHandover">
+                      Review the project information, check the documents and
+                      carry out research
+                    </label>
+                    <div class="govuk-checkboxes__guidance">
+                      <div id="changed-name-hint" class="govuk-hint">
+                        Check that no information is missing from the existing
+                        project documents and there are no errors.
+                      </div>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            What to check for
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">You should check existing
+                            project documents, including:</p>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>Academy order</li>
+                            <li>Application to convert</li>
+                          </ul>
+                          <p class="govuk-body">Check that no information is
+                            missing and there are no errors.
+                          </p>
+                          <p class="govuk-body">You should also research the
+                            background of the project before you meet with the
+                            regional delivery officer.</p>
+                          <p class="govuk-body">Things to check during your
+                            background research include: </p>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>About the project, such as advisory board
+                              conditions</li>
+                            <li>School or trust website for more information
+                              about the school</li>
+                            <li>Google maps for potential land issues</li>
+                          </ul>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="regionalDeliveryOfficerHandover-2" name="regionalDeliveryOfficerHandover" type="checkbox" value="makeNotes" {{ checked("regionalDeliveryOfficerHandover", "makeNotes") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="regionalDeliveryOfficerHandover-2">
+                      Make notes and write questions to ask the regional
+                      delivery officer
+                    </label>
+                    <div class="govuk-checkboxes__guidance">
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            What to make notes about
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <p class="govuk-body">Note down things you want to ask
+                            and talk about with the regional delivery officer at
+                            the handover meeting. </p>
+                          <p class="govuk-body">This is an opportunity to
+                            clarify anything that you're unsure about after
+                            reviewing the project and doing your background
+                            research.</p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="regionalDeliveryOfficerHandover-3" name="regionalDeliveryOfficerHandover" type="checkbox" value="doHandover" {{ checked("regionalDeliveryOfficerHandover", "doHandover") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="regionalDeliveryOfficerHandover-3">
+                      Attend handover meeting with regional delivery officer
+                    </label>
+                    <div class="govuk-checkboxes__guidance">
+                      <div id="changed-name-hint" class="govuk-hint">
+                        Discuss any questions you have about the project in the meeting.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item" style="display: none;">
+                    <input class="govuk-checkboxes__input" id="regionalDeliveryOfficerHandover-4" name="regionalDeliveryOfficerHandover" type="checkbox" value="empty" checked="empty">
+                    <label class="govuk-label govuk-checkboxes__label" for="regionalDeliveryOfficerHandover-4">
+                      empty
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <aside>
+            <h2 class="govuk-heading-m">Task notes</h2>
+            <a draggable="false" data-module="govuk-button" role="button" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-3" href="/projects/4657A4BA-E2FB-4B19-9788-CCC48154650D/notes/new?task_identifier=handover">Add a new task note</a>
+            <ul class="govuk-list govuk-!-margin-top-4">
+              <li>
+                <p class="govuk-body govuk-!-margin-bottom-0">29 June 2023</p>
+                <h3 class="govuk-heading-s govuk-!-padding-top-0">Anthony O'Malley</h3>
+                <p class="govuk-body"></p><p class="govuk-body-m">I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents</p><p></p>
+                <a class="govuk-link" href="/projects/4657A4BA-E2FB-4B19-9788-CCC48154650D/notes/E4B3C06A-F061-4D62-BDD2-3A0689B2D958/edit">Edit note</a>
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+              </li>
+              <li>
+                <p class="govuk-body govuk-!-margin-bottom-0">29 June 2023</p>
+                <h3 class="govuk-heading-s govuk-!-padding-top-0">Anthony O'Malley</h3>
+                <p class="govuk-body"></p><p class="govuk-body-m">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+                <a class="govuk-link" href="/projects/4657A4BA-E2FB-4B19-9788-CCC48154650D/notes/9147FD70-EC5D-4D23-9181-E773014C31B8/edit">Edit note</a>
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

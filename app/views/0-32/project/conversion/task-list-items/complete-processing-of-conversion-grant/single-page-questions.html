@@ -1,0 +1,106 @@
+{% extends "0-32/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../../../includes/phase.html" %}
+  <a href="../../task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Receive Grant payment certificate</h1>
+                  <div id="changed-name-hint" class="govuk-hint">
+                    You should already have sent a copy of the <a href="https://www.gov.uk/government/publications/academy-support-grant" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                      Grant payment certificate (opens in new tab)</a>
+                      when confirming the school's opening date.
+                  </div>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="completeProcessingConversionGrant-2" name="completeProcessingConversionGrant" type="checkbox" value="grantSaved" >
+                      <label class="govuk-label govuk-checkboxes__label" for="completeProcessingConversionGrant-2">
+                        Check and save the Grant payment certificate in the
+                        school's SharePoint folder
+                      </label>
+                      <div class="govuk-checkboxes__guidance">
+                        <div class="govuk-hint">
+                          Make sure the right template has been used and there
+                          is no missing information.
+                        </div>
+                        <details class="govuk-details" data-module="govuk-details">
+                          <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                              What to do if you have not received the Grant payment certificate
+                            </span>
+                          </summary>
+                          <div class="govuk-details__text">
+                            <p class="govuk-body">You should ask the school to
+                              send the certificate. You must record the date
+                              each time you contact them in <a href="https://educationgovuk.sharepoint.com/:x:/r/sites/ServiceDeliveryDirectorate/_layouts/15/Doc.aspx?sourcedoc=%7BDC55D68D-3415-4923-A502-44B49DB05C0E%7D&file=Support%20Grant%20Certificate%20Assurance%20Report%20-%20RCS.xlsx&action=default&mobileredirect=true" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                              the Support grant assurance report (opens in new
+                              tab)</a>.</p>
+                          </div>
+                        </details>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="completeProcessingConversionGrant-3" name="completeProcessingConversionGrant" type="checkbox" value="grantSaved" >
+                      <label class="govuk-label govuk-checkboxes__label" for="completeProcessingConversionGrant-3">
+                        Update KIM with date certificate is received
+                      </label>
+                      <div class="govuk-checkboxes__guidance">
+                        <div class="govuk-hint">
+                          Find this information in the ESFA handover section
+                          within KIM
+                        </div>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="completeProcessingConversionGrant-4" name="completeProcessingConversionGrant" type="checkbox" value="supportGrantCertificate">
+                      <label class="govuk-label govuk-checkboxes__label" for="completeProcessingConversionGrant-4">
+                        Update the Support grant assurance report
+                        spreadsheet
+                      </label>
+                      <div class="govuk-checkboxes__guidance">
+                        <div class="govuk-hint">
+                          You can <a href="https://educationgovuk.sharepoint.com/:x:/r/sites/ServiceDeliveryDirectorate/_layouts/15/Doc.aspx?sourcedoc=%7BDC55D68D-3415-4923-A502-44B49DB05C0E%7D&file=Support%20Grant%20Certificate%20Assurance%20Report%20-%20RCS.xlsx&action=default&mobileredirect=true" class="govuk-link" rel="noreferrer noopener" target="_blank">
+                            open the Support grant assurance report (opens in
+                            new tab)</a> to update it.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="completeProcessingConversionGrant-7" name="completeProcessingConversionGrant" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="completeProcessingConversionGrant-7">
+                        empty
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-form-group">
+                  {{ govukButton({ text: "Continue" }) }}
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "0-32/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+{% include "../../includes/phase.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <header class="govuk-!-margin-bottom-8">
+        <span class="govuk-caption-l">URN 102062</span>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-1">St. Wilfred's Primary School</h1>
+        <p class="govuk-body-l">Incoming trust: Bosco Catholic Education Trust</p>
+      </header>
+      <nav class="sub-navigation" aria-label="Sub navigation">
+        <ul class="sub-navigation__list">
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="about-the-project">About the project</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="task-list">Task list</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" aria-current="page" href="#">Notes</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="contacts">Contacts</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="assignment">Assignment</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-form-group">
+            <h2 class="govuk-heading-l">Project notes</h2>
+            {{ govukButton({ text: "Add project note" }) }}
+            <span class="govuk-caption-m">29 July 2022</span>
+            <h3 class="govuk-heading-m">Jo Wade</h3>
+            <p class="govuk-body">The regional delivery officer came back with all
+              the required documents so I can now book in a handover call.</p>
+            <a href="#" class="govuk-link">Change</a>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+            <span class="govuk-caption-m">22 July 2022</span>
+            <h3 class="govuk-heading-m">Jo Wade</h3>
+            <p class="govuk-body">Received the SharePoint folder but some things
+              are missing, I've reached back out to the regional delivery officer
+              to ask for these to be added in.</p>
+            <a href="#" class="govuk-link">Change</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,145 @@
+{% extends "0-32/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../../../includes/phase.html" %}
+  <a href="../../task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="single-page-questions" method="post" class="form">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-form-group govuk-!-margin-bottom-9">
+                  <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+                  <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Confirm
+                    all conditions have been met</h1>
+                  <div class="govuk-hint">
+                    The deadline to confirm all conditions have been met will be
+                    in the Baseline email you received. The school will not be
+                    able to open on the target conversion date unless all
+                    conditions have been met.
+                  </div>
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        What to do if conditions are not met
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      <p class="govuk-body">All conditions must be met before a
+                        school can open as an academy.</p>
+                      <p class="govuk-body">If there are outstanding conditions,
+                        you must:
+                      </p>
+                      <ol class="govuk-list govuk-list--number">
+                        <li>inform the school of the outstanding tasks</li>
+                        <li>agree a new target conversion date with all
+                          stakeholders</li>
+                        <li>email the Academies Operational Practice Unit
+                          at <a href="mailto:academiesdelivery.operations@education.gov.uk">
+                            academiesdelivery.operations@education.gov.uk</a>
+                          with the new date</li>
+                        <li>change the date in KIM</li>
+                        <li>inform the regional delivery officer who
+                          started on this project</li>
+                      </ol>
+                    </div>
+                  </details>
+                </div>
+                <div class="govuk-checklist__group">
+                  <div class="govuk-checkboxes govuk-checkboxes__checklist" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-5" name="externalStakeHolderKickoff" type="checkbox" value="hostKickOffMeeting" {{ checked("externalStakeHolderKickoff", "hostKickOffMeeting") }}>
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-5">
+                        Email Academies Operational Practice Unit to confirm all
+                        conditions have been met
+                      </label>
+                      <div class="govuk-checkboxes__guidance">
+
+                        <details class="govuk-details" data-module="govuk-details">
+                          <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                              How to confirm if conditions have been met
+                            </span>
+                          </summary>
+                          <div class="govuk-details__text">
+                            <p class="govuk-body">You must email the Academies
+                              Operational Practice Unit at <a href="mailto:academiesdelivery.operations@education.gov.uk">
+                                academiesdelivery.operations@education.gov.uk</a> to
+                              confirm if all conditions are met for this school and
+                              it will open as an academy on the target conversion
+                              date.</p>
+                            <p class="govuk-body">The email only needs to confirm if
+                              all conditions have been met, or not. You do not need to
+                              go into detail.</p>
+                            <p class="govuk-body">Things you'll need to check to
+                              confirm if all conditions have been met include:
+                            </p>
+                            <ul class="govuk-list govuk-list--bullet">
+                              <li>commercial transfer agreement signed </li>
+                              <li>leases agreed and signed </li>
+                              <li>risk protection arrangement in place and insurer
+                                confirmed </li>
+                              <li>relevant documents signed and sealed </li>
+                            </ul>
+                          </div>
+                        </details>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes__item" style="display: none;">
+                      <input class="govuk-checkboxes__input" id="externalStakeHolderKickoff-7" name="externalStakeHolderKickoff" type="checkbox" value="empty" checked="empty">
+                      <label class="govuk-label govuk-checkboxes__label" for="externalStakeHolderKickoff-7">
+                        empty
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-form-group">
+                  {{ govukButton({ text: "Continue" }) }}
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <h2 class="govuk-heading-m">Task notes</h2>
+          <div class="govuk-button-group">
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Add note
+            </button>
+          </div>
+          <p class="govuk-body govuk-!-margin-bottom-0">23 September 2022</p>
+          <h3 class="govuk-heading-s govuk-!-padding-top-0">
+            Jo Wade</h3>
+          <p class="govuk-body">I am waiting for the school and Local authority
+            to sort out the CTA. They have been bouncing it around between them
+            for 3 weeks now.
+          </p>
+          <a href="#" class="govuk-link">Change</a>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <p class="govuk-body govuk-!-margin-bottom-0">11 September 2022</p>
+          <h3 class="govuk-heading-s govuk-!-padding-top-0">
+            Jo Wade</h3>
+          <p class="govuk-body">The school has sent over the CTA but have
+            advised me that they have had no acknowledgement from the LA. This
+            may take some time to sort.
+          </p>
+          <a href="#" class="govuk-link">Change</a>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

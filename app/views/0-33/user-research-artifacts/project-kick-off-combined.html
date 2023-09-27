@@ -1,0 +1,144 @@
+{% extends "0-33/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../includes/phase.html" %}
+  <a href="../project-task-list" class="govuk-back-link">Back to task list</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="project-kick-off-combined" method="post" class="form">
+            <div class="govuk-form-group">
+              <span class="govuk-caption-xl">St. Wilfred's Primary School</span>
+              <h1 class="govuk-heading-xl">Handover with regional delivery
+                officer</h1>
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h2 class="govuk-fieldset__heading govuk-heading-m">Have you checked all the
+                  documents from the regional delivery officer?</h2>
+                <div id="sign-in-hint" class="govuk-hint">
+                  Check there are no errors or any missing information in the
+                  documents.
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Examples of conversion documents
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>Academy Order</li>
+                      <li>Application to convert</li>
+                      <li>Articles of association</li>
+                      <li>Model Documents</li>
+                    </ul>
+                  </div>
+                </details>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkConversionDocuments" name="checkConversionDocuments" type="radio" value="Yes, all required documents are correct" {{ checked("checkConversionDocuments", "Yes, all required documents are correct") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkConversionDocuments">
+                      Yes, all required documents are correct
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkConversionDocuments-2" name="checkConversionDocuments" type="radio" value="Yes, but some documents are missing or have errors" {{ checked("checkConversionDocuments", "Yes, but some documents are missing or have errors") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkConversionDocuments-2">
+                      Yes, but some documents are missing or have errors
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="checkConversionDocuments-3" name="checkConversionDocuments" type="radio" value="No" {{ checked("checkConversionDocuments", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="checkConversionDocuments-3">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h2 class="govuk-fieldset__heading" for="researchAndQuestionsForDeliveryOfficer">
+                    Preliminary research and questions for the regional delivery
+                    officer</h2>
+                </legend>
+                <div id="changed-name-hint" class="govuk-hint">
+                  It's a good idea to do some preliminary research about your
+                  school. Note any questions you have for the regional delivery
+                  officer.
+                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Common things to check
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>Which version of the model documents is the school is
+                        using?</li>
+                      <li>Do the land arrangements look simple on Google Maps?</li>
+                      <li>Are there any Advisory Board conditions?</li>
+                    </ul>
+                  </div>
+                </details>
+                <textarea class="govuk-textarea" id="researchAndQuestionsForDeliveryOfficer" name="researchAndQuestionsForDeliveryOfficer" rows="10" aria-describedby="more-detail-hint" >{{data['researchAndQuestionsForDeliveryOfficer']}}</textarea>
+              </fieldset>
+            </div>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h2 class="govuk-fieldset__heading">Have you completed a the
+                    handover meeting with the regional delivery officer?
+                  </h2>
+                </legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="completedHandoverMeeting" name="completedHandoverMeeting" type="radio" value="Yes" {{ checked("completedHandoverMeeting", "Yes") }}>
+                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting">
+                      Yes, my questions were answered
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="completedHandoverMeeting-2" name="completedHandoverMeeting" type="radio" value="Yes, but I still have questions" {{ checked("completedHandoverMeeting", "Yes, but I still have questions") }}>
+                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting-2">
+                      Yes, but I still have questions
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="completedHandoverMeeting-3" name="completedHandoverMeeting" type="radio" value="No" {{ checked("completedHandoverMeeting", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="completedHandoverMeeting-3">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            {{ govukButton({ text: "Continue" }) }}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

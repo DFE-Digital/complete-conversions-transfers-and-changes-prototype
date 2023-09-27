@@ -1,0 +1,135 @@
+{% extends "0-33/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+{% include "../../includes/phase.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <header class="govuk-!-margin-bottom-8">
+        <span class="govuk-caption-l">School URN 102062 <span class="govuk-!-margin-left-1 govuk-tag govuk-tag--purple">Conversion</span></span>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">St. Wilfred's Primary School</h1>
+        <ul class="govuk-list" id="project-summary">
+          <li><strong>Conversion date:</strong> 1 October 2023</dd></li>
+          <li><strong>Incoming trust:</strong> Bosco Catholic Education Trust</dd></li>
+          <li><strong>LA and region:</strong> Wherton, North West</dd></li>
+          <li><strong>SharePoint links:</strong> <a target="_blank" href="https://educationgovuk.sharepoint.com/sites/ag/Tier_02/Forms/AllItems.aspx?viewpath=%2Fsites%2Fag%2FTier%5F02%2FForms%2FAllItems%2Easpx&amp;id=%2Fsites%2Fag%2FTier%5F02%2FDarlington%2FWhinfield%5FPrimary%5FSchool%5F8413515&amp;viewid=3cf6153c%2D7ad5%2D473d%2Dbc7e%2D82805fe702f5">School folder (opens in new tab)</a> | <a target="_blank" href="https://educationgovuk.sharepoint.com/sites/ag/Multi%20Academy%20Trusts/Forms/AllItems.aspx?id=%2Fsites%2Fag%2FMulti%20Academy%20Trusts%2FThe%5FEducation%5FVillage%5FAT%5FTR00729">Trust folder (opens in new tab)</a></dd></li>
+        </ul>  
+      </header> 
+      <nav class="sub-navigation" aria-label="Sub navigation">
+        <ul class="sub-navigation__list">
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" aria-current="page" href="#">About the project</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="task-list">Task list</a>
+          </li>
+          
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="notes">Notes</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="contacts">Contacts</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="assignment">Assignment</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+          <nav>
+            <h2 class="govuk-heading-m">Jump to section</h2>
+            <ul class="govuk-list govuk-list--spaced govuk-!-padding-0">
+              <li>
+                <a class="govuk-link" href="#projectDetails">Project details</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#reasons-for-the-conversion">Reasons for the conversion
+              <li>
+                <a class="govuk-link" href="#advisoryBoardDetails">Advisory board details</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#schoolDetails">School details</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#academy-details">Academy details</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#incomingTrustDetails">Incoming trust details</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="govuk-grid-column-three-quarters" id="projectInformationList">
+          <div class="govuk-!-margin-bottom-9" id="projectDetails">
+            <h2 class="govuk-heading-l">About the project</h2>
+            <h2 class="govuk-heading-m">Project details</h2>
+            <dl class="govuk-summary-list" id="project-summary">
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Type</dt><dd class="govuk-summary-list__value">Conversion</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Conversion date</dt><dd class="govuk-summary-list__value">1 October 2023 <span class="empty">Provisional</span></dd></div>
+              <!-- only visible if completed <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Completion date</dt><dd class="govuk-summary-list__value">1 December 2023</dd></div>-->
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Local authority</dt><dd class="govuk-summary-list__value">Wherton</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Diocese</dt><dd class="govuk-summary-list__value">Hallam</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Region</dt><dd class="govuk-summary-list__value">North West</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Team</dt><dd class="govuk-summary-list__value">{% if data['userType'] in ['team-lead', 'regional-casework-services'] %}Regional Casework Services{% else %}North West region team{% endif %}</dd></div>
+            </dl>
+          </div>
+          <div class="govuk-!-margin-bottom-9" id="reasons-for-the-conversion">
+            <h2 class="govuk-heading-m">Reasons for the conversion</h2>
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row govuk-summary-list__row--no-actions"><dt class="govuk-summary-list__key">Academy order type</dt><dd class="govuk-summary-list__value">Academy order</dd></div>
+              <div class="govuk-summary-list__row govuk-summary-list__row--no-actions"><dt class="govuk-summary-list__key">Project due to 2RI</dt><dd class="govuk-summary-list__value">No</dd></div>
+            </dl>
+          </div>
+          <div class="govuk-!-margin-bottom-9" id="advisoryBoardDetails">
+            <h2 class="govuk-heading-m">Advisory board details</h2>
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row govuk-summary-list__row--no-actions"><dt class="govuk-summary-list__key">Date of advisory board</dt><dd class="govuk-summary-list__value">1 March 2023</dd></div>
+              <div class="govuk-summary-list__row govuk-summary-list__row--no-actions"><dt class="govuk-summary-list__key">Conditions from advisory board</dt><dd class="govuk-summary-list__value"><span class="empty">Empty</span></dd></div>
+            </dl>
+          </div>
+          <div class="govuk-!-margin-bottom-9" id="schoolDetails">
+            <h2 class="govuk-heading-m">School details</h2>
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Name</dt><dd class="govuk-summary-list__value">St. Wilfred's Primary School<br><a target="_blank" href="https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/126041">View the school's information in GIAS (opens in new tab)</a></dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Unique reference number</dt><dd class="govuk-summary-list__value">126041</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Type</dt><dd class="govuk-summary-list__value">Voluntary aided school</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Age range</dt><dd class="govuk-summary-list__value">4 to 11</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Phase</dt><dd class="govuk-summary-list__value">Primary</dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Address</dt><dd class="govuk-summary-list__value"><address class="govuk-address">Sullington Way<br>Shoreham-by-Sea<br>BN43 6PJ</address></dd></div>
+              <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">SharePoint folder</dt><dd class="govuk-summary-list__value"><a target="_blank" href="https://educationgovuk.sharepoint.com/:f:/r/sites/ServiceDeliveryDirectorate/Shared%20Documents/A2C%20and%20Interventions/Complete%20conversions,%20transfers%20and%20changes/Technical?csf=1&amp;web=1&amp;e=FWzEMP">Open the school SharePoint folder in a new tab</a></dd></div>
+            </dl>
+         </div>
+        <div class="govuk-!-margin-bottom-9" id="academy-details">
+          <h2 class="govuk-heading-m">Academy details</h2>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Name</dt><dd class="govuk-summary-list__value">St Wilfred's Academy<br><a target="_blank" href="https://get-information-schools.service.gov.uk/Establishments/Establishment/Details/126041">View the academy details in GIAS (opens in new tab)</a></dd></div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Unique reference number</dt><dd class="govuk-summary-list__value">100634</div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Academy type</dt><dd class="govuk-summary-list__value">Community</div>
+          </dl>
+        </div>
+        <div class="govuk-!-margin-bottom-9" id="incomingTrustDetails">
+          <h2 class="govuk-heading-m">Incoming trust details</h2>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Name</dt><dd class="govuk-summary-list__value">Bosco Catholic Education Trust<br><a target="_blank" href="https://get-information-schools.service.gov.uk/Groups/Search?GroupSearchModel.Text=10064181">View the trust information in GIAS (opens in new tab)</a></dd></div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">UK Provider Reference Number</dt><dd class="govuk-summary-list__value">10064181</dd></div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Group identifier (ID)</dt><dd class="govuk-summary-list__value">TR03680</dd></div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Companies House number</dt><dd class="govuk-summary-list__value">10573272<br><a target="_blank" href="https://find-and-update.company-information.service.gov.uk/company/10573272">View the Companies House information (opens in new tab)</a></dd></div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">Address</dt><dd class="govuk-summary-list__value"><address class="govuk-address">St Philip Howard Catholic School Elm Grove South<br>Barnham<br>Bognor Regis<br>PO22 0EN</address></dd></div>
+            <div class="govuk-summary-list__row"><dt class="govuk-summary-list__key">SharePoint folder</dt><dd class="govuk-summary-list__value"><a target="_blank" href="https://educationgovuk.sharepoint.com/:f:/r/sites/ServiceDeliveryDirectorate/Shared%20Documents/A2C%20and%20Interventions/Complete%20conversions,%20transfers%20and%20changes/Technical?csf=1&amp;web=1&amp;e=FWzEMP">Open the trust SharePoint folder in a new tab</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

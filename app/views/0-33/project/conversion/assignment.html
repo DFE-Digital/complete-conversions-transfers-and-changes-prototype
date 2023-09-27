@@ -1,0 +1,154 @@
+{% extends "0-33/layout.html" %}
+
+
+{% block pageTitle %}
+  Complete conversions transfers and changes
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <header class="govuk-!-margin-bottom-8">
+        <span class="govuk-caption-l">School URN 102062 <span class="govuk-!-margin-left-1 govuk-tag govuk-tag--purple">Conversion</span></span>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">St. Wilfred's Primary School</h1>
+        <ul class="govuk-list" id="project-summary">
+          <li><strong>Conversion date:</strong> 1 October 2023</dd></li>
+          <li><strong>Incoming trust:</strong> Bosco Catholic Education Trust</dd></li>
+          <li><strong>LA and region:</strong> Wherton, North West</dd></li>
+          <li><strong>SharePoint links:</strong> <a target="_blank" href="https://educationgovuk.sharepoint.com/sites/ag/Tier_02/Forms/AllItems.aspx?viewpath=%2Fsites%2Fag%2FTier%5F02%2FForms%2FAllItems%2Easpx&amp;id=%2Fsites%2Fag%2FTier%5F02%2FDarlington%2FWhinfield%5FPrimary%5FSchool%5F8413515&amp;viewid=3cf6153c%2D7ad5%2D473d%2Dbc7e%2D82805fe702f5">School folder (opens in new tab)</a> | <a target="_blank" href="https://educationgovuk.sharepoint.com/sites/ag/Multi%20Academy%20Trusts/Forms/AllItems.aspx?id=%2Fsites%2Fag%2FMulti%20Academy%20Trusts%2FThe%5FEducation%5FVillage%5FAT%5FTR00729">Trust folder (opens in new tab)</a></dd></li>
+        </ul>  
+      </header> 
+      <nav class="sub-navigation" aria-label="Sub navigation">
+        <ul class="sub-navigation__list">
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="about-the-project">About the project</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="task-list">Task list</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="notes">Notes</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" href="contacts">Contacts</a>
+          </li>
+          <li class="sub-navigation__item">
+            <a class="sub-navigation__link" aria-current="page">Assignment</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-l">Assignment</h2>
+
+          {% if (data['teamWorking'] == 'caseworker') %}
+            <h2 class="govuk-heading-m">Completing project</h2>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Person completing project
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {% if (data['completedBy']) %}
+                    {{data['completedBy']}}
+                  {% else %}
+                    <strong class="govuk-tag govuk-tag--orange">
+                      Unassigned
+                    </strong>
+                  {% endif %}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="assign-user/edit-completed-by?fromTeamLeadProjectList=false" class="govuk-link">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Team completing project
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Regional Casework Services
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#" class="govuk-link">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Project assigned by
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Jovan George
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="mailto:jovan.GEORGE2@education.gov.uk">Email</a> |
+                  <a href="#changePerson">Change</a>
+                </dd>
+              </div>
+            </dl>
+          {% else %}
+            <h2 class="govuk-heading-m">Completing project</h2>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Person completing project
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Shayla Rubio
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="mailto:shayla.RUBIO@education.gov.uk">Email</a> |
+                  <a href="assign-user/edit-completed-by?fromTeamLeadProjectList=false" class="govuk-link">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Team completing project
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  A Region
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="#" class="govuk-link">Change</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Project assigned by
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Shayla Rubio
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="mailto:shayla.RUBIO@education.gov.uk">Email</a> |
+                  <a href="assign-user/edit-completed-by?fromTeamLeadProjectList=false" class="govuk-link">Change</a>
+                </dd>
+              </div>
+            </dl>
+          {% endif %}
+
+          <h2 class="govuk-heading-m" id="schoolDetails">Prepared for advisory board</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Person who prepared project
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Shayla Rubio
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="mailto:shayla.RUBIO@education.gov.uk">Email</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

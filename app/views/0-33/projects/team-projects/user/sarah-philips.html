@@ -1,0 +1,91 @@
+{% extends "0-33/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  {{ 'RCS' if data['userType'] in ['team-lead', 'regional-casework-services'] else 'Your team' }} projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../../includes/phase.html" %}
+
+  </div>
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+  {{ mojPrimaryNavigation({
+    label: 'Primary navigation',
+    items: [
+      {
+        text: 'Unassigned',
+        href: '../unassigned'
+      },
+      {
+        text: 'In progress',
+        href: '../in-progress'
+      },
+      {
+        text: 'Opening',
+        href: '../opening'
+      },
+      {
+        text: 'By user',
+        href: '../by-user',
+        active: true
+      },
+      {
+        text: 'Completed',
+        href: '../completed'
+      }
+    ]
+  }) }}
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Projects assigned to Sarah Philips
+      </h1>
+
+			
+      <div>
+        
+        <table class="govuk-table" name="projects_table" aria-label="Projects table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col">Schools</th>
+              <th class="govuk-table__header" scope="col">URN</th>
+              <th class="govuk-table__header" scope="col">Local authority</th>
+              <th class="govuk-table__header" scope="col">Conversion or transfer date</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">The Coopers's Company and Coborn School</a></td>
+              <td class="govuk-table__cell">136600</td>
+              <td class="govuk-table__cell">Northumberland</td>
+              <td class="govuk-table__cell">1 Sep 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Westbourne Road Primary School</a></td>
+              <td class="govuk-table__cell">136601</td>
+              <td class="govuk-table__cell">Northumberland</td>
+              <td class="govuk-table__cell">1 Oct 2024</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__header govuk-table__cell"><a href="#">Fleet Primary School</a></td>
+              <td class="govuk-table__cell">136602</td>
+              <td class="govuk-table__cell">Northumberland</td>
+              <td class="govuk-table__cell">1 Dec 2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}

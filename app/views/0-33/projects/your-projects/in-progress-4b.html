@@ -1,0 +1,145 @@
+{% extends "0-33/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  Your projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+
+  </div>
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+  {{ mojPrimaryNavigation({
+    label: 'Primary navigation',
+    items: [
+      {
+        text: 'In progress',
+        href: 'in-progress',
+        active: true
+      },
+      {
+        text: 'Completed',
+        href: 'completed'
+      }
+    ]
+  }) }}
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    {% if not data['userType'] in ['team-lead', 'regional-casework-services'] %}
+    <div class="govuk-grid-column-full">
+      <div class="govuk-button-group">
+        <a class="govuk-button" data-module="govuk-button" href="#">Add a conversion</a>
+        <a class="govuk-button" data-module="govuk-button" href="#">Add a transfer</a>
+      </div>
+    </div>
+    {% endif %}
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        Your projects in progress
+      </h1>
+      <nav class="moj-sub-navigation" aria-label="Sub navigation">
+        <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="in-progress-4">Conversions</a>
+            </li>
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page" href="in-progress-4b">Transfers</a>
+            </li>
+          </ul>
+      </nav>
+      <table class="govuk-table" name="projects_table" aria-label="Projects table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">School or academy</th>
+            <th class="govuk-table__header" scope="col">URN</th>
+            <th class="govuk-table__header" scope="col">Incoming trust</th>
+            <th class="govuk-table__header" scope="col">Outgoing trust</th>
+            <th class="govuk-table__header" scope="col">Local authority</th>
+            {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
+            <th class="govuk-table__header" scope="col">Region</th>
+            {% endif %}
+            <th class="govuk-table__header" scope="col">Conversion or transfer date</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header govuk-table__cell"><a href="#">Green Lane Church of England Controlled Primary School</a></td>
+            <td class="govuk-table__cell">114219</td>
+            <td class="govuk-table__cell">Durban And Newly Diocesan Learning Trust</td>
+            <td class="govuk-table__cell">Wise Owl Trust</td>
+            <td class="govuk-table__cell">County Durham</td>
+            {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
+            <td class="govuk-table__cell" style="white-space:nowrap">North East</td>
+            {% endif %}
+            <td class="govuk-table__cell">Oct 2023</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header govuk-table__cell"><a href="#">St Joseph's Rc Primary School</a></td>
+            <td class="govuk-table__cell">101133</td>
+            <td class="govuk-table__cell">Saint John Southworth Catholic Academy Trust</td>
+            <td class="govuk-table__cell">St Pius X Academic Trust</td>
+            <td class="govuk-table__cell">Westminster</td>
+            {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
+            <td class="govuk-table__cell" style="white-space:nowrap">London</td>
+            {% endif %}
+            <td class="govuk-table__cell">Nov 2023</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header govuk-table__cell"><a href="#">Bartley Green College</a></td>
+            <td class="govuk-table__cell">103491</td>
+            <td class="govuk-table__cell">Bartley Green School</td>
+            <td class="govuk-table__cell">Great Starter Learning Academies</td>
+            <td class="govuk-table__cell">Westminster</td>
+            {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
+            <td class="govuk-table__cell" style="white-space:nowrap">London</td>
+            {% endif %}
+            <td class="govuk-table__cell">Nov 2023</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header govuk-table__cell"><a href="#">Linton College</a></td>
+            <td class="govuk-table__cell">103491</td>
+            <td class="govuk-table__cell">Linton Trust</td>
+            <td class="govuk-table__cell">ABC Academic Trust</td>
+            <td class="govuk-table__cell">Linton</td>
+            {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
+            <td class="govuk-table__cell" style="white-space:nowrap">London</td>
+            {% endif %}
+            <td class="govuk-table__cell">Nov 2023</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header govuk-table__cell"><a href="#">Wark CofE Junior School</a></td>
+            <td class="govuk-table__cell">122300</td>
+            <td class="govuk-table__cell">Wigan Learning Trust</td>
+            <td class="govuk-table__cell">Advanced Academies Trust</td>
+            <td class="govuk-table__cell">Wigan</td>
+            {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
+            <td class="govuk-table__cell" style="white-space:nowrap">North East</td>
+            {% endif %}
+            <td class="govuk-table__cell">Dec 2023</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header govuk-table__cell"><a href="#">Wherton CofE Sixth Form College</a></td>
+            <td class="govuk-table__cell">122300</td>
+            <td class="govuk-table__cell">Wigan Learning Trust</td>
+            <td class="govuk-table__cell">Advanced Academies Trust</td>
+            <td class="govuk-table__cell">Wigan</td>
+            {% if data['userType'] in ['team-lead', 'regional-casework-services'] %}
+            <td class="govuk-table__cell" style="white-space:nowrap">North East</td>
+            {% endif %}
+            <td class="govuk-table__cell">Dec 2023</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

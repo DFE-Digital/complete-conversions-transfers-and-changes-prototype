@@ -1,0 +1,133 @@
+{% extends "0-34/layout.html" %}
+
+
+
+
+{% block pageTitle %}
+  Your projects | {{serviceName}}
+{% endblock %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {% include "../../includes/phase.html" %}
+
+  </div>
+  {%- from "moj/components/primary-navigation/macro.njk" import mojPrimaryNavigation -%}
+  {{ mojPrimaryNavigation({
+    label: 'Primary navigation',
+    items: [
+      {
+        text: 'In progress',
+        href: 'in-progress',
+        active: true
+      },
+      {
+        text: 'Completed',
+        href: 'completed'
+      }
+    ]
+  }) }}
+  <div class="govuk-width-container">
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    {% if not data['userType'] in ['team-lead', 'regional-casework-services'] %}
+    <div class="govuk-grid-column-full">
+      <div class="govuk-button-group">
+        <a class="govuk-button" data-module="govuk-button" href="#">Add a conversion</a>
+        <a class="govuk-button" data-module="govuk-button" href="#">Add a transfer</a>
+      </div>
+    </div>
+    {% endif %}
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        Your projects in progress
+      </h1>
+      <table class="govuk-table" name="projects_table" aria-label="Projects table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">School or academy</th>
+            <th class="govuk-table__header" scope="col">URN</th>
+            <th class="govuk-table__header" scope="col">Project type</th>
+            <th class="govuk-table__header" scope="col">Incoming trust</th>
+            <th class="govuk-table__header" scope="col">Outgoing trust</th>
+            <th class="govuk-table__header" scope="col">Local authority</th>
+            <th class="govuk-table__header" scope="col">Conversion or transfer date</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header govuk-table__cell"><a href="../../project/conversion/task-list">St. Wilred's Primary School</a></td>
+            <td class="govuk-table__cell">102062</td>
+            <td class="govuk-table__cell">Conversion</td>
+            <td class="govuk-table__cell">Bosco Catholic Education Trust</td>
+            <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">None</span></td>
+            <td class="govuk-table__cell">Wherton</td>
+            <td class="govuk-table__cell">Sep 2023</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header govuk-table__cell"><a href="../../project/transfer/task-list">Witton-Le-Wear Primary School</a></td>
+            <td class="govuk-table__cell">102062</td>
+            <td class="govuk-table__cell">Transfer</td>
+            <td class="govuk-table__cell">Advance Learning Partnership</td>
+            <td class="govuk-table__cell">Wise Owl Trust</td>
+            <td class="govuk-table__cell">Didington</td>
+            <td class="govuk-table__cell">Sep 2023</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header govuk-table__cell"><a href="#">Green Lane Church of England Controlled Primary School</a></td>
+            <td class="govuk-table__cell">114219</td>
+            <td class="govuk-table__cell">Conversion</td>
+            <td class="govuk-table__cell">Durban And Newly Diocesan Learning Trust</td>
+            <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">None</span></td>
+            <td class="govuk-table__cell">County Durham</td>
+            <td class="govuk-table__cell">Oct 2023</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header govuk-table__cell"><a href="#">Oakhurst Community Primary School</a></td>
+            <td class="govuk-table__cell">138206</td>
+            <td class="govuk-table__cell">Conversion</td>
+            <td class="govuk-table__cell">Grove Learning Trust</td>
+            <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">None</span></td>
+            <td class="govuk-table__cell">Swindon</td>
+            <td class="govuk-table__cell">Oct 2023</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header govuk-table__cell"><a href="#">Wark Church of England Primary School</a></td>
+            <td class="govuk-table__cell">122300</td>
+            <td class="govuk-table__cell">Conversion</td>
+            <td class="govuk-table__cell">Durban And Newly Diocesan Learning Trust</td>
+            <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">None</span></td>
+            <td class="govuk-table__cell">Northumberland</td>
+            <td class="govuk-table__cell">Oct 2023</td>
+          </tr>
+
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header govuk-table__cell"><a href="#">St Joseph's Rc Primary School</a></td>
+            <td class="govuk-table__cell">101133</td>
+            <td class="govuk-table__cell">Transfer</td>
+            <td class="govuk-table__cell">Saint John Southworth Catholic Academy Trust</td>
+            <td class="govuk-table__cell">Saint Pius X Academic Trust</td>
+            <td class="govuk-table__cell">Westminster</td>
+            <td class="govuk-table__cell">Nov 2023</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__header govuk-table__cell"><a href="#">Fleetville Junior School</a></td>
+            <td class="govuk-table__cell">117137</td>
+            <td class="govuk-table__cell">Transfer</td>
+            <td class="govuk-table__cell">United Endeavour Trust</td>
+            <td class="govuk-table__cell">Great Starters Learning Acadeimies</td>
+            <td class="govuk-table__cell">Hertfordshire</td>
+            <td class="govuk-table__cell">Dec 2023</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

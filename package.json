@@ -9,7 +9,7 @@
     "@ministryofjustice/frontend": "^1.8.0",
     "dfe-frontend-alpha": "^0.1.9",
     "govuk-frontend": "4.7.0",
-    "govuk-prototype-kit": "13.10.0",
+    "govuk-prototype-kit": "13.18.1",
     "jquery": "^3.7.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
